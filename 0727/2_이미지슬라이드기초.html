@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 슬라이드 기초</title>
+</head>
+<style>
+    #wrap {
+        text-align: center;
+        width: 700px;
+        height: 400px;
+        border: 1px solid #424242;
+        margin: auto;
+        position: relative;
+    }
+
+    #kakakoBox {
+        width: 340px;
+        height: 340px;
+        border: 1px solid #424242;
+        /* 포지셔닝 컨텍스트 지정 */
+        position: relative;
+        margin: 30px auto;
+        overflow: hidden;
+    }
+
+    #kakaos {
+        width: 2380px;
+        height: 340px;
+        /*background: red;*/
+        position: absolute;
+        left: 0;
+        /*
+        http://cubic-bezier.com/
+        */
+        transition: .7s cubic-bezier(.34, -1.19, .69, 2.08);
+    }
+
+    #kakaos img {
+        float: left;
+    }
+    button {
+        width: 60px;
+        height: 40px;
+        cursor: pointer;
+        border: none;
+        position: absolute;
+    }
+    button:hover {
+        background: #424242;
+        color: #fff;
+    }
+    #leftBtn {
+        left: 40px;
+        top: 175px;
+    }
+    #rightBtn {
+        right: 40px;
+        top: 175px;
+    }
+</style>
+<body>
+<div id="wrap">
+    <div id="kakakoBox">
+        <div id="kakaos">
+            <img src="img/k1.png"/>
+            <img src="img/k2.png"/>
+            <img src="img/k3.png"/>
+            <img src="img/k4.png"/>
+            <img src="img/k5.png"/>
+            <img src="img/k6.png"/>
+            <img src="img/k7.png"/>
+        </div>
+    </div>
+    <button id="leftBtn">왼쪽</button>
+    <button id="rightBtn">오른쪽</button>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    var x = 0;
+    $("#leftBtn").click(function () {
+        x -= 340;
+        console.log(x);
+        if (x == -2380) {
+            x = 0;
+        }
+        $("#kakaos").css("left", x);
+    });
+
+    $("#rightBtn").click(function () {
+        x += 340;
+        console.log(x);
+        if (x == 340) {
+            x = -2040;
+        }
+        $("#kakaos").css("left", x);
+    });
+
+</script>
+</body>
+</html>

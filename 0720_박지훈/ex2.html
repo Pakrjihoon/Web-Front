@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>ex2</title>
+		<link rel="stylesheet" href="css/notosanskr.css"/>
+        <link rel="stylesheet" href="css/reset.css">
+		<style>
+			#menu {
+                width: 150px;
+                font-family: "Noto Sans KR",sans-serif;
+                font-size: 16px;
+                font-weight: 300;
+                border: 1px solid #424242;
+                position: fixed;
+                left: 50%;
+                margin: 20px 0 0 -72px;
+                box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+            }
+            #menu>ul {
+                width: 130px;
+                margin: 10px;
+                background-color: red;
+            }
+            #menu li {
+                background:blue;
+                margin: 6px;
+            }
+            #menu li>a {
+                width: 100px;
+                height: 27px;
+                color: #848484;
+                text-decoration: none;
+                background-repeat: no-repeat;
+                float:left;
+                text-indent: 30px;
+            }
+            li:nth-child(1)>a {background: url(img/gnb_menu_icon_01.png);}
+            li:nth-child(2)>a {background: url(img/gnb_menu_icon_02.png);}
+            li:nth-child(3)>a {background: url(img/gnb_menu_icon_03.png);}
+            li:nth-child(4)>a {background: url(img/gnb_menu_icon_04.png);}
+            li:nth-child(5)>a {background: url(img/gnb_menu_icon_05.png);}
+            li:nth-child(6)>a {background: url(img/gnb_menu_icon_06.png);}
+
+            li:nth-child(1)>a:hover {background-position: 0 -40px;
+                font-weight: 900;
+                color: lightblue;}
+            li:nth-child(2)>a:hover {background-position: 0 -40px;
+                font-weight: 900;
+                color: lightblue;}
+            li:nth-child(3)>a:hover {background-position: 0 -40px;
+                font-weight: 900;
+                color: lightblue;}
+            li:nth-child(4)>a:hover {background-position: 0 -40px;
+                font-weight: 900;
+                color: lightblue;}
+            li:nth-child(5)>a:hover {background-position: 0 -40px;
+                font-weight: 900;
+                color: lightblue;}
+            li:nth-child(6)>a:hover {background-position: 0 -40px;
+                font-weight: 900;
+                color: lightblue;}
+        /* color 를 지정했는데 왜 안변하는지 모르겠습니다.. */
+
+        </style>
+	</head>
+	<body>
+		<div id="menu">
+			<h1 class="screen_out">밴드 메뉴</h1>
+			<ul>
+				<li><a href="">게시판</a></li>
+				<li><a href="">사진첩</a></li>
+				<li><a href="">채팅방</a></li>
+				<li><a href="">캘린더</a></li>
+				<li><a href="">멤버</a></li>
+				<li><a href="">설정</a></li>
+			</ul>
+		</div>	 
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Daum 지도 시작하기</title>
+    <style>
+        #map {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -300px 0 0 -350px;
+        }
+    </style>
+</head>
+<body>
+<div id="map" style="width:700px;height:600px;"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4a700f654f9835cb73b219acf5c9a5f5"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new daum.maps.LatLng(37.4810847, 126.95216470000003),
+        level: 2
+    };
+
+    var map = new daum.maps.Map(container, options);
+</script>
+</body>
+</html>

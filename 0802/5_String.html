@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문자열 객체</title>
+</head>
+<body>
+<script>
+    /*
+        문자열(String)객체의 속성과 메서드
+        (원본 문자열을 훼손시키지 않음)
+        - length 속성 : 문자열의 길이
+        - indexOf(글자) : 인자의 index를 얻어오는 메서드
+                         (없으면 -1이 나옴)
+        - substring(시작인덱스) : 시작부터 끝까지
+        - substring(시작 인덱스, 끝 인덱스-1) : 시작부터 끝인덱스- 까지
+
+     */
+    var txt = "가나다라마바사";
+    //var idx = txt.indexOf("FA");
+    // alert(idx);
+    txt = txt.substring(2,5);
+    alert(txt);
+</script>
+</body>
+</html>

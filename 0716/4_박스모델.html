@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델</title>
+    <style>
+        /*
+            박스모델
+            - 한 요소가 박스의 모양을 갖는 모델
+            - width, height, padding, border, margin 로 구성
+            - 더 정확히 말하면,
+            width, height, padding-top, padding-right, padding-bottom, padding-left,
+            border-top, border-right, border-bottom, border-left,
+            margin-top, margin-right, margin-bottom, margin-left 14가지 속성의 합
+            - auto 값, 음수 값 표현
+         */
+        #box {
+            /*
+            width, height 값은 기본 값이 auto 다.
+            (블록레벨의 width 가 auto 면 부모의 width 를 따름
+            height 가 auto 면 자식들 높이의 합
+
+            기본 뒷 배경 border, padding, content(width, height)
+            background-clip 으로 변경 가능
+            */
+            width: 100px;
+            height: 100px;
+            background-color: #FFA500;
+            background-clip: content-box;
+            border-top: 50px solid #00F123;
+            border-right: 50px solid #DDFF2F;
+            border-left: 50px solid #DDFF2F;
+            border-bottom: 50px solid #00F123;
+            padding : 50px;
+            margin : 50px;
+            border-radius: 250px;
+            text-align: center;
+            line-height: 100px;
+        }
+        #test {
+            width: 100px;
+            height: 100px;
+            background: lightcoral;
+        }
+        div {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">Hello</div>
+    <div id="test"></div>
+</body>
+</html>

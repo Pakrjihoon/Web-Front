@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>여행기 검색</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+        #wrap {
+            width: 1080px;
+            height: auto;
+            /*background-color: #E91E63;*/
+            margin: auto;
+        }
+
+        #region {
+            width: 900px;
+            height: 200px;
+            margin: auto;
+            /*background-color: #40beed;*/
+            /*color: #fff;*/
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            /*border: 1px solid #424242;*/
+            /*border-collapse: collapse;*/
+
+        }
+
+        #region label {
+            width: 98px;
+            height: 98px;
+            /*border: none;*/
+            display: block;
+            float: left;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            /*margin:1px;*/
+            border:1px solid #fff;
+            background-color: #40beed;
+            color: #fff;
+            cursor: pointer;
+
+        }
+
+        #region label:hover{
+            background-color: #fff;
+            color: #40beed;
+            transition: .2s ease;
+        }
+        #region label:active{
+            background-color: #fff;
+            color: #40beed;
+            border:1px solid #40beed ;
+            transition: .2s ease;
+        }
+        #region .on{
+            background-color: #fff;
+            color: #40beed;
+            border:1px solid #40beed ;
+            transition: .2s ease;
+
+        }
+
+        #region input {
+            display: none;
+        }
+
+        #filter {
+            width: 200px;
+            min-height: 500px;
+            /*background-color: #00bb00;*/
+            position: relative;
+            /*float: right;*/
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            background-color: #ffffff;
+            border-radius: 2px;
+            margin-top: 100px;
+            float: left;
+        }
+
+        .sort {
+            width: 185px;
+            height: 50px;
+            /*background-color: #0091ea;*/
+            display: block;
+            font-weight: 500;
+            padding-left: 15px;
+        }
+
+        #line {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .applyBtn {
+            width: 100px;
+            font-size: 15px;
+            height: 30px;
+            background-color: #40beed;
+            text-decoration: none;
+            color: #FFFFFF;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            margin-left: 49px;
+            margin-bottom: 10px;
+            line-height: 30px;
+        }
+
+        .applyBtn:hover {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-shadow: 0 0 5px;
+            background: #0091ea;
+        }
+
+        #content {
+            position: relative;
+            width: 800px;
+            min-height: 800px;
+            /*background-color: #dd6641;*/
+            margin-left: 230px;
+            margin-top: 65px;
+            /*padding-bottom: 20px;*/
+            /*box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);*/
+        }
+
+        #order {
+            position: relative;
+            width: 130px;
+            height: 40px;
+            top: 280px;
+            left: 900px;
+
+        }
+
+        #list {
+            position: relative;
+            width: 800px;
+            min-height: 200px;
+            margin: auto;
+            /*margin-bottom: 20px;*/
+            /*background-color: #42A5F5;*/
+
+        }
+
+        .list {
+            position: relative;
+            width: 800px;
+            height: 180px;
+            /*background-color: beige;*/
+            display: inline-block;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /*padding-bottom: 20px;*/
+        }
+
+        .photo {
+            position: absolute;
+            width: 190px;
+            height: 170px;
+            background-image: url(img/paris.jpg);
+            background-size: cover;
+            margin: 5px;
+
+        }
+
+        .text2 {
+            position: absolute;
+            font-size: 30px;
+            top: 12px;
+            left: 210px;
+            font-weight: bold;
+
+        }
+
+        .text3 {
+            position: relative;
+            font-size: 20px;
+            top: 50px;
+            left: 60px;
+            width: 500px;
+            height: 30px;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            text-align: justify-all;
+            white-space: nowrap;
+            overflow: hidden;
+            /*background-color: #FFDE2F;*/
+        }
+
+        .diaryList {
+            position: absolute;
+            height: 36px;
+            bottom: 10px;
+            left: 210px;
+            white-space: nowrap;
+        }
+
+        .diaryList .diary {
+            height: 36px;
+            /*background-color: #CDDC39;*/
+            display: inline-block;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .diaryList .border {
+            width: 10px;
+            height: 1px;
+            border-bottom: 2px solid #40BEED;
+            /*background-color: #E0E0E0;*/
+            position: absolute;
+            top: 17px;
+            left: 0px;
+        }
+
+        .diaryList .circle {
+            padding: 0 12px;
+            height: 34px;
+            background-color: #fff;
+            border-radius: 50px;
+            line-height: 34px;
+            font-size: 10px;
+            text-align: center;
+            position: relative;
+            color: #40BEED;
+            border: 1px solid #40BEED;
+        }
+
+        .diaryList .firstList {
+            padding-left: 0;
+            /*background-color: red;*/
+        }
+
+        .diaryList .firstList > .border {
+            left: 20px;
+            width: 80px;
+        }
+
+        /*#diaryList .finalList>.border{*/
+        /*right: 30px;*/
+        /*width: 80px;*/
+        /*}*/
+        /*#diaryList .moreList{*/
+        /*}*/
+
+        .more {
+            /*padding:0 12px;*/
+            width: 34px;
+            height: 34px;
+            background-color: #fff;
+            border-radius: 50px;
+            line-height: 34px;
+            font-size: 10px;
+            text-align: center;
+            position: relative;
+            color: #40BEED;
+            border: 1px solid #40BEED;
+            left: 750px;
+            top: 170px;
+        }
+
+        .text4 {
+            position: relative;
+            left: 640px;
+            font-size: 20px;
+            top: -10px;
+        }
+
+        .dollar {
+            width: 40px;
+            height: 40px;
+            border-radius: 35px;
+            /*background-color:#42A5F5 ;*/
+            border: 3px solid #424242;
+            position: relative;
+            font-size: 40px;
+            left: 550px;
+            top: 10px;
+            color: #FFDE2F;
+            text-align: center;
+
+        }
+        .list:hover{
+            background-color: #40BEED;
+            transition: .2s ease;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=openChatPopup())>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="wrap">
+    <select id="order">
+        <option>전체보기</option>
+    </select>
+    <div id="region">
+<form>
+            <label><input type="radio"/>전국</label>
+            <label><input type="radio" name="seoul"/>서울</label>
+            <label><input type="radio"/>경기</label>
+            <label><input type="radio"/>인천</label>
+            <label><input type="radio"/>강원</label>
+            <label><input type="radio"/>대전</label>
+            <label><input type="radio"/>세종</label>
+            <label><input type="radio"/>충북</label>
+            <label><input type="radio"/>충남</label>
+            <label><input type="radio"/>광주</label>
+            <label><input type="radio"/>전북</label>
+            <label><input type="radio"/>전남</label>
+            <label><input type="radio"/>부산</label>
+            <label><input type="radio"/>대구</label>
+            <label><input type="radio"/>울산</label>
+            <label><input type="radio"/>경북</label>
+            <label><input type="radio"/>경남</label>
+            <label><input type="radio"/>제주</label>
+</form>
+    </div>
+    <div id="filter">
+        <div class="row">
+            <label id="sight" class="sort">테마</label>
+            <label class="sort"><input type="checkbox" name="filialduty" id="filialduty" value="filialduty" checked="checked">효도</label>
+            <label class="sort"> <input type="checkbox" name="girlfriend" id="girlfriend"
+                                        value="girlfriend">여자친구</label>
+            <label class="sort"><input type="checkbox" name="boyfriend" id="boyfriend" value="boyfriend">남자친구</label>
+            <label class="sort"><input type="checkbox" name="camping" id="camping" value="camping">캠핑/글램핑</label>
+            <label class="sort"><input type="checkbox" name="nature" id="nature" value="nature">자연/풍경</label>
+            <label class="sort"><input type="checkbox" name="picture" id="picture" value="picture">사진</label>
+            <label class="sort"><input type="checkbox" name="famous" id="famous" value="famous">맛집탐방</label>
+            <label class="sort"><input type="checkbox" name="spring" id="spring" value="spring">봄</label>
+            <label class="sort"><input type="checkbox" name="summer" id="summer" value="summer">여름</label>
+            <label class="sort"><input type="checkbox" name="autumn" id="autumn" value="autumn">가을</label>
+            <label class="sort"><input type="checkbox" name="winter" id="winter" value="winter">겨울</label>
+
+
+        </div><!--row end-->
+        <a href="" class="applyBtn">적용하기</a>
+    </div><!--filter end-->
+    <div id="content">
+        <div id="List">
+            <ul class="title">
+                <script type="text/template" id="jounalTmpl">
+                    <div class="more">...</div>
+                    <li class="list">
+                        <div class="photo"></div>
+                        <h2 class="text2">환상의 나라 에버랜드로~</h2>
+                        <i class="fas fa-dollar-sign dollar"></i>
+                        <span class="text4">800,000원</span>
+                        <span class="text3">#효도</span>
+                        <span class="text3">#관광</span>
+                        <ul class="diaryList" style="width:300px">
+                            <li class="diary firstList">
+                                <div class="border"></div>
+                                <div class="circle">에버랜드zzz</div>
+                            </li>
+                            <li class="diary">
+                                <div class="border"></div>
+                                <div class="circle">롯데월드</div>
+                            </li>
+                            <li class="diary">
+                                <div class="border"></div>
+                                <div class="circle">서울랜드</div>
+                            </li>
+                        </ul>
+                    </li>
+                </script>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="copyright">
+        <p>상호명 : (주)에르메스 | 대표 : 샤넬 | 개인정보책임자 : 루이비똥</p>
+        <p>사업자등록번호 : 201-54-10020 | 통신판매업신고번호 : 제 2018-서울관악-15411호</p>
+        <p>주소 : 충청남도 아산시 신창면 순천향로 22, 멀티미디어관 6층 | 광고 및 제휴 : hsh2@sch.ac.kr</p>
+        <br/>
+        <p>Copyright 2018. HERMES. All rights reserved.</p>
+    </div>
+</div>
+<script src="js/fix-footer.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/underscore-min.js"></script>
+<script>
+    var tmp=_.template($("#jounalTmpl").html());
+    $(document).ready(function () {
+        for(var i=0;i<8;i++) {
+            $(".title").append(tmp);
+        }
+    })
+
+    $("#region label").click(function () {
+        // alert(1);
+        // e.preventDefault()
+        $(".on").removeClass("on");
+        $(this).addClass("on");
+    })
+    var $window = $(window),
+        $document = $(document);
+
+    // alert(docHeight);
+
+    $window.scroll(function() {
+
+        var docHeight = $document.height(),
+            winHeight = $window.height();
+
+        var sTop = $window.scrollTop();
+
+        if(docHeight<=(sTop+winHeight)+30) {
+
+            for(var i = 0 ; i < 10 ; i++) {
+
+                var tmp = _.template($("#replayTmp").html());
+                $("#bandList").append(tmp);
+            }
+
+        }
+
+    });
+    $(window).scroll(function () {
+
+        //스크롤탑
+        var sTop=$(this).scrollTop();
+
+        //브라우저의 높이
+        var wTop=$(window).height();
+
+        //문서의 높이
+        var dTop=$(document).height();
+
+        if((dTop-50)<=wTop+sTop){
+            for(var i=0;i<20;i++){
+                $(".title").append(tmp);
+            }
+        }
+
+
+        //console.log("스크롤탑 : "+sTop+"/ 브라우저 높이:"+wTop+"/문서의 높이:"+dTop);
+    });//scroll() end
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문이 열리네요~</title>
+    <style>
+       #frame {
+           width: 557px;
+           height: 735px;
+           /* CSS3 부터는 뒷배경 이미지를 여러개 지정 가능 */
+           background-image: url(img/frame.png), url(img/pic2.png);
+           background-size: 100% 100%;
+           position: fixed;
+           left: 50%;
+           top: 50%;
+           margin: -367.5px 0 0 -278.5px;
+
+           /* 부모에 perspective 지정 가능 */
+           perspective: 1000px;
+       }
+        .door {
+            width: 266px;
+            height: 707px;
+            transition: .6s ease;
+            background-size: cover;
+            position: absolute;
+        }
+        .left {
+            background-image: url(img/door1.png);
+            left: 11px;
+            top: 15px;
+            transform-origin: left;
+        }
+        .right {
+            background-image: url(img/door2.png);
+            background-size: 100% 100%;
+            right: 11px;
+            top: 15px;
+            transform-origin: right;
+        }
+        #frame:hover .left {
+            transform: rotateY(-120deg);
+        }
+        #frame:hover .right {
+            transform: rotateY(120deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <!--
+        1) 뒷 배경이미지를 2개 지정
+        2) 가상요소를 이용해서 이미지를 지정
+     -->
+    <div id="frame">
+        <div class="door left"></div>
+        <div class="door right"></div>
+    </div>
+</body>
+</html>

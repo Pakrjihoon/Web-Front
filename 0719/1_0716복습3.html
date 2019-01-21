@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        ul {
+            margin: 0;
+        }
+        #menuList {
+            /* ul은 margin이 위 아래만 존재합니다 */
+            list-style: none;
+            width: 400px;
+            height: 400px;
+            padding: 0;
+            background: url(img/002.gif);
+            background-size: 100% 100%;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -200px 0 0 -200px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+        }
+        #menuList li {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: #FFF;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            transition: .5s ease;
+            text-shadow: 1px 3px 2px #424242;
+        }
+        /*
+            CSS3의 선택자 중에
+            - first-child : 부모 기준 첫번재 자식요소 선택
+            - last-child : 부모 기준 마지막 자식요소 선택
+            - nth-child(n) : 부모기준 n번재 자식요소 선택
+         */
+        li:nth-child(1) {
+            background-color: mediumseagreen;
+            left:0;
+            top: 0;
+            transform-origin: 100px 0;
+        }
+        li:nth-child(1):active {
+            transform:perspective(300px) rotateX(-60deg);
+        }
+        li:nth-child(2) {
+            background-color: cornflowerblue;
+            top: 0;
+            right: 0;
+            transform-origin: 200px 100px;
+        }
+        li:nth-child(2):active {
+            transform:perspective(200px) rotateY(-60deg);
+        }
+        li:nth-child(3) {
+            background-color: darkkhaki;
+            bottom: 0;
+            left: 0;
+            transform-origin: 0 100px;
+        }
+        li:nth-child(3):active {
+            transform: perspective(200px) rotateY(60deg);
+        }
+        li:nth-child(4) {
+            background-color: indianred;
+            right: 0;
+            bottom: 0;
+            transform-origin: 100px 200px;
+        }
+        li:nth-child(4):active {
+            transform: perspective(200px) rotateX(60deg);
+        }
+    </style>
+</head>
+<body>
+<!--
+    id, class(프로그래밍에서 변수, 함수, 메서드 등의 이름설정
+    - 낙타표기법(Camel Case) : superMan 명사 + 명사 에서는 끊어지는 부분에 대문자로 표기
+    - 헝가리언 표기법 : super_man 끊어지는 부분에 언더바 표기
+
+    id는 낙타표기법
+    class는 언더바표기법
+    가독성을 위해서 이렇게 표기하겠습니다.
+-->
+    <ul id="menuList">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+</body>
+</html>

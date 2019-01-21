@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex4</title>
+</head>
+<body>
+    <h1>당신이 가고 싶은 사이트를 클릭하세요</h1>
+    <button id="naver">네이버</button>
+    <button id="google">구글</button>
+    <button id="facebook">페이스북</button>
+    <button id="twitter">트위터</button>
+    <button id="instagram">인스타그램</button>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+		//이 곳을 채우세요.(나머지는 절대 변경 불가능)
+
+        // 현재 가리키고 있는 버튼의 index 값을 찾고 그 값을 변수에 넣어줍니다.
+        // 그 후 조건문을 주어 idx 값에 따른 홈페이지 이동을 하게됩니다.
+        var idx = $(this).index();
+        if(idx==1){
+		     location.href="https://www.naver.com/";
+         }
+         else if(idx==2) {
+		     location.href="https://www.google.com/";
+         }
+         else if(idx==3) {
+             location.href="https://www.facebook.com/";
+         }
+         else if(idx==4) {
+             location.href="https://twitter.com/?lang=ko";
+         }
+         else {
+             location.href="https://www.instagram.com/?hl=ko";
+         }
+    });
+</script>
+</body>
+</html>

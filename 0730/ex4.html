@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex4</title>
+</head>
+<body>
+    <h1>당신이 가고 싶은 사이트를 클릭하세요</h1>
+    <button id="naver">네이버</button>
+    <button id="google">구글</button>
+    <button id="facebook">페이스북</button>
+    <button id="twitter">트위터</button>
+    <button id="instagram">인스타그램</button>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+		//이 곳을 채우세요.(나머지는 절대 변경 불가능)
+
+        // 우리가 클릭한 그 버튼요소의 id속성값을 얻어옴
+		 var siteName = $(this).attr("id");
+		 // jquery 스타일
+         // $(location).attr("href","http://naver.com");
+         location.href="https://"+siteName+".com";
+    });
+</script>
+</body>
+</html>

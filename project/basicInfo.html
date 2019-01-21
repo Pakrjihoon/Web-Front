@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>명소 등록</title>
+</head>
+<link rel="icon" href="img/favicon-96x96.png">
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+<style>
+    body {
+        height: auto;
+    }
+    #wrap {
+        position: relative;
+        margin: auto;
+        width: 650px;
+        height: auto;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    #basicContent {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    #basicHeader {
+        width: 650px;
+        height: 100px;
+        margin-top: 30px;
+    }
+    #firstFlow ,#secondFlow, #lastFlow {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 180px;
+        height: 50px;
+        background-color: #f0f0f0;
+        display: inline-block;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-left: 22px;
+        border-radius: 10px;
+    }
+    #secondFlow {
+        background-color: #40BEED;
+        color: #fff;
+    }
+    hr {
+        width: 500px;
+        position: absolute;
+        left: 75px;
+        top: 35px;
+        z-index: -1;
+    }
+    #mainImage {
+        width: 400px;
+        height: 200px;
+        margin: auto;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    p {
+        margin-top:10px ;
+    }
+    #name, #type, #basicIntro, #telNum, #address ,#map{
+        width: 400px;
+        margin: auto;
+        margin-top: 25px;
+    }
+    #map {
+        height: 300px;
+    }
+    #selector {
+        width: 650px;
+        height: 50px;
+        position: relative;
+        margin: auto;
+    }
+    .selectBtn {
+        position: absolute;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #424242;
+        background-color: #f0f0f0 ;
+        transition: .3s ease;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .selectBtn:hover {
+        background-color: #40BEED;
+        color: #ffffff;
+    }
+    .select1 {
+        margin-left: 150px;
+    }
+    .select2 {
+        left: 400px;
+    }
+    #picture, #picture>i {
+        width: 100%;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        font-size: 50px;
+        cursor: pointer;
+        transition: .2s ease;
+        top:-2px;
+    }
+    #mainImage:hover {
+        background-color: #f0f0f0;
+    }
+    #searchAddress {
+        border: none;
+        background-color: #f0f0f0;
+        width: 120px;
+        height: 20px;
+        cursor: pointer;
+        transition: .2s ease;
+        border-radius: 20px;
+    }
+    #searchAddress:hover {
+        background-color: #40BEED;
+        color: #fff;
+    }
+    #basicIntro {
+        height: 60px;
+    }
+    .bad1,.bad2,.typeBad {
+        color:#E91E63;
+        font-size: 12px;
+    }
+
+</style>
+<body>
+<div id="wrap">
+    <div id="basicHeader">
+        <div id="firstFlow">명소 검색</div>
+        <div id="secondFlow">기본 정보 입력</div>
+        <div id="lastFlow">상세 정보 입력</div>
+        <hr/>
+    </div>
+    <div id="basicContent">
+        <form action="" method="post">
+            <div id="mainImage">
+                <label id=picture for="pictures"><i class="fas fa-camera"></i>
+                <input id="pictures" class="screen_out" name="picture" type="file">
+                </label>
+            </div>
+            <div id="name">
+                <label for="locationName">명소 이름</label>
+                <input id="locationName" name="name" placeholder="명소 이름을 입력해주세요">
+                <span class="bad1"> *필수 입력사항 입니다.</span>
+            </div>
+            <div id="type"> 명소 타입
+                <label><input name="selectType" class ="select_location_type" type="radio" value="room">숙소</label>
+                <label><input name="selectType" class ="select_location_type" type="radio" value="culture">관광</label>
+                <label><input name="selectType" class ="select_location_type" type="radio" value="food">음식점</label>
+                <span class="typeBad"> *타입을 지정해주세요</span>
+            </div>
+            <div id="address">주소
+                <input type="text" id="postcode" placeholder="우편번호" readonly>
+                <input type="button" id="searchAddress" value="주소 검색하기">
+                <p>
+                    <input type="text" id="address1" size="50"><br>
+                    <span class="bad2"> *필수 입력사항 입니다.</span>
+                </p>
+                <p>
+                    <input type="text" id="address2" size="50" placeholder="상세 주소 입력">
+                </p>
+            </div>
+            <div id="map"></div>
+            <div id="telNum">
+            <label>전화번호</label>
+            <input class="tel_number" name="firstNumber" size="5">-<!--
+            --><input class="tel_number" name="secondNumber" size="5">-<!--
+            --><input class="tel_number" name="lasteNumber" size="5">
+            </div>
+            <div>
+                <div id="basicIntro">
+            <label for="intro">소개</label>
+            <input id="intro" type="text" size="50">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div id="selector">
+    <a href="registerLocation.html" class="selectBtn select1">&lt; 이전으로</a>
+    <a href="" id="next" class="selectBtn select2">다음으로 &gt;</a>
+</div>
+<script src="js/jquery.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=86ebe9e4552156ffbdbba58beafaaf3d&libraries=services"></script>
+<script>
+    $(".bad1").hide();
+    $(".bad2").hide();
+    $(".typeBad").hide();
+    var $postcode = $("#postcode");
+    var $address1 = $("#address1");
+    var $address2 = $("#address2");
+    var infowindow=null;
+
+    $("#searchAddress").click(function () {
+       new daum.Postcode({
+           oncomplete: function (data) {
+               var fullAddr = '';
+               var extraAddr = '';
+               if(data.userSelectedType==='R') {
+                   fullAddr = data.roadAddress;
+               } else {
+                   fullAddr = data.jibunAddress;
+               }
+               if(data.userSelectedType ==='R') {
+                   if(data.bname!=='') {
+                       extraAddr +=data.bname;
+                   }
+                   if(data.buildingName !=='') {
+                       extraAddr+=(extraAddr !=='' ? ',' + data.buildingName : data.buildingName);
+                   }
+                   fullAddr += (extraAddr !==''?'('+extraAddr +')':'');
+               }
+               $postcode.val(data.zonecode);
+               $address1.val(fullAddr);
+               $address2.focus();
+
+               // 주소로 좌표를 검색합니다
+               geocoder.addressSearch(fullAddr, function(result, status) {
+
+                   // 정상적으로 검색이 완료됐으면
+                   if (status === daum.maps.services.Status.OK) {
+
+                       var coords = new daum.maps.LatLng(result[0].y, result[0].x);
+
+                       // 결과값으로 받은 위치를 마커로 표시합니다
+                       var marker = new daum.maps.Marker({
+                           map: map,
+                           position: coords
+                       });
+                       // 인포윈도우로 장소에 대한 설명을 표시합니다
+                       infowindow = new daum.maps.InfoWindow({
+                           content: '<div style="width:150px;text-align:center;padding:6px 0;">여기염!</div>'
+                       });
+                       if(infowindow!=null) {
+                           infowindow.close();
+                       }
+                       infowindow.open(map, marker);
+
+                       // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                       map.setCenter(coords);
+                   }
+               });
+           }
+       }).open();
+    });
+    function check(e) {
+        var locationName = $.trim($("#locationName").val());
+        var address = $.trim($("#address1").val());
+        if(locationName.length===0) {
+            e.preventDefault();
+            $(".bad1").show();
+            $(".bad2").hide();
+        }
+        else if(address.length===0) {
+            e.preventDefault();
+            $(".bad2").show();
+            $(".bad1").hide();
+        }
+        if(locationName.length===0 && address.length===0) {
+            e.preventDefault();
+            $(".bad2").show();
+            $(".bad1").show();
+        }
+    }
+    $("#next").click(function (e) {
+        check(e);
+        var type = $('input[name="selectType"]:checked').val();
+       if(type==="room") {
+           $(".typeBad").css("display","none");
+           $("#next").attr("href","registerRoom.html");
+       }
+       else if(type==="food") {
+           $(".typeBad").css("display","none");
+           $("#next").attr("href","registerFood.html");
+       }
+       else if(type==="culture") {
+           $(".typeBad").css("display","none");
+           $("#next").attr("href","registerCulture.html")
+       }
+       else {
+           e.preventDefault();
+           $(".typeBad").css("display","inline");
+       }
+    });
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+        mapOption = {
+            center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    // 지도를 생성합니다
+    var map = new daum.maps.Map(mapContainer, mapOption);
+    // 주소-좌표 변환 객체를 생성합니다.
+    var geocoder = new daum.maps.services.Geocoder();
+
+</script>
+</body>
+</html>

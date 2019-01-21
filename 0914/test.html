@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>멋진 도서 사이트</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+<link rel="stylesheet" href="css/reset.css"/>
+<link rel="stylesheet" href="css/paginate.css"/>
+<link href="https://fonts.googleapis.com/css?family=Poor+Story" rel="stylesheet">
+<style>
+	
+	#main  {
+		width:840px;
+		margin:auto;
+		border:1px solid #424242;
+		font-family: 'Poor Story', cursive;
+		font-size:24px;
+		
+	}	
+	#main h1 {
+		font-size:50px;
+		font-weight:bold;
+		text-align: center;
+		margin:20px 0;
+	}
+	#bookList {
+		width:825px;
+		overflow:hidden;
+		margin:20px 0;
+		padding-left:15px;
+	}
+	.book {
+		width:390px;
+		height:360px;
+		border:1px solid #424242;
+		margin-top:10px;
+		margin-left:10px;
+		float: left;
+		position: relative;
+		box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+		 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	}
+	.book h3 {
+		font-size:26px;
+		font-weight:bold;
+		width:350px;
+		height:30px;
+		position: absolute;
+		left:10px;
+		top:10px;
+		white-space: pre;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.book img {
+		position: absolute;
+		left:10px;
+		top:50px;
+		width:200px;
+		height:300px;
+	}
+
+.book strong {
+	position: absolute;
+	left:225px;
+	top:50px;
+	font-size:20px;
+}
+.book time {
+	position: absolute;
+	left:225px;
+	top:80px;
+	font-size:16px;
+}
+</style>
+</head>
+<body>
+	<div id="main">
+		<h1>도서 목록</h1>
+		<ul id="bookList">
+			<script type="text/template" id="bookTmp">
+				<%_.each(books,function(book){ %>
+
+				<li class="book">
+					<h3><%=book.title%></h3>
+					<img src="thumb/<%=book.image%>"/>
+					<strong><%=book.author%></strong>
+					<time><%=moment(book.publicationDate).format("YYYY년 M월 D일")%></time>
+				</li>
+				<%})%>
+			</script>
+		</ul>
+
+		<div class='paginate'><span title="이전 페이지 없음"><i class="fa fa-chevron-left"></i></span><strong title='현재 1페이지'>1</strong><a href='index.jsp?page=2' title='2'>2</a><a href='index.jsp?page=3' title='3'>3</a><a href='index.jsp?page=2' title='다음 페이지로'><i class='fa fa-chevron-right'></i><span class='screen_out'>다음 페이지</span></a></div>
+	</div>
+<script src="js/underscore-min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+    var tmp = _.template($("#bookTmp").html());
+	$.ajax({
+		url:"ajax/books.json",
+		type:"get",
+		dataType: "json",
+		error:function () {
+			alert("ERROR!");
+        },
+		success:function (json) {
+			$("#bookList").append(tmp({books:json}));
+        }
+
+	});
+</script>
+</body>
+</html>

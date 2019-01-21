@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <link rel="stylesheet" href="css/addSlider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/CommonCSSBundle.merged.css">
+    <link rel="stylesheet" type="text/css" href="css/PollCSSBundle.merged.css">
+    <link rel="stylesheet" href="css/locationContent.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <script src="js/common.merged.js"></script>
+    <style>
+        #logoImage{
+            background-image: url("img/로고.png");
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=alert('미구현')>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+    <div id="wrap">
+        <div class="navigator">
+            <div class="to_top"><a href="#" class="arrow_to_top arrow fas fa-angle-up"></i></a></div>
+            <div class="help">
+                <button class="navigation"><span>이동하기</span></button>
+            </div>
+            <div class="to_bottom"><a href="#" class="arrow_to_bottom arrow fas fa-angle-down"></i></a></div>
+        </div>
+        <div class="selectMap">
+            <div id="kakaoWrap" class="election_type2">
+                <div id="kakaoContent" class="cont_vote" role="main">
+                    <div id="cSub">
+                        <div class="feature_vote feature_count">
+                            <div class="inner_g">
+                                <div class="status_vote">
+                                    <div class="count_vote">
+                                        <div class="sort_election"><!-- 팝업 오픈시 .sort_open 클래스 추가 -->
+                                            <a href="javascript:;" class="btn_sort"><span class="screen_out">선택된 지역</span><span id="selectDistrict">전국</span><span class="ico_election">다른지역 펼치기</span></a>
+                                            <ul class="layer_sort">
+                                                <li class="on"><a href="javascript:;" class="link_region"><span class="txt_g">전국</span></a></li> <!-- 선택된 지역에 on클래스 추가 -->
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3110000">
+                                                        <span class="txt_g">서울</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3260000">
+                                                        <span class="txt_g">부산</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3270000">
+                                                        <span class="txt_g">대구</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3280000">
+                                                        <span class="txt_g">인천</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3290000">
+                                                        <span class="txt_g">광주</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3300000">
+                                                        <span class="txt_g">대전</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3310000">
+                                                        <span class="txt_g">울산</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3410000">
+                                                        <span class="txt_g">경기</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3420000">
+                                                        <span class="txt_g">강원</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3430000">
+                                                        <span class="txt_g">충북</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3440000">
+                                                        <span class="txt_g">충남</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3450000">
+                                                        <span class="txt_g"> 전북</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3460000">
+                                                        <span class="txt_g">전남</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3470000">
+                                                        <span class="txt_g">경북</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3480000">
+                                                        <span class="txt_g">경남</span>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;" class="link_region dist" did="3490000">
+                                                        <span class="txt_g">제주</span>
+                                                    </a>
+                                                <li>
+                                            </ul>
+                                            <a href="javascript:;" class="link_nation" style="display: none;"><span class="ico_election">전국으로 돌아가기</span></a>
+                                        </div>
+                                        <div class="count_map">
+                                            <div class="map_count">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--// cSub -->
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div id="fillter">
+            <h2 id="fillterMain">필터</h2>
+            <div id="money">
+                <h2 id="priceBar">가격 정보</h2>
+                <input type="range" min="0" max="100000" step="500" class="slider">
+                <p class="result"></p>
+            </div>
+            <div id="type">
+                <button type="button" class="moreBtn1"><i id="fa1" class="fas fa-arrow-circle-down"></i> 시설 타입</button>
+                <div id="moreType" class="hide">
+                    <label class="type1"><input type="checkbox">자연/공원</label>
+                    <label class="type1"><input type="checkbox">랜드마크(놀이공원)</label>
+                    <label class="type1"><input type="checkbox">박물관/동물원/아쿠아리움</label>
+                    <label class="type1"><input type="checkbox">문화재/유적지</label>
+                    <label class="type1"><input type="checkbox">수상 스포츠</label>
+                    <label class="type1"><input type="checkbox">일반 스포츠</label>
+                    <label class="type1"><input type="checkbox">오락</label>
+                    <label class="type1"><input type="checkbox">기타</label>
+                </div>
+            </div>
+            <div id="install">
+                <button type="button" class="moreBtn2"><i id="fa2" class="fas fa-arrow-circle-down"></i> 시설 특징</button>
+                <div id="moreInstall" class="hide">
+                    <label class="type1"><input type="checkbox" name="install">주차 가능</label>
+                    <label class="type1"><input type="checkbox" name="install">애완동물 허용</label>
+                    <label class="type1"><input type="checkbox" name="install">음식점</label>
+                    <label class="type1"><input type="checkbox" name="install">화장실</label>
+                    <label class="type1"><input type="checkbox" name="install">무료 와이파이</label>
+                    <label class="type1"><input type="checkbox" name="install">카페테리아</label>
+                    <label class="type1"><input type="checkbox" name="install">장애인 시설 완비</label>
+                    <label class="type1"><input type="checkbox" name="install">실내공간</label>
+                    <label class="type1"><input type="checkbox" name="install">셔틀버스</label>
+                </div>
+            </div>
+            <div id="userReview">
+                <button type="button" class="moreBtn3"><i id="fa3" class="fas fa-arrow-circle-down"></i> 사용자 평점</button>
+                <div id="moreReview" class="hide">
+                    <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                    <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                    <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                    <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                    <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i></label>
+                </div>
+            </div>
+            <button type="button" id="applyBtn">적용 하기</button>
+        </div>
+        <div id="select">
+            <button id="roomBtn" type="button" class="categoryBtn">숙소</button>
+            <button id="foodBtn" type="button" class="categoryBtn">음식점</button>
+            <button id="cultureBtn" type="button" class="categoryBtn on">관광지</button>
+        </div>
+        <div id="content">
+            <div class="element">
+                <div class="ele_picture">
+                    <img src="img/culture.jpg" alt="관광">
+                </div>
+                <div class="ele_info">
+                    <h2 class="location_name">경복궁</h2>
+                    <h2 class="fonderImg"><i class="fas fa-user-circle"></i>서울킬러</h2>
+                    <h3 class="location_intro">과거와 현재, 그 사이를 걷다</h3>
+                    <span class="s_price1">성인 기준 입장료 </span>
+                    <span class="s_price2">7,000 원</span><br/>
+                    <span class="location_address">서울특별시 종로구</span>
+                    <span class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <i class="far fa-heart"> 20,031</i>
+                </div>
+            </div>
+            <div class="element">
+                <div class="ele_picture">
+                    <img src="img/culture.jpg" alt="관광">
+                </div>
+                <div class="ele_info">
+                    <h2 class="location_name">경복궁</h2>
+                    <h2 class="fonderImg"><i class="fas fa-user-circle"></i>서울킬러</h2>
+                    <h3 class="location_intro">과거와 현재, 그 사이를 걷다</h3>
+                    <span class="s_price1">성인 기준 입장료 </span>
+                    <span class="s_price2">7,000 원</span><br/>
+                    <span class="location_address">서울특별시 종로구</span>
+                    <span class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <i class="far fa-heart"> 20,031</i>
+                </div>
+            </div>
+            <div class="element">
+                <div class="ele_picture">
+                    <img src="img/culture.jpg" alt="관광">
+                </div>
+                <div class="ele_info">
+                    <h2 class="location_name">경복궁</h2>
+                    <h2 class="fonderImg"><i class="fas fa-user-circle"></i>서울킬러</h2>
+                    <h3 class="location_intro">과거와 현재, 그 사이를 걷다</h3>
+                    <span class="s_price1">성인 기준 입장료 </span>
+                    <span class="s_price2">7,000 원</span><br/>
+                    <span class="location_address">서울특별시 종로구</span>
+                    <span class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <i class="far fa-heart"> 20,031</i>
+                </div>
+            </div>
+            <div class="element">
+                <div class="ele_picture">
+                    <img src="img/culture.jpg" alt="관광">
+                </div>
+                <div class="ele_info">
+                    <h2 class="location_name">경복궁</h2>
+                    <h2 class="fonderImg"><i class="fas fa-user-circle"></i>서울킬러</h2>
+                    <h3 class="location_intro">과거와 현재, 그 사이를 걷다</h3>
+                    <span class="s_price1">성인 기준 입장료 </span>
+                    <span class="s_price2">7,000 원</span><br/>
+                    <span class="location_address">서울특별시 종로구</span>
+                    <span class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <i class="far fa-heart"> 20,031</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="replayTmp">
+        <div class="element">
+            <div class="ele_picture">
+                <img src="img/hotel.jpg" alt="호텔">
+            </div>
+            <div class="ele_info">
+                <h2 class="location_name">신라 호텔</h2>
+                <h2 class="fonderImg"><i class="fas fa-user-circle"></i>해리포터</h2>
+                <h3 class="location_intro">품격있는 호텔, 최고의 서비스</h3>
+                <span class="s_price1">1박 숙박 기준 </span>
+                <span class="s_price2">180,000 원</span><br/>
+                <span class="location_address">서울특별시 관악구</span>
+                <span class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                <i class="far fa-heart"> 4,023</i>
+            </div>
+        </div><!--//element-->
+    </script>
+<script src="js/jquery.js"></script>
+<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/e20180613SocialSharePcBundle.merged.js"></script>
+<script src="js/localContent.js"></script>
+<script src="js/profilePopup.js"></script>
+<script src="js/chat.js"></script>
+    <script>
+        $(".moreBtn1").click(function () {
+            if($("#moreType").hasClass("hide")) {
+                $("#moreType").removeClass("hide");
+                $("#fa1").addClass("fa-arrow-circle-up");
+            }
+            else {
+                $("#moreType").addClass("hide");
+                $("#fa1").removeClass("fa-arrow-circle-up");
+                $("#fa1").addClass("fa-arrow-circle-down");
+            }
+        });
+        $(".moreBtn2").click(function () {
+            if($("#moreInstall").hasClass("hide")) {
+                $("#moreInstall").removeClass("hide");
+                $("#fa2").addClass("fa-arrow-circle-up");
+            }
+            else {
+                $("#moreInstall").addClass("hide");
+                $("#fa2").removeClass("fa-arrow-circle-up");
+                $("#fa2").addClass("fa-arrow-circle-down");
+            }
+        });
+        $(".moreBtn3").click(function () {
+            if($("#moreReview").hasClass("hide")) {
+                $("#moreReview").removeClass("hide");
+                $("#fa3").addClass("fa-arrow-circle-up");
+            }
+            else {
+                $("#moreReview").addClass("hide");
+                $("#fa3").removeClass("fa-arrow-circle-up");
+                $("#fa3").addClass("fa-arrow-circle-down");
+            }
+        });
+    </script>
+    <script src="js/e20180613VoteRegionBundle.merged.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 브라우저가 가지고 있는 기본 CSS 를 제거하는 css 파일 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #nav {
+            width: 588px;
+            height: 170px;
+            border:2px solid transparent;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin-left: -296px;
+            margin-top: -87px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #nav li {
+            float:left;
+        }
+        #nav a {
+            width: 127px;
+            height: 150px;
+            display: block;
+            border: 10px solid #fff;
+            transition: .6s ease;
+        }
+        #nav a:hover {
+            border-color: #424242;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <h2 class="screen_out">카카오 메뉴</h2>
+        <ul>
+            <li>
+                <a href="">
+                    <img src="img/footer_face01.gif" alt="무지 아이콘"/>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/footer_face02.gif" alt="어피치 아이콘"/>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/footer_face03.gif" alt="제이지 아이콘"/>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="img/footer_face04.gif" alt="프로도 아이콘"/>
+                </a>
+            </li>
+        </ul>
+    </div> <!--//nav-->
+</body>
+</html>

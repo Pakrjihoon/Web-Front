@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>position:relative</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        /*
+            레이아웃 고려대상
+            1) 층수 (1층 : 블록레벨,
+                    2층 : 인라인레벨 / float
+                    3층 : relative, absolute, fixed)
+            2) 공간차지 유무
+
+            ※ 포지션의 종류
+            1) static : default
+            - 블록이면 1층, 인라인이면 2층
+            - 공간 차지함
+            2) absolute
+            - 층수 : 3층
+            - 공간차지유무 : x (공간을 차지하지 않는다.)
+            - 기준점 : 포지셔닝 컨텍스트 (조상에게 position 이 rel~,ab~,fix~ 이 포지셔닝 컨텍스트)
+            3) fixed
+            - 층수 : 3층
+            - 공간차지유무 : x (공간을 차지하지 않는다.)
+            - 기준점 : 브라우저
+            4) relative
+            - 층수 : 3층
+            - 공간차지유무 : o (공간을 차지한다.)
+            - 포지셔닝 컨텍스트를 지정해야 할 때 , 혹은 3층의 층수가 필요할때 사용(3층으로 올림)
+            - 기준점 : 자기자 자신이 있는 그 곳 javascript에선 this라고 생각
+
+         */
+        #red {
+            background-color: #FF0000;
+        }
+        #green {
+            background-color: #00ff00;
+        }
+        #blue {
+            background-color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+</body>
+</html>

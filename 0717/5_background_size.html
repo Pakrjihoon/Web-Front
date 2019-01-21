@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>background-size</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 400px;
+            border: 1px solid #424242;
+            background-image: url(img/backimg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            /*
+                이미지의 비율을 깨지 않고 size를 지정하는 방법
+                - contain : 이미지 중심(요소안에 모두 표현)
+                - cover : 요소 중심(요소를 가득 채움 : 이미지의 일부 잘릴 수 있음) 
+             */
+            background-size: 100% 100%;
+        }
+        .contain {
+            background-size: contain;
+        }
+        .cover {
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<!--
+    HTML 에서 이미지를 보여주려면
+    1) img 요소
+    2) css 의 background-image 속성
+
+    차이점 ?
+    - 이미지 자체가 컨텐츠(내용)일 경우 img 요소 사용
+    - 이미지가 꾸며지는(디자인)데 사용될 경우 background-image 이용
+
+-->
+<!--
+    - class 속성의 특징 : 중복(여러개 요소)
+    - 중첩(한 개의 요소에 여러개)
+-->
+<div class="box contain">
+    COOL SUMMER
+</div>
+<div class="box cover">
+    COOL SUMMER
+</div>
+</body>
+</html>

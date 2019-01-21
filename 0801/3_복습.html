@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>파이어폭스</title>
+    <style>
+        #phone {
+            width: 327px;
+            height: 586px;
+            background-image: url(img/phone-overlay.png),
+                                url(img/screen-overview.jpg),
+                                url(img/phone-shadow.png);
+            background-repeat: no-repeat;
+            background-position: 0 0, center 80px, 0 490px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -293px 0 0 -163.5px;
+        }
+
+       #fox {
+           width: 156px;
+           height: 156px;
+           position: absolute;
+           background-image: url(img/foxtail.png);
+           left: 80px;
+           top:170px;
+           animation: ani 2s steps(45) infinite;
+           /* 애니메이션 상태 : 잠시 멈춤 */
+           animation-play-state: paused;
+        }
+           /* 애니메이션 상태 : 움직임 */
+       #fox:active {
+           animation-play-state: running;
+       }
+        @keyframes ani {
+            0% {background-position: 0 0}
+            100% {background-position: -7020px 0 }
+        }
+    </style>
+</head>
+<body>
+<div id="phone">
+    <div id="fox">
+
+    </div>
+</div>
+</body>
+</html>

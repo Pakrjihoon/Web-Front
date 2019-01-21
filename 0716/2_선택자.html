@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* id 가 list 의 요소의 자손들중에 li를 전부 선택 */
+       #test1 li {
+           color:red;
+           border : 2px dotted #512335;
+           margin : 7px;
+           padding : 5px;
+        }
+        /* id 가 list 인 요소의 자식인 li 의 자식인 span 요소를 선택 */
+        #test2>li>span {
+            color : blue;
+        }
+        /*
+            1) 요소 선택자 : 요소명
+            2) id 선택자 : '#'
+            3) class 선택자 : '.'
+            4) 자손 선택자 : ' '
+            5) 자식 선택자 : '>'
+         */
+    </style>
+</head>
+<body>
+    <ul id="test1">
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>
+    <ul id="test2">
+        <li>리스트1&nbsp;<span>1</span></li>
+        <li>리스트2&nbsp;<span>2</span></li>
+        <li>리스트3&nbsp;<span>3</span></li>
+        <li>리스트4&nbsp;<span>4</span></li>
+    </ul>
+    <ul>
+        <li>테스트1</li>
+        <li>테스트2</li>
+        <li>테스트3</li>
+        <li>테스트4</li>
+    </ul>
+</body>
+</html>

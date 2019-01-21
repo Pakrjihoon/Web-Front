@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+</head>
+<style>
+    h1 {
+        text-align: center;
+        margin-top: 130px;
+    }
+
+    img {
+        width: 500px;
+        height: 500px;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin: -250px 0 0 -250px;
+        transform-origin: 50% 50%;
+    }
+
+    #frame {
+        margin: -250px 0 0 -260px;
+        border: 10px solid #424242;
+        border-radius: 500px;
+        box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+    }
+   /* #seconds:hover {
+        transform: rotate(10deg);
+    }*/
+</style>
+<body>
+<div id="wrap">
+    <h1>시계</h1>
+    <div id="clock">
+        <img id="frame" src="img/Clock-face.png"/>
+        <img id="hours" src="img/hour_hand.png"/>
+        <img id="minutes" src="img/minute_hand.png"/>
+        <img id="seconds" src="img/second_hand.png"/>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+
+    function displayTime() {
+        var now = new Date();
+        var hour = now.getHours();
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+
+        setsec=sec*6;
+        setmin=min*6+(sec/60);
+        //sethour=hour+(//);
+        console.log(hour);
+        // sec 60번 min 1번
+        $("#seconds").css("transform","rotate("+setsec+"deg)");
+        $("#minutes").css("transform","rotate("+setmin+"deg)");
+       // $("#hours").css("transform","rotate("+sethour+"deg)");
+
+    } // displayTime() end
+
+    // setInterval 1초마다 displayTime 함수 호출
+    setInterval(displayTime,1000);
+
+</script>
+</body>
+</html>

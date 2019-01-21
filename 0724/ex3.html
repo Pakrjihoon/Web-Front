@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>ex3</title>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="icon" href="img/kakao_favicon.ico">
+		<style>
+			#wrap {
+				width: 960px;
+				border: 1px solid #424242;
+				margin: 50px auto;
+				box-shadow: 10px 10px 0 #424242;
+				position:relative;
+			}
+			#wrap::before {
+				content: '';
+				width: 0;
+				height: 0;
+				position: absolute;
+				border-right: 10px solid transparent;
+				border-bottom: 10px solid #424242 ;
+				right: -10px;
+			}
+			#wrap::after {
+				content:'';
+				width: 0;
+				height: 0;
+				position: absolute;
+				border-right: 10px solid #424242;
+				border-bottom: 10px solid transparent;
+				left: -1px;
+			}
+			#header {
+				width: 960px;
+				height: 100px;
+				/* 포지셔닝 컨텍스트 */
+				position: relative;
+			}
+			#header h1 {
+				width: 87px;
+				height: 21px;
+				background-color: skyblue;
+				position: absolute;
+				left: 20px;
+				top : 39.5px;
+			}
+			#header h1 a {
+				width: 87px;
+				height: 21px;
+				background: url(img/kakao.png);
+				text-indent: -9999px;
+				overflow: hidden;
+				display: block;
+			}
+			#gnb ul {
+				height: 116px;
+			}
+			#gnb li {
+				width: 120px;
+				height: 116px;
+				float: left;
+			}
+			#gnb li>a {
+				width: 120px;
+				height: 116px;
+				background-image: url(img/ko_img_gnb_150615.png);
+				display: block;
+				text-indent: -9999px;
+				overflow: hidden;
+				transition: .2s ease;
+			}
+			#gnb li>a:hover {
+				background-color: #FDD835;
+			}
+			/* IS 기법 */
+			.talk>a {
+				background-position: 0 0;
+			}
+			.story>a {background-position: -120px 0;}
+			.taxi>a {background-position: -240px 0;}
+			.tv>a {background-position: 120px 0;}
+			.group>a {background-position: -480px 0;}
+			.topic>a {background-position: -600px 0;}
+			.pic>a {background-position: -720px 0;}
+			.music>a {background-position: 240px 0;}
+
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="header">
+				<h1><a href="">kakao</a></h1>
+			</div><!--//header-->
+			<div id="gnb">
+				<h2 class="screen_out">주요서비스</h2>
+				<ul>
+					<li class="talk"><a href="">카카오톡</a></li>
+					<li class="story"><a href="">카카오스토리</a></li>
+					<li class="taxi"><a href="">카카오택시</a></li>
+					<li class="tv"><a href="">카카오티비</a></li>
+					<li class="group"><a href="">카카오그룹</a></li>
+					<li class="topic"><a href="">카카오토픽</a></li>
+					<li class="pic"><a href="">카카오픽</a></li>
+					<li class="music"><a href="">카카오뮤직</a></li>
+				</ul>	
+			</div>
+		</div><!--//wrap-->
+	</body>
+</html>
+
+
+

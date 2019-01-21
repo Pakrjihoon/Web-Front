@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤한 정수 발생</title>
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<img src="img/c1.jpg"/>
+<script src="js/jquery.js"></script>
+<script>
+
+    var up = 1;
+    var $img = $("img");
+    $img.click(function () {
+        $img.attr("src", "img/c" + up + ".jpg");
+        // num 1증가
+        // num = num + 1
+        // num += 1;
+        up++;
+        if(up>= 6){
+            up=1;
+        }
+    });
+</script>
+</body>
+</html>

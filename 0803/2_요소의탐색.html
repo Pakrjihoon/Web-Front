@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td {
+            border: 1px solid #424242;
+            font-size: 60px;
+            font-weight: bold;
+            padding: 10px 25px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+        </tbody>
+    </table>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        DOM 탐색 메서드
+        - next() : 다음요소 선택
+        - prev() : 'DOM'에서 이전요소 선택
+        - end() : '메서드체인'에서 이전요소 선택
+        - eq(index) : 요소들중 index 선택
+        - parent() : 부모요소 선택
+        - parents(선택자) : 조상중에 선택
+        - children() : 자식들 선택
+     */
+    $("td").eq(1)
+        .css("background-color","red")
+        .next().css("background-color","blue") //3번 td
+        .end() //2번 td
+        .prev() //1번 td
+        .css("background-color","green")
+        .parent() //첫번째 tr
+        .next() //두번째 tr
+        .children() //4,5,6 번 td
+        .eq(1) // 5번 5td
+        .css("background-color","yellow")
+        .parent() // 두번째 tr
+        .next() // 세번째 tr
+        .children() // 7,8,9 번 td
+        .eq(2) // 9번 td
+        .css("background-color","#FFC400")
+        .parents("tr") // 세번째 tr
+        .prev() // 두번째 tr
+        .find("td:eq(0)")  // 1번째 td
+        .css("background-color","silver");
+</script>
+</body>
+</html>

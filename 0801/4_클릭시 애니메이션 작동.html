@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클릭시 애니메이션 작동</title>
+    <style>
+        #ball {
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -50px 0 0 -50px;
+            border-radius: 50px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            cursor: pointer;
+            user-select: none;
+        }
+        /* animation을 주는 클래스 */
+        #ball.bounce {
+            animation: bounce 500ms ease 1;
+        }
+        @keyframes bounce {
+            0%{transform: translateY(0) rotate(0)}
+            50%{transform: translateY(-300px) rotate(180deg)}
+            100%{transform: translateY(0) rotate(360deg)}
+        }
+    </style>
+</head>
+<body>
+    <img id="ball" src="img/ball.jpg" width="100">
+<script src="js/jquery.js"></script>
+<script>
+    var $ball = $("#ball");
+
+    // on(이벤트명, 함수)
+    $ball.on("click",function () {
+        $ball.addClass("bounce");
+    }); //$ball click() end
+    // 애니메이션이 끝나고 난 뒤, bounce클래스 제거
+    // animationend
+
+    $ball.on("animationend",function () {
+       $ball.removeClass("bounce");
+    }); //$ball animationend() end
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>동물리스트</h1>
+<ul>
+    <li>기린</li>
+    <li>강아지</li>
+    <li>너구리</li>
+    <li>거북이</li>
+    <li>고양이</li>
+    <li>베타</li>
+    <li>북극곰</li>
+</ul>
+<script src="js/jquery.js"></script>
+<script>
+    //$li는 하나의 객체이지만 사실 그 안에 7개의 li요소 객체가 있습니다.
+    // (배열로)
+    var $li = $("li");
+
+    // jquery 객체안에 몇개의 요소가 들어있는지 개수를 알기 위해서는
+    // length 속성을 활용
+    //alert($li.length);
+
+    // eq는 인덱스번지안에 있는 요소 접근
+    //$li.eq(4).css("color","blue");
+
+    // jquery 객체안에 있는 모든 요소에 한번씩 각각 접근하려면
+    // each() 메서드를 이용 : 첫번째 인자가 index
+
+    $li.each(function (idx) {
+        var txt = $(this).text();
+        alert(idx+1+"번째는 "+txt);
+    }); //$li.each() end
+</script>
+</body>
+</html>

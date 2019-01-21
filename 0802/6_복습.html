@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style>
+        #txt {
+            width: 300px;
+            height: 150px;
+            background-color: #aaaaaa;
+            text-align: center;
+            line-height: 150px;
+        }
+    </style>
+</head>
+<body>
+<h1>이메일에서 아이디 뽑기</h1>
+<p>
+<input type="email" id="email" autocomplete="off" placeholder="이메일을 입력해주세요"/>
+<button id="inputBtn">입력</button>
+</p>
+<div id="txt">당신의 아이디는? <strong>?</strong></div>
+<script src="js/jquery.js"></script>
+<script>
+    function checkedEmail() {
+        var email =$("#email").val();
+        var idx = email.indexOf("@");
+            if(idx==-1) {
+                alert("이메일을 확인해주세요");
+                $("#email").val("").focus();
+            }
+            else if(idx>=0){
+                email =$("#email").val();
+                var id = email.substring(0,idx);
+                $("strong").text(id);
+            }
+    }
+    $(document).keyup(function (e) {
+        if(e.keyCode==13) {
+            checkedEmail();
+        }// if end
+    });
+    $("#inputBtn").click(checkedEmail);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style>
+        h1 {
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+        #infor {
+            background-color: #424242;
+            font-size: 30px;
+            color: #FFF;
+            width:260px;
+            height: 70px;
+            line-height: 70px;
+            padding:15px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin:-250px 0 0 -430px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        img {
+            border:10px solid #424242;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin:-310px 0 0 -410px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        #infor::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-top:20px solid #424242;
+            border-left:20px solid transparent;
+            left: 0;
+            bottom: -20px;
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Fake Apple item</h1>
+    <img src="img/firback.png" width="800">
+    <div id="infor">Fake Apple item</div>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        #wrap {
+            width: 700px;
+            height: 600px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -301px 0 0 -351px;
+            border: 1px solid #424242;
+        }
+        #imgsBox {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            box-shadow: 0 0 10px #424242;
+            perspective: 1000px;
+        }
+        #imgs {
+            width: 500px;
+            height: 500px;
+            transform-style: preserve-3d;
+            /*animation: roll 10s linear infinite;*/
+            transform: translateZ(-250px) rotateY(0);
+            transition: .3s ease;
+        }
+        @keyframes roll {
+            0% {transform: translateZ(-250px) rotateY(0)}
+            100% {transform: translateZ(-250px) rotateY(360deg)}
+        }
+        #imgs img {
+            position: absolute;
+        }
+        #imgs img:nth-child(1) {
+            transform: translateZ(250px);
+        }
+        #imgs img:nth-child(2) {
+            transform: rotateY(90deg) translateZ(250px);
+        }
+        #imgs img:nth-child(3) {
+            transform: rotateY(180deg) translateZ(250px);
+        }
+        #imgs img:nth-child(4) {
+            transform: rotateY(270deg) translateZ(250px);
+        }
+        #imgs img:nth-child(5) {
+            transform: rotateY(360deg) translateZ(250px);
+        }
+        button {
+            width: 80px;
+            height: 80px;
+            border: none;
+            border-radius: 40px;
+            font-size: 50px;
+            cursor: pointer;
+            position: absolute;
+            top: 260px;
+        }
+        button:hover {
+            background-color: lightskyblue;
+            color: #fff;
+
+        }
+        #leftBtn {
+            left: 10px;
+        }
+        #rightBtn {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="imgsBox">
+            <div id="imgs">
+                <img src="img/apeach.png" width="500">
+                <img src="img/frodo.png" width="500">
+                <img src="img/muzi.png" width="500">
+                <img src="img/neo.png" width="500">
+                <img src="img/ryan.png" width="500">
+            </div><!--/#imgs -->
+        </div><!--//#imgBox -->
+        <div id="buttonBox">
+            <button id="leftBtn" class="fa fa-undo"></button>
+            <button id="rightBtn" class="fa fa-redo"></button>
+        </div><!--//#buttonBox-->
+    </div><!--//#wrap-->
+<script src="js/jquery.js"></script>
+<script>
+    var $imgs = $("#imgs");
+    var deg = 0;
+    $("#rightBtn").click(function () {
+        deg+=90;
+        $imgs.css("transform","translateZ(-250px) rotateY("+deg+"deg)");
+    });//#rightBtn click() end
+    $("#leftBtn").click(function () {
+        deg-=90;
+        $imgs.css("transform","translateZ(-250px) rotateY("+deg+"deg)");
+    });//#lefttBtn click() end
+</script>
+</body>
+</html>

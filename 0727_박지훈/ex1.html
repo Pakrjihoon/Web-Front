@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>2단 레이아웃 제작</title>
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/apple.css">
+		<!--
+		폰트어썸 및 애플폰트를 사용하기 위하여 선언
+		-->
+		<style>
+			/*
+			브라우저에서 body가 가진 기본 css의 마진을
+			0으로 주어 간격을 없애줍니다.
+			*/
+			body {
+				margin: 0
+			}
+			/*
+			전체 부분은 width를 1000으로 지정합니다.
+			전체 부분에 점선을 표시하고 이 id 안에있는
+			div들의 폰트를 지정하고 웨이트 밑및 사이즈도 지정합니다.
+			블록레벨의 가운데 정렬을 위하여 margin은 auto
+			텍스트 가운데 정렬을 위하여 text-align은 center로 지정합니다.
+			*/
+			#wrap {
+				width:1000px;
+				text-align: center;
+				font-family: 'SF Pro KR', sans-serif;
+				font-weight: 600;
+				border: 2px dotted #424242;
+				margin: auto;
+				font-size: 36px;
+			}
+			/*
+			헤더는 아래쪽에 보더를 지정하기 때문에 바텀 부분이니 높이인
+			height의 값을 2px만큼 줄여주었고 글자 가운데정렬을 위하여
+			박스모델의 크기인 라인하이트를 100px로 지정하였습니다.
+			*/
+			#header {
+				width: 1000px;
+				height: 98px;
+				border-bottom: 2px dotted #424242;
+				line-height:100px;
+			}
+			/*
+			컨텐트의 박스모델 크기를 맞추기 위하여 width값을 수정하였습니다
+			보더 오른쪽에 점선이 2px 이기때문에 2를 빼주어 width를 구합니다.
+			텍스트의 중앙 정렬을 위하여 라인하이트 를 높이만큼 지정합니다
+			*/
+			#content {
+				width: 698px;
+				height: 500px;
+				float: left;
+				border-right: 2px dotted #424242;
+				line-height: 500px;
+			}
+			/*
+			헤더 다음으로 나타나는 컨텐트와 사이드바에게 float을 왼쪽과 오른쪽을 주어
+			정렬을 하였습니다. 풋과 헤더, 컨텐츠에서 보더를 지정하였기 때문에 따로 지정할
+			필요가 없습니다.
+			*/
+			#sideBar1 {
+				width: 300px;
+				height: 250px;
+				float: right;
+				line-height: 250px;
+			}
+			/*
+			 박스모델의 크기를 맞추기 위하여 지정된 보더의 값은 2px로
+			 height의 값은 98px을 주면 박스모델의 높이는 100px입니다.
+			 float은 공간을 차지하지 않기때문에 문제가 생기는데 이중 자식중 블록레벨
+			 footer에게 clear속성을 주었습니다. 폰트 사이즈나 웨이트 역시 바뀌어 변경했습니다.
+			 */
+			#footer {
+				width: 1000px;
+				height: 98px;
+				line-height:100px;
+				clear: both;
+				border-top: 2px dotted #424242;
+				font-size: 20px;
+				font-weight: 100;
+			}
+		</style>
+	</head>
+	<body>
+	<!--
+		헤더 컨텐츠, 사이드, 풋을 담당하는 div를 하나로 묶어서 처리합니다.
+		내부에는 폰트가 바뀌는걸 방지하기 위해 폰트어썸을 사용하고 그 뒤에 글자를 썼습니다.
+		맨 마지막 풋터에는 웹표준에 맞춰 엔티티 기호를 사용하였습니다.
+	-->
+		<div id="wrap">
+			<div id="header"><i class="fas fa-desktop"></i> 박지훈 웹서비스</div>
+			<div id="content"><i class="fas fa-map-marker-alt"></i> 콘텐츠 영역</div>
+			<div id="sideBar1" class="side"><i class="fas fa-camera-retro"></i> 사이드바</div>
+			<div id="footer">&copy; 2018 bjd.com</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+

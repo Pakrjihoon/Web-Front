@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        #wrap {
+            width: 600px;
+            height: 650px;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            margin: -325px 0 0 -300px;
+            text-align: center;
+        }
+        #clock {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            background-image: url(img/Clock-face.png);
+            background-size: contain;
+            border: 10px solid #424242;
+            border-radius: 260px;
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+        }
+        .hand {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+        }
+        #hour {
+            background-image: url(img/hour_hand.png);
+        }
+        #min {
+            background-image: url(img/minute_hand.png);
+        }
+        #sec {
+            background-image: url(img/second_hand.png);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1><i class="far fa-clock"></i> 아날로그 시계</h1>
+        <div id="clock">
+            <div id="hour" class="hand"></div>
+            <div id="min" class="hand"></div>
+            <div id="sec" class="hand"></div>
+        </div><!--//#clock-->
+    </div><!--//#wrap-->
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+
+    function displayTime() {
+        var now = moment();
+
+        var sec = now.second();
+        var min = now.minute();
+        var hour = now.hour();
+
+
+        var secDeg = sec * (360/60);
+        // 초만큼 더 이동
+        var minDeg = min*6 + ((6/60)*sec);
+        // 초, 분만큼 더 이동
+        var hourDeg = hour*30 + (0.5*min)+((30/3600)*sec);
+
+        $("#sec").css("transform","rotate("+secDeg+"deg)");
+        $("#min").css("transform","rotate("+minDeg+"deg)");
+        $("#hour").css("transform","rotate("+hourDeg+"deg)");
+    }// displayTime() end
+
+    // 1초마다 호출
+    setInterval(displayTime,1000);
+
+    // 최초 한번 호출
+    displayTime();
+</script>
+</body>
+</html>

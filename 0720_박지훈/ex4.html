@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>문이 열리네요~</title>
+    <style>
+        #frame {
+            width: 557px;
+            height: 735px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin: -363.5px 0 0 -256px ;
+            background: url(img/frame.png);
+            background-size: 100% 100%;
+        }
+        .door {float: left;
+            transition:.6s ease;
+            background-image: url(img/pic2.png)}
+        .left {
+            width: 266px;
+            height: 707px;
+            background: url(img/door1.png);
+            margin: 15px 0 0 11px;
+            background-size: cover;
+            transform-origin: left;
+            position: absolute;
+        }
+        .right {
+            width: 266px;
+            height: 707px;
+            margin: 15px 0 0 -15px;
+            background: url(img/door2.png);
+            background-size: cover;
+            transform-origin: right;
+            position: absolute;
+            right: 14px;
+        }
+        #frame::before{
+            content:"";
+            width: 532px;
+            height: 707px;
+            background-image: url(img/pic2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+        #frame:hover div.left {transform: perspective(707px) rotateY(-160deg);}
+        #frame:hover div.right {transform: perspective(707px) rotateY(160deg);}
+
+    </style>
+</head>
+<body>
+    <div id="frame">
+        <div class="door left"></div>
+        <div class="door right"></div>
+    </div>
+</body>
+</html>

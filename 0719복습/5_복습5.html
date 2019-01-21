@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습5</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #gnb {
+            width: 982px;
+            height: 38px;
+            margin: auto;
+        }
+        #gnb li {
+            width:103px;
+            height: 38px;
+            float: left;
+        }
+        #gnb li>a {
+            width: 103px;
+            height: 38px;
+            display: block;
+            text-indent: -9999px;
+            overflow: hidden;
+            background-image: url(img/globalnavbg.png);
+            transition:.3s ease;
+        }
+       /* 배경의 포지션을 지정 */
+        #gnb li:nth-child(1)>a {background-position: 0 38px;}
+        #gnb li:nth-child(2)>a {background-position: -103px 0;}
+        #gnb li:nth-child(3)>a {background-position: -206px 0;}
+        #gnb li:nth-child(4)>a {background-position: -309px 0;}
+        #gnb li:nth-child(5)>a {background-position: -412px 0;}
+        #gnb li:nth-child(6)>a {background-position: -515px 0;}
+        #gnb li:nth-child(7)>a {background-position: -618px 0;}
+        #gnb li:nth-child(8)>a {background-position: -721px 0;}
+        /* hover */
+        #gnb li:nth-child(1)>a:hover {background-position: 0 -38px;}
+        #gnb li:nth-child(2)>a:hover {background-position: -103px -38px;}
+        #gnb li:nth-child(3)>a:hover {background-position: -206px -38px;}
+        #gnb li:nth-child(4)>a:hover {background-position: -309px -38px;}
+        #gnb li:nth-child(5)>a:hover {background-position: -412px -38px;}
+        #gnb li:nth-child(6)>a:hover {background-position: -515px -38px;}
+        #gnb li:nth-child(7)>a:hover {background-position: -618px -38px;}
+        #gnb li:nth-child(8)>a:hover {background-position: -721px -38px;}
+        /* active */
+        #gnb li:nth-child(1)>a:active {background-position: 0 -76px;}
+        #gnb li:nth-child(2)>a:active {background-position: -103px -76px;}
+        #gnb li:nth-child(3)>a:active {background-position: -206px -76px;}
+        #gnb li:nth-child(4)>a:active {background-position: -309px -76px;}
+        #gnb li:nth-child(5)>a:active {background-position: -412px -76px;}
+        #gnb li:nth-child(6)>a:active {background-position: -515px -76px;}
+        #gnb li:nth-child(7)>a:active {background-position: -618px -76px;}
+        #gnb li:nth-child(8)>a:active {background-position: -721px -76px;}
+    </style>
+</head>
+<body>
+    <div id="gnb">
+    <h2 class="screen_out">주요 서비스</h2>
+    <ul>
+        <li><a href="">HOME</a></li>
+        <li><a href="">Store</a></li>
+        <li><a href="">Mac</a></li>
+        <li><a href="">iPod</a></li>
+        <li><a href="">iPhone</a></li>
+        <li><a href="">iPad</a></li>
+        <li><a href="">iTunes</a></li>
+        <li><a href="">Support</a></li>
+    </ul>
+    </div>
+</body>
+</html>

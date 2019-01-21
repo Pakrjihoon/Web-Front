@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>this와 클래스관련 메서드</title>
+    <style>
+        button {
+            background: lightblue;
+            border: none;
+            width: 150px;
+            height: 50px;
+            cursor: pointer;
+            /* 인라인레벨끼리 수직정렬 */
+            vertical-align: middle;
+        }
+        /* on이라는 클래스 지정 */
+        button.on {
+            background: deeppink;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<button class="on">1번 버튼</button>
+<button>2번 버튼</button>
+<button>3번 버튼</button>
+<script src="js/jquery.js"></script>
+<script>
+    //this 키워드, addClass(), removeClass()
+    $('button').click(function () {
+        // 1) 이전에 붙었던 on클래스를 제거
+        $(".on").removeClass("on");
+        // 2) 클릭한 그 요소에 on클래스를 붙임
+        $(this).addClass("on");
+    }); // click() end
+</script>
+</body>
+</html>

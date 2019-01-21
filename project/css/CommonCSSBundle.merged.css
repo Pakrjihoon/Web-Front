@@ -1,0 +1,7496 @@
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    src: url(//t1.daumcdn.net/media/common/font/Roboto-Regular.eot);
+    src: url(//t1.daumcdn.net/media/common/font/Roboto-Regular.eot?#iefix) format("embedded-opentype"), url(//t1.daumcdn.net/media/common/font/Roboto-Regular.woff2) format("woff2"), url(//t1.daumcdn.net/media/common/font/Roboto-Regular.woff) format("woff"), url(//t1.daumcdn.net/media/common/font/Roboto-Regular.ttf) format("truetype")
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    font-style: normal;
+    font-weight: 400;
+    src: url(//t1.daumcdn.net/media/common/font/Roboto-Bold.eot);
+    src: url(//t1.daumcdn.net/media/common/font/Roboto-Bold.eot?#iefix) format("embedded-opentype"), url(//t1.daumcdn.net/media/common/font/Roboto-Bold.woff2) format("woff2"), url(//t1.daumcdn.net/media/common/font/Roboto-Bold.woff) format("woff"), url(//t1.daumcdn.net/media/common/font/Roboto-Bold.ttf) format("truetype")
+}
+
+blockquote, body, button, code, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, select, td, textarea, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+fieldset, img {
+    border: 0 none
+}
+
+dl, li, menu, ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: "";
+    content: none
+}
+
+button, input, select, textarea {
+    vertical-align: middle
+}
+
+input::-ms-clear {
+    display: none
+}
+
+button {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+body {
+    background: #fff
+}
+
+body, button, input, select, td, textarea, th {
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif;
+    color: #333;
+    letter-spacing: -.05em
+}
+
+a {
+    color: #222;
+    text-decoration: none
+}
+
+a:active, a:hover {
+    text-decoration: underline
+}
+
+a:active {
+    background-color: transparent
+}
+
+address, caption, cite, code, dfn, em, var {
+    font-style: normal;
+    font-weight: 400
+}
+
+.os_mac strong {
+    font-weight: 400
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+#kakaoIndex {
+    overflow: hidden;
+    position: absolute;
+    left: -9999px;
+    width: 0;
+    height: 1px;
+    margin: 0;
+    padding: 0
+}
+
+.ir_pm {
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px
+}
+
+.ir_pm, .ir_wa {
+    display: block;
+    overflow: hidden
+}
+
+.ir_wa {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 100%
+}
+
+.ir_caption {
+    width: 1px;
+    font-size: 1px
+}
+
+.ir_caption, .screen_out {
+    overflow: hidden;
+    line-height: 0;
+    text-indent: -9999px
+}
+
+.screen_out {
+    position: absolute;
+    width: 0;
+    height: 0
+}
+
+.show {
+    display: block
+}
+
+.hide {
+    display: none
+}
+
+#kakaoWrap {
+    min-width: 1100px;
+    background: url(//t1.daumcdn.net/media/news/election2018/bg_election_180607.jpg) 50% 0 no-repeat;
+    background-size: 1840px 191px
+}
+
+#kakaoContent, #kakaoWrap {
+    position: relative
+}
+
+#kakaoContent:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #cacaca;
+    content: ""
+}
+
+#kakaoContent.cont_home:before {
+    display: none
+}
+
+.election_type2 #cMain {
+    overflow: hidden;
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 40px 0 80px
+}
+
+.election_type2 #mArticle {
+    float: left;
+    width: 760px
+}
+
+.election_type2 #mAside {
+    float: right;
+    width: 290px
+}
+
+.cont_home #cMain {
+    border-top: 2px solid #333
+}
+
+.cont_home #cMain:after {
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    right: 348px;
+    width: 1px;
+    background-color: #e5e5e5;
+    content: ""
+}
+
+.cont_home #mArticle {
+    width: 711px
+}
+
+.cont_home #mAside {
+    padding-right: 18px
+}
+
+.ticker_election {
+    border-top: 1px solid #cacaca
+}
+
+#kakaoHead:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+#kakaoHead .head_election {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    padding: 61px 0 26px
+}
+
+#kakaoHead h1 .link_news {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 9997;
+    margin-left: -499px
+}
+
+#kakaoHead .logo_news {
+    display: block;
+    width: 30px;
+    height: 37px;
+    font-size: 16px;
+    line-height: 37px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_gnb_election_180619.gif) 0 -120px no-repeat;
+    background-size: 1100px 300px
+}
+
+#kakaoServiceLogo {
+    display: block;
+    width: 180px;
+    height: 40px;
+    padding-left: 70px;
+    margin-left: 1px;
+    line-height: 40px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_gnb_election_180619.gif) 0 0 no-repeat;
+    background-size: 1100px 300px
+}
+
+#kakaoHead .util_head {
+    position: absolute;
+    top: 58px;
+    right: 5px
+}
+
+#kakaoHead .util_head:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: ""
+}
+
+#kakaoHead .status_head {
+    float: left
+}
+
+#kakaoHead .txt_earlyvote {
+    float: left;
+    width: 67px;
+    height: 31px;
+    margin: 6px 16px 0 0;
+    background-position: 0 -380px
+}
+
+#kakaoHead .info_dday {
+    float: left;
+    margin-right: 41px
+}
+
+#kakaoHead .info_dday .ico_dday {
+    float: left;
+    width: 39px;
+    height: 29px;
+    margin: 7px 5px 0 0;
+    background-position: 0 -20px
+}
+
+#kakaoHead .info_dday .num_g2 {
+    float: left;
+    font-size: 39px;
+    line-height: 43px
+}
+
+#kakaoHead .info_find {
+    position: absolute;
+    top: -20px;
+    right: 40px;
+    z-index: 20;
+    width: 290px;
+    height: 153px;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/info_find.png) 0 0 no-repeat;
+    background-size: 290px 153px;
+    text-indent: -9999px
+}
+
+#kakaoHead .link_find {
+    display: block;
+    width: 120px;
+    height: 50px;
+    margin: 20px 0 0 30px
+}
+
+#kakaoHead .status_g {
+    float: left;
+    position: relative;
+    padding-right: 15px;
+    margin-right: 35px
+}
+
+.status_g .tag_status {
+    position: absolute;
+    top: -8px;
+    right: 0;
+    z-index: 10
+}
+
+.status_g .tag_status .img_ticker {
+    display: block;
+    width: 34px;
+    height: 34px;
+    background-position: 0 -60px
+}
+
+.status_g .tag_status2 .img_ticker {
+    background-position: -40px -60px
+}
+
+.status_g .tag_status3 .img_ticker {
+    background-position: -80px -60px
+}
+
+.status_g .tag_status4 .img_ticker {
+    background-position: -120px -60px
+}
+
+.status_g .item_rate {
+    display: block;
+    overflow: hidden
+}
+
+.status_g .rolling_status {
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 46px
+}
+
+.status_g .list_rolling {
+    position: absolute;
+    left: 0;
+    right: 0
+}
+
+.status_g .list_rolling li {
+    text-align: right
+}
+
+.status_g .list_rolling .item_rate {
+    display: inline-block;
+    vertical-align: top
+}
+
+.status_g .tit_status {
+    float: left;
+    width: 130px;
+    height: 46px;
+    margin-right: 12px;
+    color: #899099;
+    text-decoration: none;
+    text-align: right
+}
+
+.status_g .tit_status .tit_g {
+    display: block;
+    font-size: 14px;
+    line-height: 17px
+}
+
+.status_g .tit_status .num_g {
+    display: block;
+    font-size: 15px;
+    line-height: 17px
+}
+
+.status_g .num_status {
+    float: left;
+    font-size: 39px;
+    line-height: 46px;
+    color: #363a4c
+}
+
+.os_mac .status_g .num_status {
+    line-height: 41px
+}
+
+.status_g .num_status .link_txt {
+    display: block;
+    text-decoration: none
+}
+
+.status_g .num_status .txt_percent {
+    font-size: 28px
+}
+
+.status_head .status_g .tit_status .txt_g {
+    display: block;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 17px
+}
+
+.status_head .status_g .tit_status .txt_g .num_g {
+    display: inline
+}
+
+#kakaoHead .btn_util {
+    float: left;
+    position: relative;
+    margin-top: 5px;
+    padding-bottom: 8px
+}
+
+#kakaoHead .btn_share {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #6c7e8e;
+    border-color: rgba(108, 126, 142, .5);
+    border-radius: 37px
+}
+
+#kakaoHead .btn_share:hover, #kakaoHead .open_sns .btn_share {
+    border-color: #363a4c;
+    background-color: #363a4c
+}
+
+#kakaoHead .btn_share .ico_share {
+    display: block;
+    width: 18px;
+    height: 16px;
+    margin: -1px auto 0;
+    background-position: 0 0
+}
+
+#kakaoHead .btn_share:hover .ico_share, #kakaoHead .open_sns .ico_share {
+    background-position: -160px -50px
+}
+
+#kakaoHead .social_comm_p {
+    top: 43px;
+    right: 0;
+    transform: translateZ(0)
+}
+
+#kakaoHead .wrap_sharelayer {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    z-index: 20;
+    padding-top: 8px
+}
+
+#kakaoHead .layer_share {
+    display: none
+}
+
+.layer_share {
+    width: 285px;
+    padding: 30px 0 14px;
+    border: 1px solid #e2e2e2;
+    background-color: #fff
+}
+
+.layer_share .list_sns {
+    overflow: hidden;
+    width: 198px;
+    margin: 0 auto
+}
+
+.layer_share .list_sns li {
+    float: left;
+    width: 66px;
+    margin-bottom: 17px
+}
+
+.layer_share .list_sns .link_sns {
+    display: block;
+    margin: 0 auto
+}
+
+.layer_share .list_sns .ico_sns {
+    display: block;
+    overflow: hidden;
+    width: 60px;
+    height: 35px;
+    margin: 0 auto
+}
+
+.layer_share .link_fb .ico_sns {
+    background-color: #42559d
+}
+
+.layer_share .link_ks .ico_sns {
+    background-color: #f0c800
+}
+
+.layer_share .link_tw .ico_sns {
+    background-color: #3dc1f2
+}
+
+.layer_share .link_mail .ico_sns {
+    background-color: #636363
+}
+
+.layer_share .link_blog .ico_sns {
+    background-color: #40c4ff
+}
+
+.layer_share .link_cafe .ico_sns {
+    background-color: #f44336
+}
+
+.layer_share .list_sns .ico_newsview {
+    display: block;
+    overflow: hidden;
+    width: 28px;
+    height: 28px;
+    margin: 3px auto 0;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/common/newsview/ico_newsview_180405.png) 0 0 no-repeat;
+    background-size: 350px 350px;
+    text-indent: -9999px
+}
+
+.layer_share .link_fb .ico_newsview {
+    background-position: -170px 0
+}
+
+.layer_share .link_ks .ico_newsview {
+    background-position: -200px 0
+}
+
+.layer_share .link_tw .ico_newsview {
+    background-position: -170px -30px
+}
+
+.layer_share .link_mail .ico_newsview {
+    background-position: -200px -30px
+}
+
+.layer_share .link_blog .ico_newsview {
+    background-position: -170px -60px
+}
+
+.layer_share .link_cafe .ico_newsview {
+    background-position: -200px -60px
+}
+
+.layer_share .tit_sns {
+    display: block;
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -1px;
+    text-align: center
+}
+
+#kakaoHead .btn_util:hover .layer_share, #kakaoHead .layer_open .layer_share {
+    display: block
+}
+
+#kakaoGnb {
+    position: relative;
+    z-index: 10;
+    border-top: 1px solid #f1f3f6;
+    text-align: center
+}
+
+#kakaoGnb .wrap_gnb {
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    width: 1100px;
+    height: 63px;
+    margin: 0 auto;
+    zoom: 1
+}
+
+#kakaoGnb .gnb_election {
+    position: relative;
+    margin-left: -14px
+}
+
+#kakaoGnb .gnb_election:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.gnb_election li {
+    float: left
+}
+
+.gnb_election .link_gnb, .wrap_lnb2 .link_lnb {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_gnb_election_180619.gif) no-repeat;
+    background-size: 1100px 300px;
+    text-align: center
+}
+
+.gnb_election .link_gnb {
+    height: 63px;
+    line-height: 63px
+}
+
+.gnb_election .link_home {
+    width: 60px;
+    background-position: 0 -50px
+}
+
+.gnb_election .link_vote {
+    width: 87px;
+    background-position: -66px -50px
+}
+
+.gnb_election .link_news {
+    width: 76px;
+    background-position: -153px -50px
+}
+
+.gnb_election .link_candidate {
+    width: 92px;
+    background-position: -229px -50px
+}
+
+.gnb_election .link_poll {
+    width: 98px;
+    background-position: -321px -50px
+}
+
+.gnb_election .link_debate {
+    width: 98px;
+    background-position: -419px -50px
+}
+
+.gnb_election .link_join {
+    width: 87px;
+    background-position: -517px -50px
+}
+
+.gnb_election .info_open {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    z-index: 10;
+    width: 93px;
+    height: 20px;
+    margin-left: -44px;
+    background-position: -60px -70px
+}
+
+.gnb_election .link_gnb .bar_gnb, .lnb_election .link_lnb .bar_lnb {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 19px
+}
+
+.gnb_election .link_gnb .bar_gnb {
+    bottom: 2px;
+    height: 3px
+}
+
+.lnb_election .link_lnb .bar_lnb {
+    bottom: 3px;
+    height: 2px
+}
+
+.gnb_election .link_gnb .bar_gnb .inner_bar, .lnb_election .link_lnb .bar_lnb .inner_bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #030303
+}
+
+.gnb_election .link_home .bar_gnb {
+    left: 14px;
+    width: 31px
+}
+
+.gnb_election .link_vote .bar_gnb {
+    left: 14px;
+    width: 53px
+}
+
+.gnb_election .link_news .bar_gnb {
+    width: 38px
+}
+
+.gnb_election .link_candidate .bar_gnb {
+    width: 54px
+}
+
+.gnb_election .link_poll .bar_gnb {
+    left: 15px;
+    width: 68px
+}
+
+.gnb_election .link_debate .bar_gnb {
+    left: 23px;
+    width: 52px
+}
+
+.gnb_election .link_join .bar_gnb {
+    left: 17px;
+    width: 53px
+}
+
+.gnb_election .link_gnb:focus .bar_gnb, .gnb_election .link_gnb:hover .bar_gnb, .gnb_election .on .link_gnb .bar_gnb, .gnb_election .on .link_gnb:focus .bar_gnb, .gnb_election .on .link_gnb:hover .bar_gnb, .lnb_election .link_lnb:focus .bar_lnb, .lnb_election .link_lnb:hover .bar_lnb, .lnb_election .on .link_lnb .bar_lnb, .lnb_election .on .link_lnb:focus .bar_lnb, .lnb_election .on .link_lnb:hover .bar_lnb {
+    display: block
+}
+
+.gnb_election .on .link_gnb .inner_bar, .gnb_election .on .link_gnb:focus .inner_bar, .gnb_election .on .link_gnb:hover .inner_bar, .lnb_election .on .link_lnb .inner_bar, .lnb_election .on .link_lnb:focus .inner_bar, .lnb_election .on .link_lnb:hover .inner_bar {
+    width: 100%
+}
+
+.gnb_election span.link_gnb:focus .bar_gnb, .gnb_election span.link_gnb:hover .bar_gnb, .lnb_election span.link_lnb:focus .bar_gnb, .lnb_election span.link_lnb:hover .bar_gnb {
+    display: none
+}
+
+.gnb_election .rolling_broad {
+    overflow: hidden;
+    position: relative;
+    width: 135px;
+    height: 27px;
+    margin-top: 18px
+}
+
+.gnb_election .inner_rolling {
+    position: absolute;
+    left: 0;
+    width: 100%
+}
+
+.gnb_election .link_broad {
+    display: block;
+    overflow: hidden;
+    height: 27px;
+    padding-left: 27px
+}
+
+.gnb_election .link_broad .thumb_g {
+    display: block;
+    height: 27px
+}
+
+.wrap_lnb {
+    overflow: hidden;
+    border-top: 1px solid #cacaca
+}
+
+.wrap_lnb2 {
+    position: relative;
+    border-top: 0 none;
+    background-color: #001d44
+}
+
+.lnb_election {
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto
+}
+
+.lnb_election li {
+    float: left;
+    position: relative
+}
+
+.lnb_election .link_lnb {
+    display: block
+}
+
+.lnb_broad {
+    padding: 25px 0
+}
+
+.lnb_broad li {
+    margin-right: 20px
+}
+
+.lnb_broad .link_lnb {
+    position: relative;
+    width: 61px;
+    height: 61px;
+    border-radius: 61px
+}
+
+.lnb_broad .thumb_g {
+    display: block;
+    width: 61px;
+    height: 61px
+}
+
+.lnb_broad .img_kbs {
+    background-position: 0 -70px
+}
+
+.lnb_broad .ico_checked {
+    position: absolute;
+    top: -2px;
+    right: -1px;
+    width: 22px;
+    height: 22px;
+    background-position: -100px -20px
+}
+
+.lnb_election .link_lnb .bar_lnb .inner_bar {
+    background-color: #fff
+}
+
+.wrap_lnb2 .link_lnb {
+    height: 66px;
+    line-height: 66px
+}
+
+.lnb_vote .link_turnout {
+    width: 68px;
+    background-position: 0 -160px
+}
+
+.lnb_vote .link_live {
+    width: 75px;
+    background-position: -68px -160px
+}
+
+.lnb_vote .link_expect {
+    width: 91px;
+    background-position: -143px -160px
+}
+
+.lnb_vote .link_count {
+    width: 89px;
+    background-position: -233px -160px
+}
+
+.lnb_vote span.link_turnout {
+    background-position: 0 -230px
+}
+
+.lnb_vote span.link_live {
+    background-position: -68px -230px
+}
+
+.lnb_vote span.link_expect {
+    background-position: -143px -230px
+}
+
+.lnb_vote span.link_count {
+    background-position: -233px -230px
+}
+
+.lnb_vote .link_turnout .bar_lnb {
+    left: 6px;
+    width: 48px
+}
+
+.lnb_vote .link_live .bar_lnb {
+    left: 14px;
+    width: 47px
+}
+
+.lnb_vote .link_expect .bar_lnb {
+    left: 15px;
+    width: 61px
+}
+
+.lnb_vote .link_count .bar_lnb {
+    left: 14px;
+    width: 61px
+}
+
+.footer_election {
+    overflow: hidden;
+    padding: 30px 0 50px;
+    border-top: 1px solid #e2e2e2;
+    font-size: 12px;
+    line-height: 20px;
+    color: gray;
+    background-color: #fafafa;
+    letter-spacing: 0;
+    clear: both
+}
+
+.os_mac .footer_election {
+    padding: 34px 0 46px
+}
+
+.footer_election .inner_foot {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto
+}
+
+.direct_link {
+    overflow: hidden;
+    position: relative;
+    height: 22px;
+    padding-left: 55px;
+    margin-bottom: 24px
+}
+
+.direct_link .tit_direct {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -1px
+}
+
+.os_mac .direct_link .tit_direct {
+    letter-spacing: -.05em
+}
+
+.direct_link .item_bundle {
+    float: left;
+    margin-right: 4px
+}
+
+.direct_link .item_bundle .link_txt {
+    display: block;
+    padding: 0 11px;
+    font-size: 13px;
+    line-height: 20px;
+    color: gray;
+    letter-spacing: -1px
+}
+
+.os_mac .direct_link .item_bundle .link_txt {
+    letter-spacing: -.05em
+}
+
+.direct_link .btn_fold {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    border: 1px solid #a4a4a4;
+    border-radius: 20px;
+    outline: 0
+}
+
+.os_mac .direct_link .btn_fold {
+    margin-top: 0
+}
+
+.direct_link .btn_fold:hover {
+    border-color: #232323
+}
+
+.direct_link .btn_fold .ico_election {
+    display: block;
+    width: 8px;
+    height: 4px;
+    margin: 0 auto;
+    background-position: -80px -10px
+}
+
+.direct_link .btn_fold:hover .ico_election {
+    -webkit-animation: arrBottom .7s;
+    animation: arrBottom .7s
+}
+
+.direct_open {
+    height: auto
+}
+
+.direct_open .btn_fold .ico_election {
+    margin-top: -1px;
+    background-position: -80px 0
+}
+
+.direct_open .btn_fold:hover .ico_election {
+    -webkit-animation: arrTop .7s;
+    animation: arrTop .7s
+}
+
+@-webkit-keyframes arrBottom {
+    0%, 50%, to {
+        -webkit-transform: translateY(0)
+    }
+    25%, 75% {
+        -webkit-transform: translateY(3px)
+    }
+}
+
+@keyframes arrBottom {
+    0%, 50%, to {
+        transform: translateY(0)
+    }
+    25%, 75% {
+        transform: translateY(3px)
+    }
+}
+
+@-webkit-keyframes arrTop {
+    0%, 50%, to {
+        -webkit-transform: translateY(0)
+    }
+    25%, 75% {
+        -webkit-transform: translateY(-3px)
+    }
+}
+
+@keyframes arrTop {
+    0%, 50%, to {
+        transform: translateY(0)
+    }
+    25%, 75% {
+        transform: translateY(-3px)
+    }
+}
+
+.footer_election .link_info {
+    color: gray;
+    letter-spacing: -1px
+}
+
+.os_mac .footer_election .link_info {
+    letter-spacing: -.05em
+}
+
+.footer_election .txt_dot {
+    padding: 0 2px 0 3px;
+    margin-top: 1px;
+    color: #d4d4d4
+}
+
+.os_mac .footer_election .txt_dot {
+    padding: 0 4px 0 3px;
+    margin-top: 0
+}
+
+.footer_election .info_copyright {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px
+}
+
+.footer_election .info_copyright .info_warn {
+    font-weight: 400
+}
+
+.footer_election .txt_copyright {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    font-style: normal;
+    color: gray
+}
+
+.footer_election .txt_kakao {
+    font-weight: 700
+}
+
+.footer_election .link_kakao {
+    color: gray
+}
+
+#kakaoWrap #wrapMinidaum {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9996;
+    width: 100%;
+    height: 38px;
+    background: url(//t1.daumcdn.net/media/news/election2017/bg_minidaum.gif) 0 0 repeat-x;
+    background-size: 2px 38px
+}
+
+#kakaoWrap #minidaum {
+    left: 50%;
+    width: 1100px;
+    height: 38px;
+    margin-left: -550px;
+    font-family: \\B3CB\C6C0, dotum, sans-serif
+}
+
+#kakaoWrap #minidaum .minidaum_logo {
+    margin: 9px 15px 0 0
+}
+
+#kakaoWrap #minidaum .minidaum_logo .img_logo {
+    width: 44px;
+    height: 20px;
+    background: url(//t1.daumcdn.net/media/news/news2016/logo_minidaum_161103.png) 0 0 no-repeat;
+    -webkit-background-size: 44px 20px;
+    background-size: 44px 20px
+}
+
+#kakaoWrap #minidaumRank {
+    margin: 10px 0 0 38px
+}
+
+.os_mac #kakaoWrap #minidaumRank {
+    margin-top: 11px
+}
+
+#kakaoWrap #minidaumRank .minidaum_rank_list {
+    background: url(//t1.daumcdn.net/media/news/news2016/minidaum_news_161103.png) 0 -407px no-repeat
+}
+
+#kakaoWrap #minidaum .minidaum_rank_open .minidaum_rank_list {
+    background-position: 14px -158px
+}
+
+#kakaoWrap .minidaum_gnb {
+    margin-top: 8px
+}
+
+.os_mac #kakaoWrap .minidaum_gnb {
+    margin-top: 7px
+}
+
+.ico_election {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/ico_election_180530.png) no-repeat;
+    background-size: 320px 380px;
+    vertical-align: top;
+    text-indent: -9999px
+}
+
+.ico_election2 {
+    background: url(//t1.daumcdn.net/media/news/election2018/ico_election2_180521.png) no-repeat;
+    background-size: 60px 570px
+}
+
+.tit_election {
+    display: block;
+    background: url(//t1.daumcdn.net/media/news/election2018/tit_election_180517.png) no-repeat;
+    background-size: 240px 1000px
+}
+
+.num_election, .tit_election {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    vertical-align: top;
+    text-indent: -9999px
+}
+
+.num_election {
+    display: inline-block;
+    background: url(//t1.daumcdn.net/media/news/election2018/num_election.png) no-repeat;
+    background-size: 30px 400px
+}
+
+.img_ticker {
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_ticker_180529.png) no-repeat;
+    background-size: 160px 160px;
+    text-indent: -9999px
+}
+
+.desc_thumb, .img_ticker, .info_thumb, .link_cont, .link_thumb, .tit_g, .tit_thumb {
+    display: block
+}
+
+.link_thumb {
+    position: relative
+}
+
+.link_thumb:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    border: 1px solid #000;
+    opacity: .05;
+    filter: alpha(opacity=5);
+    content: ""
+}
+
+.link_cont .wrap_thumb {
+    display: block;
+    position: relative
+}
+
+.link_cont .wrap_thumb:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    border: 1px solid #000;
+    opacity: .05;
+    filter: alpha(opacity=5);
+    content: ""
+}
+
+.thumb_g {
+    vertical-align: top
+}
+
+.frame_g {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.cont_thumb {
+    overflow: hidden
+}
+
+.inner_cont {
+    display: table;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed
+}
+
+.inner_cont2 {
+    display: table-cell;
+    padding-bottom: 1px;
+    vertical-align: middle;
+    word-break: keep-all
+}
+
+.emph_g, .emph_g .link_txt {
+    color: #008eee
+}
+
+.emph_g2, .emph_g2 .link_txt {
+    color: #1e88e5
+}
+
+.num_g {
+    font-family: Roboto-Bold, sans-serif
+}
+
+.os_mac .num_g {
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.num_g2 {
+    font-family: Roboto, sans-serif
+}
+
+.os_mac .num_g2 {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.tf_g {
+    border: 0 none;
+    background: transparent
+}
+
+.dimmed_g {
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: 0 100%;
+    background-repeat: repeat-x
+}
+
+.info_news {
+    display: inline-block;
+    padding-left: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #888;
+    vertical-align: top
+}
+
+.txt_dot {
+    padding: 0 5px
+}
+
+.tbl {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+#cSub .inner_g, .box_g .inner_g {
+    width: 600px;
+    margin: 20px auto 0 auto;
+}
+
+.emph_theminjoo {
+    color: #fff
+}
+
+.emph_liberty {
+    color: #fff
+}
+
+.emph_justice {
+    color: #fff
+}
+
+.emph_bareun {
+    color: #fff
+}
+
+.emph_peace {
+    color: #fff
+}
+
+.emph_green {
+    color: #fff
+}
+
+.emph_inde {
+    color: #fff
+}
+
+.emph_etc {
+    color: #fff
+}
+
+.bg_theminjoo {
+    background-color: #fff
+}
+
+.bg_liberty {
+    background-color: #fff
+}
+
+.bg_justice {
+    background-color: #fff
+}
+
+.bg_bareun {
+    background-color: #fff
+}
+
+.bg_peace {
+    background-color: #fff
+}
+
+.bg_green {
+    background-color: #fff
+}
+
+.bg_inde {
+    background-color: #fff
+}
+
+.bg_etc {
+    background-color: #fff
+}
+
+.cont_candidate .bg_theminjoo {
+    background-color: #fff
+}
+
+.cont_candidate .bg_liberty {
+    background-color: #fff
+}
+
+.cont_candidate .bg_justice {
+    background-color: #fff
+}
+
+.cont_candidate .bg_bareun {
+    background-color: #fff
+}
+
+.cont_candidate .bg_peace {
+    background-color: #fff
+}
+
+.cont_candidate .bg_green {
+    background-color: #fff
+}
+
+.cont_candidate .bg_inde {
+    background-color: #fff
+}
+
+.bg_type1 {
+    background-color: #fff
+}
+
+.bg_type2 {
+    background-color: #fff
+}
+
+.bg_type3 {
+    background-color: #fff
+}
+
+.bg_type4 {
+    background-color: #fff
+}
+
+.bg_type5 {
+    background-color: #fff
+}
+
+.bg_type6 {
+    background-color: #fff
+}
+
+.bg_type7 {
+    background-color: #fff
+}
+
+.emph_edu1 {
+    color: #5b4b94
+}
+
+.emph_edu2 {
+    color: #e2587e
+}
+
+.emph_edu3 {
+    color: #a87673
+}
+
+.emph_edu4 {
+    color: #bb8e5e
+}
+
+.emph_edu5 {
+    color: #34a673
+}
+
+.emph_edu6 {
+    color: #7f8792
+}
+
+.emph_edu7 {
+    color: #3896ac
+}
+
+.emph_edu8 {
+    color: #9b8d72
+}
+
+.bg_edu1 {
+    background-color: #5b4b94
+}
+
+.bg_edu2 {
+    background-color: #e2587e
+}
+
+.bg_edu3 {
+    background-color: #a87673
+}
+
+.bg_edu4 {
+    background-color: #bb8e5e
+}
+
+.bg_edu5 {
+    background-color: #34a673
+}
+
+.bg_edu6 {
+    background-color: #7f8792
+}
+
+.bg_edu7 {
+    background-color: #3896ac
+}
+
+.bg_edu8 {
+    background-color: #9b8d72
+}
+
+.tooltip_election {
+    position: relative
+}
+
+.tooltip_election .btn_tooltip {
+    display: block;
+    width: 31px;
+    height: 31px;
+    padding: 6px
+}
+
+.tooltip_election .ico_tooltip {
+    width: 20px;
+    height: 20px;
+    background-position: -90px 0
+}
+
+.tooltip_election .layer_tooltip {
+    display: none;
+    position: absolute;
+    top: 36px;
+    left: 0;
+    z-index: 10;
+    width: 323px;
+    padding: 13px 18px 18px 20px;
+    border: 1px solid #888;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: #fff;
+    text-align: left
+}
+
+.os_mac .tooltip_election .layer_tooltip {
+    width: 314px;
+    padding: 16px 16px 16px 22px
+}
+
+.tooltip_election .btn_tooltip:hover .ico_tooltip {
+    background-position: -120px 0
+}
+
+.tooltip_election .btn_tooltip:hover + .layer_tooltip {
+    display: block
+}
+
+.sort_election {
+    position: relative
+}
+.btn_sort {
+    margin-left:40px; ;
+}
+.sort_election .btn_sort {
+    display: block;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #008eee;
+    -webkit-font-smoothing: antialiased
+}
+
+.sort_election .btn_sort .ico_election {
+    float: right;
+    width: 14px;
+    height: 9px;
+    margin: 9px 0 0 8px;
+    background-position: -80px -30px
+}
+
+.os_mac .sort_election .btn_sort .ico_election {
+    margin-top: 6px
+}
+
+.sort_election .layer_sort {
+    display: none;
+    position: absolute;
+    left: -14px;
+    top: 30px;
+    z-index: 10;
+    width: 157px;
+    padding: 15px 13px;
+    background-color: #fff;
+    border: 1px solid #333
+}
+
+.sort_election .layer_sort li {
+    float: left
+}
+
+.sort_election .layer_sort .link_region {
+    display: block;
+    width: 39px;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center
+}
+
+.os_mac .sort_election .list_region .link_region {
+    width: 42px
+}
+
+.sort_election .layer_sort .txt_g {
+    display: inline-block;
+    position: relative;
+    vertical-align: top
+}
+
+.sort_election .layer_sort .link_region:hover .txt_g:after, .sort_election .layer_sort .on .txt_g:after {
+    position: absolute;
+    bottom: 3px;
+    left: -2px;
+    right: -2px;
+    height: 1px;
+    background-color: #333;
+    content: ""
+}
+
+.sort_open .layer_sort {
+    display: block
+}
+
+.sort_open .btn_sort .ico_election {
+    background-position: -80px -20px
+}
+
+.tab_election {
+    overflow: hidden
+}
+
+.tab_election li {
+    float: left;
+    position: relative;
+    width: 254px;
+    margin-left: -1px
+}
+
+.tab_election li:first-child {
+    margin: 0
+}
+
+.tab_election .link_tab {
+    display: block;
+    height: 48px;
+    border: 1px solid #d9d9d9;
+    font-size: 16px;
+    line-height: 44px;
+    color: #333;
+    text-align: center;
+    text-decoration: none
+}
+
+.os_mac .tab_election .link_tab {
+    line-height: 52px
+}
+
+.tab_election .on {
+    z-index: 10
+}
+
+.tab_election .on .link_tab {
+    border-color: #000;
+    font-weight: 700;
+    color: #000;
+    background-color: #fff
+}
+
+.tab_election2 {
+    overflow: hidden;
+    margin-right: -7px
+}
+
+.tab_election2 li {
+    float: left
+}
+
+.tab_election2 .link_tab {
+    display: block;
+    padding: 0 6px 0 7px;
+    font-size: 16px;
+    line-height: 19px
+}
+
+.tab_election2 .inner_tab {
+    display: inline-block;
+    position: relative;
+    vertical-align: top
+}
+
+.tab_election2 .on .inner_tab:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: -1px;
+    height: 1px;
+    background-color: #333;
+    content: ""
+}
+
+.tab_position {
+    padding: 27px 0 22px;
+    text-align: center
+}
+
+.tab_position .inner_tab {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top
+}
+
+.tab_position .link_tab {
+    float: left;
+    padding: 0 2px 6px
+}
+
+.tab_position .link_tab + .link_tab {
+    margin-left: 36px
+}
+
+.tab_position .tit_election {
+    height: 17px
+}
+
+.tab_position .tit_city {
+    width: 59px;
+    background-position: 0 -480px
+}
+
+.tab_position .tit_region {
+    width: 59px;
+    background-position: 0 -500px
+}
+
+.tab_position .tit_edu {
+    width: 44px;
+    background-position: 0 -520px
+}
+
+.tab_position .tit_amendment {
+    width: 29px;
+    background-position: 0 -640px
+}
+
+.tab_position .tit_byelection {
+    width: 106px;
+    background-position: 0 -660px
+}
+
+.tab_position .link_tab.on {
+    padding-bottom: 4px;
+    border-bottom: 2px solid #000
+}
+
+.slide_election {
+    position: relative
+}
+
+.slide, .wrap_slide {
+    overflow: hidden
+}
+
+.slide .panel {
+    float: left
+}
+
+.wrap_btn {
+    overflow: hidden
+}
+
+.wrap_btn .btn_slide {
+    float: left;
+    width: 32px;
+    height: 32px;
+    border: 1px solid #c2c2c2
+}
+
+.wrap_btn .btn_next {
+    margin-left: -1px
+}
+
+.wrap_btn .btn_slide .ico_election {
+    display: block;
+    width: 7px;
+    height: 11px;
+    margin-top: 11px
+}
+
+.wrap_btn .btn_prev .ico_election {
+    margin-left: 12px;
+    background-position: -60px 0
+}
+
+.wrap_btn .btn_next .ico_election {
+    margin-left: 13px;
+    background-position: -70px 0
+}
+
+.wrap_btn span.btn_prev .ico_election {
+    background-position: -40px 0
+}
+
+.wrap_btn span.btn_next .ico_election {
+    background-position: -50px 0
+}
+
+.box_player .player_vod {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.bnr_election {
+    display: block;
+    width: 655px;
+    margin: 0 auto
+}
+
+.link_all {
+    float: left;
+    overflow: hidden;
+    height: 16px;
+    padding: 0 12px 2px 18px;
+    font-size: 13px;
+    line-height: 16px;
+    background-position: 100% 3px
+}
+
+.os_mac .link_all {
+    padding-top: 3px;
+    padding-bottom: 0;
+    background-position: 100% 5px
+}
+
+.feature_live {
+    position: relative;
+    padding-top: 28px;
+    background-color: #2a3137
+}
+
+.box_livechat {
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto;
+    padding-bottom: 34px
+}
+
+.box_livechat .tit_live {
+    display: block;
+    height: 25px;
+    margin-bottom: 20px;
+    padding-left: 60px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    background-position: 0 -180px
+}
+
+.os_mac .box_livechat .tit_live {
+    line-height: 25px
+}
+
+.box_livechat .tab_live {
+    display: inline-block;
+    overflow: hidden;
+    padding-top: 2px;
+    vertical-align: top
+}
+
+.tab_live li {
+    float: left
+}
+
+.tab_live .link_tab {
+    display: block;
+    position: relative;
+    padding: 0 20px 3px
+}
+
+.os_mac .tab_live .link_tab {
+    padding: 3px 20px
+}
+
+.tab_live .on .link_tab {
+    color: #fff
+}
+
+.tab_live .link_tab:before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 1px;
+    height: 16px;
+    background-color: #6a6f73;
+    content: ""
+}
+
+.os_mac .tab_live .link_tab:before {
+    top: 4px
+}
+
+.tab_live li:first-child .link_tab {
+    padding-left: 0
+}
+
+.tab_live li:first-child .link_tab:before {
+    display: none
+}
+
+.box_livechat .tit_live .txt_g {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    letter-spacing: -1px;
+    vertical-align: top
+}
+
+.os_mac .box_livechat .tit_live .txt_g {
+    margin-top: 3px
+}
+
+.box_livechat .live_vod {
+    float: left;
+    position: relative;
+    z-index: 10;
+    width: 793px;
+    height: 446px
+}
+
+.box_livechat .live_chat {
+    display: inline;
+    float: left;
+    width: 307px;
+    height: 446px;
+    margin-left: -1px
+}
+
+.list_news2 li {
+    overflow: hidden;
+    width: 321px;
+    padding-bottom: 8px
+}
+
+.list_news2 li + li {
+    padding-top: 8px;
+    border-top: 1px solid #f3f3f3
+}
+
+.list_news2 .link_thumb {
+    float: right;
+    width: 76px;
+    height: 60px;
+    margin-left: 44px
+}
+
+.list_news2 .link_thumb .thumb_g {
+    display: block;
+    width: 100%
+}
+
+.list_news2 .tit_thumb {
+    overflow: hidden;
+    padding-top: 9px
+}
+
+.list_news2 .link_txt {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    height: 44px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.link_thumb .play_time {
+    position: absolute;
+    right: 6px;
+    bottom: 6px
+}
+
+.link_thumb .play_time:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #000;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    content: ""
+}
+
+.link_thumb .play_time .dimmed_g {
+    top: 0;
+    background: #000;
+    font-size: 0;
+    line-height: 0;
+    opacity: .6;
+    filter: alpha(opacity=60);
+    text-indent: -9999px
+}
+
+.link_thumb .play_time .txt_time {
+    display: block;
+    position: relative;
+    padding: 2px 4px 3px;
+    font-family: Tahoma;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+    letter-spacing: 0
+}
+
+.ico_loading {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/ico_loading.gif) 0 0 no-repeat;
+    text-indent: -9999px
+}
+
+.cmt_news .alex_single blockquote, .cmt_news .alex_single body, .cmt_news .alex_single button, .cmt_news .alex_single code, .cmt_news .alex_single dd, .cmt_news .alex_single div, .cmt_news .alex_single dl, .cmt_news .alex_single dt, .cmt_news .alex_single fieldset, .cmt_news .alex_single form, .cmt_news .alex_single h1, .cmt_news .alex_single h2, .cmt_news .alex_single h3, .cmt_news .alex_single h4, .cmt_news .alex_single h5, .cmt_news .alex_single h6, .cmt_news .alex_single input, .cmt_news .alex_single legend, .cmt_news .alex_single li, .cmt_news .alex_single ol, .cmt_news .alex_single p, .cmt_news .alex_single pre, .cmt_news .alex_single select, .cmt_news .alex_single td, .cmt_news .alex_single textarea, .cmt_news .alex_single th, .cmt_news .alex_single ul {
+    font-family: AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.cmt_news .alex_single .wrap_alex {
+    padding-bottom: 0;
+    background: transparent
+}
+
+.cmt_news .alex_single .cmt_count_box {
+    overflow: hidden;
+    margin-bottom: 10px
+}
+
+.cmt_news .alex_single .cmt_count {
+    float: left;
+    font-size: 15px;
+    line-height: 24px;
+    color: #373737
+}
+
+.cmt_news .alex_single .cmt_count .num_count {
+    padding-top: 1px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #373737
+}
+
+.os_mac .cmt_news .alex_single .cmt_count .num_count {
+    padding-top: 1px
+}
+
+.cmt_news .alex_single .my_comments {
+    margin-top: 2px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #000
+}
+
+.cmt_news .alex_single .link_write {
+    height: 34px;
+    padding-top: 14px !important;
+    padding-left: 11px;
+    border-color: #ccc
+}
+
+.cmt_news .alex_single .link_write .txt_write {
+    line-height: 16px;
+    color: gray
+}
+
+.os_mac .cmt_news .alex_single .link_write .txt_write {
+    line-height: 22px
+}
+
+.cmt_news .alex_single .write_alex {
+    background-color: #fff
+}
+
+.cmt_news .alex_single .cmt_account .info_account .link_nick {
+    padding: 0 0 4px
+}
+
+.os_mac .cmt_news .alex_single .cmt_account .info_account .link_nick {
+    padding: 3px 0 1px
+}
+
+.cmt_news .alex_single .cmt_account .link_logout {
+    padding: 6px 12px 3px 13px
+}
+
+.os_mac .cmt_news .alex_single .cmt_account .link_logout {
+    padding: 9px 12px 0 13px
+}
+
+.os_mac .cmt_news .alex_single .txt_byte {
+    top: 6px
+}
+
+.cmt_news #shareMoreViewContainerAlex, .cmt_news .alex_single .tool_write .btn_write {
+    font-family: AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.cmt_news .alex_single .tool_write .btn_write {
+    overflow: hidden
+}
+
+.cmt_news .alex_single .tool_write .btn_write .inner_btn {
+    display: inline-block;
+    margin-top: -2px;
+    vertical-align: top
+}
+
+.os_mac .cmt_news .alex_single .tool_write .btn_write .inner_btn {
+    margin-top: 0
+}
+
+.cmt_news .alex_single .tool_write .sns_register {
+    padding-top: 2px
+}
+
+.os_mac .cmt_news .alex_single .tool_write .sns_register {
+    padding-top: 4px
+}
+
+.cmt_news .alex_single .list_category {
+    top: -40px
+}
+
+.cmt_news .alex_single .list_category .link_cate {
+    font-size: 14px;
+    color: #000
+}
+
+.cmt_news .alex_single .list_category .ico_check {
+    top: 14px;
+    left: 2px;
+    width: 11px;
+    height: 7px;
+    background-position: -190px -90px
+}
+
+.os_mac .cmt_news .alex_single .list_category .ico_check {
+    top: 12px
+}
+
+.cmt_news .alex_single .cmt_box {
+    margin-top: 42px;
+    border: 1px solid #ededed;
+    border-left: 0 none;
+    border-right: 0 none;
+    border-bottom: 0 none
+}
+
+.cmt_news .alex_single .wrap_alex .list_comment {
+    padding: 0;
+    border-bottom: 1px solid #f1f1f1
+}
+
+.cmt_news .alex_single .tit_nick .link_nick {
+    font-size: 12px;
+    color: #396dba
+}
+
+.cmt_news .alex_single .list_comment .cmt_info .box_reply {
+    height: 21px
+}
+
+.cmt_news .alex_single .list_comment .cmt_info .box_reply:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    visibility: hidden;
+    content: ""
+}
+
+.cmt_news .alex_single .list_comment .cmt_info .box_reply .box_inner {
+    float: left;
+    margin-top: -1px;
+    padding-right: 1px
+}
+
+.cmt_news .alex_single .comment_recomm {
+    clear: none
+}
+
+.cmt_news .alex_single .list_comment .cmt_info .box_reply .num_txt {
+    line-height: 18px
+}
+
+.cmt_news .alex_single .list_comment .cmt_info .reply_count .num_txt {
+    display: inline-block;
+    padding: 4px 1px 0 0;
+    line-height: 17px;
+    vertical-align: top
+}
+
+.os_mac .cmt_news .alex_single .list_comment .cmt_info .reply_count .num_txt {
+    padding-top: 2px
+}
+
+.cmt_news .alex_single .list_comment .list_mycmt {
+    margin: 0;
+    padding: 15px 0
+}
+
+.cmt_news .alex_single .list_mycmt .tooltip {
+    right: -13px
+}
+
+.cmt_news .alex_single .list_mycmt .tooltip_box {
+    right: 1px
+}
+
+.cmt_news .alex_single .tooltip_box a {
+    padding: 4px 0 8px
+}
+
+.os_mac .alex_single .tooltip_box a {
+    padding: 6px 0
+}
+
+.cmt_news .alex_single .comment_recomm .btn_g {
+    padding-right: 1px
+}
+
+.cmt_news .alex_single .reply_wrap {
+    margin: 14px 0 0
+}
+
+.cmt_news .alex_single .reply_wrap .alex_more .link_fold {
+    height: 34px;
+    line-height: 15px;
+    background-color: #fff
+}
+
+.cmt_news .alex_single .info_reply .ico_reply {
+    margin-top: 3px
+}
+
+.os_mac .cmt_news .alex_single .info_reply .ico_reply {
+    margin-top: 0
+}
+
+.cmt_news .alex_single .alex_more .link_fold {
+    height: 34px;
+    padding-top: 16px;
+    border: 1px solid #e9e6e6;
+    border-radius: 2px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #000;
+    background-color: #fff
+}
+
+.os_mac .cmt_news .alex_single .alex_more .link_fold {
+    height: 33px;
+    padding-top: 17px
+}
+
+.cmt_news .alex_single .alex_more .link_fold:hover {
+    border-color: #ccc;
+    background-color: #f6f6f6
+}
+
+.cmt_news .alex_single .alex_more .link_fold .img_more {
+    width: 12px;
+    height: 7px;
+    margin-top: 5px;
+    background: url(//t1.daumcdn.net/media/news/news2016/ico_news2_170531.png) 100% -240px no-repeat;
+    background-size: 50px 580px
+}
+
+.os_mac .cmt_news .alex_single .alex_more .link_fold .img_more {
+    margin-top: 3px
+}
+
+.cmt_news .alex_single .more_report {
+    display: none
+}
+
+.cmt_news .alex_single .alex_btn.btn_refresh {
+    top: -35px;
+    right: 0
+}
+
+.cmt_news .alex_single .my_layer .my_header .num_count {
+    color: #373737
+}
+
+.cmt_news .alex_single .my_layer .info_post a {
+    position: relative;
+    padding-left: 7px;
+    border-left: 0 none
+}
+
+.cmt_news .alex_single .my_layer .info_post a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #444;
+    content: ""
+}
+
+.cmt_news .alex_single .my_header .info_author {
+    line-height: 15px
+}
+
+.os_mac .cmt_news .alex_single .my_header .info_author {
+    line-height: 18px
+}
+
+.cmt_news .alex_single .my_layer .my_header .tit_nick .link_nick {
+    line-height: 15px
+}
+
+.os_mac .cmt_news .alex_single .my_layer .my_header .tit_nick .link_nick {
+    line-height: 18px
+}
+
+.live_chat .alex_chat .cmt_count {
+    height: 34px;
+    padding: 15px 4px 0 17px;
+    line-height: 17px;
+    box-sizing: content-box
+}
+
+.live_chat .alex_chat .not_cmt .txt_not {
+    padding-top: 130px
+}
+
+.live_chat .alex_chat .btn_join .join_chat {
+    display: block;
+    text-align: center
+}
+
+.live_chat .alex_chat .info_author {
+    height: 19px;
+    font-size: 14px
+}
+
+#cSub .live_chat .alex_chat .alex_emot .inner_g {
+    width: auto;
+    border: 1px solid #353535;
+    border-left: 0 none;
+    border-radius: 0
+}
+
+.live_chat .alex_chat .alex_emot .img_tail {
+    position: absolute;
+    top: 394px;
+    left: 14px;
+    height: 10px;
+    background: url(//t1.daumcdn.net/media/news/news2016/img_alex_161013.png) -150px -90px no-repeat;
+    -webkit-background-size: 269px 243px;
+    background-size: 269px 243px
+}
+
+.live_chat .alex_chat .tab_emot .link_tab {
+    position: relative;
+    width: 76px;
+    height: 38px;
+    padding-top: 11px;
+    border-right: 0
+}
+
+.live_chat .alex_chat .tab_emot .on .link_tab {
+    height: 38px;
+    border-bottom: 1px solid #d5d5d5;
+    background-color: #f7f8f8
+}
+
+.live_chat .alex_chat .tab_emot .on .link_tab:before {
+    top: 50%;
+    left: 50%;
+    width: 49px;
+    height: 31px;
+    margin: -17px 0 0 -25px;
+    z-index: 0;
+    background-color: #e5e5e5;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    content: ""
+}
+
+.live_chat .alex_chat .tab_emot .fst .link_tab {
+    width: 77px
+}
+
+.live_chat .alex_chat .tab_emot .lst .link_tab {
+    width: 76px
+}
+
+.live_chat .alex_chat .tab_emot .tab_icon {
+    position: relative;
+    width: 26px;
+    height: 27px
+}
+
+.live_chat .alex_chat .cont_emot .link_emot {
+    position: relative;
+    width: 64px;
+    height: 64px
+}
+
+.live_chat .alex_chat .cont_emot .list_emot li a:hover .link_emot:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px;
+    content: ""
+}
+
+.live_chat .alex_chat .cont_emot .fake_scroll {
+    height: 342px
+}
+
+.live_chat .alex_chat .link_write .img_emot {
+    display: none
+}
+
+.live_chat .alex_chat .cont_write {
+    clear: none
+}
+
+.box_livechat .alex_chat .alex_emot {
+    right: -1px
+}
+
+.link_moreview {
+    display: block;
+    width: 298px;
+    height: 52px;
+    margin: 0 auto;
+    border: 1px solid #222;
+    text-align: center;
+    text-decoration: none
+}
+
+.link_moreview .cont_allview {
+    display: inline-block;
+    padding-top: 16px;
+    font-size: 0;
+    vertical-align: top
+}
+
+.os_mac .link_moreview .cont_allview {
+    padding-top: 18px
+}
+
+.link_moreview .ico_election2 {
+    padding-right: 14px;
+    font-size: 14px;
+    line-height: 16px;
+    background-position: 100% -82px
+}
+
+.os_mac .link_moreview .ico_election2 {
+    background-position: 100% -84px
+}
+
+.link_more {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 20;
+    padding: 2px 0 7px
+}
+
+.os_mac .link_more {
+    padding: 5px 0
+}
+
+.link_more .ico_election2 {
+    padding-right: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    background-position: 100% -21px
+}
+
+.os_mac .link_more .ico_election2 {
+    background-position: 100% -23px
+}
+
+.paging_election {
+    font-size: 0;
+    text-align: center
+}
+
+.paging_election .inner_paging {
+    display: inline-block;
+    vertical-align: top
+}
+
+.paging_election .num_page {
+    float: left;
+    padding: 6px 3px;
+    min-width: 25px;
+    height: 19px;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none
+}
+
+.os_mac .paging_election .num_page {
+    padding: 8px 3px 4px
+}
+
+.paging_election em.num_page {
+    position: relative;
+    min-width: 23px;
+    height: 17px;
+    border: 1px solid #1e88e5;
+    border-radius: 31px;
+    color: #1e88e5
+}
+
+.paging_election .btn_page {
+    float: left;
+    height: 9px;
+    margin: 3px;
+    padding: 7px
+}
+
+.paging_election .btn_page .ico_election {
+    display: block;
+    width: 5px;
+    height: 9px
+}
+
+.paging_election .btn_prev .ico_election {
+    background-position: -180px 0
+}
+
+.paging_election .btn_next .ico_election {
+    background-position: -190px 0
+}
+
+.aside_g {
+    margin-bottom: 40px
+}
+
+.aside_g:last-child {
+    margin-bottom: 0
+}
+
+.aside_g > .tit_election {
+    height: 17px
+}
+
+.aside_voteinfo {
+    overflow: hidden;
+    border: 1px solid #e5e5e5
+}
+
+.aside_ad + .aside_voteinfo {
+    margin-top: -23px
+}
+
+.aside_voteinfo .btn_info {
+    float: left;
+    width: 144px;
+    height: 68px;
+    text-align: center
+}
+
+.aside_voteinfo .btn_info + .btn_info {
+    width: 143px;
+    border-left: 1px solid #e5e5e5
+}
+
+.aside_voteinfo .ico_election2 {
+    display: inline-block;
+    margin-top: 19px;
+    font-size: 16px;
+    line-height: 28px;
+    vertical-align: top
+}
+
+.os_mac .aside_voteinfo .ico_election2 {
+    margin-top: 22px
+}
+
+.aside_voteinfo .ico_info {
+    padding-left: 35px;
+    background-position: 0 -25px
+}
+
+.os_mac .aside_voteinfo .ico_info {
+    background-position: 0 -28px
+}
+
+.aside_voteinfo .ico_rule {
+    padding-left: 33px;
+    background-position: 0 -55px
+}
+
+.os_mac .aside_voteinfo .ico_rule {
+    background-position: 0 -57px
+}
+
+.aside_ranking {
+    padding-top: 20px;
+    margin-bottom: 30px;
+    border-top: 2px solid #000
+}
+
+.aside_ranking .tit_election {
+    height: 15px;
+    background-position: 0 -200px
+}
+
+.aside_ranking .list_ranking {
+    padding-top: 11px;
+    margin-top: 15px;
+    border-top: 1px solid #eee
+}
+
+.aside_ranking .list_ranking li {
+    overflow: hidden;
+    padding: 5px 0;
+    font-size: 14px;
+    line-height: 17px
+}
+
+.aside_ranking .list_ranking .num_election {
+    float: left;
+    width: 23px;
+    height: 11px;
+    margin-top: 6px
+}
+
+.os_mac .aside_ranking .list_ranking .num_election {
+    margin-top: 5px
+}
+
+.aside_ranking .list_ranking .num1 {
+    background-position: 0 -200px
+}
+
+.aside_ranking .list_ranking .num2 {
+    background-position: 0 -220px
+}
+
+.aside_ranking .list_ranking .num3 {
+    background-position: 0 -240px
+}
+
+.aside_ranking .list_ranking .num4 {
+    background-position: 0 -260px
+}
+
+.aside_ranking .list_ranking .num5 {
+    background-position: 0 -280px
+}
+
+.aside_ranking .list_ranking .num6 {
+    background-position: 0 -300px
+}
+
+.aside_ranking .list_ranking .num7 {
+    background-position: 0 -320px
+}
+
+.aside_ranking .list_ranking .num8 {
+    background-position: 0 -340px
+}
+
+.aside_ranking .list_ranking .num9 {
+    background-position: 0 -360px
+}
+
+.aside_ranking .list_ranking .num10 {
+    background-position: 0 -380px
+}
+
+.aside_ranking .list_ranking .tit_g {
+    overflow: hidden;
+    padding: 2px 0;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.cont_home .aside_ranking {
+    padding-top: 0;
+    border-top: 0 none
+}
+
+.cont_home .aside_ranking .tit_election {
+    height: 17px;
+    background-position: 0 -160px
+}
+
+.cont_home .aside_ranking .list_ranking {
+    margin-top: 0;
+    border-top: 0 none
+}
+
+.cont_home .aside_ranking .list_ranking li {
+    font-size: 15px
+}
+
+.os_mac .cont_home .aside_ranking .list_ranking .num_election {
+    margin-top: 4px
+}
+
+.aside_bnr .link_bnr {
+    display: block
+}
+
+.aside_bnr .link_bnr + .link_bnr {
+    margin-top: 10px
+}
+
+.aside_bnr .link_bnr .thumb_g {
+    width: 100%;
+    height: auto
+}
+
+.aside_schedule .tit_election {
+    background-position: 0 -180px
+}
+
+.aside_schedule .list_schedule {
+    height: 206px;
+    background: url(//t1.daumcdn.net/media/news/election2018/list_schedule.jpg) 0 0 no-repeat;
+    background-size: 264px 193px
+}
+
+.aside_series {
+    margin-bottom: 27px
+}
+
+.aside_ranking + .aside_series {
+    margin-top: -19px
+}
+
+.aside_g .list_thumb li {
+    overflow: hidden;
+    padding: 12px 0 13px;
+    border-top: 1px solid #eee
+}
+
+.aside_g .list_thumb li:first-child {
+    padding-top: 36px
+}
+
+.aside_g .list_thumb .link_thumb {
+    float: right;
+    width: 75px;
+    margin: 4px 0 0 14px
+}
+
+.aside_g .list_thumb .emph_g {
+    display: block;
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #3975cd;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.aside_g .list_thumb .tit_thumb {
+    overflow: hidden;
+    height: 44px;
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px
+}
+
+.aside_g .list_thumb .tit_thumb .link_txt {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 44px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.aside_other .tit_election {
+    background-position: 0 -790px
+}
+
+.aside_other .list_other {
+    overflow: hidden;
+    margin-top: 18px;
+    border-top: 1px solid #e2e2e2;
+    border-left: 1px solid #e2e2e2
+}
+
+.aside_other .list_other li {
+    float: left;
+    width: 50%
+}
+
+.aside_other .list_other .link_txt {
+    display: block;
+    height: 45px;
+    padding-left: 13px;
+    border-bottom: 1px solid #e2e2e2;
+    border-right: 1px solid #e2e2e2;
+    font-size: 13px;
+    line-height: 45px;
+    letter-spacing: -1px
+}
+
+.os_mac .aside_other .list_other .link_txt {
+    font-size: 14px
+}
+
+.aside_realtime .tit_election {
+    background-position: 0 -810px
+}
+
+.aside_realtime .list_thumb {
+    margin-top: 18px
+}
+
+.aside_realtime .list_thumb li {
+    padding: 8px 0
+}
+
+.aside_realtime .list_thumb li:first-child {
+    padding-top: 8px
+}
+
+.aside_realtime .list_thumb .link_thumb {
+    margin-top: 0
+}
+
+.aside_realtime .list_thumb .cont_thumb {
+    padding-top: 8px
+}
+
+.aside_debate .tit_election {
+    background-position: 0 -830px;
+    margin-bottom: 27px
+}
+
+.aside_debate .ir_pm {
+    width: 290px;
+    height: 220px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_debate.jpg) 0 0 no-repeat;
+    background-size: 290px 220px
+}
+
+.cont_news .box_news {
+    padding-top: 31px
+}
+
+.os_mac .cont_news .box_news {
+    padding-top: 34px
+}
+
+.list_news {
+    margin-top: -5px
+}
+
+.os_mac .list_news {
+    margin-top: -8px
+}
+
+.list_news li {
+    overflow: hidden;
+    padding: 21px 0 26px
+}
+
+.os_mac .list_news li {
+    padding-top: 18px
+}
+
+.list_news li:first-child, .os_mac .list_news li:first-child {
+    padding-top: 0
+}
+
+.list_news .selected {
+    background-color: #f1f8fe;
+    -webkit-transition: background-color .5s;
+    transition: background-color .5s
+}
+
+.list_news li + li {
+    border-top: 1px solid #f3f3f3
+}
+
+.list_news .link_thumb {
+    float: right;
+    margin: 5px 0 0 40px
+}
+
+.os_mac .list_news .link_thumb {
+    margin-top: 8px
+}
+
+.list_news .thumb_g {
+    width: 160px;
+    height: 110px
+}
+
+.list_news .tit_thumb {
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -2px
+}
+
+.os_mac .list_news .tit_thumb {
+    font-size: 22px;
+    padding-top: 8px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -.05em
+}
+
+.list_news .tit_thumb .link_txt {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 610px;
+    padding-right: 2px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: top
+}
+
+.list_news .desc_thumb {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 46px;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 23px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.list_news .info_thumb {
+    font-size: 12px;
+    line-height: 19px;
+    color: #888
+}
+
+.relate_news {
+    overflow: hidden;
+    margin-top: 4px
+}
+
+.os_mac .relate_news {
+    margin-top: 8px
+}
+
+.relate_news .link_txt {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 660px;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.relate_news .item_relate {
+    height: 22px;
+    font-size: 15px;
+    line-height: 22px
+}
+
+.os_mac .relate_news .item_relate {
+    font-size: 16px
+}
+
+.relate_news .item_relate + .item_relate {
+    margin-top: 5px
+}
+
+.list_news .info_news {
+    padding-left: 2px
+}
+
+.list_news .link_thumb + .cont_thumb .tit_thumb .link_txt {
+    max-width: 430px
+}
+
+.list_news .link_thumb + .cont_thumb .relate_news .link_txt {
+    max-width: 480px
+}
+
+.box_news .desc_info {
+    height: 19px;
+    padding-left: 28px;
+    margin-top: 27px;
+    font-size: 13px;
+    line-height: 19px;
+    color: #888;
+    background-position: 0 -540px
+}
+
+.os_mac .box_news .desc_info {
+    line-height: 20px;
+    background-position: 0 -540px
+}
+
+.box_news .bnr_election {
+    margin: 14px auto 40px
+}
+
+.box_news .list_news + .link_moreview {
+    margin-top: -4px
+}
+
+.box_vodnews {
+    margin-top: 40px
+}
+
+.box_vodnews .box_player {
+    height: 428px
+}
+
+.box_vodnews .tit_vodnews {
+    overflow: hidden;
+    margin-top: 13px;
+    line-height: 24px
+}
+
+.box_vodnews .link_desc {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 610px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    vertical-align: top
+}
+
+.box_vodnews .cmt_count {
+    display: inline-block;
+    padding: 6px 0 0 11px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #1e88e5;
+    vertical-align: top
+}
+
+.os_mac .box_vodnews .cmt_count {
+    padding-top: 5px
+}
+
+.box_vodnews .ico_election2 {
+    width: 15px;
+    height: 13px;
+    margin: 1px 1px 0 0;
+    padding-left: 18px;
+    background-position: 0 -120px
+}
+
+.tab_district {
+    overflow: hidden;
+    position: relative
+}
+
+.tab_district li {
+    float: left
+}
+
+.tab_district:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background-color: #d9d9d9;
+    content: ""
+}
+
+.tab_district .link_tab {
+    display: block;
+    width: 44px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center
+}
+
+.os_mac .tab_district .link_tab {
+    line-height: 52px
+}
+
+.tab_district li:first-child .link_tab, .tab_district li:last-child .link_tab {
+    width: 50px
+}
+
+.tab_district .on .link_tab {
+    position: relative;
+    z-index: 10;
+    border-bottom: 1px solid #000
+}
+
+.box_cmt {
+    margin-top: 40px
+}
+
+.box_cmt .head_cmt {
+    height: 138px;
+    margin-bottom: 23px;
+    border: 1px solid #ebebeb;
+    background: url(//t1.daumcdn.net/media/news/election2018/head_cmt2.jpg) 0 0 no-repeat;
+    background-size: 758px 138px
+}
+
+.box_cmt .head_cmt .tit_cmt {
+    margin-top: 39px;
+    font-size: 26px;
+    line-height: 31px;
+    text-align: center
+}
+
+.box_photo {
+    padding-top: 26px
+}
+
+.list_photo {
+    overflow: hidden;
+    width: 786px
+}
+
+.list_photo li {
+    float: left;
+    width: 236px;
+    margin-right: 26px
+}
+
+.list_photo .cont_thumb {
+    padding-top: 10px;
+    height: 80px
+}
+
+.list_photo .tit_thumb {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 42px;
+    font-size: 15px;
+    line-height: 21px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical
+}
+
+.list_photo .info_news {
+    display: block;
+    padding-left: 0;
+    margin-top: 4px;
+    line-height: 15px
+}
+
+.box_photo .paging_election {
+    margin-top: 12px
+}
+
+.cont_candidate .lnb_election {
+    overflow: visible;
+    height: 66px
+}
+
+.lnb_election .link_register {
+    float: right;
+    padding: 22px 0 25px
+}
+
+.os_mac .lnb_election .link_register {
+    padding: 25px 0 22px
+}
+
+.lnb_election .link_register .ico_election2 {
+    padding-left: 24px;
+    background-position: 0 -355px;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff
+}
+
+.os_mac .lnb_election .link_register .ico_election2 {
+    background-position: 0 -360px
+}
+
+.sort_region {
+    float: left;
+    position: relative;
+    z-index: 30
+}
+
+.sort_region .link_layer {
+    display: block;
+    overflow: hidden;
+    padding: 21px 0 18px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+    text-decoration: none
+}
+
+.os_mac .sort_region .link_layer {
+    font-weight: 400;
+    line-height: 27px
+}
+
+.sort_region .link_layer .txt_region {
+    float: left;
+    margin: 0 18px 0 20px
+}
+
+.sort_region .link_layer .ico_election2 {
+    display: block;
+    overflow: hidden;
+    padding-right: 20px;
+    background-position: 100% -290px
+}
+
+.sort_region .link_layer .ico_election {
+    float: left;
+    width: 18px;
+    height: 27px;
+    background-position: -200px -20px
+}
+
+.layer_open .link_layer .ico_election2 {
+    background-position: 100% -320px
+}
+
+.sort_region .layer_region {
+    display: none;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 66px;
+    z-index: 20;
+    width: 1098px;
+    background-color: #fff;
+    border: 1px solid #888;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2)
+}
+
+.sort_region .layer_region:after {
+    position: absolute;
+    left: 394px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #e5e5e5;
+    content: ""
+}
+
+.sort_region .layer_region .tit_election {
+    display: block;
+    height: 15px
+}
+
+.sort_region .layer_region .head_region {
+    margin-right: 45px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.sort_region.layer_open .layer_region {
+    display: block
+}
+
+.sort_region .city_list {
+    float: left;
+    width: 349px;
+    padding: 28px 0 22px 46px
+}
+
+.sort_region .city_list .tit_election {
+    background-position: 0 -440px
+}
+
+.sort_region .city_list li {
+    width: 68px
+}
+
+.sort_region .region_list {
+    overflow: hidden;
+    padding: 28px 0 22px 46px
+}
+
+.sort_region .region_list .tit_election {
+    background-position: 0 -460px
+}
+
+.sort_region .region_list li {
+    width: 81px
+}
+
+.sort_region .region_list .desc_empty {
+    padding-top: 62px;
+    font-size: 14px;
+    line-height: 27px;
+    color: #aaafb4;
+    text-align: center
+}
+
+.sort_region .list_region {
+    overflow: hidden;
+    padding-top: 11px;
+    text-align: left
+}
+
+.sort_region .list_region li {
+    float: left
+}
+
+.sort_region .list_region .link_txt {
+    position: relative;
+    font-size: 15px;
+    line-height: 33px
+}
+
+.sort_region .list_region .on .link_txt:after {
+    position: absolute;
+    left: -1px;
+    right: -1px;
+    bottom: 0;
+    height: 1px;
+    background-color: #000;
+    content: ""
+}
+
+.wrap_candidate {
+    width: 1100px;
+    margin: 0 auto
+}
+
+.tit_candidate {
+    overflow: hidden;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -2px
+}
+
+.os_mac .tit_candidate {
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 0
+}
+
+.head_candidate .link_all {
+    margin-top: 3px
+}
+
+.os_mac .head_candidate .link_all {
+    margin-top: 0
+}
+
+.candidate_list {
+    padding-bottom: 29px
+}
+
+.candidate_list .info_candidate {
+    position: relative
+}
+
+.candidate_list .info_candidate .ico_win {
+    position: absolute;
+    top: 8px;
+    right: 60px;
+    z-index: 20;
+    width: 79px;
+    height: 24px;
+    background-position: 0 -140px
+}
+
+.candidate_list .tit_candidate {
+    margin-bottom: 14px
+}
+
+.candidate_list .tit_candidate .tit_election {
+    width: 72px;
+    background-position: 0 -540px
+}
+
+.candidate_list .info_candidate .cont_thumb {
+    overflow: hidden;
+    height: 95px;
+    padding: 14px 0 0 21px
+}
+
+.candidate_list .info_candidate .tit_thumb {
+    display: block;
+    font-size: 22px;
+    line-height: 25px;
+    color: #fff;
+    letter-spacing: -1px
+}
+
+.os_mac .candidate_list .info_candidate .tit_thumb {
+    line-height: 27px
+}
+
+.candidate_list .info_candidate .tit_thumb .ico_election {
+    width: 44px;
+    height: 22px;
+    margin: 1px 0 0 7px
+}
+
+.os_mac .candidate_list .info_candidate .tit_thumb .ico_election {
+    margin-top: 0
+}
+
+.candidate_list .info_candidate .tit_thumb .ico_resign {
+    background-position: -140px -100px
+}
+
+.candidate_list .info_candidate .tit_thumb .ico_death {
+    background-position: -240px -160px
+}
+
+.candidate_list .info_candidate .tit_thumb .ico_void {
+    width: 64px;
+    background-position: -240px -190px
+}
+
+.candidate_list .info_candidate .info_thumb {
+    display: block;
+    margin-bottom: 11px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff
+}
+
+.candidate_list .info_candidate .list_sns {
+    overflow: hidden
+}
+
+.candidate_list .info_candidate .tit_thumb + .list_sns {
+    margin-top: 35px
+}
+
+.candidate_list .info_candidate .list_sns li {
+    float: left;
+    margin-right: 13px
+}
+
+.candidate_list .info_candidate .list_sns .link_sns {
+    display: block
+}
+
+.candidate_list .info_candidate .list_sns .ico_election {
+    display: block;
+    width: 18px;
+    height: 17px
+}
+
+.candidate_list .info_candidate .list_sns .ico_website {
+    background-position: -40px -50px
+}
+
+.candidate_list .info_candidate .list_sns .ico_kakao {
+    background-position: -80px -50px
+}
+
+.candidate_list .info_candidate .list_sns .ico_instagram {
+    background-position: -20px -50px
+}
+
+.candidate_list .info_candidate .list_sns .ico_facebook {
+    background-position: 0 -50px
+}
+
+.candidate_list .info_candidate .list_sns .ico_twitter {
+    background-position: -60px -50px
+}
+
+.candidate_list .link_thumb {
+    float: right;
+    position: relative;
+    width: 87px
+}
+
+.candidate_list .link_thumb .thumb_g {
+    width: 100%
+}
+
+.candidate_list .list_candidate {
+    overflow: hidden;
+    width: 1119px
+}
+
+.candidate_list .list_candidate > li {
+    float: left;
+    position: relative;
+    width: 354px;
+    margin: 0 19px 19px 0
+}
+
+.candidate_list .info_list {
+    height: 224px;
+    border: 1px solid #e5e5e5;
+    border-top: 0 none
+}
+
+.candidate_list .list_info {
+    padding: 16px 21px 0
+}
+
+.candidate_list .info_list li {
+    overflow: hidden;
+    line-height: 27px
+}
+
+.candidate_list .info_list .emph_info {
+    float: left;
+    width: 44px;
+    font-size: 14px;
+    color: #5e5e5e
+}
+
+.candidate_list .info_list .txt_info {
+    display: block;
+    overflow: hidden;
+    font-size: 15px
+}
+
+.candidate_list .info_list .txt_info .txt_g {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.candidate_list .info_list .txt_info .ico_election2 {
+    padding-right: 12px;
+    background-position: 100% 5px
+}
+
+.os_mac .candidate_list .info_list .txt_info .ico_election2 {
+    background-position: 100% 3px
+}
+
+.candidate_list .info_support {
+    display: block;
+    margin: 3px 0 20px;
+    padding-left: 65px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #787878
+}
+
+.candidate_list .link_promise {
+    display: block;
+    height: 54px;
+    border: 1px solid #e5e5e5;
+    border-top: 0 none;
+    font-size: 15px;
+    line-height: 52px;
+    text-align: center
+}
+
+.os_mac .candidate_list .link_promise {
+    line-height: 55px
+}
+
+.candidate_list .link_dimmed {
+    color: #919191
+}
+
+.candidate_list .layer_promise {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+    padding: 30px 26px;
+    background-color: #fff;
+    border: 1px solid #888;
+    border-radius: 2px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2)
+}
+
+.candidate_list .layer_open .layer_promise {
+    display: block
+}
+
+.candidate_list .layer_promise .tit_election {
+    width: 56px;
+    height: 16px;
+    margin-bottom: 20px;
+    background-position: 0 -620px
+}
+
+.candidate_list .layer_promise .list_promise li {
+    overflow: hidden;
+    padding-left: 2px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 22px
+}
+
+.candidate_list .layer_promise .num_promise {
+    float: left;
+    margin-right: 7px
+}
+
+.candidate_list .layer_promise .txt_promise {
+    display: block;
+    overflow: hidden
+}
+
+.candidate_list .layer_promise .btn_close {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+    padding: 10px
+}
+
+.candidate_list .layer_promise .ico_election {
+    width: 17px;
+    height: 17px;
+    background-position: -100px -50px
+}
+
+.candidate_list .layer_promise .desc_empty {
+    padding-top: 149px;
+    font-size: 15px;
+    line-height: 30px;
+    color: #919191;
+    text-align: center
+}
+
+.candidate_other {
+    overflow: hidden;
+    margin-top: -8px;
+    border-top: 1px solid #e5e5e5
+}
+
+.candidate_other .tit_election {
+    float: left;
+    width: 108px;
+    height: 14px;
+    margin: 26px 19px 0 35px;
+    background-position: 0 -560px
+}
+
+.os_mac .candidate_other .tit_election {
+    margin-right: 29px;
+    margin-left: 45px
+}
+
+.candidate_other .list_other {
+    overflow: hidden
+}
+
+.candidate_other .list_other li {
+    float: left;
+    margin: 0 15px
+}
+
+.os_mac .candidate_other .list_other li {
+    margin: 0 20px
+}
+
+.candidate_other .list_other .link_other {
+    display: block;
+    height: 67px;
+    font-size: 15px;
+    line-height: 63px
+}
+
+.os_mac .candidate_other .list_other .link_other {
+    line-height: 67px
+}
+
+.head_candidate {
+    overflow: hidden;
+    margin-bottom: 14px;
+    padding-top: 40px;
+    border-top: 2px solid #333
+}
+
+.candidate_news {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 40px
+}
+
+.candidate_news .tit_candidate {
+    float: left
+}
+
+.candidate_news .tit_election {
+    width: 104px;
+    background-position: 0 -580px
+}
+
+.candidate_news .list_news2 {
+    overflow: hidden;
+    width: 1168px;
+    height: 230px
+}
+
+.candidate_news .list_news2 li {
+    float: left;
+    margin-right: 68px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.candidate_news .list_news2 li + li {
+    border-top: 0 none
+}
+
+.candidate_news .list_news2.link_thumb {
+    float: right;
+    margin-left: 44px
+}
+
+.candidate_news .list_news2 .tit_thumb {
+    overflow: hidden;
+    padding-top: 9px
+}
+
+.candidate_news .list_news2 .link_txt {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    height: 42px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 21px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.candidate_survey {
+    padding-bottom: 80px
+}
+
+.candidate_survey .tit_candidate {
+    float: left
+}
+
+.candidate_survey .tit_election {
+    width: 135px;
+    background-position: 0 -600px
+}
+
+.candidate_survey .approval_poll .bundle_poll {
+    border: 1px solid #dee3e8;
+    border-right: 0 none
+}
+
+.candidate_survey .approval_poll .item_poll {
+    width: 307px
+}
+
+.candidate_survey .approval_poll .item_poll:first-child {
+    width: 308px
+}
+
+.candidate_cmt {
+    margin: 50px auto 100px
+}
+
+.candidate_cmt .bnr_cmt {
+    width: 1098px;
+    height: 118px;
+    margin-bottom: 30px;
+    border: 1px solid #e5e5e5;
+    background: url(//t1.daumcdn.net/media/news/election2018/head_cmt.png) 50% 0 no-repeat;
+    background-size: 622px 118px
+}
+
+.candidate_cmt .tit_bnr {
+    display: block;
+    margin-top: 34px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 27px;
+    text-align: center
+}
+
+#kakaoContent.cont_poll:before {
+    background-color: #dee3e8
+}
+
+.box_g .head_poll:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+    clear: both;
+    content: ""
+}
+
+.box_g .head_poll .tit_election {
+    float: left;
+    height: 18px
+}
+
+.box_g .head_poll .tab_election2 {
+    float: right
+}
+
+.desc_prohibition {
+    position: relative;
+    height: 40px;
+    font-size: 14px;
+    line-height: 38px;
+    color: #535f72;
+    background-color: #e4ebf2;
+    text-align: center
+}
+
+.os_mac .desc_prohibition {
+    line-height: 42px
+}
+
+.box_approval {
+    padding: 35px 0 36px;
+    background-color: #f0f4f8
+}
+
+.box_approval .tit_election {
+    width: 135px;
+    margin-top: 6px;
+    background-position: 0 -340px
+}
+
+.box_approval .tooltip_election {
+    float: left
+}
+
+.box_approval .tooltip_election .ico_tooltip {
+    background-position: -200px 0
+}
+
+.box_approval .tab_election2 {
+    margin-top: 8px
+}
+
+.approval_poll {
+    margin-top: 10px
+}
+
+.approval_poll .wrap_slide {
+    border: 1px solid #dee3e8;
+    margin-right: -1px
+}
+
+.approval_poll .bundle_poll {
+    overflow: hidden
+}
+
+.approval_poll .item_poll {
+    float: left;
+    width: 308px;
+    height: 434px;
+    border: 0 none;
+    border-right: 1px solid #dee3e8
+}
+
+.approval_poll .item_poll .tit_poll {
+    margin-bottom: 8px;
+    text-align: center
+}
+
+.os_mac .approval_poll .item_poll .tit_poll {
+    margin-bottom: 5px;
+    font-weight: 600
+}
+
+.approval_poll .item_poll .remarks_list {
+    margin-top: 22px
+}
+
+.approval_poll .item_poll .info_graph {
+    height: 54px
+}
+
+.box_approval .btn_slide {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    border: 1px solid #c4c4c4
+}
+
+.box_approval .btn_slide:hover {
+    border-color: #000
+}
+
+.box_approval span.btn_slide {
+    width: 48px;
+    height: 48px
+}
+
+.box_approval span.btn_slide:hover {
+    border-color: #c4c4c4
+}
+
+.box_approval .btn_prev {
+    left: -70px
+}
+
+.box_approval .btn_next {
+    right: -70px
+}
+
+.box_approval .btn_slide .ico_election {
+    display: block;
+    width: 10px;
+    height: 16px;
+    margin: 0 auto
+}
+
+.box_approval span.btn_slide .ico_election {
+    margin-top: 16px;
+    opacity: .3;
+    filter: alpha(opacity=30)
+}
+
+.box_approval .btn_slide .ico_prev {
+    background-position: -40px -20px
+}
+
+.box_approval .btn_slide .ico_next {
+    background-position: -50px -20px
+}
+
+.box_type {
+    padding-top: 40px
+}
+
+.box_type .bnr_election {
+    margin-bottom: 42px
+}
+
+.box_type .tit_election {
+    width: 86px;
+    background-position: 0 -360px
+}
+
+.type_poll {
+    width: 1120px;
+    margin-top: 16px
+}
+
+.type_poll .item_poll {
+    width: 480px;
+    margin: 0 20px 18px 0
+}
+
+.box_type .link_moreview {
+    margin-top: 12px
+}
+
+.foot_poll {
+    margin-top: 62px;
+    border-top: 1px solid #e2e2e2
+}
+
+.foot_poll .link_bnr {
+    display: block;
+    overflow: hidden;
+    width: 1100px;
+    margin: 0 auto
+}
+
+.foot_poll .link_bnr .thumb_g {
+    float: left;
+    width: 310px;
+    margin-right: 4px
+}
+
+.foot_poll .link_bnr .desc_info {
+    float: left;
+    font-size: 13px;
+    line-height: 60px;
+    color: #888
+}
+
+.os_mac .foot_poll .link_bnr .desc_info {
+    line-height: 62px
+}
+
+.foot_poll .link_bnr .ico_election2 {
+    float: right;
+    margin-top: 21px;
+    padding-right: 13px;
+    font-size: 14px;
+    line-height: 18px;
+    background-position: 100% -266px
+}
+
+.os_mac .foot_poll .link_bnr .ico_election2 {
+    margin-top: 22px;
+    background-position: 100% -268px
+}
+
+.vod_list {
+    overflow: hidden;
+    position: relative;
+    width: 760px;
+    margin-bottom: 38px
+}
+
+.vod_list .head_vod {
+    overflow: hidden;
+    margin-bottom: 9px;
+    padding-right: 100px
+}
+
+.head_vod .num_g2 {
+    float: left;
+    font-size: 18px;
+    line-height: 30px;
+    color: #008eee
+}
+
+.os_mac .head_vod .num_g2 {
+    line-height: 25px
+}
+
+.head_vod .ico_dot {
+    float: left;
+    width: 4px;
+    height: 4px;
+    margin: 11px 7px 0;
+    border-radius: 2px;
+    background-color: #888
+}
+
+.head_vod .tit_head {
+    display: block;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.list_vod {
+    overflow: hidden;
+    width: 786px
+}
+
+.list_vod li {
+    float: left;
+    width: 236px;
+    margin-right: 26px
+}
+
+.list_vod .tit_thumb {
+    display: -webkit-box;
+    overflow: hidden;
+    height: 39px;
+    margin: 13px 0 5px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.list_vod .info_thumb .ico_cmt {
+    display: block;
+    padding-left: 20px;
+    background-position: 0 -389px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #888
+}
+
+.vod_list .wrap_btn {
+    position: absolute;
+    right: 0;
+    top: 0
+}
+
+.vod_list .wrap_btn .btn_slide {
+    width: 25px;
+    height: 25px
+}
+
+.vod_list .wrap_btn .btn_slide .ico_election {
+    margin-top: 7px
+}
+
+.vod_list .wrap_btn .btn_prev .ico_election {
+    margin-left: 9px
+}
+
+.vod_list .wrap_btn .btn_next .ico_election {
+    margin-left: 10px
+}
+
+.vod_list + .link_moreview {
+    margin-top: 45px
+}
+
+.head_promise {
+    height: 257px;
+    padding: 21px 0 66px;
+    border-bottom: 1px solid #e5e5e5;
+    background: url(//t1.daumcdn.net/media/news/election2018/head_promise.jpg) 100% 0 no-repeat;
+    background-size: 331px 278px
+}
+
+.head_promise .tit_promise {
+    overflow: hidden;
+    width: 369px;
+    height: 168px;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/tit_promise.jpg) 0 0 no-repeat;
+    background-size: 369px 168px;
+    text-indent: -9999px
+}
+
+.head_promise .btn_promise {
+    display: inline-block;
+    position: relative;
+    min-width: 220px;
+    height: 62px;
+    margin-top: 27px;
+    background-color: #2b74e0;
+    vertical-align: top;
+    text-align: center
+}
+
+.btn_promise .alex-action .selectionbox {
+    display: block;
+    width: auto;
+    padding: 0 36px;
+    text-align: center
+}
+
+.btn_promise .alex-action .icon-wrapper {
+    display: inline-block;
+    width: 36px;
+    height: 62px;
+    margin: 0;
+    vertical-align: top
+}
+
+.btn_promise .alex-action .icon {
+    width: 36px;
+    height: 55px;
+    margin-top: -8px
+}
+
+.btn_promise .alex-action .count {
+    display: inline-block;
+    height: 62px;
+    padding-right: 70px;
+    font-size: 15px;
+    line-height: 62px;
+    font-family: Roboto-Bold, sans-serif;
+    color: #fff;
+    background: url(//t1.daumcdn.net/media/news/election2018/txt_promise.png) 100% 50% no-repeat;
+    background-size: 67px 15px;
+    text-align: left;
+    vertical-align: top
+}
+
+.os_mac .btn_promise .alex-action .count {
+    font-weight: 700;
+    line-height: 62px;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.btn_promise .alex-action .selection-label {
+    display: none
+}
+
+.btn_promise .alex-action .type-LIKE.selected .icon, .btn_promise .alex-action .type-LIKE.unselected .icon {
+    background-image: url(https://t1.daumcdn.net/alexander/static_img/action/election_promise/promise1x.png);
+    background-size: 1080px 55px
+}
+
+.tag_promise {
+    overflow: hidden;
+    margin-bottom: -12px;
+    font-size: 0;
+    background-color: #f3f7fa;
+    text-align: center
+}
+
+.tag_promise .inner_tag {
+    display: inline-block;
+    padding: 22px 0;
+    vertical-align: top
+}
+
+.tag_promise .link_tag {
+    float: left;
+    height: 38px;
+    margin: 0 4px;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 36px;
+    color: #1e5fbe;
+    background-color: #d8e6f2
+}
+
+.os_mac .tag_promise .link_tag {
+    line-height: 38px
+}
+
+.tag_promise .desc_empty {
+    height: 82px;
+    font-size: 14px;
+    line-height: 78px;
+    color: #6d7d94
+}
+
+.os_mac .tag_promise .desc_empty {
+    line-height: 82px
+}
+
+.head_shot {
+    height: 243px;
+    padding: 21px 0 35px;
+    background: url(//t1.daumcdn.net/media/news/election2018/head_shot.jpg) 100% 0 no-repeat;
+    background-size: 352px 264px
+}
+
+.head_shot .tit_shot {
+    overflow: hidden;
+    width: 348px;
+    height: 172px;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/tit_shot.png) 0 0 no-repeat;
+    background-size: 348px 172px;
+    text-indent: -9999px
+}
+
+.box_shot .alex_single blockquote, .box_shot .alex_single body, .box_shot .alex_single button, .box_shot .alex_single code, .box_shot .alex_single dd, .box_shot .alex_single div, .box_shot .alex_single dl, .box_shot .alex_single dt, .box_shot .alex_single fieldset, .box_shot .alex_single form, .box_shot .alex_single h1, .box_shot .alex_single h2, .box_shot .alex_single h3, .box_shot .alex_single h4, .box_shot .alex_single h5, .box_shot .alex_single h6, .box_shot .alex_single input, .box_shot .alex_single legend, .box_shot .alex_single li, .box_shot .alex_single ol, .box_shot .alex_single p, .box_shot .alex_single pre, .box_shot .alex_single select, .box_shot .alex_single td, .box_shot .alex_single textarea, .box_shot .alex_single th, .box_shot .alex_single ul {
+    font-family: AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.box_shot .alex_single .alex_btn.btn_refresh, .box_shot .alex_single .desc_txt, .box_shot .alex_single .list_comment .cmt_info .box_reply, .box_shot .alex_single .reply_write_box, .box_shot .alex_single .tit_nick, .box_shot .alex_single .tooltip {
+    display: none
+}
+
+.box_shot .alex_single .wrap_alex {
+    padding-bottom: 0
+}
+
+.box_shot .alex_single .cmt_count_box {
+    margin-bottom: 7px
+}
+
+.box_shot .alex_single .cmt_count {
+    display: block;
+    padding: 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 19px
+}
+
+.box_shot .alex_single .cmt_count span:first-child {
+    display: none
+}
+
+.box_shot .alex_single .cmt_count .num_count {
+    padding: 0 115px 0 0;
+    margin-left: 0;
+    line-height: 17px;
+    color: #000;
+    background: url(//t1.daumcdn.net/media/news/election2018/txt_shot.gif) 100% 2px no-repeat;
+    background-size: 113px 15px
+}
+
+.os_mac .box_shot .alex_single .cmt_count .num_count {
+    background-position: 100% -1px
+}
+
+.box_shot .alex_single .write_wrap {
+    margin-bottom: 45px
+}
+
+.box_shot .alex_single .link_write {
+    height: 32px;
+    padding: 14px 0 0 20px;
+    border-color: #ccc;
+    font-size: 14px;
+    background-color: #fff
+}
+
+.os_mac .box_shot .alex_single .link_write {
+    height: 34px;
+    padding-top: 12px
+}
+
+.box_shot .alex_single .write_wrap .img_camera {
+    width: 24px;
+    height: 18px;
+    margin: 3px 0 0 3px;
+    background: url(//t1.daumcdn.net/media/news/election2017/ico_election_170410_v5.png) -160px -70px no-repeat;
+    background-size: 250px 200px
+}
+
+.box_shot .alex_single .link_write .img_camera {
+    float: left;
+    margin: 1px 10px 0 0
+}
+
+.box_shot .alex_single .write_wrap .img_camera:hover {
+    background-position: -160px -70px
+}
+
+.box_shot .alex_single .link_write .txt_write {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #666
+}
+
+.os_mac .box_shot .alex_single .link_write .txt_write {
+    line-height: 1.6
+}
+
+.box_shot .alex_single .write_on .cont_write {
+    margin-bottom: 5px
+}
+
+.box_shot .alex_single .cmt_box {
+    margin-top: 52px;
+    border: 0 none
+}
+
+.box_shot .alex_single .cmt_box > .list_category {
+    top: -38px;
+    height: 26px
+}
+
+.os_mac .box_shot .alex_single .cmt_box > .list_category {
+    top: -34px
+}
+
+.box_shot .alex_single .list_category .link_cate {
+    padding-top: 0;
+    font-size: 14px;
+    line-height: 26px
+}
+
+.box_shot .alex_single .list_comment {
+    overflow: hidden;
+    padding: 0;
+    margin: 0 -8px -8px 0
+}
+
+.box_shot .alex_single .list_comment > li {
+    float: left;
+    width: 192px;
+    height: 192px;
+    border: 0 none;
+    clear: none;
+    margin: 0
+}
+
+.box_shot .alex_single .list_comment > li:nth-child(4n-1) {
+    margin-left: -1px
+}
+
+.box_shot .alex_single .list_comment .cmt_info {
+    padding: 0 8px 8px 0;
+    margin: 0;
+    cursor: pointer
+}
+
+.box_shot .alex_single .list_comment .cmt_thumb {
+    position: relative;
+    margin-top: 0
+}
+
+.box_shot .alex_single .list_comment .cmt_thumb:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    border: 1px solid #000;
+    opacity: .05;
+    content: ""
+}
+
+.box_shot .alex_single .cmt_thumb img {
+    margin: 0
+}
+
+.box_shot .alex_single .cmt_box .alex_more {
+    clear: left;
+    margin-top: 30px
+}
+
+.box_shot .alex_single .alex_more .link_fold {
+    width: 298px;
+    height: 36px;
+    padding-top: 16px;
+    margin: 0 auto;
+    border: 1px solid #222;
+    font-size: 14px;
+    line-height: 16px;
+    color: #333
+}
+
+.os_mac .box_shot .alex_single .alex_more .link_fold {
+    height: 33px;
+    padding-top: 19px
+}
+
+.box_shot .alex_single .alex_more .link_fold .img_more {
+    width: 10px;
+    height: 5px;
+    margin: 6px 0 0 3px;
+    background: url(//t1.daumcdn.net/media/news/election2018/ico_election2_180521.png) 100% -90px;
+    background-size: 60px 570px
+}
+
+.os_mac .box_shot .alex_single .alex_more .link_fold .img_more {
+    margin-top: 4px
+}
+
+.box_shot .alex_single .comment_layer .cmt_box {
+    margin-top: 20px
+}
+
+.box_shot .alex_single .comment_layer .tit_nick {
+    display: inline-block
+}
+
+.box_shot .alex_single .comment_layer .list_comment {
+    margin: 0 20px
+}
+
+.box_shot .alex_single .comment_layer .list_comment > li {
+    float: none;
+    width: 100%;
+    height: auto
+}
+
+.box_shot .alex_single .comment_layer .list_comment .cmt_info {
+    padding: 0
+}
+
+.box_shot .alex_single .loading_more {
+    display: none
+}
+
+.photo_layer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    font-family: HelveticaNeue-Light, AppleSDGothicNeo-Light, Malgun Gothic, "\B9D1\C740   \ACE0\B515", sans-serif;
+    color: #fff;
+    background-color: #000
+}
+
+.photo_layer .inner_photo_layer {
+    height: 100%
+}
+
+.photo_layer .ico_viewer {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/ico_election_180530.png) no-repeat;
+    background-size: 320px 380px;
+    text-indent: -9999px
+}
+
+.photo_layer .cont_thumb {
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.photo_layer .inner_thumb {
+    display: table;
+    width: 100%;
+    height: 100%
+}
+
+.photo_layer .wrap_thumb {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    padding: 0 20px;
+    vertical-align: middle
+}
+
+.photo_layer .ico_loading {
+    width: 36px;
+    height: 36px;
+    margin: -18px 0 0 -18px;
+    background-image: url(//t1.daumcdn.net/media/news/election2018/common/ico_loading.gif)
+}
+
+.photo_layer .thumb_g {
+    display: block;
+    max-width: 810px;
+    max-height: 600px;
+    margin: 0 auto
+}
+
+.photo_layer .cont_photo {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 33px 40px 42px;
+    background: url(//t1.daumcdn.net/media/news/election2017/bg_dimmed50.png) 0 0 repeat
+}
+
+.photo_layer .photo_cont {
+    position: relative
+}
+
+.photo_layer .txt_photo {
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 58px;
+    padding: 0 45px 2px 0;
+    font-size: 24px;
+    line-height: 29px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    word-break: break-all
+}
+
+.photo_layer .photo_info {
+    overflow: hidden;
+    margin-top: 11px
+}
+
+.photo_layer .link_writer {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 50%;
+    font-size: 16px;
+    line-height: 31px;
+    color: #fff;
+    vertical-align: top
+}
+
+.photo_layer .link_writer .txt_name {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.photo_layer .wrap_btn {
+    float: right
+}
+
+.photo_layer .wrap_btn .btn_viewer {
+    float: left;
+    height: 44px;
+    border: 1px solid #fff;
+    border-color: hsla(0, 0%, 100%, .3);
+    border-radius: 46px
+}
+
+.photo_layer .wrap_btn .btn_share {
+    width: 44px;
+    margin-right: 12px
+}
+
+.photo_layer .wrap_btn .btn_share .ico_share {
+    width: 18px;
+    height: 18px;
+    margin: 12px auto 0;
+    background-position: -180px -50px
+}
+
+.photo_layer .wrap_btn .btn_like {
+    float: left;
+    padding: 0 20px
+}
+
+.photo_layer .wrap_btn .ico_like {
+    display: inline-block;
+    width: 20px;
+    height: 19px;
+    margin: 11px 8px 0 0;
+    background-position: -200px -50px;
+    vertical-align: top
+}
+
+.photo_layer .wrap_btn .num_txt {
+    font-size: 18px;
+    line-height: 44px;
+    font-family: Roboto, sans-serif;
+    color: #fff
+}
+
+.os_mac .photo_layer .wrap_btn .num_txt {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.photo_layer .link_report {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px 0 6px 20px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #fff
+}
+
+.photo_layer .paging_viewer {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    line-height: 21px;
+    font-family: Roboto, sans-serif;
+    color: #fff;
+    text-align: center
+}
+
+.os_mac .photo_layer .paging_viewer {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.photo_layer .paging_viewer .num_page {
+    font-family: Roboto-Bold, sans-serif;
+    color: #01bcd3
+}
+
+.os_mac .photo_layer .paging_viewer .num_page {
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSdGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.photo_layer .btn_slide {
+    position: fixed;
+    top: 50%;
+    width: 48px;
+    height: 48px;
+    margin-top: -50px;
+    border: 1px solid #fff;
+    border-color: hsla(0, 0%, 100%, .3);
+    border-radius: 50px
+}
+
+.photo_layer .btn_prev {
+    left: 40px
+}
+
+.photo_layer .btn_next {
+    right: 40px
+}
+
+.photo_layer .btn_slide .ico_viewer {
+    width: 13px;
+    height: 23px;
+    margin: 13px 0 0 17px
+}
+
+.photo_layer .btn_prev .ico_viewer {
+    background-position: -190px -70px
+}
+
+.photo_layer .btn_next .ico_viewer {
+    margin-left: 19px;
+    background-position: -210px -70px
+}
+
+.photo_layer .layer_foot {
+    position: fixed;
+    top: 0;
+    right: 0
+}
+
+.photo_layer .layer_foot .btn_close {
+    display: block;
+    width: 25px;
+    height: 25px;
+    padding: 38px 36px
+}
+
+.photo_layer .layer_foot .btn_close .ico_viewer {
+    width: 25px;
+    height: 25px;
+    background-position: -160px -70px
+}
+
+.photo_layer .wrap_sharelayer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.photo_layer .layer_share2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 291px;
+    height: 255px;
+    margin: -127px 0 0 -145px
+}
+
+.viewer_open {
+    position: fixed
+}
+
+.viewer_open .photo_layer {
+    display: block
+}
+
+.photo_layer .dimmed_layer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    z-index: 9998;
+    opacity: .7;
+    filter: alpha(opacity=70)
+}
+
+.photo_layer .login_layer {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    width: 240px;
+    height: 151px;
+    margin: -75px 0 0 -120px
+}
+
+.photo_layer .inner_login_layer {
+    padding: 25px 0 28px 22px;
+    border: 1px solid #4d4d4d;
+    border-radius: 4px;
+    background-color: #fff
+}
+
+.photo_layer .ico_login {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/common/alex/icon_pc_171027.png) no-repeat;
+    background-size: 250px auto;
+    text-indent: -9999px
+}
+
+.photo_layer .login_layer .tit_login {
+    display: block;
+    font-size: 18px;
+    line-height: 20px;
+    color: #141414;
+    letter-spacing: -1px
+}
+
+.photo_layer .login_layer .txt_login {
+    display: block;
+    padding: 6px 0 17px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #666
+}
+
+.photo_layer .login_layer .list_account {
+    overflow: hidden
+}
+
+.photo_layer .login_layer .list_account li {
+    float: left;
+    margin-right: 12px
+}
+
+.photo_layer .login_layer .link_account {
+    display: block
+}
+
+.photo_layer .login_layer .link_account .ico_login {
+    display: block;
+    width: 38px;
+    height: 38px
+}
+
+.photo_layer .login_layer .link_daum .ico_login {
+    background-position: 0 0
+}
+
+.photo_layer .login_layer .link_kakao .ico_login {
+    background-position: -40px 0
+}
+
+.photo_layer .login_layer .link_facebook .ico_login {
+    background-position: 0 -40px
+}
+
+.photo_layer .login_layer .link_twitter .ico_login {
+    background-position: -40px -40px
+}
+
+.photo_layer .login_layer .layer_foot {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.photo_layer .login_layer .btn_login_close {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 13px
+}
+
+.photo_layer .login_layer .btn_login_close .ico_login {
+    width: 16px;
+    height: 16px;
+    background-position: -80px -60px
+}
+
+.cont_broad:before {
+    display: none
+}
+
+.feature_broad .inner_g {
+    overflow: hidden;
+    position: relative;
+    height: 140px
+}
+
+.feature_broad .tit_broad {
+    display: block;
+    height: 22px;
+    margin: 42px 0 0 5px
+}
+
+.feature_broad .desc_broad {
+    overflow: hidden;
+    margin-top: 4px;
+    padding: 0 180px 0 5px;
+    font-size: 26px;
+    line-height: 31px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.feature_broad .btn_broad {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    min-width: 121px;
+    height: 48px;
+    padding: 0 10px;
+    margin-top: -25px;
+    border: 1px solid #fff;
+    border-color: hsla(0, 0%, 100%, .5);
+    font-size: 17px;
+    line-height: 46px;
+    color: #fff;
+    letter-spacing: -2px;
+    text-align: center
+}
+
+.os_mac .feature_broad .btn_broad {
+    line-height: 48px;
+    letter-spacing: 0
+}
+
+.img_vote {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_vote.png) no-repeat;
+    background-size: 330px 120px;
+    text-indent: -9999px;
+    vertical-align: top
+}
+
+.vote_head {
+    overflow: hidden;
+    background-color: #eff3f7
+}
+
+.vote_head .inner_g {
+    overflow: visible
+}
+
+.vote_head .inner_g:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.box_rate {
+    float: left;
+    width: 706px;
+    height: 508px;
+    margin: 40px 0;
+    border: 1px solid #d9e0e8;
+    border-radius: 2px;
+    background-color: #fff
+}
+
+.head_rate {
+    height: 53px;
+    padding: 0 14px 0 32px;
+    border-bottom: 1px solid #f1f1f3
+}
+
+.head_rate:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.sort_district {
+    float: left;
+    padding-top: 15px;
+    height: 22px;
+    font-size: 14px;
+    line-height: 20px
+}
+
+.os_mac .sort_district {
+    line-height: 24px
+}
+
+.sort_district .txt_national {
+    float: left;
+    font-weight: 700
+}
+
+.sort_district .txt_national a:hover {
+    text-decoration: underline
+}
+
+.sort_district .opt_district {
+    float: left;
+    position: relative
+}
+
+.sort_district .ico_arr {
+    float: left;
+    width: 8px;
+    height: 15px;
+    margin: 3px 12px 0 14px;
+    background-position: -180px -20px
+}
+
+.sort_district .link_opt {
+    display: block;
+    padding-right: 20px;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    background-position: 100% -442px;
+    opacity: .3;
+    filter: alpha(opacity=30)
+}
+
+.sort_district .link_opt .ico_arr2 {
+    display: inline-block;
+    width: 7px;
+    height: 4px;
+    margin: 10px 0 0 7px;
+    padding-right: 14px;
+    background-position: -100% -450px
+}
+
+.sort_district .box_opt {
+    display: none;
+    position: absolute;
+    left: -19px;
+    top: 38px;
+    z-index: 10;
+    width: 100px;
+    border: 1px solid #333;
+    background-color: #fff
+}
+
+.sort_district .box_opt .list_opt {
+    overflow: hidden;
+    width: 86px;
+    margin: 15px auto
+}
+
+.sort_district .box_opt .list_opt li {
+    float: left;
+    width: 43px;
+    text-align: center
+}
+
+.sort_district .box_opt2 {
+    display: none;
+    overflow-y: auto;
+    position: absolute;
+    top: 38px;
+    left: 5px;
+    z-index: 10;
+    max-height: 390px;
+    border: 1px solid #333;
+    background-color: #fff;
+    white-space: nowrap;
+    word-break: break-all;
+    word-wrap: break-word
+}
+
+.sort_district .opt_open .box_opt, .sort_district .opt_open .box_opt2 {
+    display: block
+}
+
+.sort_district .link_opt .txt_bar {
+    margin: 0 2px;
+    color: #cacaca
+}
+
+.sort_district .opt_on .link_opt {
+    opacity: 1;
+    filter: alpha(opacity=100)
+}
+
+.sort_district .opt_open .link_opt {
+    background-position: 100% -412px
+}
+
+.sort_district .list_opt {
+    margin: 15px 0
+}
+
+.box_opt .link_option {
+    padding: 0 8px
+}
+
+.box_opt2 .link_option {
+    padding: 0 21px
+}
+
+.list_opt .link_option {
+    display: block;
+    line-height: 26px
+}
+
+.list_opt .link_option:hover {
+    text-decoration: underline
+}
+
+.cont_rate {
+    margin-top: 30px;
+    text-align: center
+}
+
+.cont_rate .vote_rate {
+    display: inline-block;
+    position: relative;
+    margin-left: 131px;
+    font-size: 60px;
+    line-height: 64px;
+    color: #000;
+    letter-spacing: 0;
+    vertical-align: top
+}
+
+.cont_rate .txt_district {
+    position: absolute;
+    top: 11px;
+    right: 100%;
+    margin-right: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    font-family: AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif;
+    text-align: right;
+    white-space: nowrap
+}
+
+.os_mac .cont_rate .txt_district {
+    top: 9px;
+    font-weight: 400;
+    line-height: 24px
+}
+
+.cont_rate .time_point {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 19px;
+    vertical-align: top
+}
+
+.cont_rate .time_point .num_g2 {
+    display: inline-block;
+    margin-top: -1px;
+    vertical-align: top
+}
+
+.os_mac .cont_rate .time_point .num_g2 {
+    margin-top: 0
+}
+
+.cont_rate .txt_district .ico_election {
+    width: 45px;
+    height: 19px;
+    margin: 1px 0 0 4px;
+    background-position: -130px -20px
+}
+
+.os_mac .cont_rate .txt_district .ico_election {
+    margin-top: 0
+}
+
+.cont_rate .txt_percent {
+    margin-left: 3px;
+    font-size: 36px
+}
+
+.cont_rate .list_contrast {
+    position: absolute;
+    top: 2px;
+    left: 100%;
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #000;
+    text-align: left;
+    white-space: nowrap
+}
+
+.cont_rate .txt_max {
+    color: #fe3528;
+    margin-right: 13px
+}
+
+.cont_rate .txt_min {
+    color: #2086d4;
+    margin-right: 13px
+}
+
+.cont_rate .txt_num {
+    margin-left: 9px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: arial, sans-serif
+}
+
+.cont_rate .graph_vote {
+    position: relative;
+    height: 241px;
+    margin: 5px 40px 26px
+}
+
+.tooltip_history {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 13px 14px 7px 13px;
+    font-size: 14px;
+    line-height: 16px;
+    border: 1px solid #888;
+    border-radius: 1px;
+    background-color: #fff;
+    text-align: right;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .2)
+}
+
+.tooltip_history .tit_history {
+    display: inline-block;
+    padding-bottom: 4px;
+    font-weight: 700;
+    vertical-align: top
+}
+
+.list_history li {
+    line-height: 26px
+}
+
+.list_history .txt_history {
+    margin-right: 4px;
+    font-family: HelveticaNeue-Regular, AppleSDGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", sans-serif;
+    color: #444
+}
+
+.list_history .num_g {
+    font-size: 17px;
+    line-height: 24px;
+    vertical-align: top;
+    color: #fc3528
+}
+
+.list_history .num_history2 {
+    color: #4a8ac2
+}
+
+.list_history .num_history3 {
+    color: #53c2c4
+}
+
+.graph_vote .alex-chart .chart-description, .graph_vote .alex-chart .chart-link, .graph_vote .alex-chart .chart-title {
+    display: none
+}
+
+.graph_vote .alex-chart .line .alex-chartview {
+    min-height: 241px
+}
+
+.graph_vote .alex-chart .line .alex-chartview .tooltip {
+    width: 0 !important
+}
+
+.graph_vote .alex-chart .line .alex-chartview .tooltip .tooltip-content {
+    width: 150px
+}
+
+.cont_rate .info_rate {
+    margin: 2px 70px 0;
+    font-size: 13px;
+    line-height: 16px;
+    color: #a1a1a1;
+    text-align: left
+}
+
+.cont_rate .info_rate + .info_rate {
+    margin-top: 5px
+}
+
+.box_map {
+    overflow: visible;
+    float: right;
+    width: 360px
+}
+
+.list_map {
+    position: relative;
+    width: 400px;
+    height: 560px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_map_180525.png) 0 0 no-repeat;
+    background-size: 400px 560px
+}
+
+.list_map li {
+    position: absolute;
+    padding: 2px 0 0 37px
+}
+
+.list_map .ico_election {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 33px;
+    height: 33px;
+    border-radius: 33px
+}
+
+.list_map .item_max .ico_election {
+    background-position: -60px -100px
+}
+
+.list_map .item_min .ico_election {
+    background-position: -100px -100px
+}
+
+.list_map .txt_map {
+    display: block;
+    font-size: 13px;
+    line-height: 16px
+}
+
+.list_map .txt_map:hover {
+    text-decoration: underline
+}
+
+.list_map .item_max .txt_map {
+    color: #f93d26
+}
+
+.list_map .item_min .txt_map {
+    color: #297aec
+}
+
+.list_map .txt_map .num_g {
+    font-size: 14px;
+    letter-spacing: 0
+}
+
+.list_map .img_vote {
+    display: block;
+    width: 22px;
+    height: 12px;
+    margin: 11px 0 0 5px
+}
+
+.list_map .item_max .img_vote {
+    background-position: -370px -70px
+}
+
+.list_map .item_min .img_vote {
+    background-position: -370px -90px
+}
+
+.list_map .item_map1 {
+    top: 106px;
+    left: 71px
+}
+
+.list_map .item_map2 {
+    top: 375px;
+    left: 231px
+}
+
+.list_map .item_map3 {
+    top: 291px;
+    left: 202px
+}
+
+.list_map .item_map4 {
+    top: 69px;
+    left: -2px
+}
+
+.list_map .item_map5 {
+    top: 378px;
+    left: 46px
+}
+
+.list_map .item_map6 {
+    top: 277px;
+    left: 79px
+}
+
+.list_map .item_map7 {
+    top: 329px;
+    left: 269px
+}
+
+.list_map .item_map8 {
+    top: 235px;
+    left: 84px
+}
+
+.list_map .item_map9 {
+    top: 152px;
+    left: 76px
+}
+
+.list_map .item_map10 {
+    top: 92px;
+    left: 158px
+}
+
+.list_map .item_map11 {
+    top: 198px;
+    left: 116px
+}
+
+.list_map .item_map12 {
+    top: 214px;
+    left: -1px
+}
+
+.list_map .item_map13 {
+    top: 320px;
+    left: 63px
+}
+
+.list_map .item_map14 {
+    top: 423px;
+    left: 33px
+}
+
+.list_map .item_map15 {
+    top: 233px;
+    left: 205px
+}
+
+.list_map .item_map16 {
+    top: 358px;
+    left: 144px
+}
+
+.list_map .item_map17 {
+    top: 500px;
+    left: 4px
+}
+
+.img_cast {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    width: 167px;
+    height: 42px;
+    margin: 24px auto 0;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_cast.jpg) no-repeat;
+    background-size: 170px 495px;
+    text-indent: -9999px
+}
+
+.vote_live {
+    overflow: hidden;
+    background-color: #eff3f7
+}
+
+.vote_live .inner_g {
+    overflow: hidden;
+    width: 1100px;
+    padding: 30px 0 50px;
+    margin: 0 auto
+}
+
+.vote_live .cast_tab {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    float: right;
+    width: 307px;
+    height: 446px;
+    background-color: #fff
+}
+
+.tab_cast .link_tab {
+    display: block;
+    overflow: hidden;
+    height: 90px
+}
+
+.tab_cast li + li .link_tab {
+    height: 88px;
+    border-top: 1px solid #f0f4f7
+}
+
+.tab_cast li + li .link_tab .img_cast {
+    margin-top: 23px
+}
+
+.tab_cast .img_kbs {
+    background-position: 0 0
+}
+
+.tab_cast .img_sbs {
+    background-position: 0 -45px
+}
+
+.tab_cast .img_jtbc {
+    background-position: 0 -90px
+}
+
+.tab_cast .img_nec {
+    background-position: 0 -135px
+}
+
+.tab_cast .img_kbs2 {
+    background-position: 0 -180px
+}
+
+.tab_cast .img_jtbc2 {
+    background-position: 0 -225px
+}
+
+.tab_cast .img_videomug {
+    background-position: 0 -270px
+}
+
+.tab_cast .img_sbsnews {
+    background-position: 0 -315px
+}
+
+.tab_cast .img_ytn {
+    background-position: 0 -360px
+}
+
+.tab_cast .img_yonhapnewstv {
+    background-position: 0 -405px
+}
+
+.tab_cast .img_mbc {
+    background-position: 0 -450px
+}
+
+.tab_cast .item_off .link_tab {
+    pointer-events: none
+}
+
+.tab_cast .item_off .img_cast {
+    opacity: .15;
+    filter: alpha(opacity=15)
+}
+
+.tab_cast .on .link_tab {
+    position: relative
+}
+
+.tab_cast .on .link_tab:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid #000;
+    content: ""
+}
+
+.tab_cast .on .ico_live {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 48px;
+    height: 25px;
+    background-position: -160px 0
+}
+
+.vote_live .live_vod {
+    overflow: hidden
+}
+
+.live_vod .vod_live {
+    display: block
+}
+
+.feature_count {
+    background-color: #fff
+}
+
+.feature_count .inner_g {
+    position: relative
+}
+
+.status_vote {
+    overflow: hidden;
+    border-bottom: 1px solid #e4e8ec
+}
+
+.status_vote .tit_status {
+    float: left;
+    width: 12.5%;
+    padding-top: 4px;
+    background-color: #444
+}
+
+.status_vote .tit_status .inner_status {
+    height: 67px;
+    padding-top: 21px;
+    border-top: 1px solid #e7ecf1;
+    background-color: #fff
+}
+
+.status_vote .tit_status .tit_election {
+    width: 91px;
+    height: 44px;
+    margin: 0 auto;
+    background-position: 0 -680px
+}
+
+.list_status {
+    overflow: hidden
+}
+
+.list_status li {
+    float: left;
+    width: 14.28%
+}
+
+.list_status li:last-child {
+    float: none;
+    overflow: hidden;
+    width: auto
+}
+
+.list_status .item_status {
+    height: 93px;
+    border-left: 1px solid #e7ecf1;
+    background-color: #fff
+}
+
+.list_status .bg_party {
+    height: 4px;
+    margin-bottom: 7px;
+    border-bottom: 1px solid #e7ecf1
+}
+
+.list_status .bg_compete {
+    background-color: #a9b0b8
+}
+
+.list_status .ico_election {
+    display: block;
+    width: 80px;
+    height: 32px;
+    margin: 0 auto
+}
+
+.list_status .tit_theminjoo {
+    background-position: 0 -180px
+}
+
+.list_status .tit_liberty {
+    background-position: -80px -180px
+}
+
+.list_status .tit_bareun {
+    background-position: -160px -180px
+}
+
+.list_status .tit_peace {
+    background-position: 0 -220px
+}
+
+.list_status .tit_justice {
+    background-position: -80px -220px
+}
+
+.list_status .tit_etc {
+    background-position: -160px -220px
+}
+
+.list_status .tit_inde {
+    background-position: 0 -260px
+}
+
+.list_status .tit_compete {
+    background-position: -80px -260px
+}
+
+.list_status .num_g {
+    display: block;
+    margin-top: 4px;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center
+}
+
+.list_status .item_empty .bg_party, .list_status .item_empty .ico_election, .list_status .item_empty .num_g {
+    opacity: .3;
+    filter: alpha(opacity=30)
+}
+
+.count_vote {
+    position: relative
+}
+
+.count_vote:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.count_vote .sort_election {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    z-index: 20
+}
+
+.count_vote .sort_election .btn_sort {
+    display: inline-block;
+    font-size: 26px;
+    line-height: 31px;
+    color: #000;
+    vertical-align: top
+}
+
+.count_vote .sort_election .btn_sort .ico_election {
+    width: 16px;
+    height: 10px;
+    margin: 9px 0 0 13px;
+    background-position: -140px -60px
+}
+
+.count_vote .sort_election .layer_sort {
+    top: 36px;
+    left: 0;
+    width: 141px;
+    border-color: #ccd0d7
+}
+
+.count_vote .sort_election .layer_sort .link_region {
+    width: 47px
+}
+
+.count_vote .sort_open .btn_sort .ico_election {
+    background-position: -140px -50px
+}
+
+.count_vote .link_nation {
+    display: block;
+    width: 56px;
+    margin-top: 15px
+}
+
+.count_vote .link_nation .ico_election {
+    display: block;
+    width: 56px;
+    height: 64px;
+    background-position: 0 -70px
+}
+
+.count_vote .count_list {
+    float: right;
+    width: 374px
+}
+
+.status_vote + .count_vote .count_list, .status_vote + .count_vote .count_list2 {
+    margin-top: 37px
+}
+
+.item_count {
+    position: relative
+}
+
+.item_count .head_count {
+    overflow: hidden;
+    height: 42px;
+    border-bottom: 2px solid #333;
+    line-height: 34px
+}
+
+.head_count .tit_count {
+    float: left;
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 20px
+}
+
+.head_count .rate_count {
+    display: block;
+    overflow: hidden
+}
+
+.item_count .cont_count {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 364px;
+    max-height: 552px;
+    padding-right: 10px;
+    border-bottom: 1px solid #b8c1cb
+}
+
+.list_count li {
+    width: 348px;
+    padding-right: 16px;
+    letter-spacing: -1px
+}
+
+.os_mac .list_count li {
+    letter-spacing: 0
+}
+
+.list_count .link_cont {
+    position: relative;
+    padding: 10px 0;
+    line-height: 60px;
+    color: #555
+}
+
+.list_count li + li .link_cont {
+    border-top: 1px solid #dde2e7
+}
+
+.list_count .link_cont:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.list_count .num_rank {
+    float: left;
+    width: 26px;
+    font-size: 16px;
+    color: #777
+}
+
+.item_candidate {
+    overflow: hidden
+}
+
+.item_candidate .wrap_thumb {
+    float: left;
+    width: 48px;
+    margin-right: 10px
+}
+
+.item_candidate .ico_status {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 19px
+}
+
+.item_candidate .ico_win {
+    background-position: -80px -140px
+}
+
+.item_candidate .ico_certain {
+    background-position: -80px -160px
+}
+
+.item_candidate .ico_strong {
+    background-position: -130px -140px
+}
+
+.item_candidate .ico_resign {
+    background-position: -130px -160px
+}
+
+.item_candidate .cont_thumb {
+    float: left;
+    width: 80px;
+    height: 60px
+}
+
+.item_candidate .tit_thumb {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: #333
+}
+
+.item_candidate .info_thumb, .item_candidate .tit_thumb {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+.item_candidate .info_thumb {
+    margin-top: 2px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777
+}
+
+.item_candidate .num_rate {
+    float: left;
+    width: 80px;
+    font-size: 18px;
+    text-align: center
+}
+
+.item_compete .num_rate, .list_count2 .item_compete .num_g {
+    color: #a9b0b8
+}
+
+.item_candidate .num_count {
+    display: block;
+    overflow: hidden;
+    padding-right: 6px;
+    font-size: 18px;
+    color: #777;
+    text-align: right;
+    letter-spacing: 0
+}
+
+.item_candidate .desc_empty {
+    overflow: hidden;
+    padding-left: 10px;
+    height: 60px;
+    font-size: 12px;
+    line-height: 17px;
+    word-break: keep-all;
+    letter-spacing: -1px
+}
+
+.list_count .head_district {
+    float: left;
+    width: 81px;
+    padding-top: 2px
+}
+
+.list_count .tit_district {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px
+}
+
+.list_count .info_rate {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777
+}
+
+.list_count .info_rate .num_g2 {
+    font-size: 14px
+}
+
+.list_count .ico_compete {
+    display: block;
+    width: 30px;
+    height: 20px;
+    margin-top: 3px;
+    background-position: -190px -100px
+}
+
+.list_count .ico_arr {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    width: 7px;
+    height: 11px;
+    margin-top: -6px;
+    background-position: -130px -50px
+}
+
+.list_count .link_cont:hover .ico_arr {
+    display: block
+}
+
+.list_count .emph_distance {
+    position: absolute;
+    top: -15px;
+    right: 0;
+    height: 28px;
+    padding: 0 13px;
+    border: 1px solid #d5d8e1;
+    border-radius: 30px;
+    font-size: 12px;
+    line-height: 28px;
+    background-color: #fff
+}
+
+.list_count .emph_distance .num_g {
+    font-size: 14px
+}
+
+.item_count .desc_count {
+    margin-top: 17px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #6a6c73;
+    word-break: keep-all
+}
+
+.item_count .wrap_btn {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.list_count2 .item_candidate {
+    float: left;
+    width: 133px
+}
+
+.list_count2 .item_candidate .cont_thumb {
+    float: none;
+    width: auto
+}
+
+.list_count2 .item_candidate .num_g {
+    display: block;
+    margin-top: 3px;
+    font-size: 17px;
+    line-height: 20px
+}
+
+.tbl_count {
+    width: 100%;
+    table-layout: fixed
+}
+
+.tbl_count thead th {
+    height: 60px;
+    border-bottom: 1px solid #b9c1cb;
+    font-size: 13px;
+    line-height: 15px
+}
+
+.tbl_count thead th .emph_party {
+    font-weight: 700
+}
+
+.tbl_count tbody th, .tbl_count td {
+    height: 40px
+}
+
+.tbl_count tbody tr + tr th, .tbl_count tr + tr td {
+    border-top: 1px solid #dde2e7
+}
+
+.tbl_count tbody th {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: left
+}
+
+.tbl_count td {
+    font-size: 18px;
+    text-align: center
+}
+
+.tbl_count .num_g {
+    height: 40px;
+    line-height: 40px
+}
+
+.tbl_count .item_top .num_g {
+    color: #fff
+}
+
+.tbl_count .item_top .emph_theminjoo {
+    background-color: #006bc9
+}
+
+.tbl_count .item_top .emph_liberty {
+    background-color: #e62a22
+}
+
+.tbl_count .item_top .emph_justice {
+    background-color: #f7b300
+}
+
+.tbl_count .item_top .emph_bareun {
+    background-color: #00b0a7
+}
+
+.tbl_count .item_top .emph_peace {
+    background-color: #86be24
+}
+
+.tbl_count .item_top .emph_etc {
+    background-color: #ad9e75
+}
+
+.tbl_count .item_top .emph_inde {
+    background-color: #899099
+}
+
+.count_vote .count_map {
+    float: left;
+    width: 686px;
+    height: 400px;
+    position: relative
+}
+
+.count_map .map_count {
+    height: 400px;
+}
+
+.count_map .remarks_count {
+    position: absolute;
+    bottom: 54px;
+    left: 0;
+    z-index: 10;
+    width: 87px;
+    height: 153px;
+    background-position: -230px 0
+}
+
+.count_list2 {
+    overflow: hidden;
+    width: 1113px;
+    padding-bottom: 38px
+}
+
+.box_count {
+    float: left;
+    width: 356px;
+    height: 352px;
+    padding-top: 36px;
+    margin: 0 13px 13px 0;
+    border: 1px solid #d2d6de;
+    background-color: #fff
+}
+
+.box_count .item_count {
+    padding-left: 32px
+}
+
+.box_count .head_count {
+    height: 25px;
+    margin-right: 32px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid #333
+}
+
+.box_count .head_count .tit_count {
+    font-size: 18px;
+    line-height: 21px
+}
+
+.box_count .head_count .rate_count {
+    float: right;
+    font-size: 13px;
+    line-height: 21px;
+    color: #777
+}
+
+.box_count .item_count .cont_count {
+    width: 292px;
+    max-height: 307px;
+    padding-right: 32px;
+    border-bottom: 0 none
+}
+
+.box_count .list_count li {
+    width: 292px;
+    padding-right: 0
+}
+
+.box_count .list_count .link_cont {
+    padding: 8px 0
+}
+
+.box_count .list_count .num_rank {
+    width: 20px
+}
+
+.box_count .item_candidate .cont_thumb {
+    width: 70px
+}
+
+.box_count .item_candidate .num_rate {
+    width: 60px;
+    text-align: right
+}
+
+.box_count .item_candidate .num_count {
+    font-size: 16px;
+    padding-right: 4px
+}
+
+.box_count .list_count .emph_distance {
+    right: -7px;
+    padding: 0 11px
+}
+
+.box_count .list_count .emph_distance .num_g {
+    font-size: 13px
+}
+
+.layer_count {
+    position: absolute;
+    z-index: 20;
+    min-width: 108px;
+    padding: 23px 27px;
+    border: 1px solid #ccd0d7;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15)
+}
+
+.layer_count:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.layer_count .tit_layer {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px
+}
+
+.layer_count .list_detail {
+    float: left
+}
+
+.layer_count .list_detail + .list_detail {
+    height: 253px;
+    margin-left: 21px;
+    padding-left: 21px;
+    border-left: 1px solid #ebebeb
+}
+
+.layer_count .list_detail li {
+    height: 23px;
+    font-size: 13px;
+    line-height: 20px
+}
+
+.os_mac .layer_count .list_detail li {
+    line-height: 23px
+}
+
+.layer_count .txt_district {
+    float: left;
+    width: 41px;
+    font-weight: 700;
+    color: #919499
+}
+
+.layer_count .num_rank {
+    float: left;
+    width: 17px;
+    color: #777
+}
+
+.os_mac .layer_count .num_rank {
+    line-height: 21px
+}
+
+.layer_count .tit_name {
+    float: left;
+    width: 60px;
+    letter-spacing: -1px
+}
+
+.layer_count .tag_party {
+    float: left;
+    overflow: hidden;
+    width: 6px;
+    height: 6px;
+    margin: 8px 4px 0 0;
+    border-radius: 6px;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px
+}
+
+.os_mac .layer_count .tag_party {
+    margin-top: 7px
+}
+
+.layer_count .num_g, .layer_count .txt_g {
+    display: block;
+    overflow: hidden
+}
+
+.layer_count .num_g {
+    line-height: 23px
+}
+
+.os_mac .layer_count .num_g {
+    line-height: 21px
+}
+
+.count_amendment .layer_count .txt_district {
+    width: 43px;
+    color: #333
+}
+
+.count_amendment .layer_count .tit_name {
+    width: 33px
+}
+
+.layer_count .item_detail {
+    height: 23px;
+    font-size: 13px;
+    line-height: 23px
+}
+
+.layer_count .item_detail .num_g {
+    float: left;
+    width: 50px
+}
+
+.layer_count .item_detail .num_total {
+    display: block;
+    overflow: hidden;
+    color: #777;
+    text-align: right
+}
+
+.os_mac .layer_count .item_detail .num_total {
+    line-height: 21px
+}
+
+.tag_district {
+    display: table;
+    position: absolute;
+    z-index: 10;
+    font-size: 0
+}
+
+.tag_district .txt_g {
+    display: inline-block;
+    overflow: hidden;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 2px 2px 2px 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    background-color: #fff;
+    letter-spacing: -1px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3);
+    vertical-align: top
+}
+
+.os_mac .tag_district .txt_g {
+    line-height: 24px
+}
+
+.tag_district .ico_arr {
+    position: absolute;
+    bottom: -9px;
+    left: -2px;
+    width: 8px;
+    height: 9px;
+    background: url(//t1.daumcdn.net/media/news/election2018/tag_district.png) 0 0 no-repeat;
+    background-size: 8px 9px
+}
+
+.tag_district.on .txt_g {
+    color: #fff;
+    background-color: #4b4b4b;
+    background-color: rgba(0, 0, 0, .7)
+}
+
+.tag_district.on .ico_arr {
+    background-image: url(//t1.daumcdn.net/media/news/election2018/tag_district2_180530.png)
+}
+
+.emph_approve {
+    color: #18a563
+}
+
+.emph_oppose {
+    color: #f5415a
+}
+
+.bg_approve {
+    background-color: #18a563
+}
+
+.bg_oppose {
+    background-color: #f5415a
+}
+
+.status_amendment {
+    font-size: 0;
+    text-align: center
+}
+
+.status_amendment .inner_status {
+    display: inline-block;
+    position: relative;
+    padding: 2px 137px 18px;
+    vertical-align: top
+}
+
+.status_amendment .item_result {
+    position: absolute;
+    top: 5px;
+    width: 122px
+}
+
+.status_amendment .item_approve {
+    left: 0;
+    text-align: right
+}
+
+.status_amendment .item_oppose {
+    right: 0;
+    text-align: left
+}
+
+.status_amendment .tit_status {
+    display: block;
+    font-size: 22px;
+    line-height: 28px
+}
+
+.status_amendment .tit_status .num_g {
+    font-size: 24px
+}
+
+.status_amendment .item_result .num_g2 {
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #777
+}
+
+.graph_amendment, .graph_amendment .bar_graph {
+    position: relative;
+    width: 680px
+}
+
+.graph_amendment .bar_graph {
+    overflow: hidden;
+    height: 56px
+}
+
+.graph_amendment .bg_approve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0
+}
+
+.graph_amendment .emph_distance {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: -62px;
+    z-index: 20;
+    width: 125px;
+    height: 30px;
+    margin-top: -15px;
+    border-radius: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    background-color: #fff;
+    text-align: center
+}
+
+.graph_amendment .emph_distance .num_g {
+    font-size: 14px
+}
+
+.graph_amendment .line_graph {
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    z-index: 10;
+    width: 29px;
+    height: 76px;
+    margin-left: -15px;
+    background: url(//t1.daumcdn.net/media/news/election2018/line_graph.png) 0 0 no-repeat;
+    background-size: 29px 76px
+}
+
+.count_amendment .count_list {
+    width: 354px
+}
+
+.count_amendment .amendment_list {
+    padding-top: 41px;
+    background: url(//t1.daumcdn.net/media/news/election2018/amendment_list.gif) 0 0 no-repeat;
+    background-size: 354px 41px
+}
+
+.count_amendment .cont_count {
+    width: 344px;
+    max-height: 511px
+}
+
+.list_count3 li {
+    padding-right: 16px
+}
+
+.list_count3 .link_cont {
+    position: relative;
+    height: 52px;
+    padding-right: 5px
+}
+
+.list_count3 .link_cont:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.list_count3 li + li .link_cont {
+    border-top: 1px solid #dde2e7
+}
+
+.list_count3 .cell_district {
+    float: left;
+    width: 51px;
+    height: 52px
+}
+
+.list_count3 .tit_district {
+    display: block;
+    font-weight: 700;
+    line-height: 16px
+}
+
+.list_count3 .info_district {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    color: #777
+}
+
+.list_count3 .info_district .num_g2 {
+    font-size: 14px
+}
+
+.list_count3 .cell_g {
+    float: left;
+    width: 82px;
+    text-align: center
+}
+
+.list_count3 .cell_g + .cell_g {
+    float: right
+}
+
+.list_count3 .cell_g .emph_approve, .list_count3 .cell_g .emph_oppose {
+    height: 52px
+}
+
+.list_count3 .cell_g .num_g {
+    display: block;
+    font-size: 16px;
+    line-height: 18px
+}
+
+.list_count3 .cell_g .num_g2 {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #777
+}
+
+.list_count3 .cell_distance {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 108px;
+    margin-left: -31px;
+    line-height: 52px;
+    text-align: center
+}
+
+.list_count3 .cell_distance .num_g {
+    display: block;
+    color: #777
+}
+
+.list_count3 .cell_win .emph_approve {
+    background-color: #18a563;
+    color: #fff
+}
+
+.list_count3 .cell_win .emph_oppose {
+    background-color: #fff;
+    color: #fff
+}
+
+.list_count3 .cell_win .num_g2 {
+    color: #fff;
+    opacity: .6;
+    filter: alpha(opacity=60)
+}
+
+.list_count3 .ico_arr {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    width: 7px;
+    height: 11px;
+    margin-top: -6px;
+    background-position: -130px -50px
+}
+
+.list_count3 .link_cont:hover .ico_arr {
+    display: block
+}
+
+.count_amendment2 .amendment_list {
+    background-image: url(//t1.daumcdn.net/media/news/election2018/amendment_list2.gif);
+    background-size: 374px 41px
+}
+
+.count_amendment2 .count_list {
+    width: 374px
+}
+
+.count_amendment2 .cont_count {
+    width: 364px
+}
+
+.count_amendment2 .list_count3 .cell_district {
+    width: 85px
+}
+
+.count_amendment2 .list_count3 .cell_distance {
+    width: 94px;
+    margin-left: -7px
+}
+
+.count_vote .wrap_tab {
+    overflow: hidden;
+    margin-top: 15px
+}
+
+.count_vote .wrap_tab .link_tab {
+    float: left;
+    width: 58px;
+    height: 30px;
+    border: 1px solid #dde2e7;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: center
+}
+
+.count_vote .wrap_tab .link_tab + .link_tab {
+    margin-left: -1px
+}
+
+.count_vote .wrap_tab .link_tab.on {
+    position: relative;
+    border-color: #c2c2c2;
+    background-color: #fff
+}
+
+.feature_count .info_expect {
+    position: absolute;
+    top: 30px;
+    right: 0
+}
+
+.info_expect .txt_expect {
+    float: left;
+    width: 160px;
+    height: 13px;
+    margin-top: 1px;
+    background-position: 0 -870px
+}
+
+.info_expect .txt_middot {
+    float: left;
+    width: 3px;
+    height: 3px;
+    margin: 6px 8px 0;
+    background-color: #a4a4b3;
+    background-color: hsla(216, 9%, 67%, .5)
+}
+
+.info_expect .txt_info {
+    float: left;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 15px;
+    color: #a4a4b3
+}
+
+.feature_expect .status_vote .tit_status .tit_election {
+    background-position: 0 -890px
+}
+
+.feature_expect .count_list2 {
+    width: 1112px;
+    padding-bottom: 39px
+}
+
+.feature_expect .box_count {
+    width: 264px;
+    height: 221px;
+    margin: 0 12px 12px 0
+}
+
+.feature_expect .box_count .head_count {
+    margin-bottom: 5px
+}
+
+.feature_expect .box_count .head_count .tit_count {
+    margin-right: 0
+}
+
+.feature_expect .box_count .item_count .cont_count, .feature_expect .box_count .list_count li {
+    width: 200px
+}
+
+.feature_expect .box_count .item_candidate .num_rate {
+    display: block;
+    float: none;
+    overflow: hidden;
+    width: auto;
+    padding-right: 1px;
+    letter-spacing: -1px
+}
+
+.feature_expect .box_count .ico_compete {
+    position: absolute;
+    top: -13px;
+    right: 12px
+}
+
+.feature_expect .count_map .remarks_count {
+    width: 72px;
+    background-position: -240px -220px
+}
+
+.cont_home {
+    letter-spacing: -1px
+}
+
+.cont_home .head_section, .section_home {
+    overflow: hidden
+}
+
+.section_home {
+    padding-top: 40px
+}
+
+.section_home .bnr_election {
+    margin: 27px auto 40px
+}
+
+.head_section .tit_election {
+    float: left;
+    height: 18px
+}
+
+.head_section .tit_g {
+    float: left;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: -2px
+}
+
+.os_mac .head_section .tit_g {
+    letter-spacing: -1px
+}
+
+.feature_home .bg_feature {
+    height: 147px;
+    background: url(//t1.daumcdn.net/media/news/election2018/bg_home.jpg) #8d99a6 50% 0 no-repeat;
+    background-size: 2978px 147px
+}
+
+.feature_home .box_feature {
+    position: relative;
+    width: 1180px;
+    height: 396px;
+    margin: -85px auto 0;
+    padding-bottom: 40px
+}
+
+.feature_home .box_feature:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.feature_home .news_recomm {
+    float: left;
+    position: relative;
+    width: 752px;
+    margin-right: 1px;
+    padding: 40px 0 0 40px;
+    background-color: #fff
+}
+
+.news_recomm .head_section {
+    overflow: visible;
+    height: 20px;
+    margin-bottom: 12px
+}
+
+.news_recomm .tit_election {
+    width: 66px;
+    background-position: 0 0
+}
+
+.news_recomm .tooltip_election {
+    float: left;
+    margin: -6px 8px 0 1px
+}
+
+.news_recomm .tooltip_election .layer_tooltip {
+    top: -67px;
+    left: -75px;
+    width: 182px;
+    height: 40px;
+    border: 1px solid #333;
+    padding: 13px 14px 10px;
+    font-size: 13px;
+    line-height: 18px
+}
+
+.os_mac .news_recomm .tooltip_election .layer_tooltip {
+    width: 156px
+}
+
+.news_recomm .layer_info .ico_election {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-position: -90px 0
+}
+
+.news_recomm .layer_open .desc_info {
+    display: block
+}
+
+.news_recomm .layer_open .ico_election {
+    background-position: -120px 0
+}
+
+.news_recomm .info_recomm {
+    float: left;
+    margin-top: 2px;
+    font-size: 13px;
+    line-height: 15px;
+    color: #888;
+    letter-spacing: 0
+}
+
+.os_mac .news_recomm .info_recomm {
+    margin-top: 3px
+}
+
+.news_recomm .list_thumb {
+    overflow: hidden;
+    height: 314px
+}
+
+.news_recomm .list_thumb li {
+    overflow: hidden;
+    float: left;
+    width: 335px;
+    margin-right: 40px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f3f3
+}
+
+.news_recomm .list_thumb .link_thumb {
+    float: left;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px
+}
+
+.news_recomm .list_thumb .link_thumb .thumb_g {
+    display: block;
+    width: 100%
+}
+
+.news_recomm .list_thumb .cont_thumb {
+    padding-top: 5px
+}
+
+.os_mac .news_recomm .list_thumb .cont_thumb {
+    padding-top: 8px
+}
+
+.news_recomm .tit_thumb .link_txt {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    max-height: 48px;
+    font-size: 17px;
+    line-height: 24px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.news_recomm .info_thumb {
+    margin-top: 3px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #888
+}
+
+.news_recomm .btn_refresh {
+    overflow: hidden;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    font-size: 14px;
+    line-height: 33px
+}
+
+.news_recomm .btn_refresh .box_refresh {
+    float: right;
+    width: 32px;
+    height: 32px;
+    margin-left: 13px;
+    border: 1px solid #c2c2c2
+}
+
+.news_recomm .btn_refresh:hover .box_refresh {
+    border-color: #333
+}
+
+.news_recomm .btn_refresh .ico_election {
+    display: block;
+    width: 19px;
+    height: 17px;
+    margin: 8px 0 0 8px;
+    background-position: -60px -20px
+}
+
+.news_recomm .link_all {
+    position: absolute;
+    right: 40px;
+    top: 38px;
+    font-size: 14px
+}
+
+.feature_home .news_region {
+    overflow: hidden;
+    position: relative;
+    height: 346px;
+    padding: 40px 40px 0;
+    background-color: #fff
+}
+
+.news_region .head_section {
+    overflow: visible;
+    height: 20px
+}
+
+.news_region .tit_election {
+    width: 86px;
+    background-position: 0 -20px
+}
+
+.news_region .sort_election {
+    float: left;
+    margin-top: -3px
+}
+
+.os_mac .news_region .sort_election {
+    margin-top: -1px
+}
+
+.news_region .list_txt {
+    margin-top: 30px
+}
+
+.news_region .list_txt .link_txt {
+    display: block;
+    overflow: hidden;
+    font-size: 15px;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.news_region .link_all {
+    position: absolute;
+    top: 38px;
+    right: 40px;
+    padding-right: 0;
+    font-size: 14px;
+    background: none
+}
+
+.broad_list {
+    width: 1028px;
+    margin: 0 auto;
+    padding: 0 36px;
+    border-top: 2px solid #333
+}
+
+.broad_list:after {
+    display: block;
+    height: 0;
+    font-size: 0;
+    visibility: hidden;
+    clear: both;
+    content: ""
+}
+
+.broad_list .tit_broad {
+    float: left;
+    margin-right: 40px
+}
+
+.broad_list .tit_broad .tit_election {
+    float: left;
+    width: 92px;
+    height: 14px;
+    margin-top: 22px;
+    background-position: 0 -420px
+}
+
+.broad_list .tooltip_election {
+    float: left;
+    margin: 14px 0 0
+}
+
+.broad_list .tooltip_election .ico_tooltip {
+    width: 15px;
+    height: 15px;
+    background-position: -180px -140px
+}
+
+.broad_list .tooltip_election .btn_tooltip:hover .ico_tooltip {
+    background-position: -200px -140px
+}
+
+.broad_list .tooltip_election .layer_tooltip {
+    top: -65px;
+    left: -85px;
+    width: 195px;
+    padding: 10px 15px 15px 17px;
+    font-size: 13px;
+    line-height: 18px
+}
+
+.os_mac .broad_list .tooltip_election .layer_tooltip {
+    width: 170px;
+    padding: 13px 13px 13px 19px
+}
+
+.broad_list .list_broad {
+    float: left;
+    padding: 10px 0
+}
+
+.broad_list .list_broad li {
+    float: left
+}
+
+.broad_list .list_broad li + li {
+    margin-left: 27px
+}
+
+.broad_list .list_broad .link_broad {
+    display: block;
+    padding: 6px 0 5px
+}
+
+.broad_list .list_broad .thumb_g {
+    display: block;
+    height: 27px;
+    margin: 0 auto
+}
+
+.section_survey {
+    position: relative;
+    padding: 6px 0 9px;
+    border-bottom: 1px solid #e5e5e5
+}
+
+.section_survey .tit_election {
+    width: 156px;
+    margin-bottom: 17px;
+    background-position: 0 -40px
+}
+
+.section_survey .item_poll {
+    padding: 45px 50px;
+    border: 0 none
+}
+
+.section_survey .item_poll .tit_poll {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center
+}
+
+.section_survey .wrap_btn {
+    position: absolute;
+    top: -35px;
+    right: 0
+}
+
+.section_issue {
+    padding-bottom: 42px
+}
+
+.section_issue .head_section {
+    margin-bottom: 22px
+}
+
+.section_issue .info_cp {
+    float: left;
+    margin-left: 10px;
+    font-size: 12px;
+    line-height: 23px;
+    color: #666
+}
+
+.section_issue .election_preview {
+    float: left;
+    width: 321px
+}
+
+.section_issue .election_preview .tit_election {
+    width: 134px;
+    background-position: 0 -60px
+}
+
+.section_issue {
+    border-bottom: 1px solid #e5e5e5
+}
+
+.section_issue .election_issue {
+    float: right;
+    width: 321px
+}
+
+.section_issue .election_issue .tit_election {
+    width: 123px;
+    background-position: 0 -80px
+}
+
+.section_photo {
+    border-bottom: 1px solid #e5e5e5
+}
+
+.section_photo .tit_election {
+    display: block;
+    height: 18px;
+    margin-bottom: 12px;
+    background-position: 0 -100px
+}
+
+.section_photo .list_thumb {
+    overflow: hidden;
+    width: 726px
+}
+
+.section_photo .list_thumb li {
+    float: left;
+    width: 225px;
+    margin-right: 17px
+}
+
+.section_photo .list_thumb .link_thumb {
+    overflow: hidden
+}
+
+.section_photo .list_thumb .tit_thumb {
+    margin: 10px 0 30px
+}
+
+.section_photo .list_thumb .link_txt {
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    height: 40px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2
+}
+
+.section_rate .rate_past {
+    float: left;
+    width: 355px;
+    margin-right: 30px;
+    border-right: 1px solid #f3f3f3
+}
+
+.section_rate .rate_past .tit_election {
+    display: block;
+    height: 18px;
+    background-position: 0 -120px
+}
+
+.section_rate .rate_past .ir_pm {
+    height: 205px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_rate1.jpg) 0 0 no-repeat;
+    background-size: 355px 205px
+}
+
+.section_rate .rate_result {
+    overflow: hidden;
+    position: relative
+}
+
+.section_rate .rate_result .tit_election {
+    display: block;
+    height: 18px;
+    background-position: 0 -140px
+}
+
+.section_rate .rate_result .ir_pm {
+    height: 118px;
+    margin-top: 63px;
+    background: url(//t1.daumcdn.net/media/news/election2018/img_rate2.jpg) 0 0 no-repeat;
+    background-size: 298px 118px
+}
+
+.section_rate .rate_result .link_all {
+    position: absolute;
+    top: 0;
+    right: 0
+}
+
+.feature_home .box_elected {
+    display: none
+}
+
+.feature_elected .box_elected {
+    display: block;
+    width: 1100px;
+    padding: 40px 40px 0;
+    margin: -85px auto 0;
+    background-color: #fff
+}
+
+.box_elected .tit_election {
+    width: 102px;
+    background-position: 0 -940px
+}
+
+.box_elected .info_elected {
+    float: right;
+    letter-spacing: 0
+}
+
+.box_elected .list_remarks {
+    margin: 0 -12px
+}
+
+.box_elected .list_remarks li {
+    margin: 0 12px
+}
+
+.box_elected .list_remarks .tit_thumb {
+    font-size: 14px
+}
+
+.box_elected .list_elected {
+    overflow: hidden;
+    width: 1116px;
+    margin-top: 20px
+}
+
+.box_elected .list_elected li {
+    float: left;
+    width: 170px;
+    margin: 0 16px 16px 0
+}
+
+.box_elected .list_elected .link_thumb {
+    float: right;
+    width: 70px
+}
+
+.box_elected .list_elected .cont_thumb {
+    padding: 14px 0 0 14px;
+    color: #fff
+}
+
+.box_elected .list_elected .tit_elected {
+    display: block;
+    padding-bottom: 2px;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px
+}
+
+.box_elected .list_elected .info_thumb, .box_elected .list_elected .tit_thumb {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 16px;
+    opacity: .7
+}
+
+.box_elected .list_elected .tit_thumb .link_txt {
+    color: #fff
+}
+
+.feature_elected .box_feature {
+    width: 1100px;
+    height: 360px;
+    margin-top: 26px
+}
+
+.feature_elected .news_recomm {
+    padding: 10px 0 0;
+    margin-right: 0;
+    border-right: 1px solid #e5e5e5
+}
+
+.feature_elected .news_recomm .btn_refresh {
+    top: 0
+}
+
+.feature_elected .news_recomm .link_all, .feature_elected .news_region .link_all {
+    top: 8px
+}
+
+.feature_elected .news_region {
+    padding-top: 10px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
+    #kakaoWrap {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/bg_election_180607.jpg)
+    }
+
+    #kakaoHead .logo_news, #kakaoServiceLogo, .gnb_election .link_gnb, .wrap_lnb2 .link_lnb {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_gnb_election_180619.gif)
+    }
+
+    .layer_share .list_sns .ico_newsview {
+        background-image: url(//t1.daumcdn.net/media/common/newsview/retina/ico_newsview_180405.png)
+    }
+
+    #kakaoWrap #wrapMinidaum {
+        background-image: url(//t1.daumcdn.net/media/news/election2017/retina/bg_minidaum.gif)
+    }
+
+    #kakaoWrap #minidaum .minidaum_logo .img_logo {
+        background-image: url(//t1.daumcdn.net/media/news/news2016/retina/logo_minidaum_161103.png)
+    }
+
+    #kakaoHead .info_find {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/info_find.png)
+    }
+
+    .ico_election, .photo_layer .ico_viewer {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/ico_election_180530.png)
+    }
+
+    .ico_election2 {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/ico_election2_180521.png)
+    }
+
+    .tit_election {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/tit_election_180517.png)
+    }
+
+    .num_election {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/num_election.png)
+    }
+
+    .img_ticker {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_ticker_180529.png)
+    }
+
+    .aside_schedule .list_schedule {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/list_schedule.jpg)
+    }
+
+    .aside_debate .ir_pm {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_debate.jpg)
+    }
+
+    .box_cmt .head_cmt {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/head_cmt2.jpg)
+    }
+
+    .candidate_cmt .bnr_cmt {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/head_cmt.png)
+    }
+
+    .head_promise {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/head_promise.jpg)
+    }
+
+    .head_promise .tit_promise {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/tit_promise.jpg)
+    }
+
+    .btn_promise .alex-action .count {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/txt_promise.png)
+    }
+
+    .btn_promise .alex-action .type-LIKE.selected .icon, .btn_promise .alex-action .type-LIKE.unselected .icon {
+        background-image: url(https://t1.daumcdn.net/alexander/static_img/action/election_promise/promise2x.png)
+    }
+
+    .head_shot {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/head_shot.jpg)
+    }
+
+    .head_shot .tit_shot {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/tit_shot.png)
+    }
+
+    .box_shot .alex_single .cmt_count .num_count {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/txt_shot.gif)
+    }
+
+    .box_shot .alex_single .write_wrap .img_camera {
+        background-image: url(//t1.daumcdn.net/media/news/election2017/retina/ico_election_170410_v5.png)
+    }
+
+    .box_shot .alex_single .alex_more .link_fold .img_more {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/ico_election2_180521.png)
+    }
+
+    .photo_layer .ico_login {
+        background-image: url(//t1.daumcdn.net/media/common/alex/icon_pc_rt_171027.png)
+    }
+
+    .img_vote {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_vote.png)
+    }
+
+    .list_map {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_map_180525.png)
+    }
+
+    .graph_amendment .line_graph {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/line_graph.png)
+    }
+
+    .count_amendment .amendment_list {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/amendment_list.gif)
+    }
+
+    .count_amendment2 .amendment_list {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/amendment_list2.gif)
+    }
+
+    .tag_district .ico_arr {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/tag_district.png)
+    }
+
+    .tag_district.on .ico_arr {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/tag_district2_180530.png)
+    }
+
+    .img_cast {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_cast.jpg)
+    }
+
+    .feature_home .bg_feature {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/bg_home.jpg)
+    }
+
+    .section_rate .rate_past .ir_pm {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_rate1.jpg)
+    }
+
+    .section_rate .rate_result .ir_pm {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/img_rate2.jpg)
+    }
+}

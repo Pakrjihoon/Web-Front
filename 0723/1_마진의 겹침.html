@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마진의 겹침</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: silver;
+            width: 200px;
+            overflow: hidden;
+        }
+        li {
+            width: 180px;
+            height: 40px;
+            background-color: hotpink;
+            margin: 10px;
+           /* float: left;*/
+        }
+        /*
+            상속 < 브라우저가 가진 기본 CSS < 선택자(구체성) < 인라인
+         */
+        /*
+            마진 겹침현상
+            1) 블록레벨끼리 수직으로 인접할때 마진의 top, bottom이 겹쳐지는 현상
+            (float은 겹침이 없음)
+
+            2) 부모와 자손간의 마진겹침현상
+            - 해결방안 : 위, 아래를 막으면 됨(padding, border) or 'overflow:hidden'
+         */
+    </style>
+</head>
+<body>
+    <ul>
+        <li>리스트1</li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+        <li>리스트4</li>
+    </ul>
+</body>
+</html>

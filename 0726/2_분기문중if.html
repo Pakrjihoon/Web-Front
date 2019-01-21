@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>분기문 중에 if문</title>
+</head>
+<body>
+<script>
+
+    // 만약 확인버튼을 누르면 우리 사이트에 남는것이고,
+    // 취소를 누르면 쥬니버로 이동
+
+    var flag = confirm("당신은 성인입니까 ?");
+    if(flag) {
+        // 유저가 확인버튼을 눌렀을때
+        alert("환영합니다!");
+    }else
+    {
+        location.href = "http://jr.naver.com";
+        // 유저가 취소버튼을 눌렀을때
+        // 쥬니어네이버로 이동
+    }
+    /*
+        if(5<7) {
+            alert("A");
+        } else {
+            alert("B");
+        }
+    */
+
+    /*
+        분기문 : if, switch
+        - 특정한 시점에서 나뉘는 문장
+        - 조건식은 결과값이 true / false 로 나타내는 식
+        if 문의 문법
+
+        if(조건식) {
+            조건식이 true 일때 이 곳이 작동
+        }else {
+            조건식이 false 일때 이 곳이 작동
+        }
+     */
+</script>
+</body>
+</html>

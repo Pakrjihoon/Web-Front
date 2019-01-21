@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ex3</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/apple.css"/>
+    <style>
+
+        body {
+            font-family: 'SF Pro KR', sans-serif;
+        }
+
+        #wrap {
+            width: 1000px;
+            border: 1px solid #333;
+            margin: auto;
+        }
+
+        #header {
+            width: 1000px;
+            height: 99px;
+            border-bottom: 1px solid #333;
+            position: relative;
+            text-align: center;
+            line-height: 99px;
+        }
+
+        button {
+            padding: 12px 16px;
+            border: none;
+            cursor: pointer;
+            font: 600 25px 'SF Pro KR', sans-serif;
+            background: #26C6DA;
+            color: #fff;
+        }
+
+        button:hover {
+            background: #00B8D4;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            transition: .2s ease;
+        }
+
+        button:active {
+            background: #00ACC1;
+            transform: scale(.8);
+        }
+
+        #content ul {
+            margin: 20px auto;
+            width: 960px;
+        }
+
+        #content ul:after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+        #content li {
+            width: 278px;
+            height: 200px;
+            margin: 20px;
+            float: left;
+            font-size: 100px;
+            text-align: center;
+            line-height: 200px;
+            border: 1px solid #333;
+            font-weight: 700;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <header id="header">
+        <button>색상 변경</button>
+    </header><!-- //header -->
+    <div id="content">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+        </ul>
+    </div><!-- //content -->
+</div><!-- //wrap -->
+<script src="js/jquery.js"></script>
+<script>
+
+    // 공통적으로 변하는 글자의 색상이 흰색으로 변경합니다.
+    // 그러므로 변수를 선언하여 그 변수는 객체로 받습니다.
+    // 객체 내부에는 css 의 속성인 color 와 그림자 효과를 넣어줍니다.
+
+    var deco = {"color":"#fff","text-shadow":"1px 1px 1px #424242"};
+    $("button").click(function () {
+        $("li:first-child").css("background-color","crimson")
+            .css(deco);
+        $("li:eq(2)").css("background-color","lightskyblue")
+            .css(deco);
+        $("li:eq(6)").css("background-color","limegreen")
+            .css(deco);
+        $("li:last-child").css("background-color","yellow")
+            .css(deco);
+        // 지정한 숫자를 가르키는 li마다 변경된 색이 다르기 때문에
+        // li의 첫번째 자식요소, eq()로 요소의 인덱스를 가르키는데 0부터 시작하니
+        // 3이라 시작하는 li는 2 ~ 이런식으로 찾고 마지막 요소는 last-child로 구분하여
+        // 색상을 다 다르게 표현하기 위해 css메서드를 사용하였습니다.
+        // 공통적으로 변하게 하기 위하여 선언한 변수를 또 다시 css 메서드로 주었는데
+        // 여기서 사용한 기법이 메서드체인방식으로 한번에 주었습니다.
+        // 그림자는 밝은 색상의 배경일때 숫자가 티가 안나 살짝 넣어봤습니다.
+    });
+</script>
+</body>
+</html>

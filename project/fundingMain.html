@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fundingMain</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        #logoImage {
+            background-image: url("img/123.png");
+        }
+        #content{
+            width: 1080px;
+            height: 380px;
+            margin: auto;
+            /*background-color: yellow;*/
+        }
+
+        .pg{
+            width: 150px;
+            height: 30px;
+            background-color: #40beed;
+            margin:10px auto;
+            text-align: center;
+        }
+
+        #content>h2{
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 50px;
+            border-top: 1px solid black;
+            width: 250px;
+            padding-top: 10px;
+        }
+        #content>a{
+            font-size: 15px;
+            font-weight: 500;
+            /*margin-top: 50px;*/
+            margin: 0 0 0 1020px;
+        }
+        #content>#fundingList{
+            width: 1080px;
+            height: 300px;
+            /*background-color: red;*/
+            overflow: hidden;
+
+        }
+
+        #fundingList>li.funding{ /*이게 박스 하나 */
+            width: 230px;
+            height: 250px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 23px 70px 0 60px;
+            box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+        #fundingList>li.funding:hover {
+            transform: translateY(-2px);
+            box-shadow:0 3px 8px 0 rgba(0,0,0,.16);
+        }
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #fundingList div.funding_img>img{
+            width: 230px;
+            height: 160px;
+            border-radius: 2px 2px 0 0;
+        }
+        #fundingList div.funding_title{
+            width: 180px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #fundingList div.funding_title>strong{
+            width: 180px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+
+        }
+        #fundingList div.funding_title>span{
+            width: 180px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+
+        }
+
+        /**/
+        #content2{
+            width: 1080px;
+            height: 380px;
+            margin: auto;
+            /*background-color: yellow;*/
+        }
+
+
+        #content2>h2{
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 50px;
+            border-top: 1px solid black;
+            width: 250px;
+            padding-top: 10px;
+        }
+        #content2>a{
+            font-size: 15px;
+            font-weight: 500;
+            /*margin-top: 50px;*/
+            margin: 0 0 0 1020px;
+        }
+        #content2>#fundingList2{
+            width: 1080px;
+            height: 300px;
+            /*background-color: red;*/
+            overflow: hidden;
+
+        }
+
+        #fundingList2>li.funding{ /*이게 박스 하나 */
+            width: 230px;
+            height: 250px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 23px 70px 0 60px;
+            box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+        #fundingList2>li.funding:hover {
+            transform: translateY(-2px);
+            box-shadow:0 3px 8px 0 rgba(0,0,0,.16);
+        }
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #fundingList2 div.funding_img>img{
+            width: 230px;
+            height: 160px;
+            border-radius: 2px 2px 0 0;
+        }
+        #fundingList2 div.funding_title{
+            width: 180px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #fundingList2 div.funding_title>strong{
+            width: 180px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+
+        }
+        #fundingList2 div.funding_title>span{
+            width: 180px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+
+        }
+        #content3{
+            width: 1080px;
+            height: 380px;
+            margin: auto;
+            /*background-color: yellow;*/
+        }
+
+
+        #content3>h2{
+            font-size: 20px;
+            font-weight: 500;
+            margin-top: 50px;
+            border-top: 1px solid black;
+            width: 250px;
+            padding-top: 10px;
+        }
+        #content3>a{
+            font-size: 15px;
+            font-weight: 500;
+            /*margin-top: 50px;*/
+            margin: 0 0 0 1020px;
+        }
+        #content3>#fundingList3{
+            width: 1080px;
+            height: 300px;
+            /*background-color: red;*/
+            overflow: hidden;
+
+        }
+
+        #fundingList3>li.funding{ /*이게 박스 하나 */
+            width: 230px;
+            height: 250px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 23px 70px 0 60px;
+            box-shadow: 0 8px 20px 0 rgba(0,0,0,.1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+        #fundingList3>li.funding:hover {
+            transform: translateY(-2px);
+            box-shadow:0 3px 8px 0 rgba(0,0,0,.16);
+        }
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #fundingList3 div.funding_img>img{
+            width: 230px;
+            height: 160px;
+            border-radius: 2px 2px 0 0;
+        }
+        #fundingList3 div.funding_title{
+            width: 180px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+        #fundingList3 div.funding_title>strong{
+            width: 180px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+
+        }
+        #fundingList3 div.funding_title>span{
+            width: 180px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+
+        }
+
+        #photoBox{
+            position: relative;
+            width: 1080px;
+            height: 350px;
+            margin: auto;
+            overflow: hidden;
+            margin-top: 20px;
+            border-radius: 3px;
+        }
+
+        #photoList{
+            position: relative;
+            width:4320px;
+            height:350px;
+
+        }
+        #photoList li img{
+            float: left;
+            transition: .2s ease;
+        }
+        .item_photo h1, .item_photo h4{
+            font-weight: bold;
+        }
+        .rightBtn{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            top:150px;
+            color: #40BEED;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .leftBtn{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            font-size: 40px;
+            top:150px;
+            color: #40BEED;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        #left{
+            left:0px;
+        }
+        #right{
+            right:0px ;
+        }
+        #navList li{
+            position: absolute;
+            bottom: 10px;
+            color: #E0E0E0;
+            cursor: pointer;
+            margin-left: 280px;
+        }
+        #navList li:nth-child(1){
+            left: 190px;
+        }
+        #navList li:nth-child(2){
+            left: 220px;
+        }
+        #navList li:nth-child(3){
+            left: 250px;
+        }
+        #navList li:nth-child(4){
+            left: 280px;
+        }
+
+        #menuBox h3{
+            position: absolute;
+            font-size:40px ;
+            top:30px;
+            left:150px;
+        }
+
+        #navList li.on{
+            color:#40BEED;
+        }
+        h1{
+            position: absolute;
+            font-size: 40px;
+            font-weight: 500;
+            margin-left: 60px;
+            margin-top: 125px;
+            color: #FFFFFF;
+
+        }
+        h4{
+            position: absolute;
+            margin-left: 70px;
+            margin-top:180px;
+            font-size: 18px;
+            color: #FFFFFF;
+
+        }
+        .writeBtn{
+            position: absolute;
+            width: 150px;
+            height: 40px;
+            background-color: #40BEED;
+            display: block;
+            font-size: 20px;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 910px;
+            margin-top: 290px;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+        .writeBtn:hover {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-shadow: 0 0 5px;
+            background: #0091ea;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=openChatPop()>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="myPage.html">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="photoBox">
+    <ul id="photoList">
+        <li class="item_photo">
+            <img src="img/K-8.png" width="1080px" height="350px">
+            <h1>펀딩 여행!</h1>
+            <h4>펀딩 여행이란 FD들의 후원을 받아 여행을 다녀온 후 작성한 근사한 여행기를 함께 즐기고 공유하는 컨텐츠 입니다.<br>한바퀴에서 멋진 경험을 지금 시작해보시는것은 어떠신가요?</h4>
+            <a href="creatFunding.html" class="writeBtn">지금 작성하기</a>
+        </li>
+        <li class="item_photo">
+            <img src="img/00.jpg" width="1080px" height="350px" >
+        </li>
+        <li class="item_photo">
+            <img src="img/90.jpg" width="1080px" height="350px" >
+        </li>
+        <li class="item_photo">
+            <img src="img/70.jpg" width="1080px" height="350px">
+        </li>
+    </ul><!--//photoList-->
+
+    <ul id="navList">
+        <li class="on"><i class="fas fa-circle"></i></li>
+        <li><i class="fas fa-circle"></i></li>
+        <li><i class="fas fa-circle"></i></li>
+        <li><i class="fas fa-circle"></i></li>
+    </ul><!--//navList-->
+
+    <button id="left" class="leftBtn" ><i class="fas fa-chevron-left"></i></button>
+    <button id="right" class="rightBtn"><i class="fas fa-chevron-right"></i></button>
+</div>
+<div id="content">
+    <h2>마감을 앞둔 펀딩여행</h2>
+    <a href="end_allFunding.html" id="funding_end">+더보기</a>
+    <ul id="fundingList">
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        </ul>
+    <div id="page" class="pg"></div>
+    </div><!--//.content -->
+
+<div id="content2">
+    <h2>새로운 펀딩 여행</h2>
+    <a href="new_allFunding.html" id="funding_new">+더보기</a>
+    <ul id="fundingList2">
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+    </ul>
+    <div id="page2" class="pg"></div>
+</div><!--//.content -->
+
+
+<div id="content3">
+    <h2>펀딩달성 임박</h2>
+    <a href="success_allFunding.html" id="funding_success">+더보기</a>
+    <ul id="fundingList3">
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거" />
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+    </ul>
+    <div id="page3" class="pg"></div>
+</div><!--//.content -->
+<script src="js/jquery.js"></script>
+<script src="js/chat.js"></script>
+<script>
+
+    var num = 0;
+
+
+    $(".funding").click(function () {
+    location.href="fundingViewer.html";
+    });
+
+
+
+    var idx = 0;
+
+    var $navList = $("#navList").children();
+
+    $("#left").click(function () {
+// if(idx==0){
+// alert("dd");
+// // $("#photoList img").css("transform", "translateX(" + num + "px)");
+// }
+        if(idx!=0){
+            idx--;
+            var num= (-idx*1080);
+            $("#photoList img").css("transform", "translateX(" + num + "px)");
+// alert(no);
+            $navList.removeClass("on");
+            $navList.eq(idx).addClass("on");
+        }
+    });
+    $("#right").click(function () {
+//var no = 0;
+
+// if(idx==3){
+// alert("dd");
+// //var num= 0;
+// // $("#photoList img").css("transform", "translateX(" + num + "px)");
+//
+// }
+        if(idx!=3) {
+            idx++;
+            num= -(idx*1080);
+            $("#photoList img").css("transform", "translateX(" + num + "px)");
+            console.log(num);
+// alert(no);
+
+            $navList.removeClass("on");
+            $navList.eq(idx).addClass("on");
+        }
+    });
+    $("#navList li").click(function () {
+        var dotidx = $(this).index();
+        console.log(dotidx);
+        var imgmove = dotidx *= -1080;
+        $("#photoList img").css("transform", "translateX(" + imgmove + "px)");
+        $("#navList li").removeClass("on");
+        $(this).addClass("on");
+    });
+
+
+//header
+
+    var $popup=$("#popup");
+    var $loginForm=$("#loginForm");
+    var $findForm=$("#findForm");
+    $("#login").click(function(e) {
+        e.preventDefault();
+        $popup.show();
+        $loginForm.show();
+    });
+    $popup.click(function(e) {
+        e.preventDefault();
+        $(this).hide();
+        $(".form").hide();
+    });
+    $("#find").click(function(e) {
+        e.preventDefault();
+        $loginForm.hide();
+        $findForm.show();
+    });
+    $(".tab a").click(function () {
+        $(".on").removeClass("on");
+        $(this).addClass("on");
+    })
+    $("#findIDBtn").click(function (e) {
+        e.preventDefault();
+        $("#findID").show();
+        $("#findPW").hide();
+    });
+    $("#findPWBtn").click(function (e) {
+        e.preventDefault();
+        $("#findPW").show();
+        $("#findID").hide();
+    });
+    $(".change").click(function (e) {
+        e.preventDefault();
+        $findForm.hide();
+        $("#chanePWForm").show();
+    });
+    $(".return").click(function (e) {
+        e.preventDefault();
+        $(".form").hide();
+        $("#loginForm").show();
+    });
+    $("#profileImage").click(function () {
+        $("#personalMenu").show();
+        return false;
+    });
+    $(document).click(function () {
+        $("#personalMenu").hide();
+    });
+
+
+    var i;
+
+   function move(){
+        if(num<=-3240){
+            num=1080;
+            console.log(num)
+        }else {
+            num-=1080;
+            $("#photoList img").css("transform", "translateX(" + num + "px)");
+            console.log(num)
+        }
+    }
+
+    setInterval(move,4000);
+    $("#photoList").mouseover(function () {
+        clearInterval(i)
+    });
+
+    $("#photoList").mouseout(function () {
+
+    });
+
+
+
+
+</script>
+</body>
+</html>

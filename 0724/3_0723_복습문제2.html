@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제2</title>
+    <style>
+        #circle {
+            border-radius: 50px;
+            background: #00e78e;
+            width: 100px;
+            height: 100px;
+            transform: translate(0,0);
+            transition: .2s ease;
+        }
+    </style>
+</head>
+<body>
+<button>움직여!!</button>
+<div id="circle"></div>
+<script src="js/jquery.js"></script>
+<script>
+    // jquery 함수를 호출하여 jquery 객체를 얻어온겁니다.
+    // jquery 객체입니다.
+    // $("button");
+
+    // jquery 객체가 가지고 있는 css 메서드를 호출
+    //$btn.css("color","red");
+
+    // button요소의 jquery 객체에
+    // click 이벤트리스너를 붙이는 메서드인 click을 호출하여
+    // 이벤트리스너를 붙임
+
+    // 전역변수로 x를 선언하고 0으로 초기화
+    var x=0, y =0;
+    $("button").click(function () {
+        x += 100;
+        y += 100;
+        //id가 circle인 요소를 선택하여 jquery 객체로 얻어옴
+        $("#circle").css("transform","translate("+x+"px, "+y+"px)");
+    }); // button click() end
+
+    // 이벤트 : click, mouseover, keyup, ... (유저가 하는 행동)
+    // 이벤트 타겟 : 이벤트가 발생되는 장소(button, div, ...)
+    // 이벤트리스너 : 눈에 안보임
+    // 이벤트핸들러 : 함수
+</script>
+</body>
+</html>

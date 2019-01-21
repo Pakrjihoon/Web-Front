@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>float의 활용</title>
+    <style>
+        /*
+            float은 공간을 차지하지 않기 때문에 문제가 생김
+
+            해결책
+            1) float된 자식의 높이만큼 부모에게 height 지정
+            2) 부모에게 overflow를 hidden을 줌
+            3) 자식중(블록레벨)에 clear 속성을 줌
+            4) 부모의 가상요소로 clear 속성을 줌
+         */
+        #wrap {
+            width: 300px;
+            border: 1px solid crimson;
+            overflow: hidden;
+        }
+        .box_float {
+            width: 96px;
+            height: 100px;
+            margin: 2px;
+            float: left;
+        }
+        .clear {
+            width: 300px;
+            height: 100px;
+            background: #ffc107;
+            /* float을 정리함 */
+            clear: both;
+            /* both는 left 와 right 둘다 적용을 시킨다는의미 */
+        }
+        .box_float:nth-child(3n) {/* 0, 3, 6, 9, 12, ...*/
+            background: #9876F1;
+        }
+        .box_float:nth-child(3n+1) {/* 1, 4, 7, 10, 13, ...*/
+            background: mediumseagreen;
+        }
+        .box_float:nth-child(3n+2) {/* 2, 5, 8, 11, 14, ...*/
+            background: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="box_float"></div>
+        <div class="box_float"></div>
+        <div class="box_float"></div>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>

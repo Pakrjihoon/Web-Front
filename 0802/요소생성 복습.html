@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            cursor: crosshair;
+        }
+        .circle {
+            text-align: center;
+            border-radius: 200px;
+            color: white;
+            font-weight: bold;
+            user-select: none;
+            box-shadow: 0 0 10px #424242;
+            transition: .5s ease;
+        }
+        .fade {
+            animation: scale 1s ease 1;
+        }
+        @keyframes scale {
+            0% {transform: scale(0.3);
+                opacity: .5;}
+            100% {transform: scale(1);
+                opacity: 1;}
+        }
+
+    </style>
+</head>
+<body>
+<div></div>
+<script src="js/jquery.js"></script>
+<script>
+
+    function randomColor() {
+        var r = Math.floor(Math.random()*256);
+        var g = Math.floor(Math.random()*256);
+        var b = Math.floor(Math.random()*256);
+        return "rgb("+r+","+g+","+b+")";
+    }
+    var num = 0;
+    $("body").click(function (e) {
+        var $circle = $("<div>");
+        var x= e.clientX;
+        var y= e.clientY;
+        var size=Math.floor(Math.random()*151)+50;
+        var halfSize = size/2;
+       $circle.css({width:size,height:size,
+       "background-color":randomColor(),
+       "line-height":size+"px", "font-size":halfSize,
+           position:"fixed",
+       left:x, top:y, "margin-left":-halfSize,"margin-top":-halfSize})
+           .text(++num).addClass("circle").addClass("fade");
+        $("body").append($circle);
+    });
+</script>
+</body>
+</html>

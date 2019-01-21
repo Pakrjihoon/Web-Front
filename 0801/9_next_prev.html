@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>next메서드와 prev메서드</title>
+</head>
+<body>
+    <button>1번</button>
+    <button>2번</button>
+    <button>3번</button>
+    <button>4번</button>
+<script src="js/jquery.js"></script>
+<script>
+
+    // next() : 다음 요소 선택
+    // prev() : previous 이전 요소 선택
+    $("button").on("click",function () {
+        $(this).prev().css("color","red");
+    });
+</script>
+</body>
+</html>

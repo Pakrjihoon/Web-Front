@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>background 관련 속성</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #box {
+            width: 800px;
+            height: 600px;
+            /*
+                background 관련 속성
+                - background : 대표속성(한 번에 쓸 수 있음)
+                - background-color : 뒷배경 색상(기본 : border 부터 적용)
+                - background-image : 뒷배경 이미지
+                - background-repeat : 뒷배경 이미지 반복 컨트롤
+                - background-position : 이미지 포지션 지정
+             */
+            background-color:#84A3E4;
+            background-image: url("img/backimg.jpg");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 200px 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>

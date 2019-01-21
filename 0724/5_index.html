@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>index 메서드</title>
+</head>
+<body>
+<button>버튼</button>
+<button>버튼</button>
+<button>버튼</button>
+<button>버튼</button>
+<button>버튼</button>
+<p>당신이 누른 버튼은 : <span id="result">?</span> 번째 버튼</p>
+<script src="js/jquery.js"></script>
+<script>
+    // 어떤 요소가 부모를 기준으로 몇번재 index인지 얻어오는
+    // 메서드 : index
+    // this는 순수 자바스크립트 요소 객체
+    $("button").click(function () {
+        var btnIndex = $(this).index();
+        btnIndex = btnIndex+1;
+        $("#result").text(btnIndex);
+
+        //alert("이 버튼은 "+(btnIndex+1)+" 번째 입니다.");
+        /*
+        *   + 연산자
+        *   1) 피연산자1 '+' 피연산자2 둘 다 숫자면 덧셈
+        *   2) 피연산자1,2 둘중에 하나라도 문자열이면
+        *       문자열 합침 연산자
+         */
+        // $(this)는 jquery 객체이므로 css()메서드 이용
+        // $(this).css("color","red")
+
+        // this는 자바스크립트요소객체 이므로 자바스크립트의 문법
+        //this.style.color="red";
+    });
+</script>
+</body>
+</html>

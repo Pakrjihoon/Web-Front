@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습2</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #logo {
+            width: 120px;
+            height: 50px;
+        }
+        #logo a {
+            text-indent: -9999px;
+            overflow: hidden;
+            width: 120px;
+            height: 50px;
+            display: block;
+            background-image: url(img/tit_blacklogo_160906.png);
+            background-repeat: no-repeat;
+            margin:20px;
+            margin-left: 35px;
+            left: 20px;
+        }
+        #menu {
+            border : 1px solid #424242;
+            width:190px;
+            height: 334px;
+            position: fixed;
+            left: 50%;
+            margin-left:-95px;
+            box-shadow: 0 0 3px #424242;
+        }
+        .with_take a{background-position: -215px 0;}
+        .mag a{background-position: -430px 0;}
+        .more a{background-position: -610px 0;}
+        .with_help a:active {background-position: 0 -47px;}
+        .with_take a:active { background-position: -215px -47px;}
+        .mag a:active {background-position: -430px -47px;}
+        .more a:active{background-position: -610px -47px;}
+        #menu li {width :150px;height: 41px;}
+        #menu li a {
+            display:block;
+            margin:20px;
+            width: 150px;
+            height: 41px;
+            text-indent: -9999px;
+            overflow: hidden;
+            background-image: url(img/txt_gnb.png);
+            background-repeat: no-repeat;
+        }
+        #menu li a:active{transition: .5s ease;}
+
+    </style>
+</head>
+<body>
+<div id="menu">
+    <h1 id="logo"><a href="">같이가치</a></h1>
+    <h2 class="screen_out">같이가치 메인 서비스</h2>
+    <ul>
+        <li class="with_help"><a href="">같이기부</a></li>
+        <li class="with_take"><a href="">같이타요</a></li>
+        <li class="mag"><a href="">메거진</a></li>
+        <li class="more"><a href="">더보기</a></li>
+    </ul>
+</div>
+</body>
+</html>

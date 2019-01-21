@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Content</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/addSlider.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+        body {
+            height: auto;
+        }
+        #wrap{
+            width: 1080px;
+            height: auto;
+            position: relative;
+            margin: auto;
+        }
+        .selectMap {
+            width : 1080px;
+            height: 400px;
+            background: #4b96e6;
+
+        }
+        #fillter {
+            position: absolute;
+            width: 260px;
+            height: auto;
+            margin-right: 20px;
+            margin-left: 20px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) inset;
+        }
+        #select {
+            width: 780px;
+            height: 70px;
+            float: right;
+        }
+        #content {
+            position: relative;
+            width: 780px;
+            height: auto;
+            float: left;
+            left: 300px;
+        }
+        #type,#install,#userReview {
+            width: 260px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .type1 {
+            width: 260px;
+            height:30px;
+            line-height: 30px;
+            float: left;
+            margin: 5px 20px;
+        }
+        .moreBtn1 ,.moreBtn2,.moreBtn3{
+            width: 260px;
+            border: none;
+            font-size: 20px;
+            background-color: transparent;
+            cursor: pointer;
+            outline: none;
+            transition: .2s ease;
+            text-align: left;
+            text-indent: 10px;
+        }
+        .moreBtn1:hover,.moreBtn2:hover,.moreBtn3:hover {
+            background-color: #40BEED;
+        }
+        .hide {
+            display: none;
+        }
+        #fillterMain {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            height: 80px;
+            line-height: 80px;
+        }
+        #applyBtn {
+            background-color: #40BEED;
+            width: 200px;
+            height: 50px;
+            margin-top: 20px;
+            margin-left: 30px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            color: #fff;
+            border-radius: 15px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            transition: .2s ease;
+        }
+        #applyBtn:hover {
+            transform: scale(1.05);
+        }
+        .categoryBtn {
+            margin: 5px 5px;
+            width: 150px;
+            height: 40px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 20px;
+            background-color: transparent;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: .3s ease;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        .on {
+            background-color: #40BEED;
+            border-radius: 10px;
+            color: #fff;
+        }
+        .fa-star {
+            color: #40BEED;
+        }
+        .element {
+            width: 730px;
+            margin: 20px auto;
+            height: 160px;
+            cursor: pointer;
+            transition: .2s ease;
+        }
+        .opacity {
+            opacity: .7;
+        }
+        .ele_picture {
+            width: 170px;
+            height: 180px;
+            position: relative;
+            float: left;
+            margin-top: 5px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        .ele_info {
+            padding: 10px;
+            width: 510px;
+            height: 160px;
+            float: left;
+            margin: 5px 10px 5px 10px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        img {
+            width: 175px;
+            height: 180px;
+        }
+        .location_name {
+            width: 350px;
+            font-size: 25px;
+            height: 40px;
+            font-weight: bold;
+            float: left;
+
+        }
+        .location_intro {
+            font-size: 15px;
+            width: 100%;
+            height: 30px;
+            clear:both;
+            line-height: 30px;
+        }
+        .s_price1 {
+            font-size:20px;
+            font-weight: bold;
+            width: 200px;
+            height: 30px;
+            float: left;
+            line-height: 30px;
+        }
+        .s_price2 {
+            font-size:25px;
+            width:310px;
+            font-weight: bold;
+            height: 30px;
+            float: left;
+        }
+        .location_address {
+            display: block;
+            height: 30px;
+            line-height: 20px;
+        }
+        .score {
+            float: left;
+            width: 350px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+        }
+        .fa-heart {
+            width: 160px;
+            height: 50px;
+            line-height: 54px;
+            text-align: right;
+            font-size: 25px;
+        }
+        .fonderImg {
+            float: right;
+            width: 150px;
+            height: 40px;
+            text-align: right;
+            font-size: 20px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div class="selectMap">
+    </div>
+    <hr>
+    <div id="fillter">
+        <h2 id="fillterMain">필터</h2>
+        <div id="money">
+            <input data-addui='slider' data-min='10' data-formatter='usd'
+                   data-fontsize='14'
+                   data-step='0.05'
+                   data-range='true'
+                   value='25.50,50.00'
+            />
+        </div>
+        <div id="type">
+            <button type="button" class="moreBtn1"><i id="fa1" class="fas fa-arrow-circle-down"></i> 시설 타입</button>
+            <div id="moreType" class="hide">
+                <label class="type1"><input type="checkbox">호텔</label>
+                <label class="type1"><input type="checkbox">모텔</label>
+                <label class="type1"><input type="checkbox">게스트 하우스</label>
+                <label class="type1"><input type="checkbox">민박 및 펜션</label>
+                <label class="type1"><input type="checkbox">호스텔 및 콘도</label>
+                <label class="type1"><input type="checkbox">기타</label>
+            </div>
+        </div>
+        <div id="install">
+            <button type="button" class="moreBtn2"><i id="fa2" class="fas fa-arrow-circle-down"></i> 부대 시설</button>
+            <div id="moreInstall" class="hide">
+                <label class="type1"><input type="checkbox" name="install">무료 주차</label>
+                <label class="type1"><input type="checkbox" name="install">풀(월풀 욕조)</label>
+                <label class="type1"><input type="checkbox" name="install">룸 서비스</label>
+                <label class="type1"><input type="checkbox" name="install">조식 제공</label>
+                <label class="type1"><input type="checkbox" name="install">애완동물 허용</label>
+                <label class="type1"><input type="checkbox" name="install">음식점</label>
+                <label class="type1"><input type="checkbox" name="install">장애인 시설 완비</label>
+                <label class="type1"><input type="checkbox" name="install">금연시설</label>
+                <label class="type1"><input type="checkbox" name="install">에어컨</label>
+                <label class="type1"><input type="checkbox" name="install">무료 와이파이</label>
+            </div>
+        </div>
+        <div id="userReview">
+            <button type="button" class="moreBtn3"><i id="fa3" class="fas fa-arrow-circle-down"></i> 사용자 평점</button>
+            <div id="moreReview" class="hide">
+                <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i><i class="fas fa-star"></i></label>
+                <label class="type1"><input type="radio" name="score"><i class="fas fa-star"></i></label>
+            </div>
+        </div>
+        <button type="button" id="applyBtn">적용 하기</button>
+    </div>
+    <div id="select">
+        <button id="roomBtn" type="button" class="categoryBtn on">숙소</button>
+        <a href="contentFood.html"><button id="foodBtn" type="button" class="categoryBtn">음식점</button></a>
+        <button id="cultureBtn" type="button" class="categoryBtn">관광지</button>
+    </div>
+    <div id="content">
+    <script type="text/template" id="roomTmp">
+            <%_.each(rooms, function(room) { %>
+            <div class="element">
+                <div class="ele_picture">
+                    <img src="img/hotel.jpg" alt="호텔">
+                </div>
+                <div class="ele_info">
+                    <h2 class="location_name"><%=room.name%></h2>
+                    <h2 class="fonderImg"><i class="fas fa-user-circle"></i><%=room.founder%></h2>
+                    <h3 class="location_intro"><%=room.intro%></h3>
+                    <span class="s_price1">1박 숙박 기준 </span>
+                    <span class="s_price2"><%=room.s_price%> 원</span><br/>
+                    <span class="location_address"><%=room.address%></span>
+                    <span class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                    <i class="far fa-heart"> 4,023</i>
+                </div>
+            </div>
+            <% })%>
+    </script>
+    </div>
+
+</div>
+<script src="js/jquery.js"></script>
+<script src="//code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="js/Obj.min.js"></script>
+<script src="js/addSlider.js"></script>
+<script src="js/underscore-min.js"></script>
+<script>
+    var tmp = _.template($("#roomTmp").html())
+
+
+    $.ajax({
+        url:"ajax/room.json",
+        type : "get",
+        dataType:"json",
+        error:function () {
+            alert("실패");
+        },
+        success: function (json) {
+            $("#content").append(tmp({rooms: json}));
+        }
+    });
+    $(".moreBtn1").click(function () {
+        if($("#moreType").hasClass("hide")) {
+            $("#moreType").removeClass("hide");
+            $("#fa1").addClass("fa-arrow-circle-up");
+        }
+        else {
+            $("#moreType").addClass("hide");
+            $("#fa1").removeClass("fa-arrow-circle-up");
+            $("#fa1").addClass("fa-arrow-circle-down");
+        }
+    });
+    $(".moreBtn2").click(function () {
+        if($("#moreInstall").hasClass("hide")) {
+            $("#moreInstall").removeClass("hide");
+            $("#fa2").addClass("fa-arrow-circle-up");
+        }
+        else {
+            $("#moreInstall").addClass("hide");
+            $("#fa2").removeClass("fa-arrow-circle-up");
+            $("#fa2").addClass("fa-arrow-circle-down");
+        }
+    });
+    $(".moreBtn3").click(function () {
+        if($("#moreReview").hasClass("hide")) {
+            $("#moreReview").removeClass("hide");
+            $("#fa3").addClass("fa-arrow-circle-up");
+        }
+        else {
+            $("#moreReview").addClass("hide");
+            $("#fa3").removeClass("fa-arrow-circle-up");
+            $("#fa3").addClass("fa-arrow-circle-down");
+        }
+    });
+    $(document).ready(function () {
+        $(".element").each(function () {
+            $(this).mouseover(function () {
+                $(this).addClass("opacity");
+            });
+            $(this).mouseout(function () {
+                $(this).removeClass("opacity");
+            });
+        });
+    });
+    $("#roomBtn").click(function () {
+        location.href="contentRoom.html";
+    });
+    $("#foodBtn").click(function () {
+        location.href="contentFood.html";
+    });
+    $("#cultureBtn").click(function () {
+        location.href="contentCulture.html";
+    });
+
+</script>
+</body>
+</html>

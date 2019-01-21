@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습 3번</title>
+    <!-- 폰트 적용 -->
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: "Noto Sans KR", sans-serif;
+        }
+        h1 {
+            width: 300px;
+            /*
+                인라인 레벨의 가운데 정렬은 text-align : center
+                width가 있는 블록레벨의 가운데 정렬은 margin : auto;
+                부모의 width에서 자신의 width값을 빼고
+                나누기 2 해서 margin-left, margin-right가 사이좋게
+                나눠가집니다. 그래서 가운데 정렬
+             */
+            margin: auto;
+        }
+        #btn1 {
+            margin:20px 0;
+            width: 230px;
+            height: 50px;
+            border: none;
+            background: violet;
+            font-size: 22px;
+            /*
+                input, button 등 대체되는 요소들은
+                폰트 상속이 안됩니다. 직접 지정하세요.
+             */
+            font-family: "Noto Sans KR",sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 25px;
+            color: #FFF;
+            text-shadow: 1px 1px 1px #424242;
+            transition : .5s ease;
+            /*
+            버튼을 클릭시 테두리를 지워줌
+            버튼은 웹 접근성 때문에 outline이 존재한다.
+            (브라우저 기능)
+            */
+            outline: none;
+        }
+        #btn1:hover {
+            background-color: mediumvioletred;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19),
+            0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+        #btn1:active {
+            transform: scale(.9);
+        }
+        #btn2 {
+            background-color: cornsilk;
+            width: 230px;
+            height: 50px;
+            border-radius: 115px;
+            line-height: 50px;
+            margin :20px auto;
+            font-weight: 500;
+            color: #424242;
+            font-size: 22px;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px #424242;
+            box-shadow: 10px 10px 0 #424242;
+            transition: .3s ease;
+        }
+        #btn2:hover {
+
+        }
+        #btn2:active {
+            box-shadow: none;
+            transform: translate(10px,10px);
+        }
+    </style>
+</head>
+<body>
+    <h1>복습문제 3번</h1>
+    <button id="btn1"> &lt; 나는 버튼! &gt; </button>
+    <hr/>
+    <div id="btn2">나도 버튼!</div>
+</body>
+</html>

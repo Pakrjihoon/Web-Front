@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>interactive 웹서비스</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/notosanskr.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<style>
+			body {
+				text-align: center;
+			}
+			#wrap {
+				width:700px;
+                height:700px;
+				box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+				            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+				position: fixed;
+				left:50%;
+				top:50%;
+				margin:-350px 0 0 -350px; 
+				font-family: 'Noto Sans KR',sans-serif;
+				perspective: 1000px;
+			}
+			
+			#wrap h1 {
+				font-size:50px;
+				font-weight:900;
+				margin:30px;
+				color:#FFC107;
+			}
+			
+			#box {
+				width:500px;
+				height:500px;
+				box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+				            0 17px 50px 0 rgba(0, 0, 0, 0.19);
+				position: relative;
+				background-size:100% 100%;
+				left: 100px;
+			}
+			.door {
+				width: 250px;
+				height: 500px;
+				float: left;
+				line-height: 500px;
+				font-size: 250px;
+				color: #fff;
+				transition: .2s ease;
+			}
+			#man {
+				background-color: crimson;
+				transform-origin: left;
+			}
+			#woman {
+				background-color: #03A9F4;
+				transform-origin: right;
+			}
+			button {
+				margin-top: 30px;
+				width: 150px;
+				height: 40px;
+				border: none;
+				background-color: mediumseagreen;
+				cursor: pointer;
+				font-size: 20px;
+				font-weight: bold;
+				color:#fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1>문을 여시오!</h1>
+			<div id="box">
+				<div id="man" class="door"><i class="fa fa-male"></i></div>
+				<div id="woman" class="door"><i class="fa fa-female"></i></div>
+			</div><!--//box-->
+            <button id="executeBtn">열고 닫기</button>
+		</div><!--//wrap-->
+		<script src="js/jquery.js"></script>
+	<script>
+		$("button").on("click",function () {
+			$("#man").css("transform","rotateY(-120deg)");
+			$("#woman").css("transform","rotateY(120deg)");
+			//$("#man").css("transform", "rotateY(120deg)");
+			//$("#woman").css("transform", "rotateY(-120deg)");
+		});
+
+
+	</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>연습문제</title>
+    <link rel="icon" href="https://www.google.com/images/icons/product/chrome_web_store-32.png">
+    <style>
+      hr {
+          margin-top: 20px;
+          margin-bottom: 20px;
+      }
+        #clip {
+            background: aquamarine;
+            width: 150px;
+            height: 30px;
+            border: 3px solid black;
+            border-bottom: none;
+            /* border-bottom 항목만 제외하기 위하여 none 으로 선언 */
+
+            border-radius: 30px 30px 0 0;
+
+            /*
+                블록레벨안에 글자(인라인)가 한 단어가 있을때
+                수평, 수직 가운데 정렬하는 법
+
+                1) 수평 가운데 정렬 : text-align 을 center 로 지정
+                2) 수직 가운데 정렬 : line-height 를 height 와 동일하게 지정
+            */
+            text-align: center;
+            line-height: 30px ;
+        }
+        #contents {
+            width: 300px;
+            height: 300px;
+            background: aquamarine;
+            /*
+            ex)
+            border-top-width
+            border-top-style
+            border-top-color
+            이런식으로 하나씩 지정해주는게 아니라 다 묶어서
+            top, bottom, rigtht, left 까지 총 12개를 한번에 지정해주는것이
+            border 다.  각각 지정이 가능하며 각 지정을 안할시 통합 지정
+            */
+            border : 3px solid black;
+            border-radius: 0 20px 20px 20px;
+            padding: 10px;
+        }
+        #arrow {
+            background: transparent;
+            width: 0;
+            height: 0;
+            border: 30px solid transparent;
+            border-bottom: 50px solid #513441;
+            border-top:none;
+            margin-left: 20px;
+        }
+        #prof {
+            border:2px solid #424242;
+            padding:5px;
+            border-radius: 50px 50px 50px 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>텝모양 만들기</h1>
+        <div id="clip">menu</div>
+        <div id="contents">내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.
+           내용이 들어갑니다.내용이 들어갑니다.내용이 들어갑니다.
+        </div>
+    <hr/>
+    <h1>화살표 만들기</h1>
+        <div id="arrow"></div>
+    <hr/>
+        <h1>프로필</h1>
+            <img id="prof" src="img/zosuk.gif" width="83" alt="프로필사진">
+</body>
+</html>
+<!-- 폴더 혹은 파일 이름 변경 Shift + F6 -->

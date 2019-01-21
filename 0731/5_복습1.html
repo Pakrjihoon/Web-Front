@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요일 검색기</title>
+</head>
+<body>
+<h1>요일 알아보기</h1>
+<input type="date" id="date"/>
+<h2>????</h2>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+    moment.lang("ko");
+    // input의 값이 변경될때의 이벤트 : change
+    $("#date").change(function () {
+        var select = $(this).val();
+        var sel = moment(select);
+        var day = sel.format("YYYY년 MM월 DD일은 dddd입니다.");
+        $("h2").text(day);
+    });
+</script>
+</body>
+</html>

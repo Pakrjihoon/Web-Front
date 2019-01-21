@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>text와 html의 차이점</title>
+    <style>
+        div {
+            width: 340px;
+            height: 340px;
+            border: 1px solid #424242;
+            margin: 20px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <button>눌러주세요</button>
+</p>    
+<div id="text"></div>
+<div id="html"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+        var img = "<img src='img/k2.png'/>";
+
+        // text 메서드는 단지 문자열로 입력
+        $("#text").text(img);
+        // html 메서드로 img 요소가 새로 생성되었음
+        $("#html").html(img);
+    }); //button click() end
+</script>
+</body>
+</html>

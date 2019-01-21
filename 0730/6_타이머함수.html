@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>타이머 관련함수</title>
+    <style>
+        body {
+            color: white;
+            background-color: #1e2c24;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>3초후 Git Hub 로 이동</h1>
+<img src="img/loading.gif" alt="로딩중" title="로딩중"/>
+<script src="js/jquery.js"></script>
+<script>
+
+    setTimeout(function () {
+       location.href="https://github.com/";
+    },3000);
+    /*
+        타이머 관련 함수 : javascript
+        1) setTimeout(함수, 시간) : 시간은 밀리세컨드(1000분의 1초)
+            - 시간후에 함수 호출
+
+        2) setInterval(함수, 시간) : 시간은 밀리세켠드(1000분의 1초)
+            - 시간마다 함수 호출
+     */
+</script>
+</body>
+</html>

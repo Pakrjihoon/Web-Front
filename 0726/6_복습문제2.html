@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>색상 랜덤</title>
+    <style>
+    h1 {
+        text-align: center;
+        font-size: 48px;
+    }
+    </style>
+</head>
+    <h1>나는 무슨색 ?</h1>
+<body>
+<script src="js/jquery.js"></script>
+<script>
+
+    $(document).click(function () {
+        var rnd1 = Math.floor((Math.random()*256));
+        var rnd2 = Math.floor((Math.random()*256));
+        var rnd3 = Math.floor((Math.random()*256));
+        var rnd4 = Math.floor((Math.random()*256));
+        var rnd5 = Math.floor((Math.random()*256));
+        var rnd6 = Math.floor((Math.random()*256));
+        var color = "rgb(+"+rnd1+","+rnd2+","+rnd3+")";
+        $("body").css("background-color",color);
+        $("h1").css("color","rgb(+"+rnd4+","+rnd5+","+rnd6+")");
+    });
+</script>
+</body>
+</html>

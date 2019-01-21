@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포지션 absolute</title>
+    <style>
+        #box {
+            width: 500px;
+            height: 400px;
+            background-color: teal;
+            position: absolute;
+        }
+        #box img {
+            /*
+                position 속성값
+                - fixed : 브라우저 기준
+                - absolute : 포지셔닝컨텍스트 기준
+                            (기본값 : html 요소)
+
+                            가장 가까운 조상중에
+                            relative 나 absolute 나 fixed 일때
+                            그 요소가 바로 포지셔닝 컨텍스트
+                            없으면 html 요소(기본값)
+             */
+            position: absolute;
+            right: -83px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        테스트
+        <img src="img/zosuk.gif"/>
+    </div>
+</body>
+</html>

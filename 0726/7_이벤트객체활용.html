@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이벤트 객체 활용</title>
+    <style>
+        /*
+            바디와 브라우저의 크기를 같게 만드는 방법
+            문제는 height
+            - body에 position을 fixed로 height를 100%로 해주어도 되며
+            - html도 height 를 100%로 해준다.
+         */
+        html {
+            height: 100%;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            cursor: crosshair;
+        }
+        img {
+            transition : .1s ease;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/p2.jpg" width="200"/>
+<script src="js/jquery.js"></script>
+<script>
+    $("body").mousemove(function (evt){
+        // evt는 이벤트 객체
+
+        var x = evt.clientX-100;
+        var y = evt.clientY-100;
+        $("img").css("transform","translate("+x+"px,"+y+"px)");
+        console.log(x,y);
+    });
+</script>
+</body>
+</html>

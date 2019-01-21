@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>여러속성 한번에 변경하기</title>
+    <style>
+        #box {
+            margin-top: 20px;
+            width: 300px;
+            height: 200px;
+            background-color: #ABCDEF;
+        }
+    </style>
+</head>
+<body>
+    <button>한번에 변경</button>
+    <div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    var $box = $("#box");
+    /*
+    * css 관련 메서드 : css()
+    * 1) css(속성 명, 속성 값) : setter
+    * 2) css(속성 몇) : getter
+    * 3) css(객체) : 여러가지 속성을 한번에 setter
+     */
+    $("button").click(function () {
+        // width 800
+        // height 600
+        // background-color: yellow
+        // border : 10px dotted green
+
+        //메서드 체인
+        /*
+        $box.css("width","800px")
+            .css("height","600px")
+            .css("background","yellow")
+            .css("border","10px dotted green");
+        */
+        // 메서드 체인이 아닌 객체를 활용한다. 속성명 : 속성값
+        $box.css({"width":800, "height":600,"background":"yellow","border":"10px dotted green"})
+    }); //click() end
+</script>
+</body>
+</html>

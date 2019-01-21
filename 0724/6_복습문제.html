@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+        #car {
+            width: 800px;
+            height: 600px;
+            background-image: url(img/c1.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<p>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+<button>변경</button>
+</p>
+<div id="car"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+        // 우리가 클릭한 그 버튼의 index를 얻어와서 img변수에 대입
+        var img = $(this).index();
+        img= img+1;
+        // 그 img를 이용하여 이미지 변경
+        $("#car").css("background-image","url(img/c"+img+".jpg)");
+    });// click() end
+</script>
+</body>
+</html>

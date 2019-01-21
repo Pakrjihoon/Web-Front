@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>구체성</title>
+    <style>
+        h1,h2,h3,h4,h5 {
+            font-size : 50px;
+        }
+        /*
+            구체성(cascading)이란 ?
+            - 여러 선택자에서 한 개의 요소를 선택하고,
+              하나의 속성에 다른 속성값을 지정했을때
+              과연 어떤 속성값이 적용되는지 판단하는 성질
+
+            - 0          0        0        0
+            (인라인)    (id)    (class)   (요소)
+
+        */
+        /* css가 들어가기 전에는 브라우저가 가지고 있는 기본 css 는 검은색 */
+        h1 {
+            color:red;
+        }
+        h1 {
+            color:blue;
+        }
+        /* font의 color는 파란색으로 적용 ! */
+        /* 0 0 1 0 */
+        .h2 {
+            color: #F00;
+        }
+        /* 0 1 0 0 */
+        #h2 {
+            color: #00F;
+        }
+        /* font의 color는 파란색으로 적용 ! */
+        /* 0 1 0 0 */
+        #h3 {
+            color: #F00;
+        }
+        /* 0 0 1 0 */
+        .h3 {
+            color: #00F;
+        }
+        /* font의 color는 빨간색으로 적용 ! */
+        /* 0 0 1 0 */
+        .h4 {
+            color: #F00;
+        }
+        /* 0 0 1 0 */
+        .h4 {
+            color: #00F;
+        }
+        /* font의 color는 파란색으로 적용 됩니다 ! */
+        /* 0 1 1 0 */
+        #h1:hover {
+            background-color: #FF1744;
+        }
+        /* 0 1 1 0 */
+        #h1:active {
+            background-color: #9575CD;
+        }
+        /* 같은 구체성을 가진 예
+        - 마우스 hover, active 적용 hover가 먼저 적용이 되었고
+          active가 적용이 되었으므로 가능
+        - 반대로 되었을때 active가 먼저 적용이 되면 hover가 하위에 있으므로 hover 적용 x
+        - 이때는 아래와 같이 기재한다.
+        */
+        /* html 이라는 요소 항목을 추가하여 구체성을 높혔다. */
+        /* 0 1 0 1*/
+        html #h2:active {
+            background-color: #000;
+        }
+        /* 0 1 0 0 */
+        #h2:hover {
+            background-color: #9575CD;
+        }
+        /* 같은 구체성이면 아래에 있는 css 항목이 적용 ! */
+        /* font의 color는 파란색으로 적용 됩니다 ! */
+    </style>
+</head>
+<body>
+<!--
+    요소안에 style 속성으로(이게 인라인)
+    1 0 0 0
+    <h1 style="color:yellow"></h1>
+-->
+    <h1 id="h1" class="h1">나는 무슨색?</h1>
+    <h2 id="h2" class="h2">이건 무슨색일까?</h2>
+    <h3 id="h3" class="h3">이건 무슨색일까?</h3>
+    <h4 id="h4" class="h4">이건 무슨색일까?</h4>
+
+    <h5 id="h5" class="h5" style="color:green">무슨 색일까요?</h5>
+    <!-- 참고로 이런식으로 쓰진 않습니다. -->
+</body>
+</html>

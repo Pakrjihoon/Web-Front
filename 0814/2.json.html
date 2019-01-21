@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>json에 대하여</title>
+</head>
+<body>
+<script>
+    /*
+        json은 배열([]) + 객체({})
+     */
+
+    var p = {name:"하정우",height:184,weight:75};
+    p.age = 41;
+   // alert(p.age);
+
+    var arr = ["하정우","정우성","이정재"];
+    // alert(arr[1]);
+
+    var json = [
+        {"name":"정우성","height": 186,"weight":80},
+        {"name":"이정재","height": 176,"weight":70},
+        {"name":"하정우","height": 184,"weight":75},
+        {"name":"김태정","height": 160,"weight":43}
+    ];
+    alert(json[3].name);
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax의 시작</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        td, th {
+            border: 2px solid #424242;
+            padding: 10px 12px;
+        }
+    </style>
+</head>
+<body>
+<h1>배우 목록</h1>
+<button>불러오기</button>
+<table>
+    <thead>
+        <tr>
+            <th>이름</th>
+            <th>키</th>
+            <th>몸무게</th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td colspan="3">없음</td>
+    </tr>
+    </tbody>
+</table>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+        // ajax를 이용할때는 $.ajax 라는 함수를 이용한다.
+        // 다양한 옵션이 들어가기 때문에 객체를 넣어줍니다.
+        $.ajax({
+            url:"ajax/actors.json", // 서버 주소
+            dataType:"json", // 넘어오는 데이터의 타입지정
+            error:function () {
+              alert("에러!");
+            },
+            success:function (json) {
+                //이전 tr들 비우기
+                $("tbody").empty();
+
+                $(json).each(function () {
+                    // this가 객체 : {"name":"정우성","height": 186,"weight":80},
+                    // {"name":"이정재","height": 176,"weight":70},
+                    // {"name":"하정우","height": 184,"weight":75},
+                    // {"name":"김태정","height": 160,"weight":43}
+
+                    var $tr = $("<tr>");
+
+                    var $td1 = $("<td>").text(this.name);
+                    var $td2 = $("<td>").text(this.height);
+                    var $td3 = $("<td>").text(this.weight);
+
+                    $tr.append($td1,$td2,$td3).appendTo("tbody");
+                }); // each() end
+            }// success end
+        }); // ajax() end
+    }); // click() end
+</script>
+</body>
+</html>

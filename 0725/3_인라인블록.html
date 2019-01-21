@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>인라인블록</title>
+    <style>
+        #wrap {
+            width: 800px;
+            border: 1px solid #424242;
+            margin: auto;
+            background-color: silver;
+            text-align: center;
+        }
+        #wrap>div {
+            padding: 0;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            /*
+                display : inline-block
+                - 인라인의 장점(공간차지함, text-align:center)
+                - 블록의 장점(width, height)을 가짐
+                - 유의점
+             */
+            display: inline-block;
+        }
+        #red {
+            background-color: #FF0000;
+        }
+        #green {
+            background-color: #00ff00;
+        }
+        #blue {
+            background-color: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="red">r</div><!--
+        --><div id="green">g</div><!--
+        --><div id="blue">b</div>
+    </div>
+</body>
+</html>

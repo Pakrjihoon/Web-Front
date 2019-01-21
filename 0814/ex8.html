@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3D 시계</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/notosanskr.css"/>
+    <style>
+        #clock {
+            font-family: "Noto Sans KR", sans-serif;
+            font-weight: 900;
+            width: 640px;
+            height: 200px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -100px 0 0 -320px;
+            perspective: 250px;
+        }
+        /* clock의 자식 전부 */
+        #clock > * {
+            top: 0;
+            position: absolute;
+            height: 200px;
+        }
+        #clock>div {
+            width: 200px;
+            transform-style: preserve-3d;
+            transition: .3s ease;
+        }
+        #hour {
+            left: 0;
+            transform: translateZ(-500px);
+        }
+        /* 1~12시, 0~59분, 0초~59초*/
+        .time {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            font-size: 120px;
+            line-height: 180px;
+            text-align: center;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 10px #424242;
+            backface-visibility: hidden;
+        }
+        #clock .now {
+            color: #424242;
+        }
+        #min {
+            left: 220px;
+            transform: translateZ(-2000px);
+        }
+        #sec {
+            left: 440px;
+            transform: translateZ(-2000px);
+        }
+        .colon {
+            width: 20px;
+            font-size: 80px;
+            line-height: 170px;
+        }
+        .first {
+            left: 200px;
+        }
+        .last {
+            left: 420px;
+        }
+    </style>
+</head>
+<body>
+<div id="clock">
+    <div id="hour"></div>
+    <span class="colon first">:</span>
+    <div id="min"></div>
+    <span class="colon last">:</span>
+    <div id="sec"></div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+    // 1) 시, 분, 초를 생성
+    function createTime() {
+
+        // 시간용 for문
+        for(var i = 0; i<12; i++) {
+
+            var time = i+1;
+            if(time<10) {
+                time = "0"+time;
+            }// if end
+
+            $("<div class='time'>").text(time)
+                .css("transform","rotateX(-"+(i*30)+"deg) translateZ(500px)")
+                .appendTo("#hour");
+        }
+        // 분,초용 for문
+        for(var j = 0; j<60; j++) {
+            var time = j;
+            if(time<10) {
+                time = "0"+time;
+            }// if end
+            $("<div class='time'>").text(time)
+                .css("transform","rotateX(-"+(j*6)+"deg) translateZ(2000px)")
+                .appendTo("#min")
+                .clone() // 복제하는 메서드 복제를 안하면 sec부분만 붙는다.
+                .appendTo("#sec");
+        }
+    } //createTime() end
+
+    // 2) 시간에 따라서 돌아가는 함수
+    function rotateTime() {
+        var now = new Date();
+        var hour = now.getHours()-1;
+        var min = now.getMinutes();
+        var sec = now.getSeconds();
+        $("#hour").css("transform","translateZ(-500px) rotateX("+hour*30+"deg)");
+        $("#min").css("transform","translateZ(-2000px) rotateX("+min*6+"deg)");
+        $("#sec").css("transform","translateZ(-2000px) rotateX("+sec*6+"deg)");
+        $(".now").removeClass("now");
+
+        $("#hour").children().eq(hour).addClass("now");
+        $("#min").children().eq(min).addClass("now");
+        $("#sec").children().eq(sec).addClass("now");
+    }
+
+    // one() 이벤트리스너를 딱 한번만 붙이는 메서드
+    $("#clock").one("click",function () {
+        createTime();
+        setInterval(rotateTime,1000);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사전답사 & 대리 플래너</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <style>
+        #wrap {
+            width: 1080px;
+            height: 900px;
+            margin: 20px auto;
+            top:50px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        #allList {
+            width: 1080px;
+            height: 150px;
+            margin: 20px auto;
+            /*background-color: #40beed;*/
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+            line-height: 143px;
+        }
+        #location {
+            width: 1080px;
+            height: 100px;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+        }
+        select {
+            width: 200px;
+            height: 30px;
+            padding-left: 10px;
+            font-size: 18px;
+            color: #424242;
+            border: 1px solid #424242;
+            border-radius: 3px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        select>option {
+            text-align: center;
+        }
+        /* check, hover 스타일 설정 FireFox */
+        select option:checked,
+        select option:hover {
+            box-shadow: 0 0 10px 100px #ff00ff inset;
+            color: #fff;
+        }
+        #write {
+            padding: 10px 30px 10px 30px;
+            background-color: #40BEED;
+            text-decoration: none;
+            float: right;
+            margin-top: 70px;
+            margin-right: 180px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 20px;
+            border: none;
+        }
+        #select {
+            margin-left: 190px;
+            margin-top: 30px;
+            width: 100%;
+            height: 100px;
+            font-size: 25px;
+
+        }
+        #select>a{
+            text-decoration: none;
+            color:#424242;
+            margin: 10px;
+            display: block;
+            padding-left: 10px;
+            float: left;
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            background-color: #fff;
+        }
+        #select>.on {
+            background-color: #40BEED;
+            color: #fff;
+        }
+        #content {
+            position: relative;
+            text-indent: 30px;
+            left: 200px;
+        }
+        table {
+            width: 700px;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        caption{
+            display: none;
+        }
+        thead {
+            display: none;
+        }
+        tbody {
+            width: 100%;
+            font-size: 20px;
+        }
+        tbody>tr {
+            background-color: #f0f0f0;
+            height: 60px;
+            line-height: 60px;
+            padding: 20px;
+            cursor: pointer;
+            transition: .2s ease;
+            margin: 10px;
+        }
+        tbody>tr:hover {
+            background-color: #40BEED;
+        }
+        tbody:nth-child(1){
+            border-radius: 20px;
+        }
+        #search {
+            width: 100%;
+            height: 50px;
+            margin: 30px 0 0 30px;
+            text-align: center;
+        }
+        #localsPopup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            background-repeat: no-repeat;
+            background-position: center 105px;
+            left:0;
+            top:0;
+            display: none;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+        #localsPopup2 {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            background-repeat: no-repeat;
+            background-position: center 105px;
+            left:0;
+            top:0;
+            box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.7), 0 2px 10px 0 rgba(255, 255, 255, 0.7);
+            display: none;
+        }
+        .popupContent {
+            width: 700px;
+            height: 600px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -300px 0 0 -350px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.7), 0 2px 10px 0 rgba(255, 255, 255, 0.7);
+        }
+        .contentNo {
+            display: none;
+        }
+        #deadlinewrap{
+            position: absolute;
+            top:10px;
+            left:660px;
+        }
+        .deadline{
+            right: -35px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            width:75px;
+            height: 60px;
+            background-color:#40BEED;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            position: absolute;
+            line-height: 2;
+        }
+        .deadline::after{
+            content:"";
+            position:absolute;
+            width: 0;
+            height: 0;
+            border-right:50px solid transparent;
+            border-top:20px solid #40BEED;
+            top: 60px;
+            left:0;
+        }
+        .deadline::before{
+            content:"";
+            position:absolute;
+            width: 0;
+            height: 0;
+            border-left:50px solid transparent;
+            border-top:20px solid #40BEED;
+            top: 60px;
+            left:25px;
+        }
+        #text {
+        }
+        #writePopup {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            background-repeat: no-repeat;
+            background-position: center 105px;
+            left:0;
+            top:0;
+            display: none;
+        }
+        #writePopup>#writePopup2>h2 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #424242;
+            text-align: center;
+            font-weight: bold;
+        }
+        #writePopup2 {
+            width: 350px;
+            height: 250px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -125px 0 0 -175px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.7), 0 2px 10px 0 rgba(255, 255, 255, 0.7);
+        }
+        .category {
+            text-decoration: none;
+            text-align: center;
+            width: 200px;
+            height: 50px;
+            background-color: #f0f0f0;
+            display: block;
+            margin: 30px auto 30px auto;
+            color: #424242;
+            line-height: 50px;
+            transition: .3s ease;
+            border-radius: 5px;
+            font-weight: bold;
+            box-shadow: 0 2px 5px 0 rgba(255, 255, 255, 0.7), 0 2px 10px 0 rgba(255, 255, 255, 0.7);
+        }
+        .category:hover {
+            background-color: #40BEED;
+            color: #fff;
+        }
+        #address {
+            width: 100%;
+            font-size: 30px;
+            padding: 10px;
+            margin: 10px 0 0 10px;
+            font-weight: bold;
+        }
+        #title {
+            padding: 10px;
+            width: 100%;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #user {
+            width: 440px;
+            height: 40px;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            float: left;
+        }
+        #timeAndView {
+            width: 220px;
+            height: 40px;
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 15px;
+            float: right;
+            line-height: 40px;
+        }
+        #destination {
+            width: 100%;
+            padding: 10px;
+        }
+        #bookmark {
+            width: 50px;
+            margin-right: 5px;
+        }
+        #bookmark>i {
+            font-size: 30px;
+        }
+        #apply {
+            width: 100px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #bookmark,#apply {
+            text-align: center;
+            border: none;
+            outline: none;
+            background-color: #40BEED;
+            color: #fff;
+            font-size: 20px;
+            padding: 5px;
+            margin-bottom: 50px;
+            float: right;
+            height: 50px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        #logoImage {
+            background-image: url("img/로고.png");
+        }
+        #bookmark:hover,#apply:hover {
+            transform: scale(1.03);
+        }
+        #localsPopup2>.popupContent>h2 {
+            width: 100%;
+            height: 50px;
+            font-size: 35px;
+            font-weight: bold;
+            padding: 20px;
+        }
+        #cause {
+            display: block;
+            width:100%;
+            height: 20px;
+            padding: 10px;
+            margin-left: 50px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #causeTxt {
+            display: block;
+            position: fixed;
+            height: 300px;
+            left: 50%;
+            top: 50%;
+            margin: -150px 0 0 -300px;
+            width: 600px;
+        }
+        #applyConfirm,#cancle {
+            width: 100px;
+            margin: 10px;
+            height: 50px;
+            text-align: center;
+            border: none;
+            outline: none;
+            background-color: #40BEED;
+            color: #fff;
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .3s ease;
+            position: relative;
+            top: 350px;
+            left: 220px;
+        }
+        .contentPlanner {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=openChatPop()>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="allList"><h1>사전 답사 & 대리 여행 계획 </h1></div>
+    <div id="wrap">
+        <div id="location">
+            <label>지역 <select>
+                <option value="000">전체</option>
+                <option value="02">서울 </option>
+                <option value="031">경기 </option>
+                <option value="032">인천</option>
+                <option value="033">강원 </option>
+                <option value="041">충남 </option>
+                <option value="042">대전 </option>
+                <option value="043">충북 </option>
+                <option value="051">부산 </option>
+                <option value="052">울산 </option>
+                <option value="053">대구 </option>
+                <option value="054">경북 </option>
+                <option value="054">경북 </option>
+                <option value="055">경남 </option>
+                <option value="061">전남 </option>
+                <option value="062">광주 </option>
+                <option value="063">전북 </option>
+                <option value="064">제주 </option>
+            </select></label>
+        </div>
+        <button id="write">글쓰기</button>
+        <div id="select">
+            <a id="explore" class="on" href="">사전답사</a>
+            <a id="planner" class="" href="">여행 계획 대리</a>
+        </div>
+        <div id="content">
+            <table>
+                <caption>게시물 목록</caption>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>가격</th>
+                        <th>진행상황</th>
+                        <th>작성자</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="contentExplore">
+                        <td class="contentNo">1123</td>
+                        <td>통영 맛집 사전답사 구해요</td>
+                        <td>2,000원</td>
+                        <td>매칭 전</td>
+                        <td>챈</td>
+                    </tr>
+                    <tr class="contentPlanner">
+                        <td class="contentNo">1123</td>
+                        <td>용인 부근 대리여행 구합니다.</td>
+                        <td>2,000원</td>
+                        <td>매칭 전</td>
+                        <td>챈</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="search">
+            <select>
+                <option>전체</option>
+                <option>제목</option>
+                <option>제목+내용</option>
+                <option>작성자</option>
+            </select>
+            <input type="text">
+        </div>
+    </div>
+    <div id="localsPopup">
+        <div class="popupContent">
+        <div id="address">서울특별시 / 강남구</div>
+        <div id="title">dd</div>
+        <div id="user"><i class="fas fa-user-circle"></i> 길구봉구</div>
+            <div id="timeAndView">2018.09.30 16:00:31 조회수 8</div>
+            <div id="deadlinewrap">
+                <p class="deadline">마감까지</br>
+                    7일
+                </p>
+            </div>
+        <hr>
+            <div id="destination">상세 목적지 : 코엑스</div>
+        <div id="text">
+
+        </div>
+        <div></div>
+        <div><button id="apply">신청하기</button><button id="bookmark"><i class="far fa-bookmark"></i></button></div>
+        </div>
+    </div>
+    <div id="localsPopup2">
+        <div class="popupContent">
+        <h2>사전답사 신청</h2>
+        <span id="cause">신청 사유</span><textarea id="causeTxt" placeholder="내용을 입력해주세요">
+        </textarea>
+            <div><button id="applyConfirm">신청하기</button><button id="cancle">취소</button></div>
+        </div>
+    </div>
+    <div id="writePopup">
+        <div id="writePopup2">
+            <h2>작성하실 카테고리를 선택하세요</h2>
+            <a id="writeExplore" class="category" href="writeExplore.html">사전답사 신청</a>
+            <a id="writePlanner" class="category" href="writePlanner.html">여행 계획 대리 신청</a>
+        </div>
+    </div>
+<div id="footer">
+<div id="copyright">
+    <p>상호명 : (주)에르메스 | 대표 : 샤넬 | 개인정보책임자 : 루이비똥</p>
+    <p>사업자등록번호 : 201-54-10020 | 통신판매업신고번호 : 제 2018-서울관악-15411호</p>
+    <p>주소 : 충청남도 아산시 신창면 순천향로 22, 멀티미디어관 6층 | 광고 및 제휴 : hsh2@sch.ac.kr</p>
+    <br/>
+    <p>Copyright 2018. HERMES. All rights reserved.</p>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/fix-footer.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/profilePopup.js"></script>
+<script>
+
+    $("#explore").click(function (e) {
+        e.preventDefault();
+        $("#planner").removeClass("on");
+        $("#explore").addClass("on");
+        $(".contentExplore").show();
+        $(".contentPlanner").hide();
+    });
+    $("#planner").click(function (e) {
+        e.preventDefault();
+        $("#explore").removeClass("on");
+        $("#planner").addClass("on");
+        $(".contentPlanner").show();
+        $(".contentExplore").hide();
+    });
+    $("tbody>tr>td").click(function () {
+        $("#localsPopup").fadeIn(500);
+    });
+    $("#localsPopup").click(function () {
+        $("#localsPopup").fadeOut(500);
+    });
+    $("#write").click(function () {
+        $("#writePopup").fadeIn(500);
+    });
+    $("#writePopup").click(function () {
+       $("#writePopup").fadeOut(500);
+    });
+    $("#apply").click(function () {
+        $("#localsPopup2").fadeIn(500);
+    });
+    $("#cancle").click(function () {
+       $("#localsPopup2").fadeOut(500);
+    });
+    $("#bookmark").click(function () {
+       alert("북마크에 등록 되었습니다");
+    });
+    $("#applyConfirm").click(function () {
+       alert("신청이 완료 되었습니다.");
+       $("#localsPopup2").fadeOut(500);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+#header{
+    height: 100px;
+    background: #40beed;
+}
+#menu{
+    width: 1080px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+#menuBar{
+    width: 800px;
+    margin-left: 70px;
+    float: left;
+    text-align: center;
+}
+#logoImage{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #fff;
+    background-size: contain;
+    margin: 10px 0;
+    float: left;
+    background-image: url("img/123.png");
+}
+#logoImage,#menuBar li{
+    display: inline-block;
+}
+#menuBar a{
+    min-width: 50px;
+    height: 30px;
+    padding: 5px;
+    margin: 30px 5px;
+    background: #40BEED;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 17px;
+    display: block;
+    transition: .3s ease;
+}
+#menuBar a:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #40BEED;
+}
+#menu a{
+    color: #fff;
+}
+#personalMenu a{
+    color: #424242;
+}
+#menu a, #personalMenu a{
+    text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#login{
+    width: 100px;
+    height: 40px;
+    background: #7b8184;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 30px;
+    right:0;
+}
+#popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    display: none;
+    z-index: 999;
+}
+.form{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -200px;
+    background-color: #fff;
+    color: #40BEED;
+    display: none;
+    z-index: 999;
+}
+.form form{
+    text-align: left;
+    line-height: 1.5;
+    padding: 50px;
+}
+.form h1{
+    text-align: center;
+    color: #40BEED;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.form label{
+    font-size: 20px;
+}
+.form input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #424242;
+    border-radius: 5px;
+}
+
+.btn{
+    width: 300px;
+    height: 40px;
+    background: #40BEED;
+    color: white;
+    position: absolute;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+#loginBtn{
+    bottom: 80px;
+}
+#registerBtn{
+    bottom: 30px;
+}
+#find{
+    display: block;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.tab{
+    width: 310px;
+    margin: 30px auto;
+}
+#findForm a{
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    color: #000;
+    background: #7b8184;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+#findForm .on{
+    color: #fff;
+    background: #40BEED;
+}
+#findPW{
+    display: none;
+}
+#findBtn{
+    bottom: 200px;
+}
+#findID p{
+    font-size: 20px;
+    position: absolute;
+    bottom: 130px;
+    text-align: center;
+}
+.change{
+    bottom: 150px;
+}
+.return{
+    bottom: 50px;
+}
+#profileBox{
+    margin-top: 15px;
+    float: right;
+    position: relative;
+}
+#profileImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#personalMenu{
+    width:120px;
+    height: 180px;
+    position: absolute;
+    top: 75px;
+    right: -70px;
+    display: none;
+    z-index: 999;
+}
+#personalMenu:after{
+    content: "";
+    position: absolute;
+    width: 0; height: 0;
+    border-left: 15px solid #fff;
+    border-top: 15px solid transparent;
+    left: 0;
+    top: -15px;
+}
+#personalMenu li{
+    width:120px;
+    height: 30px;
+    background: #fff;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    transition: .2s ease;
+}
+#personalMenu li a {
+    font-size: 12px;
+}
+#personalMenu li:hover{
+    background: #40beed;
+}
+#personalMenu li:first-child{
+    border-radius: 0 5px 0 0;
+}
+#personalMenu li:last-child{
+    border-radius: 0 0 5px 5px;
+}

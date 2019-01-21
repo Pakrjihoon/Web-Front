@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <link rel="stylesheet" href="css/apple.css">
+    <style>
+        #carBox {
+            border: 20px solid red;
+            width: 1024px;
+            height: 768px;
+            position: fixed;
+            top:50%;
+            left: 50%;
+            margin: -404px 0 0 -532px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        #title {
+            color: #fff;
+            line-height: 60px;
+            width: 250px;
+            height: 60px;
+            font-family: "SF Pro KR",sans-serif;
+            font-weight: 600;
+            position: absolute;
+            background-color: red;
+            left: -40px;
+            top:30px;
+            margin: 0;
+            text-indent: 30px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        #title::before {
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 20px solid #bc0505;
+            border-left: 20px solid transparent;
+            bottom:-20px;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="carBox">
+        <h1 id="title">빨간색 슈퍼카</h1>
+        <img src="img/c3.jpg" alt="슈퍼카"/>
+    </div><!--//movieBox-->
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>clearInterval</title>
+</head>
+<body>
+<h1>???</h1>
+<button id="startBtn">시작</button>
+<button id="stopBtn">멈춤</button>
+<button id="resetBtn">초기화</button>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+    var num =0;
+    var id=0;
+    $("#startBtn").click(function () {
+        id = setInterval(function () {
+            $("h1").text(++num);
+        },1);
+
+        //버튼 비활성화
+        $(this).attr("disabled",true);
+        $("#stopBtn").attr("disabled",false);
+
+    });
+    $("#stopBtn").click(function () {
+       clearInterval(id);
+       $("#startBtn").attr("disabled",false);
+       $("#stopBtn").attr("disabled",true);
+       $("#resetBtn").attr("disabled",false);
+    });
+    $("#resetBtn").click(function () {
+        num =0;
+        $("h1").text("???");
+        $("#startBtn").attr("disabled",false);
+        $("#resetBtn").attr("disabled",true);
+        $("#stopBtn").attr("disabled",false);
+    });
+
+
+</script>
+</body>
+</html>

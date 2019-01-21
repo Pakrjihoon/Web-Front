@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery 시작</title>
+</head>
+<body>
+    <button id="btn">눌러보세요 !</button>
+
+<!-- jquery.js 파일을 import -->
+<script src="js/jquery.js"></script>
+<!-- 우리가 작성하는 코드는 또 다른 script요소에 -->
+<script>
+    // jquery는 $() 를 반드시 기억할것 ! : CSS의 선택자를 활용하여 선택
+    // id가 btn인 요소를 선택한 후 click 이벤트 리스너를 붙임
+    $("#btn").click(function () {
+        // 클릭했을때 id가 btn 요소를 선택한 후
+        // css의 color 속성 값을 red 로 변경
+        $("#btn").css("background","red");
+    }); //click() end
+    // 자바 스크립트의 한줄 주석
+
+    /*
+    자바스크립트의 여러줄 주석
+     */
+</script>
+</body>
+</html>

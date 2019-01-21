@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>카카오프렌즈 이름 맞추기</title>
+		<link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/notosanskr.css" />
+		<style>
+			#wrap {
+				font-family: "Noto Sans KR", sans-serif;
+				width: 800px;
+				margin:20px auto;
+				box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+				text-align: center;
+				padding: 40px 0;
+				position: relative;
+                border:6px solid #616161;
+			}
+            #wrap h1 {
+                font-size: 50px;
+                font-weight: 900;
+                color: #FF9100;
+            }
+            #imgBox {
+                width: 340px;
+                height: 340px;
+                overflow: hidden;
+                box-shadow: 0 0 10px #FF9100;
+                margin: 30px auto;
+                position: relative;
+            }
+            #imgs {
+                width: 340px;
+                height: 2380px;
+                top:0px;
+                transition: .2s ease;
+                position: absolute;
+            }
+            #imgs img {
+                float: left;
+            }
+            #nameBox li {
+                display: inline-block;
+            }
+            #nameBox a {
+                display: block;
+                font-size: 15px;
+                background-color: #FFDE2F;
+                padding: 15px 20px;
+                text-decoration: none;
+                font-weight: bold;
+                color: #424242;
+                transition: .2s ease-in;
+            }
+            #nameBox a:hover {
+                background-color: yellow;
+                color: #000;
+                box-shadow: 0 0 10px #424242;
+            }
+
+
+            
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<h1><i class="fa fa-comment"></i> 카카오 프렌즈 이름 맞추기</h1>
+			<div id="imgBox">
+                <div id="imgs">
+                    <img src="img/k1.png" alt="무지"/>
+                    <img src="img/k2.png" alt="어피치"/>
+                    <img src="img/k3.png" alt="제이지"/>
+                    <img src="img/k4.png" alt="프로도"/>
+                    <img src="img/k5.png" alt="네오"/>
+                    <img src="img/k6.png" alt="튜브"/>
+                    <img src="img/k7.png" alt="라이언"/>
+                </div><!--//#imgs -->    
+			</div><!--//#imgBox -->
+            <div id="nameBox">
+                <h2 class="screen_out">카카오프렌즈 이름들</h2>
+                <ul>
+                    <li><a href="">무지</a></li>
+                    <li><a href="">어피치</a></li>
+                    <li><a href="">제이지</a></li>
+                    <li><a href="">프로도</a></li>
+                    <li><a href="">네오</a></li>
+                    <li><a href="">튜브</a></li>
+                    <li><a href="">라이언</a></li>
+                </ul>
+            </div><!--//#nameBox -->
+		</div><!--//wrap -->
+		<script src="js/jquery.js"></script>
+    <script>
+        // 정답 (index)
+        var correct = -1;
+
+        var $kakao = $("#nameBox li");
+
+        // 랜덤한 이미지를 보여주는 함수
+        function randomImg() {
+            correct = Math.floor(Math.random()*7);
+            $("#imgs").css("top",-(correct*340));
+        } // randomImg() end
+        randomImg();
+
+        $kakao.on("click",function (e) {
+            e.preventDefault();
+            // 우리가 클릭한 그 li요소의 index를 얻어와서
+            var idx= $(this).index();
+            if (idx == correct) {
+                alert("정답입니다.");
+                randomImg();
+            }
+            else {
+                alert("아닙니다.");
+            }
+        }); // on click end
+    </script>
+	</body>
+</html>

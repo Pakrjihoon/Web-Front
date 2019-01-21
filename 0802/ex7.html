@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>ex7</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		#wrap {
+			width:700px;
+			height:700px;
+			box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+			margin:50px auto;
+			position: relative;
+			border:2px solid #aaa;
+		}
+		
+		button {
+			width:50px;
+			height:50px;
+			font:bold 30px arial,sans-serif;
+			border:0;
+			color:#fff;
+			cursor: pointer;
+			background:#BBDEFB;
+			text-shadow:1px 1px 1px #424242;
+		}
+
+		button:hover {
+			background:#29B6F6;
+			box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
+			0 25px 55px 0 rgba(0, 0, 0, 0.21);
+		}
+		button:active {
+			background:#0277BD;
+		}
+
+		#wrap ul {
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+		
+		.ir {
+			position: absolute;
+			text-indent:-9999px;
+			overflow: hidden;
+
+		}
+		#mazeBox {
+			width:600px;
+			height:600px;
+			border:1px solid #424242;
+			position: absolute;
+			left:50px;
+			top:50px;
+			overflow: hidden;
+		}
+
+		#character {
+			width:100px;
+			height:100px;
+			position: absolute;
+			left:0px;
+			top:0;
+			transition: .1s ease;
+		}
+
+		.screen_out{
+			width:0;
+			height:0;
+			margin:0;
+			border:0;
+			padding:0;
+			font-size:0;
+			line-height: 0;
+			overflow: hidden;
+			visibility: hidden;
+			position: absolute;
+		}
+		.top,.right,.bottom,.left {position: absolute;}
+		.top,.bottom {left: 325px;}
+		.top {top: 0;}
+		.bottom {bottom: 0;}
+		.right,.left {top: 325px;}
+		.right {right: 0;}
+		.left {left: 0;}
+
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<h1 class="screen_out">버튼 목록</h1>
+	<ul>
+		<li class="top"><button><i class="fa fa-arrow-up"></i><span class="ir">위로</span></button></li>
+		<li class="right"><button><i class="fa fa-arrow-right"></i><span class="ir">오른쪽으로</span></button></li>
+		<li class="bottom"><button><i class="fa fa-arrow-down"></i><span class="ir">아래로</span></button></li>
+		<li class="left"><button><i class="fa fa-arrow-left"></i><span class="ir">왼쪽으로</span></button></li>
+	</ul>
+	<div id="mazeBox">
+		<img id="character" src="img/mario.png" width="100" alt="슈퍼마리오"/>
+	</div><!-- //mazeBox -->
+</div><!-- //wrap -->
+<script src="js/jquery.js"></script>
+<script>
+	var x = 0;
+	var y = 0;
+	var $mario =$("#character");
+    /*
+            BOM(Browser Object Model)
+
+            location : 주소창 객체
+            window : 브라우저 자체
+            history: 앞으로, 뒤로
+            document : 문서 자체
+         */
+    /*
+     * document안의 요소객체들 : (Document Object Model)
+     * - h1, body, ....
+     */
+	$(document).keyup(function (e) {
+
+            if (e.keyCode == 37) {
+                x -= 50;
+            }
+            else if (e.keyCode == 38) {
+                y -= 50;
+            }
+            else if (e.keyCode == 39) {
+                x += 50;
+            }
+            else if (e.keyCode == 40) {
+                y += 50;
+            }
+        if(x >=-10 && x<=510) {
+            $mario.css({left: x, top: y});
+		}
+        else
+		{
+		    alert("fail");
+		}
+    });
+	$(".bottom").click(function () {
+	    if(y>=500){
+	        alert("더이상 갈 수 없습니다");
+		} else {
+	        y+=50;
+            $mario.css("top",y);
+	    }
+    });
+    $(".top").click(function () {
+        if(y<=0){
+            alert("더이상 갈 수 없습니다");
+        } else {
+            y-=50;
+            $mario.css("top",y);
+        }
+    });
+	$(".right").click(function () {
+	    if(x>=500) {
+	        alert("더이상 갈 수 없습니다");
+		} else {
+            x += 50;
+            $mario.css("left", x);
+        }
+    });
+    $(".left").click(function () {
+        if(x<=0) {
+            alert("더이상 갈 수 없습니다");
+        } else {
+            x -= 50;
+            $mario.css("left", x);
+        }
+    });
+</script>
+</body>
+</html>

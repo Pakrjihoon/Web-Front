@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상요소 활용</title>
+    <style>
+        .chat {
+            background-color: yellow;
+            width: 400px;
+            height: 200px;
+            border-radius: 20px 0 20px 20px;
+            padding: 15px;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+            position: relative;
+        }
+        .chat::after {
+            /* 가상요소에서는 content 속성을 반드시 기재(빈칸이라도) */
+            content: '';
+            /* 가상요소는 인라인레벨 이지만 postion을 absolute로 지정하면 블록레벨로 된다. */
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top:30px solid yellow;
+            border-right: 30px solid transparent;
+            right:-30px;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat">안녕하세요?</div>
+</body>
+</html>

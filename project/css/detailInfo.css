@@ -1,0 +1,301 @@
+#di_wrap {
+    position: relative;
+    width: 1080px;
+    min-height: 1500px;
+    margin: auto;
+    /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+
+}
+
+#di_nameBox {
+    position: relative;
+    width: 700px;
+    height: auto;
+    /*left: 290px;*/
+    margin: auto;
+    /*background-color: #FF5252;*/
+}
+
+#di_nameBox h2 {
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+}
+
+#di_nameBox h3 {
+    font-size: 20px;
+    text-align: center;
+}
+
+#di_profileBox {
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    width: 500px;
+    /*background-color: #00E5FF;*/
+
+
+}
+
+#di_profileBox strong {
+    font-size: 20px;
+    /*margin-top:5px;*/
+    /*text-align: center;*/
+    vertical-align: middle;
+    /*height:50px;*/
+    /*display: block;*/
+}
+#di_profileBox img{
+    /*margin: auto;*/
+    /*display: block;*/
+
+}
+#di_profileInfo{
+    margin-left: 150px;
+}
+
+#di_photo {
+    /*position: absolute;*/
+    border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
+    /*bottom: 0;*/
+    /*top:10px;*/
+    /*margin-top:5px;*/
+    /* */
+}
+
+#di_nameBox h3 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#di_photoBox {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 3px;
+}
+
+#di_photoList {
+    position: relative;
+    width: 2000px;
+    height: 300px;
+
+}
+#di_photoList li img {
+    float: left;
+    transition: .2s ease;
+}
+
+
+.di_btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    font-size: 40px;
+    top: 125px;
+    color: #40BEED;
+    background-color: transparent;
+    border: none;
+}
+
+#di_left {
+    left: 0px;
+}
+
+#di_right {
+    right: 0px;
+}
+
+#di_navList li {
+    position: absolute;
+    bottom: 10px;
+    color: #E0E0E0;
+    cursor: pointer;
+}
+
+#di_navList li:nth-child(1) {
+    left: 190px;
+}
+
+#di_navList li:nth-child(2) {
+    left: 220px;
+}
+
+#di_navList li:nth-child(3) {
+    left: 250px;
+}
+
+#di_navList li:nth-child(4) {
+    left: 280px;
+}
+
+#di_addressBox {
+    position: relative;
+    float: left;
+    margin-top: 25px;
+    width: 500px;
+    height: 400px;
+}
+
+
+#di_addressBox h3 {
+    position: absolute;
+    font-size: 20px;
+    top: 30px;
+    left: 10px;
+}
+
+#di_addressBox p {
+    position: absolute;
+    font-size: 20px;
+    top: 30px;
+    left: 80px;
+}
+#di_evaluate {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    margin: auto;
+}
+
+.di_ev_btn {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    font-size: 75px;
+    background-color: transparent;
+    border: none;
+}
+
+.di_rightBtn {
+    right: 0;
+}
+
+.di_leftBtn {
+    left: 0;
+}
+
+#di_replyBox {
+    position: relative;
+    top: 50px;
+    margin: auto;
+    width: 700px;
+    height: 100px;
+
+}
+
+#di_replyBox textarea {
+    width: 550px;
+    height: 95px;
+    border-radius: 10px;
+}
+
+#di_replyBox button {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    top: 0;
+    left: 550px;
+    border-radius: 10px;
+    border: none;
+    background-color: #40BEED;
+    color: white;
+}
+
+.di_reviewBox {
+    position: relative;
+    width: 700px;
+    height: 100px;
+    padding-bottom: 40px;
+    margin: auto;
+    top: 80px;
+    /*background-color: #FFDE2F;*/
+}
+
+.di_reviewBox img {
+    position: relative;
+    border-radius: 50px;
+    width: 100px;
+    height:  100px;
+    margin: auto;
+    margin-bottom: 10px;
+    display: block;
+    /*left: 20px;*/
+    /*top:5px;*/
+    /*background-color: #00E5FF;*/
+}
+.di_reviewBox label{
+    position: relative;
+    min-width:130px;
+    height: 15px;
+    display: block;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
+    /*background-color:#00E5FF;*/
+    padding: 3px 0;
+    /*top:100px;*/
+    /*left:40px;*/
+}
+
+.di_reviewcontent {
+    position: relative;
+    width: 540px;
+    height: 100px;
+    /*background-color: blue;*/
+    /*margin: auto;*/
+    /*bottom: 100px;*/
+    margin-left: 150px;
+    bottom:130px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: justify;
+}
+.di_reviewListBox{
+    position: relative;
+    width: 700px;
+    min-height: 130px;
+    /*background-color: #42A5F5;*/
+}
+.di_reviewList{
+    position: relative;
+    width: 700px;
+    height: 130px;
+    overflow: hidden;
+    /*background-color: #CDDC39;*/
+}
+.di_reviewInfo{
+    position: relative;
+    /*margin: auto;*/
+    width:130px;
+    height:130px;
+    /*background-color: #FF5252;*/
+}
+
+#di_navList li.on {
+    color: #40BEED;
+}
+
+#di_plus {
+    color: #40BEED;
+}
+
+#di_minus {
+    color: #FF5252;
+}
+#di_map {
+    width: 100%;
+    float: left;
+    height: 300px;
+    top: 100px;
+}
+.di_mapInfo {
+    display: block;
+}

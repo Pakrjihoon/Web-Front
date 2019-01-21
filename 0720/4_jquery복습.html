@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습</title>
+    <style>
+        #box {
+            width: 600px;
+            height: 450px;
+            background-image: url(img/c1.jpg);
+            background-size: cover;
+        }
+        #change {
+            position: absolute;
+            left: 522px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">안녕하세요?</h1>
+    <button id="btn">눌러봐!</button>
+    <div id="box"></div>
+    <button id="change">이미지 변경</button>
+<script src="js/jquery.js"></script>
+<script>
+    $("#btn").click(function () {
+       $("#head").css("color","red").text("Jquery");
+    }); //click() end
+    $("#change").click(function () {
+        $("#box").css("background-image","url(img/c2.jpg)");
+    }) //changeImg end
+</script>
+</body>
+</html>

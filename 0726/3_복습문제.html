@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+</head>
+<body>
+<h1>당신은 성인이 <span>????</span></h1>
+<script src="js/jquery.js"></script>
+<script>
+    var age = prompt("당신의 나이는 ?");
+    // 만약 나이가 20살 이상이면 span에 맞습니다. 라고 출력
+
+    // 만약 나이가 20살 미만이면 span에 아닙니라. 라고 출력
+    if(age>=20) {
+        $("span").text("맞습니다.");
+    } else {
+        $("span").text("아닙니다.");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>트랜스폼</title>
+    <style>
+        body {
+            background: cornflowerblue;
+            text-align: center;
+        }
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        /*
+            transform : 변형 속성
+            - translate : 이동
+            - rotate : 회전
+            - scale : 비율
+            - skew : ---
+
+            transform-origin : 변형의 기준점 지정
+         */
+        #frame {
+            transition : .6s ease;
+            transform-origin: top;
+        }
+        #frame:active{
+            transform : rotate(-40deg);
+        }
+        #car {
+            width : 500px;
+            transition:.6s ease;
+            transform-origin: bottom;
+        }
+        #car:hover {
+            /* perspective 는 원근법 지정 */
+            transform: perspective(500px) rotateX(45deg);
+        }
+    </style>
+</head>
+<body>
+    <img id="frame" src="img/frame.png" alt="프레임">
+    <hr />
+    <img id="car" src="img/c2.jpg" alr="supercar">
+</body>
+</html>

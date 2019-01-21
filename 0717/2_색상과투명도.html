@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>색상과 투명도</title>
+    <style>
+        /*
+            색상표현
+            1) 키워드 : red , green, blue, white ,etc..(약 120가지)
+            2) #16진수 6자리 : #000000, #FFFFFF, #FF0000 , etc..
+            3) #16진수 3자리 : #000, #0F0, etc..
+            4) RGB 함수형
+            - rgb(0~100%, 0~100%, 0~100%) : % 꼭 써줘야 작동됨
+            - rgb(0~255, 0~255, 0~255)
+            5) hsl 함수형
+            - 포토샵쪽에 나옴 명도, 채도, etc..
+            6) rgba 함수형 : a는 알파(투명도)값
+            - rgba(0~100%, 0~100%, 0~100%, 0~1)
+            - rgba(0~255, 0~255, 0~255, 0~1)
+         */
+        #red {
+            background-color: rgb(255, 0, 0);
+            margin-bottom: -180px;
+        }
+
+        #blue {
+            position: relative;
+            background-color: rgba(0%, 0%, 100%, .5);
+            margin-left: 100px;
+            /*
+            width, height, padding, border 는 음수 값이 없음
+            margin 은 음수 값이 있다.
+            */
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: #FFF; /* 글자수를 최대한 적은 수로 */
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="red" class="box">RED</div>
+<div id="blue" class="box">BLUE</div>
+</body>
+</html>

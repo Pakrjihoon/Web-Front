@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8" />
+		<title>다음 텝</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<style>
+		
+			#sectionBlog {
+				    height: 240px;
+    				position: fixed;
+				    width: 655px;
+					padding:0 10px;
+					border:10px solid #616161;
+					box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+					left:50%;
+					top:50%;
+					margin:-130px 0 0 -347.5px;
+			}
+			
+			#sectionBlog h3 {
+				height:36px;
+				position: absolute;
+				top:15px;
+				left:0;
+			}
+			
+			#sectionBlog a {
+				line-height: 36px;
+				display: block;
+			    height: 36px;
+			    text-align: center;
+			    color: #777b80;
+			    background: url(img/txt_pctop_170711.png) no-repeat 0 0;
+			    letter-spacing: -1px;
+			    white-space: nowrap;
+				background-color: red;
+			}
+
+			h3#cafeTab {
+				left:7px;
+			}
+			#cafeTab a {
+				width: 36px;
+				background-position: 0 -220px;
+			}
+			#cafeTab.on a {
+				background-position: 0 -256px;
+			}
+			h3#miznetTab {
+				left:44px;
+			}
+			#miznetTab a {
+				width: 50px;
+				background-position: -36px -220px;
+			}
+			#miznetTab.on a {
+				background-position: -36px -256px;
+			}
+			h3#kakaostoryTab {
+				left:97px;
+			}
+			#kakaostoryTab a {
+				width: 88px;
+				background-position: -86px -220px;
+			}
+			#kakaostoryTab.on a {
+				width: 88px;
+				background-position: -86px -256px;
+			}
+			h3#tistoryTab {
+				left:188px;
+			}
+			#tistoryTab a {
+				width:62px;
+				background-position: -174px -220px;
+			}
+			#tistoryTab.on a {
+				background-position: -174px -256px;
+			}
+			h3#brunchTab {
+				left:253px;
+			}
+			#brunchTab a {
+				width: 50px;
+				background-position: -236px -220px;
+			}
+			#brunchTab.on a {
+				background-position: -236px -256px;
+			}
+			h3#ilboonTab {
+				left:306px;
+			}
+			#ilboonTab a {
+				width: 50px;
+				background-position: -286px -220px;
+			}
+			#ilboonTab.on a {
+				background-position: -286px -256px;
+			}
+			h3#storyfundingTab {
+				left:359px;
+			}
+			#storyfundingTab a {
+				width: 74px;
+				background-position: -336px -220px;
+			}
+			#storyfundingTab.on a {
+				background-position: -336px -256px;
+			}
+
+			.ir_wa {
+			    display: block;
+			    overflow: hidden;
+			    position: relative;
+			    z-index: -1;
+			    width: 100%;
+			    height: 100%;
+			}
+			.content {
+				width:655px;
+				height:180px;
+				position: absolute;
+				left:10px;
+				top:55px;
+				display: none;
+			}
+			#cafe {
+				background-image: url(img/cafe.png);
+			}
+			#miznet {
+				background-image: url(img/miznet.png);
+			}
+			#kakaostory {
+				background-image: url(img/kakaostory.png);
+			}
+			#tistory {
+				background-image: url(img/tistory.png);
+			}
+			#brunch {
+				background-image: url(img/brunch.png);
+			}
+			#ilboon {
+				background-image: url(img/ilboon.png);
+			}
+			#storyfunding {
+				background-image: url(img/storyfunding.png);
+			}
+
+			#cafe.on,
+			#miznet.on,
+			#kakaostory.on,
+			#tistory.on,
+			#brunch.on,
+			#ilboon.on,
+			#storyfunding.on {
+				display: block;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="sectionBlog">
+			<h2 class="screen_out">블로그 정보</h2>
+			<h3 id="cafeTab" class="on">
+				<a href="http://top.cafe.daum.net/">
+				<span class="ir_wa">카페</span>
+				</a>
+			</h3>
+			<div id="cafe" class="content on">
+				<!-- 이미지로 대체-->
+			</div>
+			<h3 id="miznetTab">
+				<a href="http://miznet.daum.net/">
+				<span class="ir_wa">미즈넷</span>
+				</a>
+			</h3>
+			<div id="miznet" class="content">
+				<!-- 이미지로 대체-->
+			</div>
+			<h3 id="kakaostoryTab">
+				<a href="https://story.kakao.com/">
+				<span class="ir_wa">카카오스토리</span>
+				</a>
+			</h3>
+			<div id="kakaostory" class="content">
+				<!-- 이미지로 대체-->
+			</div>
+			<h3 id="tistoryTab">
+				<a href="http://www.tistory.com/">
+				<span class="ir_wa">티스토리</span>
+				</a>
+			</h3>
+			<div id="tistory" class="content">
+				<!-- 이미지로 대체-->
+			</div>
+			<h3 id="brunchTab">
+				<a href="https://brunch.co.kr/">
+				<span class="ir_wa">브런치</span>
+				</a>
+			</h3>
+			<div id="brunch" class="content">
+				<!-- 이미지로 대체-->
+			</div>
+			<h3 id="ilboonTab">
+				<a href="http://1boon.daum.net/">
+				<span class="ir_wa">1boon</span>
+				</a>
+			</h3>
+			<div id="ilboon" class="content">
+				<!-- 이미지로 대체-->
+			</div>
+			<h3 id="storyfundingTab">
+				<a href="https://storyfunding.daum.net/">
+				<span class="ir_wa">스토리펀딩</span>
+				</a>
+			</h3>
+			<div id="storyfunding" class="content">
+				<!-- 이미지로 대체-->
+			</div>
+
+		</div><!--//#sectionBlog-->
+		<script src="js/jquery.js"></script>
+	<script>
+		$("#sectionBlog h3").click(function (e) {
+			e.preventDefault();
+			$(".on").removeClass("on");
+			$(this).addClass("on");
+			var idx = $(this).index();
+            $(".content").eq(idx-8).addClass("on");
+
+        });
+	</script>
+	</body>
+</html>

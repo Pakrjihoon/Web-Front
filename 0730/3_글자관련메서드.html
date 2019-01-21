@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글자 관련 메서드</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <input id="text">
+    <button id="getBtn">얻기</button>
+    <button id="setBtn">쓰기</button>
+</p>
+<div id="box">??</div>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        요소의 자식으로글자가 들어가거나 얻어올때
+        text() 메서드
+        - text(내용) : setter
+        - text() : getter
+
+        input, select, textarea 는 (파라미터)의 값
+        - val(내용) : setter
+        - val() : getter
+     */
+
+    $("#getBtn").click(function () {
+        var txt = $("#text").val();
+        //var txt = $("#box").text();
+        if (txt == "") {
+            alert("꼭 입력해주세요");
+        }
+        else {
+            // 유저가 적어도 한글자 이상 입력했으니 출력
+            $("#box").text(txt);
+        } // if~else end
+    }); //#getBtn click() end
+    $("#setBtn").click(function () {
+        //$("#box").val(txt);
+        $("#box").text();
+    });
+</script>
+</body>
+</html>

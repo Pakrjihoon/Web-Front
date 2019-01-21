@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8"/>
+		<title>영화포스터 목록</title>
+		<link rel="stylesheet" href="css/notosanskr.css">
+		<style>
+			#wrap {
+				width: 1100px;
+				height: auto;
+				border: 10px solid #424242;
+				text-align: center;
+				margin:auto;
+				text-shadow: 1px 1px 1px #424242;
+				font-family: "Noto Sans KR", sans-serif;
+				font-weight: 900;
+			}
+			#posterBox {
+				width: 1040px;
+				height: 380px;
+				margin: auto;
+			}
+			.poster {
+				width: 250px;
+				height: 356px;
+				float: left;
+				margin: 5px;
+				box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+			}
+			.btn {
+				width: 200px;
+				height: 60px;
+				margin-bottom: 20px;
+				border: none;
+				background: dimgray;
+				border-radius: 10px;
+				color:#FFF;
+				font-size: 24px;
+				font-family: "Noto Sans KR", sans-serif;
+				font-weight: 200;
+				cursor: pointer;
+				outline: none;
+				transition:.2s ease;
+			}
+			.btn:active {
+				background: lightskyblue;
+				color: #000;
+				transform: scale(1.15);
+				box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+				font-weight: 900;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id='wrap'>
+			<h1>영화 포스터 모음</h1>
+			<div id="posterBox">
+				<div class="poster">
+					<img src="img/p1.jpg" align="인크레더블2 포스터" width="250" height="356"/>
+				</div>
+				<div class="poster">
+					<img src="img/p2.jpg" align="미션임파서블 포스터"  width="250" height="356"/>
+				</div>
+				<div class="poster">
+					<img src="img/p3.jpg" align="앤트맨과 와스프 포스터"  width="250" height="356"/>
+				</div>
+				<div class="poster">
+					<img src="img/p4.jpg" align="마녀 포스터"  width="250" height="356"/>
+				</div>
+			</div>
+			<div id="btnBox">
+				<button class="btn">인크레더블2</button>
+				<button class="btn">미션임파서블</button>
+				<button class="btn">앤트맨과 와스프</button>
+				<button class="btn">마 녀</button>
+			</div>
+		</div>
+		
+	</body>
+</html>

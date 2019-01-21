@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        /*
+            z-index
+            - 3층인 요소에게만(relative, absolute, fixed 에만)
+
+         */
+        #red {
+            background-color: #FF0000;
+            z-index: 3;
+        }
+
+        #green {
+            background-color: #00ff00;
+            left: 50px;
+            top: 50px;
+            z-index: 2;
+        }
+
+        #blue {
+            background-color: #0000ff;
+            left: 100px;
+            top: 100px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="red"></div>
+<div id="green"></div>
+<div id="blue"></div>
+</body>
+</html>

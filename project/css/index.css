@@ -1,0 +1,434 @@
+#header{
+    height: 300px;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+#profileBox{
+    margin-top: 15px;
+    float: right;
+    position: relative;
+    z-index: 50;
+}
+#profileImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#personalMenu{
+    width:120px;
+    height: 180px;
+    position: absolute;
+    top: 75px;
+    right: -70px;
+    display: none;
+}
+#personalMenu:after{
+    content: "";
+    position: absolute;
+    width: 0; height: 0;
+    border-left: 15px solid #fff;
+    border-top: 15px solid transparent;
+    left: 0;
+    top: -15px;
+}
+#personalMenu li{
+    width:120px;
+    height: 30px;
+    background: #fff;
+    text-align: center;
+
+    line-height: 30px;
+    cursor: pointer;
+}
+#personalMenu li a {
+    font-size: 12px;
+}
+#personalMenu li:hover{
+    background: #40beed;
+}
+#personalMenu li:first-child{
+    border-radius: 0 5px 0 0;
+}
+#personalMenu li:last-child{
+    border-radius: 0 0 5px 5px;
+}
+#personalMenu a{
+    color: #424242;
+    text-decoration: none;
+}
+#menu{
+    width: 1080px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+}
+#menuBar{
+    width: 810px;
+    margin-left: 70px;
+    float: left;
+    text-align: center;
+}
+#logoImage{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #fff;
+    background-image: url("img/로고.png");
+    background-size: contain;
+    margin: 10px 0;
+    float: left;
+}
+#logoImage,#menuBar li{
+    display: inline-block;
+}
+#menuBar a{
+    min-width: 50px;
+    height: 30px;
+    padding: 5px;
+    margin: 30px 5px;
+    background: #40BEED;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 17px;
+    display: block;
+}
+#menuBar a:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #40BEED;
+}
+.nav a{
+    color: #424242;
+    text-decoration: none;
+}
+#menuBar a{
+    color: #fff;
+    text-decoration: none;
+}
+#login{
+    width: 100px;
+    height: 40px;
+    background: #7b8184;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    position: absolute;
+    top: 30px;
+    right:0;
+}
+#searchForm{
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+#area{
+    width: 350px;
+    height: 40px;
+    margin: 20px;
+    font-size: 15px;
+}
+#date{
+    position: relative;
+    z-index: 1;
+}
+.tui-calendar td, .tui-calendar th {
+    vertical-align: middle;
+}
+.tui-datetime-input{
+    height: 40px;
+}
+#searchBtn{
+    width: 100px;
+    height: 40px;
+    padding: 5px;
+    background: #40BEED;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    cursor: pointer;
+    transition: .2s ease;
+}
+#searchBtn:hover {
+    transform: scale(1.03);
+}
+#content{
+    width: 1080px;
+    height: 1300px;
+    margin: auto;
+}
+#introWrap{
+    height: 910px;
+    overflow: hidden;
+}
+.wrap{
+    width: 1080px;
+}
+.nav{
+    width: 200px;
+    height: 249px;
+    border-top: 1px solid #424242;
+    margin-top: 50px;
+    float: left;
+}
+.nav h2{
+    margin: 50px 0 80px 0;
+    font-size: 30px;
+    line-height: 1.2;
+}
+#bestFD h2{
+    margin: 30px 0;
+    font-size: 30px;
+}
+.nav a{
+    font-size: 20px;
+}
+#planner{
+    margin-left: 30px;
+}
+#funding{
+    clear: both;
+}
+.card_list{
+    position: relative;
+    width: 800px;
+    height: 250px;
+    margin-top: 50px;
+    float: right;
+}
+.card{
+    width: 230px;
+    height: 250px;
+    float: left;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.card:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow:0 3px 8px 0 rgba(0,0,0,.16);
+}
+.left{
+    margin-right: 50px;
+}
+.right{
+    margin-left: 50px;
+}
+.thumbnail{
+    width: 230px;
+    height: 150px;
+}
+.info_box{
+    height: 150px;
+    padding: 10px;
+    line-height: 1.5;
+}
+#fundingList .info_box{
+    height: 200px;
+    padding: 10px;
+    line-height: 1.4;
+}
+.card h3{
+    font-size: 18px;
+}
+.card h4{
+    font-size: 15px;
+}
+.card p{
+    font-size: 13px;
+}
+.list{
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+    display: inline-block;
+}
+#exploreList{
+    margin-left: 30px;
+    float: left;
+}
+#plannerList{
+    float: right;
+}
+.post_list{
+    list-style: disc;
+    margin: 40px;
+}
+.post_list li{
+    margin: 20px 0;
+}
+#boxWrap{
+    width: 920px;
+    height: 230px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+#bestFD{
+    height: 300px;
+    text-align: center;
+    margin-top: 50px;
+    border-top: 1px solid #424242;
+    position: relative;
+}
+#prevBtn,#postBtn{
+    width: 80px;
+    height: 300px;
+    background: none;
+    border: none;
+    font-size: 70px;
+    color: #40BEED;
+    cursor: pointer;
+    outline: none;
+}
+#prevBtn{
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+#postBtn{
+    position: absolute;
+    right: 0;
+    top: 30px;
+}
+#fdBox{
+    width: 1840px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .3s ease;
+}
+.item_fd{
+    list-style: none;
+    width: 200px;
+    height: 230px;
+    float: left;
+    padding: 15px;
+    line-height: 1;
+}
+.item_fd img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    margin-bottom: 15px;
+}
+.item_fd h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+.item_fd p{
+    font-size: 20px;
+    margin: 15px;
+}
+#popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.6);
+    display: none;
+    z-index: 1;
+}
+.form{
+    width: 400px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0 0 -200px;
+    background-color: #fff;
+    color: #40BEED;
+    display: none;
+    z-index: 1;
+}
+.form form{
+    text-align: left;
+    line-height: 1.5;
+    padding: 50px;
+}
+.form h1{
+    text-align: center;
+    color: #40BEED;
+    font-size: 50px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.form label{
+    font-size: 20px;
+}
+.form input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #424242;
+    border-radius: 5px;
+}
+.btn{
+    width: 300px;
+    height: 40px;
+    background: #40BEED;
+    color: white;
+    position: absolute;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.btn:hover{
+    cursor: pointer;
+}
+#loginBtn{
+    bottom: 80px;
+}
+#registerBtn{
+    bottom: 30px;
+}
+#find{
+    display: block;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.tab{
+    width: 310px;
+    margin: 30px auto;
+}
+#findForm a{
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    color: #000;
+    background: #7b8184;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+}
+#findForm .on{
+    color: #fff;
+    background: #40BEED;
+}
+#findPW{
+    display: none;
+}
+#findBtn{
+    bottom: 200px;
+}
+#findID p{
+    font-size: 20px;
+    position: absolute;
+    bottom: 130px;
+    text-align: center;
+}
+.change{
+    bottom: 150px;
+}
+.return {
+    bottom: 50px;
+}

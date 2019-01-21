@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex2</title>
+    <style>
+        @font-face {
+            font-family: 'thomson';
+            font-style: normal;
+            font-weight: 100;
+            src: url(fonts/ThompsonModernSemibold.woff) format('woff');
+        }
+
+        body {
+            font-family: 'thomson',sans-serif;
+            letter-spacing: -1.25px;
+            margin:0;
+            font-size: 50px;
+        }
+        h2 {
+            text-indent: -9999px;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            display: none;
+        }
+        #nav {
+            width:200px;
+            background: #949494;
+            margin: auto;
+            padding-right: 100px;
+            /*border-right: 20px solid #424242;*/
+            /*border-bottom: 20px solid #424242;*/
+            border-radius: 0 0 40px 0;
+            border-bottom: 20px solid #424242;
+            border-right: 20px solid #424242;
+            position: fixed;
+            left: 50%;
+            margin: 0 0 0 -100px;
+        }
+        #nav::before {
+            content:'';
+            width: 0;
+            height: 0;
+            border-top : 20px solid transparent;
+            border-left: 20px solid #fff;
+            position: absolute;
+            top:362px;
+        }
+        #nav::after {
+            content: '';
+            width:0;
+            height: 0;
+            border-bottom: 20px solid #424242;
+            border-right: 20px solid #fff;
+            position: absolute;
+            right: -20px;
+            top : 0
+        }
+        ul {
+            margin: 0;
+        }
+        ul>li{
+            margin: 0;
+            list-style: none;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 50px;
+            transition: .5s ease;
+        }
+        li:first-child {
+             padding-top: 20px;
+         }
+        li:last-child {
+            padding-bottom: 30px;
+        }
+        li a:hover {
+            color:darkblue;
+        }
+        /*.color {
+            color:darkblue;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="nav">
+    <h2 class="screen_out">Main Service</h2>
+    <ul>
+        <li class="home"><a href="">Home</a></li>
+        <li class="work"><a href="">Work</a></li>
+        <li class="vision"><a href="">Vision</a></li>
+        <li class="news"><a href="">News</a></li>
+        <li class="careers"><a href="">Careers</a></li>
+    </ul>
+    </div>
+<script src="js/jquery.js"></script>
+<script>
+   /*
+    var $a = $("li>a");
+    $a.mouseover(function () {
+        var select = $(this);
+        select.toggleClass("color");
+    });
+    */
+</script>
+</body>
+</html>

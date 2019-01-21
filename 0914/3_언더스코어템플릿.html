@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>템플릿의 활용</title>
+</head>
+<body>
+<h1>동물 목록</h1>
+<script type="text/template" id="animalTmpl">
+    <ul>
+        <% _.each(animals, function(animal) { %>
+        <li><%=animal%></li>
+        <% }) %>
+    </ul>
+</script>
+<script src="js/underscore-min.js"></script>
+<script src="js/jquery.js"></script>
+<script>
+    var animals = ["사자","호랑이","개미핥기","고양이","개","팬더"];
+
+    var tmp = _.template($("#animalTmpl").html());
+
+    $("h1").after(tmp({"animals":animals}));
+</script>
+</body>
+</html>

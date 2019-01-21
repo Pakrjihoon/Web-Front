@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Daum 영화</title>
+    <link rel="icon" href="img/daum_favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        th, td {
+            border:1px solid #424242;
+            /* 수직(top, bottom) 수평(left, right) */
+            padding:8px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>영화 사이트</h1>
+    <h2>영화 검색</h2>
+    <form action="https://movie.daum.net/search/main" method="get">
+        <fieldset>
+            <legend>영화 검색폼</legend>
+            <label for="search">검색</label>
+                <input id="search" name="searchText" placeholder="검색할 영화이름">
+                <button class="fab fa-searchengin">검색</button>
+        </fieldset>
+    </form>
+    <hr/>
+    <h2>일일 박스오피스</h2>
+    <table summary="박스오피스">
+        <caption>7월 16일 박스오피스</caption>
+        <thead>
+        <tr>
+            <!-- th의 scope 속성으로 제목의 범위를 지정 -->
+            <th scope="col">순위</th>
+            <th scope="col">포스터</th>
+            <th scope="col">영화명</th>
+            <th scope="col">관객수</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>
+                    <img src="poster/poster1.jpg" width="100px" alt="앤트맨포스터">
+                </td>
+                <th scope="row">앤트맨과 와스프</th>
+                <td>4,483,553명</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <img src="poster/poster2.jpg" width="100px" alt="앤트맨포스터">
+                </td>
+                <th scope="row">마녀</th>
+                <td>4,483,553명</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <img src="poster/poster3.jpg" width="100px" alt="앤트맨포스터">
+                </td>
+                <th scope="row">스카이스크래퍼</th>
+                <td>4,483,553명</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <img src="poster/poster4.jpg" width="100px" alt="앤트맨포스터">
+                </td>
+                <th scope="row">속닥속닥</th>
+                <td>4,483,553명</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <img src="poster/poster5.jpg" width="100px" alt="앤트맨포스터">
+                </td>
+                <th scope="row">변산</th>
+                <td>4,483,553명</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4"><a href="">영화진흥위원회 영화관 입장권 통합전산망 제공</a></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

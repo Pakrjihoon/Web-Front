@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>쌓임문맥(stacking context)</title>
+    <style>
+        #p1 {
+            position: fixed;
+        }
+        #p2 {
+            position: absolute;
+        }
+        /*
+            z-index : 1 이상일때 Stacking Context = true
+            Stacking Context는 StackingContext의 부모를 기준으로 적용
+            루트 StackingContext는 html 요소임
+            현재 크롬, 파이어폭스는 position: fixed 일때
+            z-index를 주지 않고도 StackingContext = true
+            (웹표준은 아닙니다만, 개발자는 꼭 알아야 합니다.)
+         */
+        .child {
+            width: 100px;
+            height: 100px;
+        }
+        #c1 {
+            z-index: 2;
+            position: absolute;
+            background-color: lightskyblue;
+        }
+        #c2 {
+            z-index: 1;
+            position: absolute;
+            background-color: greenyellow;
+            margin:50px 0 0 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent" id="p1">
+        <div class="child" id="c1"></div>
+    </div>
+    <div class="parent" id="p2">
+        <div class="child" id="c2"></div>
+    </div>
+</body>
+</html>

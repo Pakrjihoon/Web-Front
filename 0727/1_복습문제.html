@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+            overflow: hidden;
+            /* 더블클릭시 파랗게 잡히는것 제거 */
+            user-select: none;
+        }
+        h1 {
+            font-size: 100px;
+            text-shadow: 2px 2px #424242;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>나는 무슨색?</h1>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        중복된 코드가 있을경우 함수를 선언하여 호출
+     */
+    function random() {
+        var r = Math.floor((Math.random()*256));
+        var g = Math.floor((Math.random()*256));
+        var b = Math.floor((Math.random()*256));
+        var color = "rgb("+r+","+g+","+b+")";
+        return color;
+    } // random() end
+
+    //alert(random());
+
+    var $body = $('body');
+    $body.click(function () {
+        $body.css("background-color",random());
+        $('h1').css("color",random());
+    }); // body click() end
+</script>
+</body>
+</html>

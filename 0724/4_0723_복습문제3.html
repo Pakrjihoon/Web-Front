@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습3</title>
+    <style type="text/css">
+        button {
+            padding:16px 20px;
+            font:bold 15px arial,sans-serif;
+            border:0;
+            color:#fff;
+            cursor: pointer;
+            text-shadow:1px 1px 1px #424242;
+        }
+
+        button:hover {
+            background:#29B6F6;
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
+            0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+        button:active {
+            background:#0277BD;
+        }
+
+        button:first-child {
+            background:deeppink;
+        }
+        button:nth-child(2) {
+            background:deepskyblue;
+        }
+        button:last-child {
+            background:lime;
+        }
+
+        #box {
+            width:300px;
+            height:200px;
+            border:1px solid #333;
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        }
+    </style>
+</head>
+<body>
+<p>
+    <button>DEEPPINK</button>
+    <button>DEEPSKYBLUE</button>
+    <button>LIME</button>
+</p>
+<div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+
+        // 우리가 클릭한 '그' 버튼에서 뒷배경색을 얻어와서
+        // 변수 color에 대입
+        var color = $(this).css("background-color");
+
+        // 얻어온 color 값을 id가 box인 요소의 뒷배경에 대입
+        $("#box").css("background-color",color);
+    }); // button click() end
+</script>
+</body>
+</html>

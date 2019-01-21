@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>색상과 투명도</title>
+    <style>
+        #red {
+            background-color: rgb(255, 0, 0);
+            margin-bottom: -180px;
+        }
+
+        #blue {
+            position: relative;
+            background-color: rgb(0%, 0%, 100%);
+            margin-left: 100px;
+            /* 요소 전체가 반투명 */
+            opacity: .5;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: #FFF;
+            font-size: 60px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div id="red" class="box">RED</div>
+<div id="blue" class="box">BLUE</div>
+</body>
+</html>

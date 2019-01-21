@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트객체</title>
+
+</head>
+<body>
+<script src="js/jquery.js"></script>
+<script>
+
+    /*
+        객체
+        - 속성들의 묶음
+        - 선언 : {} or new Object()
+        - . : 속성접근연산자
+        - 객체가 가지고 있는 속성중에 함수를 메서드라고 합니다.
+    */
+    // test 함수 선언
+    function test() {
+        alert("난 테스트 함수!!");
+    }
+    // test() 함수 호출
+    // test();
+    // test메서드 호출
+    wonbin.test();
+    var wonbin = {
+        "name":"원빈",
+        "height":177,
+        "weight":65,
+        "birth":"1977-11-10",
+        "agent":"이든나인",
+        "test":function () {
+            alert("테스트 입니다.");
+        }
+    };
+</script>
+</body>
+</html>

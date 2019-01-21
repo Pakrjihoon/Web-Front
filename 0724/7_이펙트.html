@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이펙트</title>
+    <style>
+        #box {
+            width: 600px;
+            height: 400px;
+            background-image:url(img/c4.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <button>show / hide</button>
+    <button>fade In / Out</button>
+    <button>slide Up / Down</button>
+</p>
+<div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button:eq(0)").click(function () {
+        // 요소를 숨기는게 display:none으로
+
+        // 이런 기능을 정말 많이 쓰이기 때문에
+        // hide() / show() 메서드가 있음 (API 안에 존재함)
+        //$("#box").css("display","none");
+        // toggle() 메서드
+        $("#box").toggle(500);
+    }); //click() end;
+    $("button:eq(1)").click(function () {
+        // fade In / Out : 스으윽 나타나고 사라지는 것
+        // fadeToggle
+        $("#box").fadeToggle(1000);
+    });
+    $("button:eq(2)").click(function () {
+        $("#box").slideToggle(500);
+    });
+</script>
+</body>
+</html>

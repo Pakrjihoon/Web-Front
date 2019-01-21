@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>수직 메뉴 만들기</title>
+    <link rel="stylesheet" href="fonts/NotoSansKR-Bold-Hestia.otf">
+    <style>
+        /*
+            브라우저가 가진 기본 CSS
+            각 요소마다(전부는 아님) 브라우저가 가진 기본 CSS 가 있음
+            EX ) h1 ~ h6 의 글자 크기, 마진, 글자 두께,
+                ul, ol 등의 리스트 스타일, a 요소의 글자색상, 언더라인,
+                p 요소의 마진, body 요소의 마진
+        */
+        body {
+            /* 브라우저가 가진 CSS 초기화 */
+            margin: 0;
+            font-family: "Noto Sans KR",sans-serif;
+        }
+        /*
+        웹 접근성, 검색엔진등을 위해서
+        글자는 존재하나, CSS 를 적용할 경우 필요가 없기 때문에 CSS 로 제거함
+         */
+        .screen_out {
+            overflow: hidden;
+            position: absolute;
+            width: 0;
+            height: 0;
+            line-height: 0;
+            text-indent: -9999px;
+        }
+        #gnb ul {
+            width: 180px;
+            height: auto;
+            background-color: cornflowerblue;
+            /* 브라우저가 가진 css */
+            margin: 0;
+            list-style: none;
+            padding: 0;
+           /* border : 10px solid #424242; */
+            line-height: 60px;
+         }
+        #gnb li {
+            width: 180px;
+            height: 60px;
+        }
+        #gnb a {
+            /* 글자 수평 수직 가운데 정렬 */
+            text-align: center;
+            line-height: 60px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #FFFFFF;
+            display: block;
+            /* 글자 언더바 지우기 (글자를 꾸민다고 생각) */
+            text-decoration: none;
+            transition: .6s ease;
+        }
+        /*
+        a 요소는 인라인레벨 요소이기 때문에
+        width, height 를 지정해도 적용 안됨
+        그래서, a요소를 블록레벨로 변경해야 합니다.
+         */
+        #gnb a:hover {
+            font-size: 27px;
+            background-color: #FFFFFF;
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="gnb">
+    <h2 class="screen_out">주요 서비스</h2>
+        <ul>
+            <li><a href="">메 일</a></li>
+            <li><a href="">카 페</a></li>
+            <li><a href="">뉴 스</a></li>
+            <li><a href="">지 도</a></li>
+        </ul>
+    </div>
+</body>
+</html>

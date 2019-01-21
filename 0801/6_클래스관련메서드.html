@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스 관련 메서드</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: #FFDE2F;
+            margin-top: 20px;
+            transition: .5s ease;
+        }
+        .circle {
+            background: #f44336;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <button>붙였다 떼기</button>
+    <div class="box"></div>
+
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        클래스관련 메서드가 필요한 이유 ?
+        attr 로는 중간에 있는 클래스를 삭제하거나 제거가 너무 귀찮습니다.
+        그래서
+        - addClass(클래스명) : 클래스 더함
+        - removeClass(클래스명) : 클래스 제거
+        - hasClass(클래스명) : 클래스가 있으면 true, 없으면 false를 반환
+        - toggleClass(클래스명) : 있으면 제거, 없으면 붙임
+     */
+    var $box = $(".box")
+    $("button").on("click",function () {
+
+        $box.toggleClass("circle");
+        // .box가 circle클래스를 가지고 있으면 떼고
+        // 없으면 붙이고
+
+        // .box가 circle이라는 클래스를 가지고 있는지 확인
+        // var flag = $box.hasClass("circle");
+        //
+        // if(flag) {
+        //     $box.removeClass("circle");
+        // }
+        // else {
+        //     $box.addClass("circle");
+        // }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>항상 가운데</title>
+    <style>
+        body {
+           /* height: 9387px;
+            background-position: center;
+            background-image: url(img/bg_tmon.jpg); */
+        }
+        #box {
+            width: 300px;
+            height: 200px;
+            background: #84A3E4;
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFF;
+            text-align: center;
+            line-height: 200px;
+
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -100px;
+            /*
+                블록레벨이 브라우저를 기준으로
+                항상 가운데 정렬하는 방법
+                1) position 을 fixed 로 (브라우저 기준으로 고정)
+                2) left, top 을 50%로 (브라우저 width / height 의 50%)
+                3) margin 으로 이동 (요소의 width / height 의 절반만큼)
+             */
+        }
+    </style>
+</head>
+<body>
+<div id="box">난 가운데</div>
+</body>
+</html>

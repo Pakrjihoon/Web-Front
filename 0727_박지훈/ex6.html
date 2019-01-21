@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>ex6</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            width: auto;
+            height: 100%;
+            margin: 0;
+        }
+        button {
+            position: fixed;
+            width: 200px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            margin: -50px 0 0 -100px;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 30px;
+            background: #00B8D4;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+        }
+        button:hover {
+            box-shadow: inset 0 0 5px #424242;
+        }
+        #popup {
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -287.5px 0 0 -462px;
+            background-color: #FFDE2F;
+            background-image: url(img/bg.png);
+            background-repeat: no-repeat;
+            background-size: 924px 575px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<button>여기를 클릭!</button>
+<div id="popup"></div>
+<script src="js/jquery.js"></script>
+<script>
+
+    var $popup = $("#popup");
+    $("button").click(function () {
+        $popup.fadeIn(500);
+        $("body").css("background-color", "#FFDE2F");
+
+    });
+    var color = $("body").css("background-color", "#fff");
+    $popup.click(function () {
+       $popup.fadeOut(500);
+        color.fadeIn(500);
+    });
+</script>
+</body>
+</html>

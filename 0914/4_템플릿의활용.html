@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>템플릿의 활용</title>
+</head>
+<body>
+    <h1>장르 목록</h1>
+    <!-- 템플릿을 만듦 -->
+    <table>
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th>장르</th>
+            <th>삭제</th>
+        </tr>
+        </thead>
+        <tbody>
+    <script type="text/template" id="genreTmp">
+        <%_.each(genres, function(genre) { %>
+        <tr>
+            <td><%=genre.no%></td>
+            <th><%=genre.name%></th>
+            <td>
+                <a href="delete.jsp?no=">삭제</a>
+            </td>
+        </tr>
+        <%})%>
+    </script>
+        </tbody>
+    </table>
+<script src="js/jquery.js"></script>
+<script src="js/underscore-min.js"></script>
+<script>
+
+    // 언더스코어 템플릿
+    var tmp = _.template($("#genreTmp").html());
+
+    $.ajax({
+        url:"ajax/genres.json",
+        type:"get",
+        dataType:"json",
+        error:function () {
+            alert("에러");
+        },
+        success:function (json) {
+            $("tbody").append(tmp({genres:json}));
+        }
+    });
+</script>
+</body>
+</html>

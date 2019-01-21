@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>moment라이브러리의 사용</title>
+</head>
+<body>
+<h1>????-??-?? ??:??:??.???</h1>
+<!-- jquery import -->
+<script src="js/jquery.js"></script>
+<!-- moment import -->
+<script src="js/moment-with-locales.js"></script>
+<script>
+    /*
+        moment 객체 생성법 : moment();
+     */
+    function displayTime() {
+        //moment 객체 생성
+        var now = moment();
+        //var year = now.year();
+        //var month = now.month();
+
+        var full = now.format("YYYY년 MM월 DD일 hh시 mm분 ss.SSS초");
+        $("h1").text(full);
+    } //displayTime() end
+    displayTime();
+    setInterval(displayTime,1);
+
+</script>
+<!--
+    자바스크립트의 없는 기능들을 라이브러리들이 담당
+
+    - jquery : 요소선택, 컨텐츠변경, css변경, 이펙트, ajax 편리함
+    - moment : 날짜, 시간관련 편리함
+    - underscore : 템플리, 배열,컬랙션 편리함
+-->
+</body>
+</html>

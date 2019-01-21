@@ -1,0 +1,13 @@
+#footer{
+    height: 130px;
+    background: #40BEED;
+}
+#copyright{
+    width: 1080px;
+    margin: auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 17px;
+    color: #fff;
+    line-height: 1.5;
+    text-align: center;
+}

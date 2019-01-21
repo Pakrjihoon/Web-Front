@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>언더스코어 템플릿 기초</title>
+</head>
+<body>
+<!-- jquery.js -->
+<script src="js/jquery.js"></script>
+<!-- underscore.js -->
+<script src="js/underscore-min.js"></script>
+<script>
+    /*
+        자바스크립트 라이브러리
+        1) jquery : 요소 선택, 컨텐츠 변경,
+                    이펙트, ajax가 쉽고 편리
+
+        2) moment : 날짜 및 시간처리가 쉽고 편리
+
+        3) underscore : 배열 및 컬렉션, 템플릿 엔진 : '_'
+
+     */
+        // tmp는 함수
+        var tmp = _.template("<h1>안녕하세요? <%=name%>님</h1>");
+        var markup = tmp({name:"박지훈"});
+        $("body").prepend(markup);
+</script>
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>명소 플러스</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <style>
+        #titleMain {
+            width: 1080px;
+            height: 350px;
+            background-color: cadetblue;
+            margin: auto;
+            color: #FFFFFF;
+            background-image: url("img/00.jpg");
+            background-repeat: repeat;
+            border-radius: 3px;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 500;
+            margin-left: 50px;
+            margin-top: 50px;
+            padding-top: 110px;
+        }
+
+        h4 {
+            margin-left: 80px;
+            padding-top: 30px;
+            font-size: 20px;
+        }
+
+        .writeBtn {
+            width: 150px;
+            font-size: 20px;
+            height: 40px;
+            background-color: #40beed;
+            text-decoration: none;
+            color: #FFFFFF;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            margin-left: 905px;
+            margin-top: 40px;
+            line-height: 35px;
+        }
+
+        .writeBtn:hover {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-shadow: 0 0 5px;
+            background: #0091ea;
+        }
+
+        #main_sight {
+            margin: auto;
+            width: 1080px;
+            position: relative;
+            /*background-color: #00bb00;*/
+        }
+
+        #filter {
+            width: 200px;
+            height: 500px;
+            /*background-color: #00bb00;*/
+            position: absolute;
+            float: right;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            background-color: #ffffff;
+            border-radius: 2px;
+            margin-top: 10px;
+        }
+
+        #content {
+            width: 860px;
+            /*height: 500px;*/
+            /*background-color: #0091ea;*/
+            float: right;
+        }
+
+        #content > #sightList {
+            width: 1080px;
+            /*height: 300px;*/
+            /*background-color: red;*/
+            overflow: hidden;
+
+        }
+
+        #sightList > li.sight { /*이게 박스 하나 */
+            width: 230px;
+            height: 250px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 50px 20px 40px 30px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+
+        #sightList > li.sight:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .16);
+        }
+
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #sightList div.content_img > img {
+            width: 230px;
+            height: 160px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        #sightList div.content_title {
+            width: 180px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #sightList div.content_title > strong {
+            width: 180px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+
+        }
+
+        #sightList div.content_title > span {
+            width: 180px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+        }
+
+
+        .sort {
+            width: 250px;
+            height: 50px;
+            /*background-color: #0091ea;*/
+            display: block;
+            font-weight: 500;
+            padding-left: 15px;
+        }
+
+        #sight {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        #line {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .applyBtn {
+            width: 100px;
+            font-size: 15px;
+            height: 30px;
+            background-color: #40beed;
+            text-decoration: none;
+            color: #FFFFFF;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+            margin-left: 49px;
+            margin-top: 30px;
+            line-height: 30px;
+        }
+
+        .applyBtn:hover {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-shadow: 0 0 5px;
+            background: #0091ea;
+        }
+
+        .fa-plus-circle {
+            color: #40beed;
+            font-size: 15px;
+        }
+
+        .fa-minus-circle {
+            color: #dd4444;
+            font-size: 15px;
+        }
+
+        .vote {
+            font-weight: 600;
+            font-size: 15px;
+            /*background-color: red;*/
+        }
+        #logoImage {
+            background-image: url("img/로고.png");
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=openChatPop()>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="myPage.html">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="localsMenuBar"></div>
+<div id="titleMain">
+    <h1>명소 등록</h1>
+    <h4>한바퀴에서 새롭게 제안하는 명소등록 시스템! 여러 사용자와 교루하며 새로알게된 장소를 주고받아 보세요.</h4>
+    <h4>등록과 탈락도 모두 여러분의 선택으로 이루어 집니다.</h4>
+    <a href="" onclick="openPop()" class="writeBtn">명소 등록하기</a>
+</div>
+<div id="main_sight">
+    <div id="filter">
+        <div class="row">
+            <label id="sight" class="sort">명소</label>
+
+            <label class="sort"><input type="checkbox" name="room" id="room" value="room" checked="checked">숙 소</label>
+
+            <label class="sort"> <input type="checkbox" name="restaurant" id="restaurant"
+                                        value="restaurant">음식점</label>
+
+            <label class="sort"><input type="checkbox" name="tourism" id="tourism" value="tourism">관 광</label>
+
+        </div><!--row end-->
+
+        <div class="row">
+            <label id="line" class="sort">정렬 순서</label>
+
+
+            <label class="sort"><input type="radio" name="line" id="new" value="new" checked="checked">최신순</label>
+
+            <label class="sort"><input type="radio" name="line" id="popularity" value="popularity">인기순</label>
+
+            <label class="sort"><input type="radio" name="line" id="end" value="end">마감 임박순</label>
+
+        </div><!--row end-->
+        <a href="" class="applyBtn">적용하기</a>
+    </div><!--filter end-->
+
+    <div id="content">
+        <ul id="sightList">
+            <li class="sight">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.funding_img -->
+                <div class="content_title">
+                    <h2>숙소 이름</h2><!--타이틀로 설정할것-->
+                    <strong>내용 요약</strong>
+                    <span>프로필
+                        <em>티어</em>
+                         <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                        </span>
+                    </span>
+                    <div class="voteWrap">
+                    <span class="vote plus"><i class="fas fa-plus-circle"></i>
+                        <em>35</em>
+                    </span>
+                        <span class="vote minus"><i class="fas fa-minus-circle"></i>
+                        <em>6</em>
+                    </span>
+                    </div>
+                </div>
+            </li> <!--//.sight -->
+            <li class="sight">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.funding_img -->
+                <div class="content_title">
+                    <h2>숙소 이름</h2><!--타이틀로 설정할것-->
+                    <strong>내용 요약</strong>
+                    <span>프로필
+                        <em>티어</em>
+                         <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                        </span>
+                    </span>
+                    <div class="voteWrap">
+                    <span class="vote plus"><i class="fas fa-plus-circle"></i>
+                        <em>35</em>
+                    </span>
+                        <span class="vote minus"><i class="fas fa-minus-circle"></i>
+                        <em>6</em>
+                    </span>
+                    </div>
+                </div>
+            </li> <!--//.sight -->
+            <li class="sight">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.funding_img -->
+                <div class="content_title">
+                    <h2>숙소 이름</h2><!--타이틀로 설정할것-->
+                    <strong>내용 요약</strong>
+                    <span>프로필
+                        <em>티어</em>
+                         <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                        </span>
+                    </span>
+                    <div class="voteWrap">
+                    <span class="vote plus"><i class="fas fa-plus-circle"></i>
+                        <em>35</em>
+                    </span>
+                        <span class="vote minus"><i class="fas fa-minus-circle"></i>
+                        <em>6</em>
+                    </span>
+                    </div>
+                </div>
+            </li> <!--//.sight -->
+        </ul>
+    </div><!--//.content -->
+
+</div><!--main_sight end-->
+
+<script type="text/template" id="replayTmp">
+    <li class="sight">
+        <div class="content_img">
+            <img src="img/car.jpg" alt="자전거"/>
+        </div><!--//.funding_img -->
+        <div class="content_title">
+            <h2>숙소 이름</h2><!--타이틀로 설정할것-->
+            <strong>내용 요약</strong>
+            <span>프로필
+                        <em>티어</em>
+                         <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                        </span>
+                    </span>
+            <div id="vote">
+                    <span class="vote plus"><i class="fas fa-plus-circle"></i>
+                        <em>35</em>
+                    </span>
+                <span class="vote minus"><i class="fas fa-minus-circle"></i>
+                        <em>6</em>
+                    </span>
+            </div>
+        </div>
+    </li> <!--//.sight -->
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/profilePopup.js"></script>
+<script>
+
+    var $window = $(window),
+        $document = $(document);
+
+    // alert(docHeight);
+
+    $window.scroll(function () {
+
+        var docHeight = $document.height(),
+            winHeight = $window.height();
+
+        var sTop = $window.scrollTop();
+
+        if (docHeight <= (sTop + winHeight) + 30) {
+
+            for (var i = 0; i < 10; i++) {
+
+                var tmp = _.template($("#replayTmp").html());
+                $("#sightList").append(tmp);
+            }
+
+        }
+
+    });
+    function openPop(){
+
+        //새 창을 가운데로 띄우기 위해 좌표계산.
+        var left = Math.floor((screen.availWidth - 250) / 2);
+        var top = Math.floor((screen.availHeight - 100) / 2);
+
+        //창 옵션
+        var winOpts = "width=900, height=800, left=" + left + ", top=" + top + ", scrollbars=no, resizable=yes";
+        //창 오픈​
+        window.open("registerLocation.html", "",winOpts);
+    }
+</script>
+</body>
+</html>

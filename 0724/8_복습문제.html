@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+        body {
+            background-image: url(img/bg.jpg);
+            background-position: center 0;
+        }
+        #writeBox {
+            width: 550px;
+            height: 140px;
+            background-image: url(img/write_box.png);
+            margin: auto;
+            transform: translate(-26px,144px);
+            cursor: pointer;
+        }
+        #popup {
+            /* 브라우저 전체를 덮는 팝업 만들기 */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.8);
+            background-image: url(img/popup.png);
+            background-repeat: no-repeat;
+            background-position: center 105px;
+            display: none;
+            left:0;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <div id="writeBox"></div>
+    <div id="popup"></div>
+<script src="js/jquery.js"></script>
+<script>
+    // 만약 변수 안에 담는 데이터가 jquery 객체일때는
+    // 변수 앞에 $를 붙임(전세계적 프론트엔드 개발자들 공용)
+    var $popup = $("#popup");
+
+    $("#writeBox").click(function () {
+        $("#popup").fadeIn(500);
+        // 이런식으로 id를 이용하여 호출을 하면 매 사용시마다 호출하고 버리고
+        // 다시 호출하고 버리고를 반복하여 메모리 사용이 떨어짐
+    }); // #writeBox.click() end
+    $popup.click(function () {
+        $popup.fadeOut(500);
+        // #popup 부분에 this 로도 사용이 가능하다.
+    }); // #popup.click() end
+</script>
+</body>
+</html>

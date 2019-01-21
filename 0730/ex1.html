@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>2단 레이아웃 제작</title>
+		<!-- font awesome 적용 -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<!-- 애플폰트 적용 -->
+		<link rel="stylesheet" href="css/apple.css">
+	</head>
+	<style>
+		h1,h2 {
+			margin: 0;
+		}
+		body {
+			font-family: "SF Pro KR",sans-serif;
+		}
+		#wrap {
+			width: 1000px;
+			border: 2px dotted #424242;
+			margin: auto;
+			text-align: center;
+		}
+		#header, #footer {
+			width: 1000px;
+			height: 100px;
+			line-height: 100px;
+		}
+		#context {
+			/* border right 만큼 빼주어야한다. */
+			width: 698px;
+			height: 500px;
+			border-right: 2px dotted #424242;
+			line-height: 500px;
+			float: left;
+		}
+		#sideBar {
+			width: 300px;
+			height: 250px;
+			float: left;
+			line-height: 250px;
+		}
+		#header {
+			border-bottom: 2px dotted #424242;
+		}
+		#footer {
+			clear: both;
+			border-top: 2px dotted #424242;
+		}
+	</style>
+	<body>
+		<div id="wrap">
+			<div id="header"><h1><i class="fas fa-desktop"></i> 웹 서비스</h1></div>
+			<div id="context"><h2><i class="fas fa-map-marker-alt"></i> 컨텐츠 영역</h2></div>
+			<div id="sideBar"><h2><i class="fas fa-camera-retro"></i> 사이드바</h2></div>
+			<div id="footer">&copy; 2018 bjd.com</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+

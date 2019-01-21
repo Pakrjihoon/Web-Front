@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex2</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/apple.css" />
+    <style>
+        /*
+        body 에는 윗공간만 띄우는 20px을 주었고 왼쪽 오른쪽은 0이다.
+        폰트를 지정하였고 text-align으로 인라인레벨 요소들은 모두 가운데 정렬을 할 수 있다.
+        */
+        body {
+            margin: 20px 0;
+            font-family: 'SF Pro KR', sans-serif;
+            text-align: center;
+        }
+        /*
+        id가 txt인 선택자는 높이와 너비를 지정해주었다. 지정을 해준 이유는
+        버튼을 눌렀을때 이벤트가 발생하는데 이 크기를 지정해주지 않으면 버튼이 아래로 내려가기 때문이다.
+        아래 버튼과 간격도 조금 주었다.
+        그리고 글자가 부드럽게 변하기 위하여 트랜지션을 주었다.
+        */
+        #txt {
+            width: auto;
+            height: 80px;
+            font-size: 48px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            transition: .5s ease;
+        }
+
+        /*
+         id가 btn인 선택자에 대한 내부에 폰트를 지정하고 두께도 다르게 지정했다.
+         보더는 일부러 none으로 지정했으며 컬러를 변경하고 버튼스럽게 하기 위하여 커서를 포인터로
+         글자와 버튼사이의 간격을 주기 위해서 패딩을 추가하였다.
+         글자색도 흰색으로 바꾸었다.
+        */
+        #btn {
+            font-weight: 600;
+            font-family: 'SF Pro KR', sans-serif;
+            font-size: 28px;
+            background-color: #00B8D4;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        /*
+        마우스 오버를 했을때 발생하는 이벤트이다. 그림자를 넣어주었다.
+        그리고 오버시 버튼의 배경색이 바뀐다.
+        */
+        #btn:hover {
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+            background-color: #0277BD;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="txt">버튼을 눌러보세요.</h1>
+    <button id="btn">난 버튼</button>
+<script src="js/jquery.js"></script>
+<script>
+
+    // jquery를 사용하기 위하여 src ="경로"를 기재하고 아래에 스크립트 요소를 추가하여 내부에서
+    // 코드를 작성한다
+
+    // 버튼에 클릭 이벤트를 줘야하니 아이디 선택자인 #btn에 클릭 이벤트를 발생시키고 내부에 함수를
+    // 적는다. 이 함수는 이벤트 리스너에 의해 호출되어 이벤트 핸들러가 작동한다.
+    // 내부에서는 변수 change를 선언과 동시에 변경해야하는 속성이 여러개이니 객체에 속성과
+    // 그 속성에 대한 값을 써주고 우리가 변경해야할 요소는 h1 요소이므로 h1요소를 선택하여
+    // css메서드에서 선언한 변수를 호출하여 사용한다.
+    $("#btn").click(function () {
+        var change = {"font-size":"80px","color":"deepskyblue","text-shadow":"0 0 20px deepskyblue"};
+        $("#txt").css(change);
+    });
+</script>
+</body>
+</html>

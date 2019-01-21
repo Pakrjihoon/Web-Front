@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: silver;
+            color: #FFF;
+            line-height: 300px;
+            font-size: 200px;
+            font-weight: bold;
+            margin: auto;
+        }
+        #box:hover {
+            box-shadow: 0 0 10px #424242;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="addBtn">붙이기</button>
+        <button id="removeBtn">떼기</button>
+    </p>
+    <div id="box">X</div>
+<script src="js/jquery.js"></script>
+<script>
+    $("#addBtn").on("click",function () {
+
+        // #box의 뒷배경색 변경, 글자가 'O' 로 바뀐다.
+        // mouseenter 이벤트 붙음
+        $("#box").css("background-color","deepskyblue")
+            .text('O')
+            .on("mouseenter",function () {
+                alert("붙었습니다.");
+            });
+    }); //#addBtn click() end
+    $("#removeBtn").on("click",function () {
+       $("#box").css("background-color","silver")
+           .text('X')
+           .off("mouseenter");
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 분류</title>
+    <style>
+        div,span {
+            background: yellow;
+            color:red;
+            width: 200px;
+            height: 200px;
+           /* font-size: 300px; */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>대체되지 않는 요소</h1>
+    <p>ㄱㄴㄷㄹㅁㅂㅅㅇ</p>
+    <h1>대체되는 요소</h1>
+    <input/>
+    <hr/>
+    <h1>블록레벨</h1>
+        <h2>h요소는 블록레벨</h2>
+        <p>p요소도 블록레벨</p>
+        <ul>
+            <li>ul역시 블록레벨</li>
+            <li>ul역시 블록레벨 2</li>
+        </ul>
+        <ol>
+            <li>ol 블록레벨</li>
+        </ol>
+        <dl>
+            <dt>블록</dt>
+            <dd>블록레벨테스트</dd>
+        </dl>
+    <div>Park</div>
+        <hr/>
+    <h1>인라인레벨</h1>
+    <span>span 인라인 요소</span>
+    <input><select></select><textarea></textarea>
+    <img src="img/naver_favicon.ico" alt="favi">
+    <a href="">네이버</a>&nbsp;<a href="">다음</a>
+    <label>label은 인라인요소</label>
+    <em>em도 인라인요소</em>
+    <strong>strong도 인라인요소</strong>
+    <button>인라인</button>
+    <span>Park</span>
+</body>
+    <!--
+        요소의 분류
+
+        1) 대체되는 요소 vs 대체되지 않는 요소
+        - 대체되는 요소들 : hr, img, table, textarea, select, input ..
+        - 대체되지 않는 요소들 : 나머지
+
+        2) 블록(레벨)요소 vs 인라인(레벨)요소
+
+        3) 블록레벨
+        - GUI 프로그래밍의 개념으로 보면 컨테이너 역할
+        - 줄바꿈이 됨
+        - 레이아웃을 담당
+        - h1~h6, ol, ul, dl, li, dt, dd, p, hr ..etc
+        - 대표적인 블록레벨 : div(division)
+        - div : 의미는 없지만 가장 대표적인 블록레벨
+        - 크기를 지정할 수 있음(css 로 width, height)
+
+        4) 인라인레벨
+        - GUI 프로그래밍의 개념으로 보면 컴포넌트 / 컨텐츠(글 or 내용) 담당
+        - 줄바꿈이 없음
+        - 대체되는 요소들은 inline 요소
+        - img, button, a, em, strong, input, label, select ..etc
+        - 대표적인 인라인레벨요소 : span
+        - span : 의미는 없지만 정말 많이 이용되는 인라인요소
+        - 크기를 지정할 수 없음(css 의 width, height)
+          (단, 대체되는 요소들은 지정 가능)
+        - 글자크기가 자신의 크기임
+    -->
+
+</html>

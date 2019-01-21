@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>명소 등록</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="icon" href="img/favicon-96x96.png">
+<style>
+    #wrap {
+        position: relative;
+        margin: auto;
+        width: 650px;
+        height: auto;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    #detailHeader {
+        width: 650px;
+        height: 98px;
+        margin-top: 20px;
+    }
+    #firstFlow ,#secondFlow, #lastFlow {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 180px;
+        height: 50px;
+        background-color: #f0f0f0;
+        display: inline-block;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-left: 22px;
+        border-radius: 10px;
+    }
+    hr {
+        width: 500px;
+        position: absolute;
+        left: 75px;
+        top: 35px;
+        z-index: -1;
+    }
+    #firstFlow {
+        background-color: #40BEED;
+        color: #fff;
+        margin-right: 5px;
+    }
+    #searchLocationBar {
+        width: 650px;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+    }
+    #registerLocation {
+        width: 650px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    #resultList {
+        width:400px;
+        height: 300px;
+        margin: auto;
+        text-align: center;
+    }
+</style>
+<body>
+<div id="wrap">
+    <form action="" method="post">
+        <div id="detailHeader">
+            <div id="firstFlow">명소 검색</div>
+            <div id="secondFlow">기본 정보 입력</div>
+            <div id="lastFlow">상세 정보 입력</div>
+            <hr/>
+        </div>
+        <div id="searchLocationBar">
+            <button id="inputLocation" type="submit">검색</button>
+            <input type="text" size="30" placeholder="명소를 입력하세요" value="searchLocation">
+        </div>
+        <div id="resultList">
+        </div>
+        <div id="registerLocation">
+            <span>찾고자 하는 명소가 없으신가요?</span>
+        <a href="basicInfo.html">명소 등록하기</a>
+        </div>
+    </form>
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $("#inputLocation").click(function (e) {
+        e.preventDefault();
+        $("#resultList").text("명소가 존재하지 않습니다. 명소를 등록해보세요")
+    });
+</script>
+</body>
+</html>

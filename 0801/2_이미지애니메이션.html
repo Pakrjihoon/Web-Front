@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 애니메이션</title>
+    <style>
+        #box {
+            width: 472px;
+            height: 472px;
+            box-shadow: 0 0 10px #424242;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -236px 0 0 -236px;
+            background-image: url(img/preload-tindercox.png);
+
+            /* 60개로 짤라서 : steps(프레임수) */
+            animation: ani 2s steps(60) infinite;
+        }
+        @keyframes ani {
+            0% {background-position: 0 0}
+            100% {background-position: -28320px 0}
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

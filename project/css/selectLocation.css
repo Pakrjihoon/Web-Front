@@ -1,0 +1,144 @@
+body *{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.box{
+    width: 1060px;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    padding: 10px;
+    position: relative;
+}
+.moveBtn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    background: white;
+    outline: none;
+    color: #40BEED;
+}
+#left{
+    left: 0;
+}
+#right {
+    right: 0;
+}
+#titleBox{
+    margin-top: 20px;
+    height: 90px;
+    line-height: 50px;
+    font-size: 35px;
+    font-weight: bold;
+}
+#titleBox p{
+    font-size: 25px;
+}
+#founderImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#pictureBox,.picture{
+    height: 400px;
+}
+#pictureListBox {
+    height: 150px;
+}
+.list_card{
+    height: 330px;
+    clear: both;
+}
+.detail{
+    font-size: 15px;
+    line-height: 2.5;
+    margin: 30px;
+}
+.no_site{
+    width: 1060px;
+    height: 330px;
+    text-align: center;
+    line-height: 330px;
+}
+#reviewWriteBtn{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background: #40beed;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.card{
+    float: left;
+    margin: 32px;
+    text-align: center;
+    line-height: 1.5;
+}
+.card a{
+    color: #424242;
+    text-decoration: none;
+}
+.card img{
+    width: 200px;
+    height: 150px;
+}
+#journalBox{
+    height: 550px;
+}
+.card_journal{
+    width: 900px;
+    height: 150px;
+    margin: 20px auto;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card_journal a{
+    color: #424242;
+}
+.card_journal img{
+    width: 200px;
+    height: 150px;
+    float: left;
+}
+.card_journal p{
+    margin: 15px 0;
+}
+.card_journal li{
+    float: left;
+    min-width: 50px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    background: #40BEED;
+    color: #fff;
+    line-height: 30px;
+    margin-right: 10px;
+    position: relative;
+}
+.card_journal hr{
+    height: 3px;
+    border: 0;
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+    background: #40beed;
+}
+.detail_journal{
+    width: 680px;
+    float: right;
+    padding: 10px;
+    line-height: 1.5;
+    position: relative;
+}
+#reviewBox{
+    height: 380px;
+}

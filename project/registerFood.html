@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>명소 등록</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="icon" href="img/favicon-96x96.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="css/tui-time-picker.css" />
+<style>
+    body {
+        height: auto;
+    }
+    #wrap {
+        position: relative;
+        margin: auto;
+        width: 650px;
+        height: auto;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    #detailHeader {
+        width: 650px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    #firstFlow ,#secondFlow, #lastFlow {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 200px;
+        height: 50px;
+        background-color: #f0f0f0;
+        display: inline-block;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-left: 5px;
+        border-radius: 10px;
+    }
+    #lastFlow {
+        background-color: #40BEED;
+        color: #fff;
+        margin-right: 5px;
+    }
+    hr {
+       width: 500px;
+       position: absolute;
+       left: 75px;
+       top: 35px;
+        z-index: -1;
+    }
+    #nav {
+        width: 650px;
+        height: 150px;
+    }
+    .navigation {
+        width: 650px;
+        height: 75px;
+        line-height: 75px;
+    }
+    #openAndClose {
+        font-size: 20px;
+        width: 200px;
+        height:75px;
+        float: left;
+        font-weight: bold;
+    }
+    .navigation {
+        text-align: center;
+        line-height: 75px;
+    }
+    #restDate {
+        font-size: 20px;
+        font-weight:bold;
+        width: 200px;
+        height: 75px;
+    }
+    #inputRestDate {
+        width: 450px;
+        height: 75px;
+        float: right;
+        line-height: 75px;
+        text-indent: 80px;
+    }
+    #noRest {
+        font-size: 15px;
+        color: darkgrey;
+    }
+    #leftSide {
+        width: 320px;
+        height: 200px;
+        float: left;
+        border-right: 1px solid #424242;
+    }
+    #rightSide {
+        width: 320px;
+        height: 200px;
+        float: right;
+    }
+    #content {
+        width: 650px;
+        height: 200px;
+        clear: both;
+    }
+    .content2 {
+        width:650px;
+        height: 40px;
+        line-height: 30px;
+        text-align: center;
+    }
+    #leftSide>h2 , #rightSide>h2, #content>h2, #wrap h2{
+        font-size: 20px;
+        text-indent: 10px;
+        font-weight: bold;
+        margin: 10px;
+    }
+    .type {
+        margin: 10px;
+        width: 140px;
+        height: 20px;
+        float: left;
+    }
+    .type2 {
+        margin: 10px;
+        width: 150px;
+        height: 20px;
+        float: left;
+    }
+    .menu{
+        border-radius: 10px;
+        outline: none;
+    }
+    #selector {
+        width: 650px;
+        height: 50px;
+        position: relative;
+        margin: auto;
+        top: 20px;
+    }
+    .selectBtn {
+        position: absolute;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #424242;
+        background-color: #f0f0f0;
+        transition: .3s ease;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .selectBtn:hover {
+        background-color: #40BEED;
+        color: #ffffff;
+    }
+    .select1 {
+        margin-left: 150px;
+    }
+    .select2 {
+        left: 400px;
+    }
+    #addMenu {
+        width: 650px;
+        height: 50px;
+        text-align: center;
+    }
+    #addMenu button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 18px;
+        height: 30px;
+
+    }
+    #timepicker-wrapper2, #timepicker-wrapper3 {
+        float: left;
+        height: 60px;
+        line-height: 80px;
+        width:200px;
+        margin:5px;
+    }
+    #as {
+        line-height: 80px;
+        float: left;
+    }
+</style>
+<body>
+<div id="wrap">
+    <form action="" method="post">
+    <div id="detailHeader">
+        <div id="firstFlow">명소 검색</div>
+        <div id="secondFlow">기본 정보 입력</div>
+        <div id="lastFlow">상세 정보 입력</div>
+        <hr/>
+    </div>
+    <div id="nav">
+        <div id="openAndClose" class="navigation">영업 시간
+        </div>
+        <div id="timepicker-wrapper2"></div>
+        <span id="as">~</span>
+        <div id="timepicker-wrapper3"></div>
+        <div id="restDate" class="navigation">휴무일</div>
+        <div id="inputRestDate">
+            <input id="inputRest" type="text">
+            <label id="noRest" for="noRestDate"><input type="checkbox" id="noRestDate">연중 무휴</label>
+        </div>
+    </div>
+    <div id="leftSide">
+        <h2>시설 타입</h2>
+        <label class="type"><input type="radio" name="diningtype">레스토랑</label>
+        <label class="type"><input type="radio" name="diningtype">카페/베이커리</label>
+        <label class="type"><input type="radio" name="diningtype">일반 식당</label>
+        <label class="type"><input type="radio" name="diningtype">뷔페</label>
+        <label class="type"><input type="radio" name="diningtype">한정식</label>
+        <label class="type"><input type="radio" name="diningtype">호프/PUB/BAR</label>
+    </div>
+    <div id="rightSide">
+        <h2>음식 종류</h2>
+        <label class="type"><input type="radio" name="diningkind">한식</label>
+        <label class="type"><input type="radio" name="diningkind">중식</label>
+        <label class="type"><input type="radio" name="diningkind">일식</label>
+        <label class="type"><input type="radio" name="diningkind">양식</label>
+        <label class="type"><input type="radio" name="diningkind">뷔페</label>
+        <label class="type"><input type="radio" name="diningkind">디저트</label>
+        <label class="type"><input type="radio" name="diningkind">퓨전</label>
+        <label class="type"><input type="radio" name="diningkind">기타(타국 등)</label>
+    </div>
+    <div id="content">
+        <h2>시설 특징</h2>
+        <label class="type2"><input type="checkbox" name="diningcharacter">예약</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">테이크아웃</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">배달</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">유아용 의자</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">휠체어 이용 가능</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">와이파이 존</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">주차 가능</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">야외석</label>
+        <label class="type2"><input type="checkbox" name="diningcharacter">주류 판매</label>
+    </div>
+        <h2>메뉴 정보</h2>
+    <div class="content2">
+        <label>메뉴 이름 <input class="menu" type="text" name="menuName"></label>
+        <label>가격 <input class="menu" type="text" name="price"></label> 원
+        <label><input type="radio" name="mainDish" checked>대표 메뉴 선택</label>
+    </div>
+    </form>
+    <div id="addMenu">
+        <button id="addBtn" type="button"><i class="fas fa-plus-circle"></i> 추가 하기</button>
+    </div>
+</div>
+<div id="selector">
+<a href="basicInfo.html" class="selectBtn select1">&lt; 이전으로</a>
+<a href="" id="clearRegister" class="selectBtn select2">등록하기 &gt;</a>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/tui-code-snippet.min.js"></script>
+<script src="js/tui-time-picker.min.js"></script>
+<script>
+    $("#clearRegister").click(function () {
+        alert("등록 완료");
+    });
+    $("#addBtn").click(function () {
+        $(".content2").eq(0).after(' <div class="content2">\n' +
+            '        <label>메뉴 이름 <input class="menu" type="text" name="menuName"></label>\n' +
+            '        <label>가격 <input class="menu" type="text" name="price"></label> 원\n' +
+            '<label><input type="radio" name="mainDish">대표 메뉴 선택</label>\n'+
+            '    </div>');
+    });
+    var now = new Date();
+    var instance = new tui.TimePicker('#timepicker-wrapper2', {
+        initialHour: now.getHours(),
+        initialMinute: now.getMinutes(),
+        inputType: 'selectbox'
+    });
+    var instance2 = new tui.TimePicker('#timepicker-wrapper3', {
+        initialHour: now.getHours(),
+        initialMinute: now.getMinutes(),
+        inputType: 'selectbox'
+    });
+</script>
+</body>
+</html>

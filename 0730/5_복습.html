@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+        button {
+            width: 100px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+        }
+        div {
+            margin-top: 20px;
+            width: 500px;
+            height: 400px;
+            border: 1px solid #424242;
+        }
+    </style>
+</head>
+<body>
+    <button>RED</button>
+    <button>GREEN</button>
+    <button>BLUE</button>
+    <button>YELLOW</button>
+    <div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    $("button").click(function () {
+       var color = $(this).text();
+       $("#box").css("background-color",color);
+    }); //button click() end
+</script>
+</body>
+</html>

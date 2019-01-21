@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax test</title>
+</head>
+<body>
+    <h1>장르 목록</h1>
+    <ul>
+
+    </ul>
+<script src="js/jquery.js"></script>
+<script>
+    $.ajax({
+        url:"ajax/genres.json",
+        type : "get",
+        dataType:"json",
+        error:function () {
+            alert("서버 점검중");
+        },
+        success: function (data) {
+            $(data).each(function () {
+                $("<li>").text(this.no+")" + this.name)
+                    .appendTo("ul");
+            });
+        }
+    });
+</script>
+</body>
+</html>

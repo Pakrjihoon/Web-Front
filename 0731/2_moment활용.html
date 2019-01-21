@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>moment라이브러리의 활용</title>
+</head>
+<body>
+<!--
+    시간을 나타내는 요소 : HTML5에 추가됨
+    - time 요소
+    - datetime 속성 :  YYYY-MM-DDTHH:MI:SS+09:00 (T는 time의 줄임말, 09:00은 표준시)
+-->
+<time datetime="2018-07-31T11:20:52">??</time>
+<time datetime="2018-05-31T10:42:52">??</time>
+<time datetime="2017-07-31T10:42:52">??</time>
+<time datetime="1994-08-07T15:42:52">??</time>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+
+
+    // 한국 시간으로
+    moment.locale("ko");
+
+    $("time").each(function () {
+        var idx = $(this).attr("datetime");
+
+        // moment(시간) : 그때 시간의 moment 객체 생성
+        var thatTime = moment(idx);
+
+        // fromNow() : 그때부터 지금까지의 시간을 표현
+        $(this).text(thatTime.fromNow()+",");
+
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+
+        #wrap {
+            border: 2px solid #424242;
+            width:1000px;
+            margin: auto;
+            text-align: center;
+        }
+        #carBox {
+            width: 800px;
+            height: 600px;
+            border: 20px solid #fff;
+            box-shadow: 0 0 20px #fff;
+            margin: auto;
+            position: relative;
+            z-index: 3;
+        }
+        #carList {
+            width: 900px;
+            height: 140px;
+            list-style: none;
+            margin: 20px auto;
+            padding: 0;
+        }
+        #carList li {
+            width: 160px;
+            height: 120px;
+            float: left;
+            opacity: .3;
+            border:10px solid #fff;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        #carList li:hover {
+            border-color: #424242;
+            opacity: 1;
+        }
+        #popup {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: rgba(0,0,0,.8);
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>멋진 자동차들</h1>
+        <div id="carBox">
+            <img src="img/no_image.jpg" width="800"
+            alt="아래의 자동차이미지에 마우스를 가져가 보세요."
+            title="아래의 자동차이미지에 마우스를 가져가 보세요."/>
+        </div>
+        <ul id="carList">
+            <li>
+                <img src="img/c1.jpg" width="160" alt="포르토피노" />
+            </li>
+            <li>
+                <img src="img/c2.jpg" width="160" alt="720s" />
+            </li>
+            <li>
+                <img src="img/c3.jpg" width="160" alt="G70" />
+            </li>
+            <li>
+                <img src="img/c4.jpg" width="160" alt="DB11" />
+            </li>
+            <li>
+                <img src="img/c5.jpg" width="160" alt="911" />
+            </li>
+        </ul>
+    </div><!--//#wrap-->
+    <div id="popup"></div>
+<script src="js/jquery.js"></script>
+<script>
+
+    // id가 carList인 ul의 자손중에 img 요소들을 선택하여
+    // jquery 객체로 만들고, 그 img 요소들에 mouseenter 이벤트리스너를
+    // 붙이고 이벤트 핸들러를 작성합니다
+    $("#carList img").mouseenter(function () {
+        // src 라는 변수를 선언하고
+        // 우리가 마우스엔터한 '그' img요소의 src속성의 값을
+        // 얻어와서 src 변수에 대입
+        var src = $(this).attr("src");
+
+        // alt 라는 변수를 선언하고
+        // 우리가 마우스엔터한 '그' img요소의 alt속성의 값을
+        // 얻어와서 alt 변수에 대입
+        var alt = $(this).attr("alt");
+
+        $("#carBox img").attr({"src":src,"alt":alt,"title":alt});
+        //#carList li mouseenter() end
+        // #carBox에 click이벤트리스너를 붙이고
+        // 이벤트 핸들러 작성
+        $("#carBox").click(function () {
+            $("#popup").fadeIn(500);
+        });
+        // #popup에 click이벤트리스너를 붙이고
+        // 이벤트 핸들러 작성
+        $("#popup").click(function () {
+            $("#popup").fadeOut(500);
+        });
+    });
+</script>
+</body>
+</html>

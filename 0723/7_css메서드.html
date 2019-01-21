@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>css메서드</title>
+    <style>
+        #box {
+            margin-top: 10px;
+            width: 300px;
+            height: 200px;
+            border: 1px solid #424242;
+        }
+    </style>
+</head>
+<body>
+    <button>뒷배경 변경</button>
+    <button>height값 얻기</button>
+    <div id="box"></div>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        jquery는 setter와 getter가 메서드 하나로
+
+        css메서드의 용법
+        1) css(속성명, 속성값) : 속성명을 속성값으로 세팅해주는 setter
+        2) css(속성명): : 해당 속성값을 얻어오는 getter
+     */
+    /*
+    * 개발자가 가지는 기본 개념
+    *
+    * 1) index는 0부터
+    * 2) getter는 변수로 받아라!!
+    */
+    // jquery에서는 nth-child와 비슷한 eq:(인덱스) 선택자가 있습니다.
+    // index는 0부터
+    $("button:eq(0)").click(function () {
+        $("#box").css("background-color","red");
+        // id가 box인 요소를 선택후 css background-color의 색을 red로 변경
+    }); //button:eq(0) click() end
+
+    // 1) eq(1) 버튼을 클릭 했을때
+    $("button:eq(1)").click(function () {
+        // 2) id가 box인 요소를 선택한 후 css의 height 값을 얻어옵니다.
+        var height= $("#box").css("height");
+        // 변수 height에 대입
+        alert(height);
+        // 변수 값을 출력
+    });
+    // button:eq(1) click() end
+</script>
+</body>
+</html>

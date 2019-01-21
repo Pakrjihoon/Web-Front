@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>웹폰트 적용</title>
+    <!--
+        font-family 에 폰트를 적용할 수 있음
+        그런데, 개발자의 컴퓨터에 설치된 폰트를 사용한다면,
+        일반 클라이언트 컴퓨터에서는 그 폰트가 제대로 표현되지 않습니다.
+        폰트도 웹폰트를 사용해야 합니다.
+        - https://fonts.google.com 에서 선택 후 적용
+
+        폰트패밀리 적용시 폰트를 여러개 작성할 수 있습니다.
+        그런데 모든 폰트가 없다고 가정하면, 혹은 웹폰트인데 서버에서 다운이 안되었다면??
+
+        그래서 가장 마지막에 대표패밀리를 지정합니다.
+        - serif : 삐침있는 폰트(궁서, 명조체)
+        - sens-serif : 삐침이 없는 폰트(고딕, 굴림, 돋움 ...)
+        - cursive : 필기체(미생체, 나눔펜체, 나눔붓체...)
+        - monospace : 타자기체(d2coding 등)
+        - fantasy : 판타지체
+
+        ex) 밴드
+        "Helvetica Neue",
+        Helvetica,
+        Arial,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        NotoColorEmoji,
+        "Segoe UI Symbol",
+        "Android Emoji",
+        EmojiSymbols;
+        sans-serif,
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Dokdo|Gugi|Hi+Melody|Jua|Song+Myung" rel="stylesheet">
+    <style>
+        h1 {
+            font-size: 40px;
+            font-weight: normal;
+        }
+
+        #test1 {
+            font-family: 'Hi Melody', cursive;
+            /* Hi Melody : 폰트명 // cursive : 폰트 종류 */
+        }
+
+        #test2 {
+            font-family: 'Jua', sans-serif;
+        }
+
+        #test3 {
+            font-family: 'Dokdo', cursive;
+        }
+
+        #test4 {
+            font-family: 'Song Myung', serif;
+        }
+
+        #test5 {
+            font-family: 'Gugi', cursive;
+        }
+    </style>
+</head>
+<body>
+<h1 id="test1">달의 앞면은 그림자에 가려져 있었다.</h1>
+<h1 id="test2">달의 앞면은 그림자에 가려져 있었다.</h1>
+<h1 id="test3">달의 앞면은 그림자에 가려져 있었다.</h1>
+<h1 id="test4">달의 앞면은 그림자에 가려져 있었다.</h1>
+<h1 id="test5">달의 앞면은 그림자에 가려져 있었다.</h1>
+</body>
+</html>

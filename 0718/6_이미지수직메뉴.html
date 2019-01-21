@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 수직메뉴</title>
+    <!-- reset.css -->
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #nav {
+            width: 300px;
+            height: 400px;
+            box-shadow: 0 0 1px #424242;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin:-200px 0 0 -150px;
+        }
+        /* li의 자식인 a요소 width, height 가 정해졌으면 li 는 자동으로 맞게 따라간다.*/
+        /* 하지만 유지및 보수를 위하여 항상 써주는 습관을 가지자 ! */
+        #nav li {
+            width: 300px;
+            height: 100px;
+        }
+        #nav li>a {
+            width: 300px;
+            height: 100px;
+            /* a는 인라인 요소이기 때문에 블록레벨로 지정해준다.*/
+            display: block;
+            /* IR */
+            text-indent: -9999px;
+            overflow: hidden;
+            transition:.2s ease;
+            background-repeat: no-repeat;
+        }
+        /* 뒷배경 이미지 적용 */
+        .mail a{background-image: url(img/mail_a.gif);}
+        .cafe a{background-image: url(img/cafe_a.gif);}
+        .blog a{background-image: url(img/blog_a.gif);}
+        .kin a{background-image: url(img/kin_a.gif);}
+        /* 마우스 hover 시 */
+        a:hover {
+            background-position: 0 -100px;
+        }
+        #nav a:active {
+            background-position: 0 -200px;
+            box-shadow:inset 0 0 30px #424242;
+            transition: box-shadow .5s ease;
+        }
+
+    </style>
+</head>
+<body>
+<div id="nav">
+    <h2 class="screen_out">주요 서비스</h2>
+    <ul>
+        <!-- 클래스를 a 요소에 주어도 상관은 없지만 href 값이 길어질 수 있으니 보통 이렇게 사용 -->
+        <li class="mail"><a href="">메일</a></li>
+        <li class="cafe"><a href="">카페</a></li>
+        <li class="blog"><a href="">블로그</a></li>
+        <li class="kin"><a href="">지식in</a></li>
+    </ul>
+</div>
+<!--//nav-->
+</body>
+</html>

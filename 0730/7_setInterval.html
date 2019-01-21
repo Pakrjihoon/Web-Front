@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval함수</title>
+    <link href="https://fonts.googleapis.com/css?family=Monofett" rel="stylesheet">
+    <style>
+        h1 {
+            font-family: 'Monofett', cursive;
+            font-weight: 400;
+            font-size: 70px;
+            color: #00B8D4;
+        }
+    </style>
+</head>
+<body>
+    <h1>2018-07-30 15:34:45</h1>
+<script src="js/jquery.js"></script>
+<script>
+/*
+    1) Date 객체
+    - new Date() : 객체 생성
+ */
+
+function displayTime() {
+// new Date() 하여 현재 시간을 가진 Date 객체를 생성하여
+// 변수 now에 대입(초기화)
+    var now = new Date();
+    var year = now.getFullYear();
+    var month = now.getMonth() + 1;
+    var date = now.getDate();
+    var hour = now.getHours();
+    var min = now.getMinutes();
+    var sec = now.getSeconds();
+
+    var fullTime = year+"-"+month+"-"+date+"-"+" "+hour+":"+min+":"+sec;
+    $("h1").text(fullTime);
+} // displayTime() end
+
+    // setInterval 1초마다 displayTime 함수 호출
+    setInterval(displayTime,1000);
+</script>
+</body>
+</html>

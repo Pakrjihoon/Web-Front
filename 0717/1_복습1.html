@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 | 밴드</title>
+    <link rel="shortcut icon" href="https://ssl.pstatic.net/cmstatic/webclient/icon/20180319122923/favicon.ico">
+    <style>
+        fieldset {
+            border:  none ;
+        }
+        legend {
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+<a href="https://band.us">BAND</a>
+<h2>회원가입</h2>
+<form action="" method="get">
+    <fieldset>
+        <legend>회원가입 폼</legend>
+        <div>
+            <label for="email">이메일</label>
+            <input id="email" name="email" type="email" placeholder="이메일" autocomplete="off">
+        </div>
+        <p></p>
+        <div>
+            <label for="pwd">비밀번호</label>
+            <input id="pwd" name="pwd" type="password" placeholder="비밀번호">
+            <button type="button">비밀번호 보기</button>
+        </div>
+        <p>비밀번호는 알파벳과 숫자를 포함해야 하고 6자 이상이어야 합니다.</p>
+        <div>
+            <label for="name">이름</label>
+            <input id="name" name="name" type="text" placeholder="이름">
+        </div>
+        <button>확인</button>
+        <hr/>
+        <textarea name="captcha"></textarea>
+    </fieldset>
+</form>
+
+</body>
+</html>

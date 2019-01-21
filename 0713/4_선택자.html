@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>선택자</title>
+    <style>
+        /*
+            id 선택자 : 요소 한개만 선택 '#' 키워드
+            class 선택자 : 요소 여러개 선택가능 '.' 키워드
+         */
+        #red {
+            color: #FF0000;
+        }
+        #blue {
+            color:#0000FF;
+        }
+        #green {
+            color:#00FF00;
+        }
+        .box{
+            /*
+            border : 가장자리
+            border 속성 값 : 선의두께, 선의모양, 선의색상
+            */
+            margin:20px;
+            padding: 50px;
+            border:1px solid black;
+            width: 200px; height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="red" class="box">빨강</div>
+    <div id="blue" class="box">파랑</div>
+    <div id="green" class="box">녹색</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>서버에서 다운받는 웹폰트</title>
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <link rel="stylesheet" href="css/apple.css">
+    <!--
+        웹폰트 포맷
+        - eot : 비표준, IE에서만 작동
+        - woff : web open font format
+        - otf : 윈도우, mac os 등의 font format
+    -->
+    <style>
+        .noto {
+            font-family:"Noto Sans KR", sans-serif;
+            font-size: 40px;
+            color: mediumseagreen;
+        }
+        .thin {
+            font-weight: 100;
+        }
+        .light{font-weight: 200;}
+        .demi{font-weight: 300;}
+        .regular{font-weight: 400;}
+        .medium{font-weight: 500;}
+        .bold{font-weight: 700;}
+        .black{font-weight: 900;}
+        /* font 이름 안에 띄어쓰기가 있으면 "" 혹은 '' 를 기재한다. */
+    </style>
+</head>
+<body>
+    우리서버 웹폰트 테스트 해보기
+    <div class="noto thin">우리서버 웹폰트 테스트 해보기</div>
+    <div class="noto light">우리서버 웹폰트 테스트 해보기</div>
+    <div class="noto demi">우리서버 웹폰트 테스트 해보기</div>
+    <div class="noto regular">우리서버 웹폰트 테스트 해보기</div>
+    <div class="noto medium">우리서버 웹폰트 테스트 해보기</div>
+    <div class="noto bold">우리서버 웹폰트 테스트 해보기</div>
+    <div class="noto black">우리서버 웹폰트 테스트 해보기</div>
+</body>
+</html>

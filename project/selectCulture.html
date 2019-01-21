@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>에버랜드|한바퀴</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <link rel="stylesheet" href="css/selectLocation.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+        .photosList{
+            position: relative;
+            width:1400px;
+            height: 130px;
+        }
+        .photos {
+            width: 165px;
+            height: 130px;
+            background-size: cover;
+            float: left;
+            margin-right: 10px;
+        }
+        .viewer{
+            position: relative;
+            width:960px;
+            height: 130px;
+            top:10px;
+            left:50px;
+            overflow: hidden;
+        }
+        #infoBox{
+            height: 300px;
+        }
+        #info{
+            width: 1060px;
+        }
+        #info div{
+            float: left;
+            height: 300px;
+        }
+        #location{
+            width: 360px;
+        }
+        #character {
+            width: 340px;
+            padding-left: 10px;
+        }
+        #map{
+            float: left;
+        }
+        #type{
+            width: 338px;
+            padding-left: 10px;
+            border-left: 1px solid #424242;
+            border-right: 1px solid #424242;
+        }
+        h2{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        #logoImage {
+            background-image: url("img/로고.png");
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=alert('미구현')>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="content">
+    <div id="titleBox" class="box">
+        <h1>에버랜드</h1>
+        <a href=""><img id="founderImage" src="img/joy.jpg"/></a>
+        <p>꿈과 환상의 나라 에버랜드~</p>
+    </div>
+    <div id="pictureBox" class="box">
+        <ul>
+            <li>
+                <img class="picture" src="img/maxresdefault.jpg" width="1060"/>
+            </li>
+        </ul>
+    </div>
+    <div id="pictureListBox" class="box">
+        <button id="left" class="moveBtn"><i class="fas fa-chevron-left"></i></button>
+        <button id="right" class="moveBtn"><i class="fas fa-chevron-right"></i></button>
+        <div class="viewer">
+            <ul class="photosList">
+                <li>
+                    <img class="photos" src="img/hero_image.jpg" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/로고.png" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/maxresdefault.jpg" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/thumbnail.jpg" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/joy.jpg" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/thumbnail.jpg" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/joy.jpg" width="165px" height="130px">
+                </li>
+
+                <li>
+                    <img class="photos" src="img/maxresdefault.jpg" width="165px" height="130px">
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="infoBox" class="box">
+        <div id="info">
+            <div id="location">
+                <h2>위치 정보</h2>
+                <div id="map" style="width:250px;height:250px;"></div>
+            </div>
+            <div id="type">
+                <h2>시설 타입 및 정보</h2>
+                <div class="detail">
+                    <p>레스토랑, 한식</p>
+                    <p>OPEN 09:00</p>
+                    <p>CLOSE 18:00</p>
+                    <p>매주 금요일 휴무</p>
+                </div>
+            </div>
+            <div id="character">
+                <h2>관광지 특징</h2>
+                <div class="detail">
+                    <p>레스토랑, 한식</p>
+                    <p>09:00-18:00</p>
+                    <p>매주 금요일 휴무</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="reviewBox" class="box list_card">
+        <h2>사용자 후기</h2>
+        <button id="reviewWriteBtn">리뷰 작성</button>
+        <div class="card">
+            <a href="">
+                <img src="img/cat.jpg"/>
+                <h3>정말 좋아요!</h3>
+                <p class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>2018.10.12</p>
+                <p>hellojava</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <img src="img/cat.jpg"/>
+                <h3>정말 좋아요!</h3>
+                <p class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>2018.10.12</p>
+                <p>hellojava</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <img src="img/cat.jpg"/>
+                <h3>정말 좋아요!</h3>
+                <p class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>2018.10.12</p>
+                <p>hellojava</p>
+            </a>
+        </div>
+        <div class="card">
+            <a href="">
+                <img src="img/cat.jpg"/>
+                <h3>정말 좋아요!</h3>
+                <p class="score"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></p>
+                <p>2018.10.12</p>
+                <p>hellojava</p>
+            </a>
+        </div>
+    </div>
+    <div id="aroundBox" class="box">
+        <div class="list_card">
+            <h2>주변 숙소</h2>
+            <div class="no_site">
+                주변에 숙소가 존재하지 않습니다.
+            </div>
+        </div>
+        <div class="list_card">
+            <h2>주변 음식점</h2>
+            <div class="no_site">
+                주변에 식당이 존재하지 않습니다.
+            </div>
+        </div>
+        <div class="list_card">
+            <h2>주변 즐길거리</h2>
+            <div class="no_site">
+                주변에 관광지가 존재하지 않습니다.
+            </div>
+        </div>
+    </div>
+    <div id="journalBox" class="box list_card">
+        <h2>관련 여행기</h2>
+        <div class="card_journal">
+            <a href="">
+                <img src="img/hero_image.jpg"/>
+                <div class="detail_journal">
+                    <h3>환상의 나라 에버랜드로!</h3>
+                    <p>오늘은 에버랜드를 방문 해봤어요~넘나 사람이 많...</p>
+                    <ul>
+                        <hr/>
+                        <li>에버랜드</li>
+                        <li>호원미술관</li>
+                        <li>백남준 아트센터</li>
+                        <li>에버랜드</li>
+                        <li>호원미술관</li>
+                        <li>백남준 아트센터</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="card_journal">
+            <a href="">
+                <img src="img/hero_image.jpg"/>
+                <div class="detail_journal">
+                    <h3>환상의 나라 에버랜드로!</h3>
+                    <p>오늘은 에버랜드를 방문 해봤어요~넘나 사람이 많...</p>
+                    <ul>
+                        <hr/>
+                        <li>에버랜드</li>
+                        <li>호원미술관</li>
+                        <li>백남준 아트센터</li>
+                        <li>에버랜드</li>
+                        <li>호원미술관</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+        <div class="card_journal">
+            <a href="">
+                <img src="img/hero_image.jpg"/>
+                <div class="detail_journal">
+                    <h3>환상의 나라 에버랜드로!</h3>
+                    <p>오늘은 에버랜드를 방문 해봤어요~넘나 사람이 많...</p>
+                    <ul>
+                        <hr/>
+                        <li>에버랜드</li>
+                        <li>호원미술관</li>
+                        <li>백남준 아트센터</li>
+                        <li>백남준 아트센터</li>
+                        <li>호원미술관</li>
+                    </ul>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div id="copyright">
+        <p>상호명 : (주)에르메스 | 대표 : 샤넬 | 개인정보책임자 : 루이비똥</p>
+        <p>사업자등록번호 : 201-54-10020 | 통신판매업신고번호 : 제 2018-서울관악-15411호</p>
+        <p>주소 : 충청남도 아산시 신창면 순천향로 22, 멀티미디어관 6층 | 광고 및 제휴 : hsh2@sch.ac.kr</p>
+        <br/>
+        <p>Copyright 2018. HERMES. All rights reserved.</p>
+    </div>
+</div>
+<script src="js/fix-footer.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5582a53295fa523e80970aa10695aeaa"></script>
+<script>
+    var container = document.getElementById('map');
+    var options = {
+        center: new daum.maps.LatLng(33.450701, 126.570667),
+        level: 3
+    };
+
+    var map = new daum.maps.Map(container, options);
+
+    var photoIdx=0;
+    $("#left").click(function () {
+
+        if (photoIdx != 0) {
+            photoIdx--;
+
+            var num = (-photoIdx * 175);
+            $(".photosList img").css("transform", "translateX(" + num + "px)");
+        }
+    });
+    $("#right").click(function () {
+
+        if (photoIdx != 4) {
+            photoIdx++;
+
+            var num = -(photoIdx * 175);
+            $(".photosList img").css("transform", "translateX(" + num + "px)");
+        }
+    });
+
+    var liWidth=0;
+    function getHrLength(){
+        $(".detail_journal").each(function () {
+            $(this).find("li").each(function () {
+                liWidth+=$(this).width();
+            });
+            $(this).find("hr").width(liWidth+10);
+            liWidth=0;
+        });
+    }
+    getHrLength();
+</script>
+</body>
+</html>

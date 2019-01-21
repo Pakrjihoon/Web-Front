@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax 복습</title>
+</head>
+<body>
+<h1>동아리 멤버 목록</h1>
+<button>작동</button>
+<ul>
+    <li>아직 없음</li>
+</ul>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+    /*
+        ajax 옵션객체 주요 속성
+        - url : 서버 주소
+        - data : 서버로 보낼 파라미터
+        - dataType : text, html, json, xml
+                    (서버에서 오는 데이터의 타입)
+        - type : GET, POST, PUT, DELETE
+        - error : 에러시 호출되는 콜백함수
+        - success : 성공시 호출되는 콜백함수
+     */
+    $("button").click(function () {
+       $.ajax({
+         url:"data/members.json",
+           dataType:"json",
+           error:function (xhr, error, code) {
+               // xhr : XMLHTTPRequest 객체
+               // error : 에러
+               // code : 에러코드
+               alert(code);
+           }, // error end
+           success:function (data) {
+                // data : 서버에서 넘어오는 데이터
+               $("ul").empty();
+               $(data).each(function () {
+                    $("<li>").text("이름 : "+this.name + " / "+"학과 : "+this.major + " / "+"학번 : "+this.code + " / ").appendTo("ul");
+               }); // each() end
+           } // success end
+       }); // $.ajax() end
+    }); // click ()end
+</script>
+</body>
+</html>

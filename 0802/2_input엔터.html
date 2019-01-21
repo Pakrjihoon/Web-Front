@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>input 엔터</title>
+</head>
+<body>
+    <input id="txt">
+    <button>입력</button>
+<script src="js/jquery.js"></script>
+<script>
+    $("#txt").on("keypress",function (e) {
+        /*
+           주요키코드
+           - 엔터 : 13
+           - 0 : 48
+           - A : 65
+           - a : 97
+           - ← :37
+           - ↑ : 38
+           - → : 39
+           - ↓ : 40
+         */
+        if(e.keyCode==13) {
+            var txt = $("#txt").val();
+            alert(txt);
+        }
+    });
+    $("button").on("click",function () {
+        var txt = $("#txt").val();
+        alert(txt);
+    }); // button.click() end
+</script>
+</body>
+</html>

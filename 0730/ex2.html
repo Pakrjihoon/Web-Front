@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex2</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/apple.css" />
+    <style>
+        body {
+            font-family: "SF Pro KR",sans-serif;
+            text-align: center;
+        }
+        #txt {
+            font-size: 60px;
+            font-weight: 600;
+            padding: 30px;
+            transition: .2s ease;
+        }
+        #btn {
+            /* 대체되는 요소들은 font 상속이 안되므로 직접 지정 */
+            font-family: "SF Pro KR",sans-serif;
+            font-weight: 600;
+            padding: 10px 20px;
+            font-size: 30px;
+            cursor: pointer;
+            color: #fff;
+            background-color: lightskyblue;
+            border: none;
+            transition: .5s ease;
+        }
+        #btn:hover {
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+            background-color: #0277BD;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="txt">버튼을 눌러보세요.</h1>
+    <button id="btn">난 버튼</button>
+    <script src="js/jquery.js"></script>
+    <script>
+        $("#btn").click(function () {
+            $("#txt").css({
+                color:"#fff",
+                transform:"scale(2)",
+                "text-shadow":"0 0 20px deepskyblue"
+            });
+        }); // #btn click() end
+    </script>
+</body>
+</html>

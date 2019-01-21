@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>랜덤한 정수 발생</title>
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<img src="img/c1.jpg"/>
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        수학객체는 Marth
+        - random() : 0~0.9999999 .... 까지의 실수 발생
+        - floor() : 버림함수
+        - Math.floor(Math.random()*갯수)+시작수
+     */
+    var $img = $("img");
+    $img.click(function () {
+       /* var num = Math.floor((Math.random()*6)+5);
+        alert(num);
+        */
+        var rnd = Math.floor((Math.random()*5)+1);
+        $img.attr("src", "img/c" + rnd + ".jpg");
+        // num 1증가
+        // num = num + 1
+        // num += 1;
+    });
+</script>
+</body>
+</html>

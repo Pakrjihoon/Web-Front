@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가운데 정렬</title>
+    <style>
+        #parent {
+            width: 800px;
+            height: 600px;
+            border: 1px solid black;
+            /*
+               인라인(글자: 컨텐츠)의 가운데 정렬
+               - 부모에 text-align:center
+             */
+            text-align: center;
+        }
+        #parent span {
+            background : pink;
+        }
+        #parent div {
+            width:100px;
+            background: aquamarine;
+            margin: auto;
+            /*
+                블록레벨의 수평 가운데 정렬
+                (width값이 지정한 상태에서 margin: auto)
+             */
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <span>인라인</span>
+        <div>블록</div>
+    </div>
+</body>
+</html>

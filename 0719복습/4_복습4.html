@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/notosanskr.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>복습4</title>
+    <style>
+        h1 {
+            width: 200px;
+            height: 60px;
+            font-family: "Noto Sans KR", sans-serif;
+            font-weight: 700;
+            font-size: 15px;
+            background-color: yellow;
+            line-height: 60px;
+            text-indent: 30px;
+            position: absolute;
+            left:50%;
+            top:50%;
+            margin : -120px 0 0  -220px;
+        }
+        #carBox {
+            border:10px solid yellow;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin: -210px 0 0 -210px; ;
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+        }
+        h1::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-top: 10px solid #d8d802;
+            border-left: 10px solid transparent;
+            left:0;
+            top:60px;
+        }
+    </style>
+</head>
+<body>
+<div id="carBox">
+    <h1>노란색 스포츠카</h1>
+    <img src="img/c4.jpg" width="400px" alt="car"/>
+</div>
+</body>
+</html>

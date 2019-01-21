@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>영화진흥위원회 API 활용</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        td, th {
+            border: 2px solid #424242;
+            padding: 10px 12px;
+            text-align: center;
+        }
+        #loader {
+            background-image: url(img/loader.gif);
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: none;
+            background-color: rgb(255,255,255) ;
+            opacity: .5;
+        }
+    </style>
+</head>
+<body>
+<h1>2018년 8월 13일 박스오피스</h1>
+<button>불러오기</button>
+<table>
+    <thead>
+    <tr>
+        <th>순위</th>
+        <th>영화제목</th>
+        <th>개봉일</th>
+        <th>누적매출액</th>
+        <th>누적관객수</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td colspan="5">없음</td>
+    </tr>
+    </tbody>
+</table>
+<div id="loader"></div>
+<script src="js/jquery.js"></script>
+<script>
+    var $loader = $("#loader");
+    $("button").click(function () {
+        $loader.show();
+        $.ajax({
+            url:"http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
+            data:{
+                key:"430156241533f1d058c603178cc3ca0e",
+                targetDt:"20180813"
+            },
+            error:function () {
+                alert("Error!");
+            }, //error end
+            success:function (movieData) {
+                var movies = movieData.boxOfficeResult.dailyBoxOfficeList;
+                $("tbody").empty();
+                $(movies).each(function () {
+                    var $tr = $("<tr>");
+                    var $td1 = $("<th>").text(this.rank);
+                    var $td2 = $("<td>").text(this.movieNm);
+                    var $td3 = $("<td>").text(this.openDt);
+                    var $td4 = $("<td>").text(this.salesAcc+"원");
+                    var $td5 = $("<td>").text(this.audiAcc+"명");
+
+                    $tr.append($td1,$td2,$td3,$td4,$td5).appendTo("tbody");
+                }); // each() end
+                $loader.hide();
+            }
+        }) //ajax() end
+    }); //click() end
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>요소의 추가 / 삭제</title>
+    <style>
+        #animalList {
+            background: antiquewhite;
+            list-style: none;
+            padding: 20px;
+            width: 200px;
+        }
+        #animalList li {
+            width: 180px;
+            height: 60px;
+            background-color: #987654;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+            line-height: 60px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <input id="name" autofocus placeholder="동물 이름 입력" autocomplete="off">
+        <button id="addBtn">동물 추가</button>
+        <button id="removeBtn">전체 삭제</button>
+    </p>
+    <h1>동물 리스트</h1>
+    <ul id="animalList">
+        <li>맘모스</li>
+    </ul>
+<script src="js/jquery.js"></script>
+<script>
+    var $name = $("#name");
+
+    // input에서 글자를 얻어와서
+    // 새로운 li 요소를 생성한 뒤 ul에 붙이는 메서드
+    function createElement() {
+        // 유저가 입력한 글자 얻어와서 name 변수에 대입
+        // 쓸 때없는 문자를 자르는 구문 trim();
+        var name = $("#name").val().trim();
+
+        if(name.length == 0) {
+            alert("동물 이름을 입력해주세요");
+            return ;
+        } else {
+            // 유저가 동물이름을 입력하였음
+            /*
+                추가하는 메서드
+                1) 부모.append(자식) : 마지막 자식으로 추가
+                2) 자식.appendTo(부모) : 마지막 자식으로 추가
+                3) 부모.prepend(자식) : 첫번째 자식으로 추가
+                4) 자식.prependTo(부모) : 첫번재 자식으로 추가
+                5) 새로운요소.insertAfter(기존요소) : 형제로 다음에 추가
+                6) 새로운요소.insertBefore(기존요소) : 형제로 이전에 추가
+                7) 기존요소.after(새로운요소) : 형제로 다음에 추가
+                8) 기존요소.before(새로운요소) : 형제로 이전에 추가
+             */
+            $("<li>").text(name).appendTo("#animalList");
+            // li 요소 생성 후 글자 입력하고
+            // ul 요소의 마지막 자식으로 추가
+            // $("<li>").text(name)
+            //     .insertAfter("li:last");
+
+            // $("li:last").after($("<li>").text(name));
+        } // if~else end
+    } //createElement() end
+
+    $("#addBtn").on("click",createElement); //click() end
+    $name.keyup(function (e) {
+        if(e.keyCode==13) {
+            createElement();
+        }//if end
+    }); // keyup() end
+    $("#removeBtn").on("click",function () {
+        /*
+            부모.empty() : 자식 전부 제거
+            요소.remove() : 요소 삭제
+         */
+       $("#animalList").empty();
+    }); //click() end
+    /*
+        1) 요소.on(이벤트명,함수) : 요소에 해당이벤트리스너를 붙임
+        2) 부모.on(이벤트명,자식,함수) : 미래에 추가될 자식에게도
+                                    이벤트 리스너를 붙이는 메서드로 강력함
+     */
+    $("#animalList").on("click","li",function () {
+        $(this).remove();
+    }); //click() end
+
+    // id가 name인 input요소에 포커스 맞추기
+    $name.focus();
+</script>
+</body>
+</html>

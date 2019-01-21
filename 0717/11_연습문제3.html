@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습3</title>
+    <link rel="shortcut icon" href="https://assets-cdn.github.com/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu|Nanum+Pen+Script" rel="stylesheet">
+    <style>
+        .bar {
+            width:192px;
+            height: 118px;
+            text-align: center;
+            line-height: 118px;
+            color: #FFF;
+            font-weight: bold;
+            font-size: 40px;
+            left: 50%;
+            top: 50%;
+            position: fixed;
+            margin-top: -118px;
+            margin-left: -192px;
+            transition : .6s ease;
+            font-family: 'Nanum Pen Script', cursive ,'sans-serif';
+            text-decoration: underline;
+        }
+        #menu1 {
+            background-color: #0887D7;
+            transform-origin: top;
+        }
+        #menu2 {
+            background-color: hotpink;
+            margin-left: 0;
+            transform-origin: right;
+        }
+        #menu3 {
+            background-color: rgb(30%,20%,60%);
+            margin-top: 0;
+            transform-origin: left;
+        }
+        #menu4 {
+            background-color: rgba(70%, 40%, 10%, .95);
+            margin: 0 0 0 0;
+            transform-origin: bottom;
+        }
+        #git {
+            width: 384px;
+            height: 236px;
+            background-image: url(img/git.gif);
+            float: left;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin-top: -118px;
+            margin-left: -192px;
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+        #menu1:active {
+            transform: perspective(192px) rotateX(-80deg);
+        }
+        #menu2:active {
+            transform: perspective(118px) rotateY(-60deg);
+        }
+        #menu3:active {
+            transform: perspective(192px) rotateY(60deg);
+        }
+        #menu4:active {
+            transform: perspective(192px) rotateX(80deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="git"></div>
+    <div id="menu1" class="bar">메뉴1</div>
+    <div id="menu2" class="bar">메뉴2</div>
+    <div id="menu3" class="bar">메뉴3</div>
+    <div id="menu4" class="bar">메뉴4</div>
+
+</body>
+</html>

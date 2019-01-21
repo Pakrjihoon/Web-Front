@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>네이버텝</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style>
+
+        body, h1, h2, h3, h4, input, button {
+            font-family: 'Noto Sans KR', 'Nanum Gothic', "돋움", Dotum, Helvetica, "Apple SD Gothic Neo", sans-serif;
+            font-size: 12px;
+            background: #F2F4F7;
+        }
+
+        .shop_wrap {
+            margin: 20px auto;
+            position: relative;
+            width: 330px;
+            height: 882px;
+            border: 1px solid #dee3eb;
+            background: #fff;
+        }
+
+        .shop_header {
+            position: relative;
+            height: 44px;
+            border-bottom: 1px solid #ebeef3;
+
+        }
+        .shop_header h2 {
+            display: inline-block;
+            padding: 13px 16px;
+            background-color: #fff;
+        }
+
+        .shop_header h2 a {
+            display: inline-block;
+            display: block;
+            width: 26px;
+            height: 18px;
+            background-position: -98px 0;
+            background-image: url(img/sp_shopping_v170424.png);
+            background-repeat: no-repeat;
+            text-indent: -9999px;
+            overflow: hidden;
+        }
+
+        .shop_tab {
+            overflow: hidden;
+            padding-left: 1px;
+            position: absolute;
+            top: 0;
+            right: -0px;
+            height:45px;
+        }
+
+        .shop_tab li {
+            float: left;
+            position: relative;
+            line-height: 999px;
+            overflow: hidden;
+            list-style: none;
+            padding: 13px 5px 11px ;
+            margin-right: 10px;
+            opacity: .6;
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+        }
+
+        .shop_tab li > a {
+            width: 26px;
+            height: 18px;
+            display: block;
+            text-indent: -9999px;
+            overflow: hidden;
+            margin:0 1px 0 1px;
+            background-image: url(img/sp_shopping_v170424.png);
+            background-clip: content-box;
+
+        }
+        .shop_tab li:nth-child(1) {
+            margin-right: 11px;
+        }
+
+        .shop_tab li.on {
+            opacity: 1;
+            border-bottom-color:#777f83;
+        }
+
+        .shop_tab li:nth-child(1) > a {
+            background-position: -38px -64px;
+        }
+
+        .shop_tab li:nth-child(2) > a {
+            width:38px;
+            background-position: -50px 0;
+        }
+
+        .shop_tab li:nth-child(3) > a {
+            width:28px;
+            background-position: 0 -64px;
+        }
+
+        .shop_contents {
+            border-top: none;
+            width: 330px;
+            height: 821px;
+        }
+        .shop_contents img {
+            margin-left:5px;
+        }
+
+        .shop_contents .tab {
+            position: absolute;
+            display: none;
+        }
+
+        .shop_contents .tab.on {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div class="shop_wrap">
+    <div class="shop_header">
+        <h2><a href="http://shopping.naver.com/">쇼핑</a></h2>
+        <ul class="shop_tab">
+            <li class="on">
+                <a href="" title="상품은 광고영역입니다.">상품</a>
+            </li>
+            <li>
+                <a href="" title="쇼핑몰은 광고영역입니다.">쇼핑몰</a>
+            </li>
+            <li>
+                <a href="" title="MEN은 광고영역입니다.">맨즈</a>
+            </li>
+        </ul>
+    </div><!--//shop_header-->
+    <div class="shop_contents">
+        <div class="tab on">
+            <img src="img/t1.jpg"/>
+        </div>
+        <div class="tab">
+            <img src="img/t2.jpg"/>
+        </div>
+        <div class="tab">
+            <img src="img/t3.jpg"/>
+        </div>
+    </div><!--//contents-->
+</div><!--//shop_wrap-->
+<script src="js/jquery.js"></script>
+<script>
+    $(".shop_tab li").on("click",function (e) {
+        // 브라우저가 가진 기능 막기(a요소의 링크이동막기)
+        e.preventDefault();
+
+        // 기존의 on 클래스를 제거
+        $(".on").removeClass("on");
+
+        //우리가 클릭한 그 li에 on클래스 추가함
+        $(this).addClass("on");
+
+        // .tab 요소들중에 해당 idx에 on클래스를 추가한다.
+        var idx = $(this).index();
+        $(".tab").eq(idx).addClass("on");
+
+    }); //.shop_tab click() end
+</script>
+</body>
+</html>

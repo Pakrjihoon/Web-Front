@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>for문</title>
+</head>
+<body>
+<select id="year">
+    <!--<option id="year"></option>-->
+</select>년도
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        반복문 : 반복하는 문장 (for / while)
+
+        for 문의 문법
+        for (초기식; 조건식; 증감식) {
+            반복할 구문
+        }
+        조건식이 true 인 동안 반복
+
+        순서
+        1) 초기식은 한번만
+        2) 조건식 수행 후 참인경우만
+        3) 반복할 구문 작동
+        4) 증감식
+        5) 조건식 수행 후 참인경우만
+        6) 반복할 구문 작동
+        7) 증감식
+        8) 조건식 수행후 false면 끝
+     */
+
+    /*
+    for ( ; ; ) {
+    alert("test")
+    } //for end -> 초기식 조건식 증감식을 아무것도 쓰지 않으면 무한반복
+     */
+    // for(var i=0; i<=10; i++) {
+    //     document.write(i+"<br/>");
+    // }
+    // var a= 2;
+    // for(var i=1; i<10; ++i){
+    //     document.write(a+"*"+i+"="+a*i+"<br/>");
+    // }
+
+    for(var i=2018; i>1904; i--) {
+        $("<option>").text(i).appendTo("#year");
+    }
+</script>
+</body>
+</html>

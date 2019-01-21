@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>명소 등록</title>
+</head>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="icon" href="img/favicon-96x96.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="css/tui-time-picker.css" />
+<style>
+    body {
+        height: auto;
+    }
+    #wrap {
+        position: relative;
+        margin: auto;
+        width: 700px;
+        height: auto;
+        left: 25px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    }
+    #detailHeader {
+        width: 650px;
+        height: 100px;
+        margin-top: 20px;
+    }
+    #firstFlow ,#secondFlow, #lastFlow {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 180px;
+        height: 50px;
+        background-color: #f0f0f0;
+        display: inline-block;
+        line-height: 50px;
+        margin-top: 20px;
+        margin-left: 22px;
+        border-radius: 10px;
+    }
+    #lastFlow {
+        background-color: #40BEED;
+        color: #fff;
+    }
+    hr {
+        width: 500px;
+        position: absolute;
+        left: 75px;
+        top: 35px;
+        z-index: -1;
+    }
+    #nav {
+        width: 650px;
+        height: 150px;
+    }
+    .navigation {
+        width: 650px;
+        height: 75px;
+        line-height: 75px;
+    }
+    #checkIn, #checkOut {
+        font-size: 20px;
+        width: 200px;
+        height:75px;
+        float: left;
+        font-weight: bold;
+    }
+    .navigation {
+        text-align: right;
+        line-height: 75px;
+    }
+    #leftSide {
+        width: 320px;
+        height: 200px;
+        float: left;
+        border-right: 1px solid #424242;
+    }
+    #rightSide {
+        width: 360px;
+        height: 220px;
+        float: right;
+    }
+    .content2 {
+        width:650px;
+        height: 200px;
+        line-height: 30px;
+        text-align: center;
+    }
+    #leftSide>h2 , #rightSide>h2, #content>h2, #wrap h2{
+        font-size: 20px;
+        text-indent: 10px;
+        font-weight: bold;
+        margin: 10px;
+    }
+    #leftSide .type {
+        height: 30px;
+    }
+    .type {
+        margin: 5px;
+        width: 150px;
+        height: 20px;
+        float: left;
+    }
+    .type2 {
+        width: 500px;
+        margin: 5px;
+        height: 20px;
+        float: left;
+        text-align: left;
+    }
+    .menu{
+        border: 1px solid #424242;
+        border-radius: 5px;
+        outline: #40BEED;
+    }
+    #selector {
+        width: 650px;
+        height: 50px;
+        position: relative;
+        margin: auto;
+        top: 20px;
+    }
+    .selectBtn {
+        position: absolute;
+        border-radius: 20px;
+        padding: 10px;
+        font-size: 15px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #424242;
+        background-color: #f0f0f0;
+        transition: .3s ease;
+        box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .selectBtn:hover {
+        background-color: #40BEED;
+        color: #ffffff;
+    }
+    .select1 {
+        margin-left: 150px;
+    }
+    .select2 {
+        left: 400px;
+    }
+    #addMenu {
+        width: 650px;
+        height: 50px;
+        text-align: center;
+    }
+    #addMenu button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .mainImage {
+        width: 190px;
+        height: 150px;
+        margin-left: 10px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        float: left;
+        transition: .2s ease;
+
+    }
+    .mainImage:hover {
+        background-color: #F0F0F0;
+    }
+    .detail {
+        width: 450px;
+        height: 200px;
+        float: right;
+    }
+    .picture, .picture>i {
+        width: 190px;
+        height: 100%;
+        line-height: 150px;
+        text-align: center;
+        font-size: 50px;
+        cursor: pointer;
+        float: left;
+    }
+    #timepicker-wrapper2, #timepicker-wrapper3 {
+        float: left;
+        height: 75px;
+        line-height: 80px;
+        width:400px;
+        margin:5px;
+    }
+</style>
+<body>
+<div id="wrap">
+    <form action="" method="post">
+        <div id="detailHeader">
+            <div id="firstFlow">명소 검색</div>
+            <div id="secondFlow">기본 정보 입력</div>
+            <div id="lastFlow">상세 정보 입력</div>
+            <hr/>
+        </div>
+        <div id="nav">
+            <div id="checkIn" class="navigation">체크 인</div>
+            <div id="timepicker-wrapper2"></div>
+            <div id="checkOut" class="navigation">체크 아웃</div>
+            <div id="timepicker-wrapper3"></div>
+        </div>
+        <div id="leftSide">
+            <h2>시설 타입</h2>
+            <label class="type"><input type="radio" name="diningtype">호텔</label>
+            <label class="type"><input type="radio" name="diningtype">모텔</label>
+            <label class="type"><input type="radio" name="diningtype">게스트 하우스</label>
+            <label class="type"><input type="radio" name="diningtype">민박 및 펜션</label>
+            <label class="type"><input type="radio" name="diningtype">호스텔 및 콘도</label>
+            <label class="type"><input type="radio" name="diningtype">기타</label>
+        </div>
+        <div id="rightSide">
+            <h2>부대 시설</h2>
+            <label class="type"><input type="checkbox" name="diningkind">무료주차</label>
+            <label class="type"><input type="checkbox" name="diningkind">풀(월풀 욕조)</label>
+            <label class="type"><input type="checkbox" name="diningkind">룸 서비스</label>
+            <label class="type"><input type="checkbox" name="diningkind">조식 제공</label>
+            <label class="type"><input type="checkbox" name="diningkind">애완동물 허용</label>
+            <label class="type"><input type="checkbox" name="diningkind">음식점</label>
+            <label class="type"><input type="checkbox" name="diningkind">장애인 시설 완비</label>
+            <label class="type"><input type="checkbox" name="diningkind">무료 와이파이</label>
+            <label class="type"><input type="checkbox" name="diningkind">에어컨</label>
+            <label class="type"><input type="checkbox" name="diningkind">금연 시설</label>
+        </div>
+        <h2>객실 정보</h2>
+        <div class="content2">
+            <div class="mainImage">
+                <label class=picture><i class="fas fa-camera"></i>
+                <input class="screen_out" name="picture" type="file">
+            </label>
+            </div>
+            <div class="detail">
+                <label class="type2">객실 이름 <input class="menu" type="text" name="menuName"></label>
+                <label class="type2">기준 인원 / 최대 인원
+                <input class="menu" type="text" name="basicPeople" size="3"> 명 /
+                <input class="menu" type="text" name="maxPeople" size="3"> 명</label>
+                <label class="type2">1일 숙박 금액 <input class="menu" type="number" name="price"> 원</label>
+                <label class="type2">기준인원 외 추가 금액 <input class="menu" type="number" name="price"> 원
+                <label><input type="checkbox">없음</label></label>
+                <label class="type2">대실 가격<input class="menu" type="number" name="price"> 원
+                <label><input type="checkbox">존재하지 않음</label></label>
+            </div>
+        </div>
+    </form>
+<div id="addMenu">
+        <button id="addBtn" type="button"><i class="fas fa-plus-circle"></i> 추가 하기</button>
+</div>
+</div>
+<div id="selector">
+        <a href="basicInfo.html" class="selectBtn select1">&lt; 이전으로</a>
+        <a href="" id="clearRegister" class="selectBtn select2">등록하기 &gt;</a>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/tui-code-snippet.min.js"></script>
+<script src="js/tui-time-picker.min.js"></script>
+<script>
+    $("#clearRegister").click(function () {
+        alert("등록 완료");
+    });
+    $("#addBtn").click(function () {
+        $(".content2").eq($(this).index()).after(' <div class="content2">\n' +
+            '<div class="mainImage">\n'+
+           ' <label class=picture for="pictures"><i class="fas fa-camera"></i>\n'+
+           ' <input class="screen_out" name="picture" type="file">\n'+
+           ' </label></div>\n'+
+            '<div class="detail">\n'+
+            '<label class="type2">객실 이름 <input class="menu" type="text" name="menuName"></label>\n'+
+            '<label class="type2">기준 인원 / 최대 인원\n'+
+        '<input class="menu" type="text" name="basicPeople" size="3"> 명 /\n'+
+         '   <input class="menu" type="text" name="maxPeople" size="3"> 명</label>\n'+
+          '  <label class="type2">1일 숙박 금액 <input class="menu" type="number" name="price"> 원</label>\n'+
+           ' <label class="type2">기준인원 외 추가 금액 <input class="menu" type="number" name="price"> 원\n'+
+            '<label><input type="checkbox">없음</label></label>\n'+
+       ' <label class="type2">대실 가격<input class="menu" type="number" name="price"> 원\n'+
+        '    <label><input type="checkbox">존재하지 않음</label></label>\n'+
+        '</div>\n'+
+        '</div></div>');
+    });
+    var now = new Date();
+    var instance = new tui.TimePicker('#timepicker-wrapper2', {
+        initialHour: now.getHours(),
+        initialMinute: now.getMinutes(),
+        inputType: 'selectbox'
+    });
+    var instance2 = new tui.TimePicker('#timepicker-wrapper3', {
+        initialHour: now.getHours(),
+        initialMinute: now.getMinutes(),
+        inputType: 'selectbox'
+    });
+</script>
+</body>
+</html>

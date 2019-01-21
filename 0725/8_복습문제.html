@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>복습문제</title>
+    <style>
+        #wrap {
+            border: 2px solid #424242;
+            width: 1000px;
+            height: 830px;
+            margin: auto;
+        }
+        #carBox{
+            margin: 0 100px ;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+        }
+        #carList {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+        }
+        #carList li {
+            margin: 5px;
+            display: inline-block;
+
+        }
+        #carList li>img {
+            opacity: .5;
+            cursor: pointer;
+            transition: .3s ease;
+            border: 5px solid transparent;
+        }
+        #carList li>img:hover {
+            opacity: 1;
+            border: 5px solid #424242;
+        }
+        #carBox img {
+            z-index: 2;
+
+        }
+        #popup {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0,0,0,.8);
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>멋진 자동차들</h1>
+        <div id="carBox">
+            <img id="change" src="img/no_image.jpg" width="800"
+                 alt="아래의 자동차 이미지에 마우스를 가져가보세요"
+                 title="아래의 자동차 이미지에 마우스를 가져가보세요"/>
+        </div>
+        <ul id="carList">
+            <li>
+                <img src="img/c1.jpg" width="160" alt="포르토피노"/>
+            </li>
+            <li>
+                <img src="img/c2.jpg" width="160" alt="720s"/>
+            </li>
+            <li>
+                <img src="img/c3.jpg" width="160" alt="G70"/>
+            </li>
+            <li>
+                <img src="img/c4.jpg" width="160" alt="DB11"/>
+            </li>
+            <li>
+                <img src="img/c5.jpg" width="160" alt="911"/>
+            </li>
+        </ul>
+    </div> <!--//#wrap-->
+    <div id="popup"></div>
+<script src="js/jquery.js"></script>
+<script>
+
+    $("li").mouseover(function () {
+        var select1 = $(this).index();
+        select1 = select1+1;
+        $("#change").attr("src","img/c"+(select1)+".jpg");
+    });
+    $("#change").click(function () {
+        $("#popup").fadeIn(500);
+    });
+    $("#popup").click(function () {
+        $("#popup").fadeOut(500);
+    });
+</script>
+</body>
+</html>

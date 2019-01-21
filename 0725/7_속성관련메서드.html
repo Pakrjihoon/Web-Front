@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>속성관련메서드</title>
+</head>
+<body>
+<p>
+    <button>이미지 변경</button>
+    <button>title 값 얻기</button>
+    <button>속성 여러개 변경</button>
+</p>
+<img src="img/p1.jpg" width="200" alt="인크레더블2 포스터" title="인크레더블2">
+<script src="js/jquery.js"></script>
+<script>
+    /*
+        HMTL의 속성관련 메서드 : attr();
+        - attr(명, 값) : setter
+        - attr(명) : getter
+        - attr(객체) : 여러개 setter
+     */
+    $("button:first-child").click(function () {
+        $("img").attr("src","img/p4.jpg");
+    }); //button:first-child click() end
+    $("button:eq(1)").click(function () {
+        var title = $("img").attr("title");
+        alert(title);
+    }); //attr() end
+    $("button:last-child").click(function () {
+        $("img").attr({"src":"img/p4.jpg","width":600,"title":"마녀","alt":"마녀포스터"});
+    }); //button:eq(2) click() end
+</script>
+</body>
+</html>

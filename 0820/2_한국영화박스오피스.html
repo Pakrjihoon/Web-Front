@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>한국영화박스오피스</title>
+    <style>
+        #loader {
+            background: rgba(255,255,255,.6) url(img/loader.gif);
+            background-position: center;
+            background-repeat: no-repeat;
+            display: none;
+        }
+        #popup {
+            background: rgba(0,0,0,.8);
+            display: none;
+        }
+        #infoBox {
+            width: 400px;
+            min-height: 300px;
+            /* height 는 고정값이지만 min height는 최소값이다.*/
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin : -210px 0 0 -160px;
+            padding: 10px;
+            box-shadow: 0 0 20px #fff;
+        }
+        .full {
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            position: fixed;
+        }
+    </style>
+</head>
+<body>
+<h1>2018년 8월 19일 영화 박스 오피스</h1>
+<ol id="movieList">
+    <li><a href="" data-id="20170670">목격자</a></li>
+    <li><a href="" data-id="20179101">공작</a></li>
+    <li><a href="" data-id="20186202">신과함께-인과 연</a></li>
+    <li><a href="" data-id="20181942">맘마미아!2</a></li>
+    <li><a href="" data-id="20183584">메가로돈</a></li>
+    <li><a href="" data-id="20184802">몬스터 호텔3</a></li>
+    <li><a href="" data-id="20181181">미션 임파서블: 폴아웃</a></li>
+    <li><a href="" data-id="20187641">극장판 도라에몽 : 진구의 보물섬</a></li>
+    <li><a href="" data-id="20186501">극장판 헬로카봇 : 백악기 시대</a></li>
+    <li><a href="" data-id="20187427">명탐정 코난 : 제로의 집행인</a></li>
+</ol>
+<div id="popup" class="full">
+    <div id="infoBox">
+        <h2 id="title">제목</h2>
+        <dl>
+            <dt>감독</dt>
+            <dd id="director">xx</dd>
+            <dt>장르</dt>
+            <dd id="genres">ㅋㅋㅋㅋ</dd>
+            <dt>개봉일</dt>
+            <dd id="releaseDate">xxxx년 x월 x일</dd>
+            <dt>배우</dt>
+            <dd id="actors">이성민, 황정민, 주지훈, 조진웅</dd>
+        </dl>
+    </div>
+</div>
+<div id="loader" class="full"></div>
+<script src="js/jquery.js"></script>
+<script src="js/moment-with-locales.js"></script>
+<script>
+    var $loader = $("#loader");
+    var $popup = $("#popup");
+    $("#movieList a").click(function (e) {
+        e.preventDefault();
+        $loader.show();
+        var id = $(this).data("id");
+        $.ajax({
+            url:"http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieInfo.json",
+            type : "get",
+            dataType:"json",
+            data : {
+                key :"ec0ce64312eca4dc382192ffd1eae636",
+                movieCd: id
+            },
+            error:function () {
+                alert("Error!");
+            },  //error end
+            success:function (json) {
+                var movie = json.movieInfoResult.movieInfo;
+                console.log(json);
+                var title = movie.movieNm;
+                var directors = "";
+                var genres = "";
+                var actors = "";
+                var releaseDate = movie.openDt;
+                $(movie.directors).each(function (/*idx*/) {
+                    directors += this.peopleNm+", ";
+                    // if(movie.directors.length -1 != idx) {
+                    //     directors +=", ";
+                    // } // if end
+                }); // each() end
+
+                $(movie.genres).each(function () {
+                    genres +=this.genreNm+", ";
+                }); // each() end
+
+                $(movie.actors).each(function () {
+                    actors +=this.peopleNm+", ";
+                }); // each() end
+                // 제일 뒤의 2글자 잘라내기
+                directors = directors.substring(0,directors.length-2);
+                genres = genres.substring(0,genres.length-2);
+                actors = actors.substring(0,actors.length-2);
+                $("#director").text(directors);
+                $("#title").text(title);
+                $("#genres").text(genres);
+                $("#actors").text(actors);
+                $("#releaseDate").text(moment(releaseDate).format("YYYY년 MM월 DD일"));
+                $loader.hide();
+                $popup.show();
+
+                var height = $("#infoBox").height();
+                // 동적으로 margin-top을 변경
+                $("#infoBox").css("margin-top","-"+((height/2)+10)+"px");
+            }   //success end
+        }); //ajax() end
+    }); // click() end
+    $popup.click(function () {
+       $popup.hide();
+    });
+</script>
+</body>
+</html>

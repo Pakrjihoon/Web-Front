@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>움직이기!!</title>
+</head>
+<style>
+    img {
+        transition:.1s ease;
+    }
+</style>
+<body>
+<p>
+    <button>움직여!</button>
+</p>
+<img src="img/github-mark.png" width="200" />
+<script src="js/jquery.js"></script>
+<script>
+    var x, y;
+    x = 30;
+    y = 0;
+    $("button").click(function () {
+        x +=30;
+        y +=0;
+        $("img").css("transform","translate("+x+"px,"+y+"px");
+    });
+</script>
+</body>
+</html>

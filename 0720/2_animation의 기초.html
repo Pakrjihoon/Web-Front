@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션</title>
+    <style>
+        #ryan {
+            position : absolute;
+            /*
+                position 기본 값은 static (정적인)
+                static 이면 left, top, right, bottom에
+                숫자를 지정해도 안움직임
+             */
+            animation: move 2s ease infinite;
+        }
+        /*
+            애니메이션은 두가지를 생각해야 합니다.
+            1) keyframes
+            2) animation 속성
+         */
+        @keyframes move {
+            0% {left: 0; top:0;}
+            25% {left:200px; top:0;}
+            50% {left:200px; top:200px;}
+            75%{left:0;top:200px;}
+            100% {left: 0; top:0;}
+        }
+        #heart {
+            width:300px;
+            height: 300px;
+            background-image: url(img/heart.png);
+            background-size: 100% 100%;
+            position: fixed;
+            left:50%;
+            top:50%;
+            margin:-150px 0 0 -150px;
+            animation:bounce 1s ease infinite;
+        }
+        @keyframes bounce {
+            0% {transform:scale(1);}
+            25% {transform: scale(0.65);}
+            50% {transform: scale(1.35);}
+            75% {transform: scale(0.8);}
+            100% {transform: scale(1);}
+        }
+    </style>
+</head>
+<body>
+    <img src="img/ryan.png" id="ryan">
+    <div id="heart"></div>
+</body>
+</html>

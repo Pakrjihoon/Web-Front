@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>ex2</title>
+		<link rel="stylesheet" href="css/notosanskr.css"/>
+		<style>
+			body {
+				font-family: "Noto Sans KR", sans-serif;
+				margin: 0;
+			}
+			.screen_out {
+				width: 0;
+				height: 0;
+				line-height: 0;
+				text-indent: -9999px;
+				position: absolute;
+				overflow: hidden;
+			}
+			#menu {
+				width: 150px;
+				margin: 20px auto;
+				box-shadow: 1px 1px 5px #424242;
+			}
+			#menu ul{
+				width: 150px;
+				margin: 0;
+				list-style: none;
+				padding: 1px 0;
+			}
+			#menu li {
+				margin: 6px;
+			}
+			#menu a {
+				width: 100px;
+				height: 27px;
+				display: block;
+				font-weight: 100;
+				text-decoration: none;
+				color: #424242;
+				background-repeat: no-repeat;
+				text-indent: 28px;
+				background-position: 0 3px;
+			}
+			#menu a:hover {
+				color: #9876F1;
+				font-weight: 900;
+				background-position: 0 -157px;
+			}
+			#menu li:nth-child(1) a {background-image: url(img/gnb_menu_icon_01.png);}
+			#menu li:nth-child(2) a {background-image: url(img/gnb_menu_icon_02.png);}
+			#menu li:nth-child(3) a {background-image: url(img/gnb_menu_icon_03.png);}
+			#menu li:nth-child(4) a {background-image: url(img/gnb_menu_icon_04.png);}
+			#menu li:nth-child(5) a {background-image: url(img/gnb_menu_icon_05.png);}
+			#menu li:nth-child(6) a {background-image: url(img/gnb_menu_icon_06.png);}
+        </style>
+	</head>
+	<body>
+	<!-- div는 브라우저가 가지고있는 기본 css 가 없다. -->
+		<div id="menu">
+			<h1 class="screen_out">밴드 메뉴</h1>
+			<ul>
+				<li><a href="">게시판</a></li>
+				<li><a href="">사진첩</a></li>
+				<li><a href="">채팅방</a></li>
+				<li><a href="">캘린더</a></li>
+				<li><a href="">멤버</a></li>
+				<li><a href="">설정</a></li>
+			</ul>
+		</div>	 
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

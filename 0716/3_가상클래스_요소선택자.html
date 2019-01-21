@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>가상 클래스 &amp; 요소</title>
+    <style>
+        /*
+            가상클래스 선택자 : ":"
+            - link : 다녀오지 않은 하이퍼링크 (브라우저 기본 : 파란색)
+            - visited : 다녀온 하이퍼링크 (브라우저 기본 : 보라색)
+            - hover : 마우스 오버시
+            - active : 마우스 클릭시
+            - focus : 마우스 포커스가 맞을 경우
+
+            가상 요소 : 가상으로 인라인레벨 요소가 들어감 "::" (CSS 2.1 에서는 : 한개)
+            - before : 부모를 기준으로 첫번째 자식요소로
+            - after : 부모를 기준으로 마지막 자식요소로
+         */
+        hr {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        #naver:hover
+        {
+            font-size:30px;
+            color:blue;
+        }
+        /*a:link {*/
+            /*color:red;*/
+        /*}*/
+        /* ctrl + / 을 하면 주석 처리를 한다. */
+        a {
+            color: #424242;
+            text-decoration : none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        #daum:hover {
+            color: green;
+            font-size: 30px;
+        }
+        #nate:hover {
+            color: red;
+            font-size: 30px;
+        }
+        #box {
+            width: 200px;
+            height: 150px;
+            background: #FF33DD;
+            /* 숫자 변경을 부드럽게 처리 css 3.0 부터 추가 */
+            transition: 500ms;
+        }
+        #box:hover {
+            width: 500px;
+            height: 300px;
+            background-color: #00F123;
+            border-radius: 30px 30px 30px 30px;
+        }
+        #box:active {
+            background-color: lightcoral;
+        }
+        input {
+            transition : .3s ease;
+        }
+        input:focus {
+            font-size: 20px;
+            background-color: lightgreen;
+            border : 3px solid #424242
+        }
+        #ve {
+            width : 300px;
+            height : 200px;
+            background-color: cornflowerblue;
+            /* 글자(인라인) 수평가운데 정렬 */
+            text-align: center;
+            /* 블록 레벨안에 인라인 레벨을 수직 가운데 정렬
+                height 와 line-height 의 크기를 같게 */
+            line-height: 200px;
+            display: block;
+        }
+        #ve::before {
+            /* 가상요소는 반드시 content 를 써야함 */
+            content:"a";
+            background-color: green;
+            /* 인라인레벨은 width, height 가 적용안됨 */
+            width: 100px;
+            height: 100px;
+        }
+        #ve::after {
+            content:"!!!";
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<h1>가상 클래스</h1>
+    <a id="naver" href="https://naver.com" target="_blank">네이버</a>
+    <a id="daum" href="https://daum.net" target="_blank">다음</a>
+    <a id="nate" href="https://nate.com" target="_blank">네이트</a>
+    <input/>
+<hr/>
+    <div id="box"></div>
+<hr/>
+<h1>가상 요소</h1>
+    <div id="ve">가상요소</div>
+</body>
+</html>

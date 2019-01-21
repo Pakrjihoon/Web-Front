@@ -1,0 +1,335 @@
+.item_poll {
+    position: relative;
+    padding: 26px 29px 24px;
+    border: 1px solid #eee;
+    background-color: #fff
+}
+
+.item_poll .tit_poll {
+    display: block;
+    margin-bottom: 17px;
+    font-size: 18px;
+    line-height: 21px
+}
+
+.item_poll .cp_poll {
+    display: block;
+    height: 26px;
+    margin-bottom: 26px
+}
+
+.os_mac .item_poll .cp_poll {
+    margin-bottom: 28px
+}
+
+.item_poll .cp_poll .thumb_g {
+    display: block;
+    height: 100%;
+    margin: 0 auto
+}
+
+.item_poll .desc_empty {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 115px;
+    height: 103px;
+    margin: -51px 0 0 -57px;
+    font-size: 0;
+    line-height: 0;
+    background: url(//t1.daumcdn.net/media/news/election2018/empty_poll.gif) 0 0 no-repeat;
+    background-size: 115px 103px;
+    text-indent: -9999px
+}
+
+.graph_poll2 {
+    position: relative;
+    height: 195px;
+    padding-top: 6px;
+    background: url(//t1.daumcdn.net/media/news/election2018/grid_poll.png) 0 0 repeat-x;
+    background-size: 2px 201px
+}
+
+.graph_poll2 .range_poll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 20px;
+    background: url(//t1.daumcdn.net/media/news/election2018/range_poll.png) 0 0 no-repeat;
+    background-size: 20px 201px
+}
+
+.remarks_list {
+    margin-top: 14px
+}
+
+.list_remarks {
+    overflow: hidden;
+    margin: 0 -7px
+}
+
+.list_remarks li {
+    float: left;
+    margin: 0 7px 4px
+}
+
+.list_remarks .tag_remarks {
+    float: left;
+    width: 10px;
+    height: 10px;
+    margin: 4px 5px 0 0;
+    border-radius: 10px
+}
+
+.list_remarks .tit_thumb {
+    overflow: hidden;
+    font-size: 13px;
+    line-height: 17px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left
+}
+
+.list_remarks .num_g {
+    padding-left: 4px
+}
+
+.list_remarks2 {
+    margin: 0
+}
+
+.list_remarks2 li {
+    width: 33.33%;
+    margin: 0 0 7px
+}
+
+.info_graph {
+    display: block;
+    margin-top: 10px
+}
+
+.info_graph, .link_relate {
+    font-size: 12px;
+    line-height: 18px;
+    color: #777
+}
+
+.link_relate {
+    display: inline-block;
+    margin-top: 8px;
+    vertical-align: top
+}
+
+.link_relate .ico_election2 {
+    padding-right: 11px;
+    background-position: 100% -236px
+}
+
+.os_mac .link_relate .ico_election2 {
+    background-position: 100% -238px
+}
+
+.item_poll .alex-chart .txt-number {
+    font-family: Roboto, sans-serif
+}
+
+.os_ios .item_poll .alex-chart .txt-number, .os_mac .item_poll .alex-chart .txt-number {
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSdGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.item_poll .alex-chart .chart-title {
+    overflow: hidden
+}
+
+.item_poll .alex-chart .chart-title .title-text {
+    margin-bottom: 18px
+}
+
+.os_mac .alex-chart .chart-title .title-text {
+    font-weight: 600
+}
+
+.item_poll .alex-chart .column-bar .chart-title .title-text {
+    margin-bottom: 23px
+}
+
+.item_poll .alex-chart .line .chart-title .title-text {
+    margin-bottom: 29px
+}
+
+.item_poll .alex-chart .column-bar .bar-title {
+    bottom: -26px
+}
+
+.os_mac .item_poll .alex-chart .column-bar .bar-title {
+    bottom: -29px;
+    font-size: 14px
+}
+
+.item_poll .alex-chart .horizontal-bar .bar-percent .txt-number {
+    font-size: 15px
+}
+
+.os_mac .item_poll .alex-chart .horizontal-bar .bar-percent .txt-number {
+    padding-bottom: 2px;
+    font-weight: 400
+}
+
+.item_poll .alex-chart .horizontal-bar .bar-stats.inside .txt-number {
+    padding-bottom: 1px
+}
+
+.item_poll .alex-chart .stacked-bar .txt-number {
+    padding-left: 10px;
+    font-size: 15px
+}
+
+.os_mac .item_poll .alex-chart .stacked-bar .txt-number {
+    padding-bottom: 1px
+}
+
+.item_poll .alex-chart .column-bar .bar-stats {
+    line-height: 18px
+}
+
+.os_mac .item_poll .alex-chart .column-bar .bar-stats {
+    line-height: 19px
+}
+
+.item_poll .alex-chart .chart-legends .legend-item {
+    margin-bottom: 1px
+}
+
+.item_poll .alex-chart .chart-legends .legend-item .legend-name {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px
+}
+
+.os_mac .item_poll .alex-chart .chart-legends .legend-item .legend-name {
+    font-size: 13px;
+    line-height: 17px
+}
+
+.item_poll .alex-chart .stacked-bar .chart-legends .legend-item .legend-name {
+    font-size: 13px
+}
+
+.os_mac .item_poll .alex-chart .stacked-bar .chart-legends .legend-item .legend-name {
+    font-size: 14px
+}
+
+.item_poll .alex-chart .chart-legends .legend-item .legend-rate {
+    font-size: 14px;
+    font-family: Roboto, sans-serif
+}
+
+.os_mac .item_poll .alex-chart .chart-legends .legend-item .legend-rate {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica, AppleSdGothicNeo-Regular, Malgun Gothic, "\B9D1\C740   \ACE0\B515", dotum, \\B3CB\C6C0, sans-serif
+}
+
+.item_poll .alex-chart .chart-link a {
+    color: #777
+}
+
+.item_poll .alex-chart .chart-link:after {
+    display: inline-block;
+    width: 6px;
+    height: 10px;
+    margin: 5px 0 0 5px;
+    background: url(//t1.daumcdn.net/media/news/election2018/ico_election2.png) 100% -240px no-repeat;
+    background-size: 60px 540px;
+    vertical-align: top;
+    content: ""
+}
+
+.os_mac .item_poll .alex-chart .chart-link:after {
+    margin-top: 3px
+}
+
+.item_poll .alex-chart .column-bar .column-bars-wrapper {
+    margin-left: 20px
+}
+
+.item_poll .vs_type2 .column-bar .column-bars-wrapper {
+    margin-left: 30px
+}
+
+.item_poll .alex-chart .horizontal-bar .bar-stats.inside .txt-title {
+    padding-bottom: 1px
+}
+
+.os_mac .item_poll .alex-chart .horizontal-bar .bar-stats.inside .txt-title {
+    padding-bottom: 0
+}
+
+.item_poll .alex-chart .chart-description .description-text {
+    letter-spacing: -.1em
+}
+
+.os_mac .item_poll .alex-chart .chart-description .description-text {
+    letter-spacing: -.05em
+}
+
+.item_poll .alex-chart .line .alex-chartview {
+    top: -10px;
+    min-height: 210px
+}
+
+.item_poll .alex-chart .line .chart-legends {
+    padding-top: 4px
+}
+
+.approval_poll .item_poll .alex-chart .chart-title {
+    display: none
+}
+
+.approval_poll .item_poll .alex-chart .chart-legends .legend-items {
+    height: 45px
+}
+
+.item_poll .alex-chart .stacked-bar .chart-legends {
+    padding-top: 10px;
+    padding-bottom: 7px
+}
+
+.item_poll .stacked-bar .chart-legends .legend-item {
+    width: 33.33%;
+    margin: 2px 0 0
+}
+
+.item_poll .stacked-bar .chart-legends .legend-item .legend-bullet {
+    margin-left: 7px
+}
+
+.section_survey .item_poll .tit_poll {
+    display: none
+}
+
+.section_survey .item_poll .alex-chart .column-bar .chart-title .title-text {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 1.5dppx), only screen and (min-resolution: 144dpi) {
+    .graph_poll2 {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/grid_poll.png)
+    }
+
+    .graph_poll2 .range_poll {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/range_poll.png)
+    }
+
+    .item_poll .desc_empty {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/empty_poll.gif)
+    }
+
+    .item_poll .alex-chart .chart-link:after {
+        background-image: url(//t1.daumcdn.net/media/news/election2018/retina/ico_election2.png)
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이미지 로테이트</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <style>
+        #wrap {
+            width: 500px;
+            height: 400px;
+            margin: 50px auto;
+            position: relative;
+            box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+        }
+        #kakaoBox {
+            width: 340px;
+            height: 340px;
+            position: absolute;
+            left: 80px;
+            top: 30px;
+            overflow: hidden;
+        }
+        #kakaos {
+            width: 1020px;
+            height: 1020px;
+            position: absolute;
+            left: -340px;
+            transition: .2s ease;
+        }
+        #kakaos img {
+            position: absolute;
+            left: 340px;
+            transform-origin: 50% 150%;
+        }
+        #kakaos img:nth-child(1) {
+            transform: rotate(0);
+        }
+        #kakaos img:nth-child(2) {
+            transform: rotate(90deg);
+        }
+        #kakaos img:nth-child(3) {
+            transform: rotate(180deg);
+        }
+        #kakaos img:nth-child(4) {
+            transform: rotate(-90deg);
+        }
+        .btn {
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 30px;
+            font-size: 40px;
+            cursor: pointer;
+            box-shadow: 0 20px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
+            transition: .2s ease;
+            position : absolute;
+            top: 170px;
+        }
+        .left {
+            left: 10px;
+        }
+        .btn:hover {
+            background-color: lightskyblue;
+            color: #fff;
+        }
+        .right {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="kakaoBox">
+            <div id="kakaos">
+                <img src="img/k1.png">
+                <img src="img/k2.png">
+                <img src="img/k3.png">
+                <img src="img/k4.png">
+            </div><!--//#kakaos -->
+        </div><!--//#kakaoBox-->
+        <button class="btn left fas fa-undo-alt"></button>
+        <button class="btn right fas fa-redo-alt"></button>
+    </div><!--//#wrap-->
+</body>
+<script src="js/jquery.js"></script>
+<script>
+    var deg=0;
+
+    $(".left").click(function () {
+        deg += -90;
+       $("#kakaos").css("transform","rotate("+deg+"deg)");
+    });
+    $(".right").click(function () {
+        deg +=- -90;
+        $("#kakaos").css("transform","rotate("+deg+"deg)");
+    });
+    right =0;
+</script>
+</html>

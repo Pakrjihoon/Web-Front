@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>ex5</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            cursor: crosshair;
+        }
+        #circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            background-color: crimson;
+            text-align: center;
+            line-height: 50px;
+            color:#fff;
+            font-weight: bold;
+            margin: auto;
+            transition : .1s ease;
+            box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
+        }
+    </style>
+</head>
+<body>
+    <div id="circle">1</div>
+<script src="js/jquery.js"></script>
+<script>
+    var $div = $("#circle");
+    var num = 1;
+
+        $("body").click(function (e) {
+            var size = Math.floor((Math.random()*150)+50);
+            var r = Math.floor((Math.random()*256));
+            var g = Math.floor((Math.random()*256));
+            var b = Math.floor((Math.random()*256));
+            var x = e.clientX-470;
+            var y = e.clientY-100;
+            num+=1;
+            $("#circle").text(num);
+            $div.css({"background-color":"rgb("+r+","+g+","+b+")","width":size,"height":size,
+                "transform":"translate("+x+"px,"+y+"px)","line-height":+size+"px"});
+
+        });
+
+
+</script>
+</body>
+</html>

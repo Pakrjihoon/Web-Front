@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>보더</title>
+    <style>
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+            /* margin은 바깥쪽 여백을 의미합니다.
+                top, right, bottom, left가 있습니다.
+                이 모든 것을 포괄하는 것이 margin 입니다. */
+        }
+        #box {
+            width: 100px;
+            height: 100px;
+            background:#03DAC6;
+            /* 뒷 배경 색상 지정 */
+            margin: 50px;
+            padding: 50px;
+            /* padding은 안쪽 여백을 의미하고 top, right, bottom, left가
+            있습니다.*/
+            /* 둥근보더 */
+            /* 둥근 보더를 위해 크기를 100 이상(widht , height 크기)
+            으로 지정하면 둥근 보더가 됩니다.*/
+            border-radius: 1000px;
+        }
+        #free {
+            background: yellow;
+            width: 100px;
+            height: 100px;
+            border-radius: 30px 0 30px 30px;
+            box-shadow:10px 10px 10px #000000;
+            /* 그림자를 생성해줌 */
+        }
+        #arrow {
+            background: #FFFFFF;
+            width: 0px;
+            height: 0px;
+            border-top: 10px solid #FF0000;
+            border-right: 50px solid #0000FF;
+            border-left: 20px solid transparent;
+            /* transparent를 하면 투명색 (공간차지함) */
+            border-bottom: 100px solid #000000;
+            /* border 에는 top , right , bottom , left 가 다 있습니다.
+             모든것을 공통으로 주기 위해서는 border 를 기재하면 됩니다. */
+        }
+    </style>
+</head>
+<body>
+    <div id="box">ABC</div>
+    <div id="free">Hello</div>
+    <hr/>
+    <div id="arrow"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>그림자</title>
+    <style>
+        h1 {
+          /*
+          text-shadow : 수평 수직 blur 색상, ...
+           */
+            font-size: 100px;
+            text-align: center;
+            text-shadow: 10px 10px 20px red,
+            -10px -10px 20px blue,
+            10px -10px 20px green;
+            color: #fff;
+        }
+        #btn {
+            width : 155px;
+            height: 50px;
+            background-color: #0DB2D7;
+            display: block;
+            text-align: center;
+            line-height: 50px;
+            color: #FFF;
+            border-radius : 25px;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            text-decoration: none;
+            transition: .3s ease;
+        }
+        #btn:hover {
+            background-color: #0887D7;
+            box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+    </style>
+</head>
+<body>
+    <h1>Big Data</h1>
+    <hr/>
+    <a id="btn" href="">DOWNLOAD</a>
+</body>
+</html>

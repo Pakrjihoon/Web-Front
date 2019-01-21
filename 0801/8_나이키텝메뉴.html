@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>나이키메뉴</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <style type="text/css">
+        body {
+            overflow-y: scroll;
+            font-size: 12px;
+            font-family: helvetica, arial, verdana, tahoma, 'NanumGothic', '나눔고딕', Malgun Gothic, '맑은고딕', Apple Gothic, Dotum, '돋움', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .Local-tab {
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .Local-tab .conTab .tab {
+            position: relative;
+            width: 547px;
+            height: 30px;
+            margin: 50px auto 30px;
+            background: #f7f7f7;
+            border: 1px solid #dfdfdf;
+        }
+
+        .Local-tab .conTab .tab .active-tab {
+            top: -1px;
+            width: 143px;
+            background: url(img/bg_pdp_localtab.png) no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 30px;
+            line-height: 30px;
+            height: 40px;
+            color: #fff;
+        }
+
+
+        .Local-tab .conTab .tab > ul > li {
+            width: 137px;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        .Local-tab .conTab .tab > ul > li {
+            float: left;
+            font-size: 11px;
+            font-weight: bold;
+            color: #333;
+            width: 135px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .Local-tab .conTab .tab > ul > li > a {
+            color: #333;
+        }
+
+        .Local-tab .conTab .tab > ul > li > a {
+            display: block;
+        }
+
+        .conArea {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50px;
+            width: 1180px;
+            margin-left: -580px;
+            padding: 0 0px;
+            text-align: left;
+        }
+
+        .conArea.show {
+            display: block;
+        }
+
+        .active-tab {
+            transition: .2s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="Local-tab">
+    <div class="conTab">
+        <div class="tab">
+            <div class="active-tab">상세정보</div>
+            <ul class="clx">
+                <li>
+                    <a href="" class="menu" data-index="0">상세정보</a>
+                    <div class="conArea show">
+                        <img src="img/n1.png"/>
+                    </div>
+                </li>
+                <li>
+                    <a href="" class="menu" data-index="1">배송/결제 정보</a>
+                    <div class="conArea">
+                        <img src="img/n2.png"/>
+                    </div>
+                </li>
+                <li>
+                    <a href="" class="menu" data-index="2">유의사항</a>
+                    <div class="conArea">
+                        <img src="img/n3.png"/>
+                    </div>
+                </li>
+                <li>
+                    <a href="" class="menu" data-index="3">교환/반품/AS</a>
+                    <div class="conArea">
+                        <img src="img/n4.png"/>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery.js"></script>
+<script>
+    $(".tab a").on("click",function (e) {
+        e.preventDefault();
+
+        $(".show").removeClass("show");
+
+        $(this).prev().removeClass("active-tab");
+        $(".active-tab").css("left","143px").text();
+
+
+        var idx = $(this).index();
+        $(".conArea").eq(idx+1).addClass("show");
+
+    });
+</script>
+</body>
+</html>

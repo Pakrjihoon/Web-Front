@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <style>
+        body{
+            /*font-family: 'Noto Sans KR', sans-serif;*/
+        }
+        .writeBtn {
+            width: 150px;
+            font-size: 20px;
+            height: 40px;
+            background-color: #40beed;
+            text-decoration: none;
+            color: #FFFFFF;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10px;
+            line-height: 35px;
+            float: right;
+            display: inline-block;
+        }
+
+        .writeBtn:hover {
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            text-shadow: 0 0 5px;
+            background: #0091ea;
+        }
+
+        .selectBar {
+            width: 130px;
+            height: 30px;
+            margin-top: 10px;
+        }
+
+        .checkFunding {
+            margin-left: 710px;
+
+        }
+
+        #allFunding {
+            width: 1080px;
+            height: 150px;
+            margin: auto;
+            margin-top: 10px;
+            /*background-color: #40beed;*/
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            font-weight: 600;
+            font-size: 50px;
+            text-align: center;
+            line-height: 143px;
+        }
+
+        #content {
+            width: 1080px;
+            /*height: 380px;*/
+            margin: auto;
+            /* background-color: yellow;*/
+        }
+
+        #content > h2 {
+            font-size: 25px;
+            font-weight: 500;
+            margin-top: 50px;
+            border-top: 1px solid black;
+            width: 300px;
+            padding-top: 10px;
+        }
+
+        #content > a {
+            font-size: 20px;
+            font-weight: 500;
+            /*margin-top: 50px;*/
+            margin: 0 0 0 1320px;
+        }
+
+        #content > #fundingList {
+            width: 1400px;
+            /*height: 300px;*/
+            /*background-color: red;*/
+            overflow: hidden;
+
+        }
+
+        #fundingList > li.funding { /*이게 박스 하나 */
+            width: 230px;
+            height: 250px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 23px 70px 23px 60px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+        }
+
+        #fundingList > li.funding:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .16);
+        }
+
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #fundingList div.funding_img {
+            width: 230px;
+            height: 160px;
+
+            position: relative;
+
+        }
+
+        #fundingList div.funding_img > img {
+            width: 230px;
+            height: 160px;
+            border-radius: 2px 2px 0 0;
+            position: absolute;
+        }
+
+        #fundingList div.funding_title {
+            width: 180px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #fundingList div.funding_title > strong {
+            width: 180px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+
+        }
+
+        #fundingList div.funding_title > span {
+            width: 180px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .back {
+            background: rgba(0, 0, 0, 0.6);
+            width: 230px;
+            height: 160px;
+            border-radius: 2px 2px 0 0;
+            position: absolute;
+        }
+
+        .success {
+            width: 90px;
+            height: 90px;
+            border-radius: 80px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 85px;
+            font-weight: 600;
+            font-size: 30px;
+            color: #40beed;
+            margin: 40px 0 0 50px;
+            text-shadow: 1px 1px 1px #0091ea;
+        }
+
+        .failure {
+            width: 90px;
+            height: 90px;
+            border-radius: 80px;
+            background-color: transparent;
+            text-align: center;
+            line-height: 85px;
+            font-weight: 600;
+            font-size: 30px;
+            color: #dd4444;
+            margin: 40px auto;
+            text-shadow: 1px 1px 1px #aa2222;
+        }
+        #writeBtnDiv {
+            width: 1080px;
+            height: 50px;
+            margin: auto;
+        }
+        #logoImage {
+            background-image: url("img/123.png");
+        }
+    </style>
+
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=openChatPop()>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="myPage.html">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+
+<div id="writeBtnDiv">
+<a href="creatFunding.html" class="writeBtn">펀딩 작성하기</a>
+</div>
+<div id="allFunding"><h1>모든 펀딩여행</h1></div>
+<div id="content">
+        <select class="selectBar" title="">
+        <option selected>전체보기</option>
+        <option>최신순</option>
+        <option>마감임박순</option>
+        <option>펀딩달성임박순</option>
+    </select>
+    <input type="checkbox" value="" class="checkFunding">완료된 펀딩을 포함하여 보기
+    <ul id="fundingList">
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/car.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+                <div class="back">
+                    <div class="failure">FAIL</div>
+                </div>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/90.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bottle.jpg" alt="자전거"/>
+                <div class="back">
+                    <div class="success">SUCCESS!</div>
+                </div>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/cat.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/00.jpg" alt="자전거"/>
+                <div class="back">
+                    <div class="success">SUCCESS!</div>
+                </div>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+                <div class="back">
+                    <div class="failure">FAIL</div>
+                </div>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+        <li class="funding">
+            <div class="funding_img">
+                <img src="img/bicycle.jpg" alt="자전거"/>
+            </div><!--//.funding_img -->
+            <div class="funding_title">
+                <strong>인제의 모든 수상 레저</strong>
+                <strong>여행요약</strong>
+                <span>프로필
+                        <em>티어</em>
+                    </span>
+                <span>78,000원</i>
+                    <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+            </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+    </ul>
+</div><!--//.content -->
+
+<script type="text/template" id="replayTmp">
+    <li class="funding">
+        <div class="funding_img">
+            <img src="img/bottle.jpg" alt="자전거"/>
+            <div class="back">
+                <div class="success">SUCCESS!</div>
+            </div>
+        </div><!--//.funding_img -->
+        <div class="funding_title">
+            <strong>인제의 모든 수상 레저</strong>
+            <strong>여행요약</strong>
+            <span>프로필
+                        <em>티어</em>
+                    </span>
+            <span>78,000원</i>
+                <em>(12%)</em>
+                    <span><i class="far fa-calendar-alt"></i>
+                        <em>D-7</em>
+                    </span>
+                    </span>
+        </div><!--//.funding_title --   >
+        </li> <!--//.funding -->
+</script>
+<div id="footer">
+    <div id="copyright">
+        <p>상호명 : (주)에르메스 | 대표 : 샤넬 | 개인정보책임자 : 루이비똥</p>
+        <p>사업자등록번호 : 201-54-10020 | 통신판매업신고번호 : 제 2018-서울관악-15411호</p>
+        <p>주소 : 충청남도 아산시 신창면 순천향로 22, 멀티미디어관 6층 | 광고 및 제휴 : hsh2@sch.ac.kr</p>
+        <br/>
+        <p>Copyright 2018. HERMES. All rights reserved.</p>
+    </div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/fix-footer.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/profilePopup.js"></script>
+<script>
+
+    var $window = $(window),
+        $document = $(document);
+
+    // alert(docHeight);
+
+    $window.scroll(function () {
+
+        var docHeight = $document.height(),
+            winHeight = $window.height();
+
+        var sTop = $window.scrollTop();
+
+        if (docHeight <= (sTop + winHeight) + 30) {
+
+            for (var i = 0; i < 10; i++) {
+
+                var tmp = _.template($("#replayTmp").html());
+                $("#fundingList").append(tmp);
+            }
+
+        }
+
+    });
+    $(".funding").click(function () {
+        location.href = "fundingViewer.html";
+    });
+
+</script>
+</body>
+</html>

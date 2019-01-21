@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>3단 레이아웃 만들기</title>
+    <style>
+        #wrap {
+            border: 1px solid #424242;
+            margin: auto;
+            width: 1100px;
+            height: 800px;
+        }
+        #header {
+            width: 1100px;
+            height: 100px;
+            background: hotpink;
+            float: left;
+        }
+        #menuBar {
+            width: 300px;
+            height: 600px;
+            background: orangered;
+            float: left;
+        }
+        #content {
+            width: 600px;
+            height: 600px;
+            background: #29B6F6;
+            float: left;
+        }
+        #sideBar {
+            width:200px;
+            height: 600px;
+            background: mediumaquamarine;
+            float: left;
+        }
+        #footer {
+            width: 1100px;
+            height: 100px;
+            background: yellow;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="header"></div>
+    <div id="menuBar"></div>
+    <div id="content"></div>
+    <div id="sideBar"></div>
+    <div id="footer"></div>
+</div><!--//#wrap -->
+</body>
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>음식점 정보</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/detailInfo.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <style>
+
+
+        #dinning_detailBox {
+            position: relative;
+            /*float: right;*/
+            margin-top: 25px;
+            width: 500px;
+            height: 400px;
+            /*margin: 0px 0px 0px 580px;*/
+            margin-left: 580px;
+            /*display: none;*/
+        }
+        #dinning_detailBox dl {
+            font-size: 20px;
+            /*margin-top: 20px;*/
+            padding: 10px 0 0 10px;
+        }
+
+        #dinning_detailBox dt {
+            width: 100px;
+            /*margin: 10px;*/
+            padding: 20px 0 10px 30px;
+            font-weight: bold;
+        }
+
+        #dinning_detailBox dd {
+            /*transform: translateX(180PX) translateY(-30PX);*/
+            position: absolute;
+            right: 100px;
+            margin-top: -30px;
+        }
+
+        #menuBox {
+            position: relative;
+            width: 1000px;
+            height: 400px;
+            /*display: none;*/
+            /*float: left;*/
+        }
+
+        #menuBox h3 {
+            position: absolute;
+            font-size: 40px;
+            top: 30px;
+            left: 150px;
+        }
+
+        #menu1 {
+            position: relative;
+            left: 200px;
+            top: 100px;
+            font-size: 20px;
+            float: left;
+        }
+
+        #menu1 li {
+            list-style: disc;
+            padding: 10px;
+        }
+
+        #menu2 {
+            position: relative;
+            left: 500px;
+            top: 100px;
+            font-size: 20px;
+        }
+
+        #menu2 li {
+            list-style: disc;
+            padding: 10px;
+        }
+
+
+        #room_detailBox {
+            position: relative;
+            /*float: right;*/
+            margin-top: 25px;
+            width: 500px;
+            height: 400px;
+            /*margin: 0px 0px 0px 580px;*/
+            margin-left: 580px;
+            display: none;
+        }
+        #room_detailBox dl {
+            font-size: 20px;
+            /*margin-top: 20px;*/
+            padding: 10px 0 0 10px;
+        }
+
+        #room_detailBox dt {
+            width: 100px;
+            /*margin: 10px;*/
+            padding: 20px 0 10px 30px;
+            font-weight: bold;
+        }
+
+        #room_detailBox dd {
+            /*transform: translateX(180PX) translateY(-30PX);*/
+            position: absolute;
+            right: 100px;
+            margin-top: -30px;
+        }
+        #room_infoBox{
+            position: relative;
+            width: 1000px;
+            min-height: 300px;
+            margin: auto;
+            margin-top: 30px;
+            display: none;
+            /*background-color: #9575CD;*/
+        }
+        #room_info{
+            position: absolute;
+            left:10px;
+            width:900px;
+            height: 250px;
+            margin-top: 10px;
+            /*background-color: #FFEB3B;*/
+
+
+        }
+        #room_infoBox img{
+            position: absolute;
+            top:20px;
+            width:200px;
+            height:200px;
+        }
+        #room_infoBox em{
+            position: relative;
+            font-size: 20px;
+            font-weight: bold;
+            left:230px;
+            top:25px;
+        }
+        #room_infoBox p{
+            position: relative;
+            left:230px;
+            font-size: 17px;
+            top:60px;
+            line-height: 1.5;
+        }
+        #room_infoBox h3{
+            font-size: 30px;
+            text-align: justify;
+        }
+
+
+        #culture_detailBox{
+            position: relative;
+            /*float: right;*/
+            margin-top: 25px;
+            width: 500px;
+            height: 400px;
+            /*margin: 0px 0px 0px 580px;*/
+            margin-left: 580px;
+            display: none;
+        }
+        #culture_detailBox dl{
+            font-size: 20px;
+            /*margin-top: 20px;*/
+            padding: 10px 0 0 10px;
+        }
+        #culture_detailBox dt{
+            width: 100px;
+            /*margin: 10px;*/
+            padding: 20px 0 10px 30px;
+            font-weight: bold;
+        }
+        #culture_detailBox dd{
+            /*transform: translateX(180PX) translateY(-30PX);*/
+            position: absolute;
+            right: 100px;
+            margin-top: -30px;
+        }
+        #culture_admissionBox{
+            position: relative;
+            width: 1000px;
+            height: 400px;
+            display: none;
+
+            /*float: left;*/
+        }
+
+        #culture_admissionBox h3{
+            position: absolute;
+            font-size:30px
+        ;
+            top:30px;
+            left:150px;
+        }
+        #culture_admission{
+            position: relative;
+            left:200px;
+            top:100px;
+            font-size: 20px;
+            float: left;
+        }
+        #culture_admission li{
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<div id="di_wrap">
+    <div id="di_nameBox">
+        <h2>춘천 닭갈비</h2>
+        <h3>청춘이 가장 많이 품고 있는 춘천 닭갈비</h3>
+
+        <div id="di_profileBox">
+            <div id="di_profileInfo">
+            <strong>FOUNDER 김자홍</strong>
+            <img src="img/jul.jpg" width="50" height="50" id="di_photo">
+            </div>
+        </div><!--//profileBox -->
+
+    </div><!--//nameBox -->
+
+    <div id="di_photoBox">
+        <ul id="di_photoList">
+            <li class="di_item_photo">
+                <img src="img/jul2.jpg" width="500px" height="300px">
+            </li>
+            <li class="di_item_photo">
+                <img src="img/jul.jpg" width="500px" height="300px">
+            </li>
+            <li class="di_item_photo">
+                <img src="img/jul3.jpg" width="500px" height="300px">
+            </li>
+            <li class="di_item_photo">
+                <img src="img/jul4.jpg" width="500px" height="300px">
+            </li>
+        </ul><!--//photoList-->
+
+        <ul id="di_navList">
+            <li class="di_on"><i class="fas fa-circle"></i></li>
+            <li><i class="fas fa-circle"></i></li>
+            <li><i class="fas fa-circle"></i></li>
+            <li><i class="fas fa-circle"></i></li>
+        </ul><!--//navList-->
+
+        <button id="di_left" class="di_btn"><i class="fas fa-chevron-left"></i></button>
+        <button id="di_right" class="di_btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div id="di_addressBox">
+        <h3 class="di_mapInfo">주소</h3>
+        <p class="di_mapInfo" id="di_detailInfo">서울특별시 관악구</p>
+        <div id="di_map"></div>
+    </div><!--//addressBox-->
+
+    <div id="dinning_detailBox">
+        <dl>
+            <dt>영업 시간</dt>
+            <dd>10:30~21:00</dd>
+        </dl>
+        <dl>
+            <dt>시설 타입</dt>
+            <dd>일반 식당</dd>
+        </dl>
+        <dl>
+            <dt>휴무일</dt>
+            <dd>매주 금요일</dd>
+        </dl>
+        <dl>
+            <dt>음식 종류</dt>
+            <dd>한식</dd>
+        </dl>
+        <dl>
+            <dt>특징</dt>
+            <dd>예약 가능, 주차 가능, 포장 가능</dd>
+        </dl>
+        <dl>
+            <dt>문의 전화</dt>
+            <dd>031-777-7777</dd>
+        </dl>
+    </div><!--//detailBox-->
+
+    <div id="menuBox">
+        <h3>메뉴</h3>
+        <div id="menu1">
+            <ul>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+            </ul>
+        </div>
+        <div id="menu2">
+            <ul>
+                <li>막국수 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+                <li>춘천 닭갈비 - 9000원</li>
+            </ul>
+        </div>
+
+    </div><!--//menuBox-->
+
+
+    <div id="room_detailBox">
+        <dl>
+            <dt>체크 인</dt>
+            <dd>14:00</dd>
+        </dl>
+        <dl>
+            <dt>체크 아웃</dt>
+            <dd>12:00</dd>
+        </dl>
+        <dl>
+            <dt>시설 타입</dt>
+            <dd>호텔</dd>
+        </dl>
+        <dl>
+            <dt>특징</dt>
+            <dd>예약 가능, 주차 가능, 포장 가능</dd>
+        </dl>
+        <dl>
+            <dt>문의 전화</dt>
+            <dd>031-777-7777</dd>
+        </dl>
+    </div><!--//detailBox-->
+
+    <div id="room_infoBox">
+        <h3>객실정보</h3>
+        <div id="room_info">
+            <ul>
+                <li>
+                    <img src="img/jul.jpg">
+                    <em>비즈니스 룸</em>
+                    <p>기준 인원 : 4인</p>
+                    <p>최대 인원 : 6인</p>
+                    <p>1일 숙박 가격 : 80,000원</p>
+                    <p>기준 인원 외 추가요금 : 5,000원</p>
+                    <p>대실 가격 : 40,000원</p>
+                </li>
+
+            </ul>
+
+        </div>
+    </div><!--//roomBox-->
+
+    <div id="culture_detailBox">
+        <dl>
+            <dt>영업 시간</dt>
+            <dd>10:30~21:00</dd>
+        </dl>
+        <dl>
+            <dt>시설 타입</dt>
+            <dd>랜드마크(놀이공원)</dd>
+        </dl>
+        <dl>
+            <dt>기준 인원 외 추가 요금</dt>
+            <dd>5,000원</dd>
+        </dl>
+        <dl>
+            <dt>특징</dt>
+            <dd>예약 가능, 주차 가능, 포장 가능</dd>
+        </dl>
+        <dl>
+            <dt>문의 전화</dt>
+            <dd>031-777-7777</dd>
+        </dl>
+    </div><!--//detailBox-->
+
+    <div id="culture_admissionBox">
+        <h3>입장료</h3>
+        <div id="culture_admission">
+            <ul>
+                <li>성인 - 7000원</li>
+                <li>청소년 - 6000원</li>
+                <li>만 5세 미만 - 무료</li>
+                <li>만 65세 이상 - 무료</li>
+            </ul>
+        </div>
+    </div>
+    <!--//cultureBox-->
+    <div id="di_evaluate">
+        <button id="di_plus" class="di_ev_btn di_leftBtn"><i class="fas fa-plus-circle"></i></button>
+        <button id="di_minus" class="di_ev_btn di_rightBtn"><i class="fas fa-minus-circle"></i></button>
+    </div><!--//evaluate-->
+
+    <div id="di_replyBox">
+        <form id="di_form">
+            <textarea id="di_content" placeholder=" 내용을 입력해주세요"></textarea>
+            <button type="button"> 댓글쓰기</button>
+        </form>
+    </div><!--//replyBox-->
+
+
+    <!--<div class="reviewBox">-->
+    <!--<ul >-->
+    <!--<li>-->
+    <!--<img src="img/jul4.jpg" width="100px" height="100px">-->
+    <!--<div class="reviewcontent"></div>-->
+    <!--</li>-->
+    <!--</ul>-->
+    <!--</div>&lt;!&ndash;//reviewBox&ndash;&gt;-->
+</div>
+<script type="text/template" id="di_test">
+    <!--var con = $("#content").val();-->
+    <div class="di_reviewBox">
+        <ul class="di_reviewListBox">
+            <li class="di_reviewList">
+                <div class="di_reviewInfo">
+                <img src="img/jul4.jpg" width="90px" height="90px">
+                <label>하이</label>
+                </div>
+                <div class="di_reviewcontent"><%=value%></div>
+            </li>
+        </ul>
+    </div><!--//reviewBox-->
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=86ebe9e4552156ffbdbba58beafaaf3d&libraries=services"></script>
+<script>
+    var tmp = _.template($("#di_test").html());
+
+    $("#di_form button").click(function () {
+        var text_val = $("#di_content").val();
+        // alert(text_val);
+        $("#di_wrap").append(tmp({value: text_val}));
+    });
+
+    var idx = 0;
+    var $navList = $("#di_navList").children();
+
+    $("#di_left").click(function () {
+        if (idx != 0) {
+            idx--;
+            var num = (-idx * 500);
+            $("#di_photoList img").css("transform", "translateX(" + num + "px)");
+            // alert(no);
+            $navList.removeClass("di_on");
+            $navList.eq(idx).addClass("di_on");
+        }
+    });
+    $("#di_right").click(function () {
+        if (idx != 3) {
+            idx++;
+            var num = -(idx * 500);
+            $("#di_photoList img").css("transform", "translateX(" + num + "px)");
+            console.log(num);
+            // alert(no);
+
+            $navList.removeClass("di_on");
+            $navList.eq(idx).addClass("di_on");
+        }
+    });
+    $("#di_navList li").click(function () {
+            var dotidx = $(this).index();
+        console.log(dotidx);
+        var imgmove = dotidx *= -500;
+        $("#di_photoList img").css("transform", "translateX(" + imgmove + "px)");
+        $("#di_navList li").removeClass("on");
+        $(this).addClass("on");
+    });
+    // 마커가 표시될 위치입니다
+
+    var mapContainer = document.getElementById('di_map'), // 지도를 표시할 div
+        mapOption = {
+            center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+            level: 3 // 지도의 확대 레벨
+        };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new daum.maps.Map(mapContainer, mapOption);
+    var markerPosition  = new daum.maps.LatLng(33.450701, 126.570667);
+
+    // 마커를 생성합니다
+    var marker = new daum.maps.Marker({
+        position: markerPosition
+    });
+    marker.setMap(map);
+
+</script>
+</body>
+</html>

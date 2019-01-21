@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마이페이지</title>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/favicon-96x96.png">
+    <style>
+
+        #contentBox {
+            /*position: relative;*/
+            margin: 150px auto;
+            width: 750px;
+            height: 670px;
+            box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        }
+
+        .btn2 {
+            width: 60px;
+            font-weight: 600;
+            border-bottom: 3px solid #fff;
+            /*border-radius: 5px;*/
+            font-size: 18px;
+            display: block;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+            color: #424242;
+            /*box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        .on {
+            /*background: #40BEED;*/
+            color: #40beed;
+            border-bottom: 3px solid #40beed;
+        }
+
+        /*.on2 {*/
+        /*display: none;*/
+        /*}*/
+
+        #content {
+            width: 750px;
+            height: 400px;
+            background-color: #0091ea;
+            float: right;
+            margin-top: 30px;
+            /*display: none;*/
+        }
+
+        #content > #contentList {
+            width: 750px;
+            /*height: 300px;*/
+            /*background-color: red;*/
+            overflow: hidden;
+
+        }
+
+        #contentList > li.allContent { /*이게 박스 하나 */
+            width: 150px;
+            height: 240px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 50px 10px 40px 70px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+
+        }
+
+        #contentList > li.allContent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .16);
+        }
+
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #contentList div.content_img > img {
+            width: 150px;
+            height: 170px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        #contentList div.content_title {
+            width: 150px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #contentList div.content_title > strong {
+            width: 150px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+            position: absolute;
+
+        }
+
+        #contentList div.content_title > span {
+            width: 150px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .fa-heart {
+            color: #dd4444;
+        }
+
+        .like {
+            font-weight: 600;
+        }
+
+        #page {
+            width: 750px;
+            height: 30px;
+            background-color: #dd4444;
+            position: absolute;
+            top: 570px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        #roomContent {
+            width: 750px;
+            height: 400px;
+            background-color: #0091ea;
+            float: right;
+            margin-top: 30px;
+            display: none;
+        }
+
+        #roomContent > #roomList {
+            width: 750px;
+            /*height: 300px;*/
+            background-color: red;
+            overflow: hidden;
+
+        }
+
+        #roomList > li.allContent { /*이게 박스 하나 */
+            width: 150px;
+            height: 240px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 50px 10px 40px 70px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+
+        }
+
+        #roomList > li.allContent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .16);
+        }
+
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #roomList div.content_img > img {
+            width: 150px;
+            height: 170px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        #roomList div.content_title {
+            width: 150px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #roomList div.content_title > strong {
+            width: 150px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+            position: absolute;
+
+        }
+
+        #roomList div.content_title > span {
+            width: 150px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .fa-heart {
+            color: #dd4444;
+        }
+
+        .like {
+            font-weight: 600;
+        }
+
+        #page2 {
+            width: 750px;
+            height: 30px;
+            background-color: #dd4444;
+            position: absolute;
+            top: 570px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+
+
+        #diningContent {
+            width: 750px;
+            height: 400px;
+            background-color: #0091ea;
+            float: right;
+            margin-top: 30px;
+            display: none;
+
+        }
+
+        #diningContent > #diningList {
+            width: 750px;
+            /*height: 300px;*/
+            background-color: #3300aa;
+            overflow: hidden;
+
+        }
+
+        #diningList > li.allContent { /*이게 박스 하나 */
+            width: 150px;
+            height: 240px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 50px 10px 40px 70px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+
+        }
+
+        #diningList > li.allContent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .16);
+        }
+
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #diningList div.content_img > img {
+            width: 150px;
+            height: 170px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        #diningList div.content_title {
+            width: 150px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #diningList div.content_title > strong {
+            width: 150px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+            position: absolute;
+
+        }
+
+        #diningList div.content_title > span {
+            width: 150px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .fa-heart {
+            color: #dd4444;
+        }
+
+        .like {
+            font-weight: 600;
+        }
+
+        #page3 {
+            width: 750px;
+            height: 30px;
+            background-color: #dd4444;
+            position: absolute;
+            top: 570px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+
+
+
+        #cultureContent {
+            width: 750px;
+            height: 400px;
+            background-color: #0091ea;
+            float: right;
+            margin-top: 30px;
+            display: none;
+
+        }
+
+        #cultureContent > #cultureList {
+            width: 750px;
+            /*height: 300px;*/
+            background-color: #00bb00;
+            overflow: hidden;
+
+        }
+
+        #cultureList > li.allContent { /*이게 박스 하나 */
+            width: 150px;
+            height: 240px;
+            background-color: #ffffff;
+            border-radius: 2px;
+            float: left;
+            margin: 50px 10px 40px 70px;
+            box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .1);
+            transition: all .1s ease-in-out;
+            cursor: pointer;
+
+        }
+
+        #cultureList > li.allContent:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, .16);
+        }
+
+        /*#bandList>li.band+li.band{*/
+        /*margin: 0 0 25px 25px;*/
+        /*}*/
+        #cultureList div.content_img > img {
+            width: 150px;
+            height: 170px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        #cultureList div.content_title {
+            width: 150px;
+            height: 75px;
+            margin-left: 10px;
+            margin-top: 5px;
+        }
+
+        #diningList div.content_title > strong {
+            width: 150px;
+            height: 19.2px;
+            display: inline-block;
+            font-size: 15px;
+            position: absolute;
+
+        }
+
+        #cultureList div.content_title > span {
+            width: 150px;
+            height: 16.8px;
+            display: inline-block;
+            font-size: 12px;
+            color: #757575;
+        }
+
+        .fa-heart {
+            color: #dd4444;
+        }
+
+        .like {
+            font-weight: 600;
+        }
+
+        #page4 {
+            width: 750px;
+            height: 30px;
+            background-color: #dd4444;
+            position: absolute;
+            top: 570px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<div id="header">
+    <div id="menu">
+        <a href="index.html"><div id="logoImage"></div></a>
+        <div id="menuBar">
+            <ul>
+                <li id="fundingMenu"><a href="fundingMain.html">여행 펀딩</a></li>
+                <li id="siteMenu"><a href="allSight.html">명소 +</a></li>
+                <li id="journalMenu"><a href="">여행기</a></li>
+                <li id="requestMenu"><a href="locals.html">사전 답사/대리플래너</a></li>
+                <li id="chatMenu"><a href="" onclick=openChatPop()>LIVE! 현장상황</a></li>
+                <li id="roomsMenu"><a href="contentRoom.html">숙소</a></li>
+                <li id="diningMenu"><a href="contentFood.html">식당</a></li>
+                <li id="cultureMenu"><a href="contentCulture.html">관광</a></li>
+            </ul>
+        </div>
+        <!--<a id="login" href="">로그인</a>-->
+        <div id="profileBox">
+            <img id="profileImage" src="img/joy.jpg"/>
+            <div id="personalMenu">
+                <ul>
+                    <li><a href="">마이페이지</a></li>
+                    <li><a href="">알림</a></li>
+                    <li><a href="">메시지함</a></li>
+                    <li><a href="">코인</a></li>
+                    <li><a href="">회원정보 수정</a></li>
+                    <li><a href="">로그아웃</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="popup"></div>
+<div id="loginForm" class="form">
+    <h1><i class="fas fa-user"></i>로그인</h1>
+    <form>
+        <fieldset>
+            <legend class="screen_out">로그인폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>비밀번호</label><br/>
+            <input/><br/>
+            <button id="loginBtn" class="btn">로그인</button>
+            <button id="registerBtn" class="btn">회원가입</button>
+        </fieldset>
+    </form>
+    <a id="find" href="">아이디/비밀번호 찾기</a>
+</div>
+<div id="findForm" class="form">
+    <div class="tab">
+        <a id="findIDBtn" class="on" href="">아이디 찾기</a>
+        <a id="findPWBtn" href="">비밀번호 변경</a>
+    </div>
+    <form id="findID">
+        <fieldset>
+            <legend class="screen_out">아이디찾기폼</legend>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button id="findBtn" class="btn">찾기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+    <form id="findPW">
+        <fieldset>
+            <legend class="screen_out">비밀번호변경폼</legend>
+            <label>아이디</label><br/>
+            <input/><br/>
+            <label>이메일</label><br/>
+            <input/><br/>
+            <button class="change btn">비밀번호 변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+<div id="chanePWForm" class="form">
+    <form>
+        <fieldset>
+            <legend class="screen_out">비밀번호재설정폼</legend>
+            <label>새로운 비밀번호</label><br/>
+            <input/><br/>
+            <label>새로운 비밀번호 확인</label><br/>
+            <input/><br/>
+            <button class="change btn">변경하기</button>
+            <button class="return btn">로그인으로 되돌아가기</button>
+        </fieldset>
+    </form>
+</div>
+
+<div id="contentBox">
+    <a href="" class="btn2 on" id="all">전체</a>
+    <a href="" class="btn2" id="room">숙소</a>
+    <a href="" class="btn2" id="dining">음식점</a>
+    <a href="" class="btn2" id="culture">관광지</a>
+
+    <div id="content">
+        <ul id="contentList">
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+        </ul>
+        <div id="page">페이징 처리</div>
+    </div><!--//.content -->
+
+
+    <!--room-->
+    <div id="roomContent">
+        <ul id="roomList">
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+
+        </ul>
+        <div id="page2">페이징 처리</div>
+    </div><!--//.roomContent -->
+
+
+
+
+    <!--dining-->
+    <div id="diningContent">
+        <ul id="diningList">
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+        </ul>
+        <div id="page3">페이징 처리</div>
+    </div><!--//.roomContent -->
+
+
+    <!--culture-->
+    <div id="cultureContent">
+        <ul id="cultureList">
+            <li class="allContent">
+                <div class="content_img">
+                    <img src="img/car.jpg" alt="자전거"/>
+                </div><!--//.content_img -->
+                <div class="content_title">
+                    <h2>삼백그람</h2><!--타이틀로 설정할것-->
+                    <span class="region">
+                        <em>서울시 / 관악구</em>
+                    </span>
+                    <span class="like"><i class="fas fa-heart"></i>
+                        <em>1,335</em>
+                    </span>
+                </div><!--//.content_title -->
+            </li> <!--//.allContent -->
+        </ul>
+        <div id="page4">페이징 처리</div>
+    </div><!--//.roomContent -->
+
+
+</div><!--//.contentBox-->
+
+<script src="js/chat.js"></script>
+<script src="js/jquery.js"></script>
+<script>
+
+    var $btn = $(".btn2");
+
+
+    $(".btn2").click(function (e) {
+        e.preventDefault()
+        $(".on").removeClass("on");
+        $(this).addClass("on");
+    });
+
+    $("#all").click(function () {
+        $("#content").show();
+        $("#roomContent").hide();
+        $("#diningContent").hide();
+        $("#cultureContent").hide();
+    });
+
+    $("#room").click(function () {
+        $("#content").hide();
+        $("#roomContent").show();
+        $("#diningContent").hide();
+        $("#cultureContent").hide();
+    });
+
+    $("#dining").click(function () {
+        $("#content").hide();
+        $("#roomContent").hide();
+        $("#diningContent").show();
+        $("#cultureContent").hide();
+    });
+
+    $("#culture").click(function () {
+        $("#content").hide();
+        $("#roomContent").hide();
+        $("#diningContent").hide();
+        $("#cultureContent").show();
+    });
+
+    // if ($(this).hasClass("on2")) {
+    //     $("#likeList").css("display", "inline");
+    //     $("#bookmarkList").css("display", "none");
+    // }
+    // else {
+    //     if($("#likeList").hasClass("on2")){
+    //         $("#likeList").removeClass("on2");
+    //         $("#likeList").css("display", "none");
+    //     }
+    //     $("#bookmarkList").css("display", "inline");
+    // }
+
+</script>
+</body>
+</html>
