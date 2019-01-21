@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>table 실무활용</title>
+</head>
+<body>
+<h1>구단 순위</h1>
+    <table border="1" summary="EPL구단 순위">
+        <caption>구단 순위표</caption>
+            <thead>
+                <tr>
+                    <th>순위</th>
+                    <th>팀</th>
+                    <th>승</th>
+                    <th>패</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1</th>
+                    <td><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/14/17_300300.png?_t=20180528" width="24" alt="맨시티 구단마크">맨시티</td>
+                    <td>32</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/14/35_300300.png?_t=20180528" width="24" alt="맨시티 구단마크">맨유</td>
+                    <td>25</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td><img src="http://t1.daumcdn.net/media/img-section/sports13/logo/team/14/33_300300.png?_t=20180528" width="24" alt="맨시티 구단마크">토트넘</td>
+                    <td>23</td>
+                    <td>7</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">자료제공 : 제공</td>
+                </tr>
+            </tfoot>
+    </table>
+<!--
+    table 실무활용
+    1) caption요소 : 표의 제목처럼 사용하는 요소
+    2) 테이블은 thead, tbody, tfoot으로 구성
+                     tbody는 필수(없다면 브라우저가 생성)
+    3) summary 속성 : 표에 대한 요약 정리(웹 접근성)
+    4) th(table header) 요소 : 표 안에서 제목
+-->
+</body>
+</html>

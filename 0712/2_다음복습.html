@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Daum</title>
+    <link rel="icon" href="img/daum_favicon.ico"/>
+</head>
+<body>
+    <h1><a href="https://www.daum.net" target="_blank">
+        <img src="img/daum_logo.png"
+             width="180"
+             height="94"
+             title="Daum"
+             alt="Daum"/>
+        <!-- title속성 : 툴팁메뉴 , 어떤요소든지 쓸 수있음 -->
+    </a></h1>
+    <h2>검색</h2>
+    <!--
+    주소 뒤에 ?xx=yy&aa=bb
+    이런식으로 넘어가는 파라미터를 '쿼리스트링'이라고 한다.
+    -->
+    <form action="https://search.daum.net/search" method="get">
+        <fieldset>
+            <legend>통합검색</legend>
+            <input type="text" name="q" title="검색어 입력" size="55">
+            <button type="button">한글입력기</button>
+            <button>검색</button>
+        </fieldset>
+    </form>
+    <a href="http://cs.daum.net/faq/15/14957.html#28978">서제스트란?</a>
+        <h3>인기 검색어</h3>
+            <ul>
+                <li>
+                    <a href="https://search.daum.net/search?w=tot&q=%EC%A1%B0%ED%98%84%EC%9A%B0+%EC%95%84%EB%82%B4&DA=NPI">조현우 아내</a>
+                </li>
+                <li>
+                    <a href="https://search.daum.net/search?w=tot&q=%EA%B9%80%EC%88%98%EB%AF%B8+%EC%95%84%EA%B7%80%EC%B0%9C&DA=NPI">김수미 아귀찜</a>
+                </li>
+                <li>
+                    <a href="https://search.daum.net/search?w=tot&q=%EB%8B%A4%EC%9D%8C%EA%B2%80%EC%83%89+%EC%9D%B4%EB%B2%A4%ED%8A%B8&DA=NPI">다음검색 이벤트</a>
+                </li>
+            </ul>
+    <button type="button">&lt;이전</button>
+    <button type="button">&gt;다음</button><br>
+    <a href="https://www.daum.net/doc/startpage.html">다음을 시작페이지로</a>
+    <h2>주요 서비스</h2>
+    <ul>
+        <li><a href="http://cafe.daum.net/">카페</a></li>
+        <li><a href="https://mail.daum.net/">메일</a></li>
+        <li><a href="http://media.daum.net/">뉴스</a></li>
+    </ul>
+    <h2>전체 서비스</h2>
+    <dl>
+        <dt>커뮤니케이션</dt>
+            <dd><a href="https://mail.daum.net/">메일</a></dd>
+            <dd><a href="http://www.tistory.com/">티스토리</a></dd>
+        <dt>미디어</dt>
+            <dd><a href="http://media.daum.net/entertain">연예</a></dd>
+            <dd><a href="http://media.daum.net/?nil_profile=mini&nil_src=news">뉴스</a></dd>
+    </dl>
+    <h2>오늘의 정보</h2>
+    <strong>07. 12. (목)</strong>
+    <ul>
+        <li>
+            <a href="">날씨 서울시 <strong>흐림 </strong><i>영상 28도</i> 28&deg;C</a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블셀합치기</title>
+</head>
+<body>
+<h1>테이블 합치기</h1>
+    <h2>수평으로 합치기</h2>
+    <!-- column 간의 합치기 : colspan 속성 -->
+        <table border="1" width="300" height="300">
+            <tr>
+                <td colspan="3">1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+        </table>
+<hr/>
+    <h2>수직으로 합치기</h2>
+    <!-- row 간의 합치기 : rowspan 속성 -->
+        <table border="1" width="300" height="300">
+            <tr>
+                <td rowspan="3">1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+        </table>
+
+</body>
+</html>

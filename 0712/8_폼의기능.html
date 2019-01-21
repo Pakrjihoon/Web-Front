@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼의 기능에 대하여</title>
+</head>
+<body>
+<!--
+    클라이언트에서 서버로 넘어가는 데이터 : 파라미터
+    파라미터가 넘어가는 방식 : GET, POST (PUT, DELETE)
+
+    GET 방식
+    - 주소 뒤에 &xxx=yyy&aaa=bbb... 이런식(쿼리스트링) 으로
+    파라미터가 넘어가는 방식
+    - 장점 : 어디서든 똑같은 페이지를 볼 수 있음
+    - 단점 : 용량제한 / 파라미터가 주소창에 노출됨
+
+    POST 방식
+    - 파라미터가 주소창에 노출되지 않음(HTTP 프로토콜의 body로 넘어감)
+    - 그렇다고 보안성이 좋다는게 아님(HTTP 프로토콜 body에 노출, 패킷을 훔칠 수 있음)
+    - HTTP -> HTTPS (보안성이 좋아짐) 최근 프로토콜
+    - 장점 : 용량이 제한없음 / 주소창에 노출되지 않음
+    - 단점 : 복사 붙여넣기 해도 결과가 다름
+
+-->
+
+<h1>로그인</h1>
+    <form action="test" method="post">
+        <fieldset>
+            <legend>로그인 폼</legend>
+            <label>이메일<input name="id" id="in" type="email" placeholder="이메일 입력"></label>
+            <!-- label을 쓰는 방법 1 -->
+
+            <label for="pwd">비밀번호</label>
+            <!-- label을 쓰는 방법 2 -->
+            <input name="pass" id="pwd" type="password" placeholder="비밀번호 입력">
+            <button type="submit">로그인</button>
+        </fieldset>
+    </form>
+<label><input type="checkbox">이 약관에 동의합니다.</label>
+<!--
+    label 요소 : input 요소에 제목을 붙이는 요소
+-->
+</body>
+</html>
